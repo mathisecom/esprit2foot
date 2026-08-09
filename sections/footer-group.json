@@ -102,14 +102,14 @@
           "settings": {
             "menu": "footer",
             "show_menu_title": true,
-            "menu_title": ""
+            "menu_title": "Informations Légales"
           }
         },
         "text": {
           "type": "text",
           "settings": {
             "title": "Contactez-Nous",
-            "content": "<p>esprit2foot.pro@gmail.com</p>",
+            "content": "<p>esprit2foot.pro@gmail.com</p><p>+33 7 71 55 13 75</p>",
             "enable_follow_on_shop": true
           }
         }
