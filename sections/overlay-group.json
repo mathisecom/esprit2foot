@@ -48,7 +48,7 @@
     "search-drawer": {
       "type": "search-drawer",
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "show_article_category": true,
         "search_menu": "",
         "search_menu_show_title": true

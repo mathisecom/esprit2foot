@@ -14,35 +14,43 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "message_ij9kRh": {
+        "message_gxax6w": {
           "type": "message",
           "settings": {
-            "text": "Buy two = Get 1 free !",
+            "text": "La meilleure qualité du marché !",
             "url": ""
           }
         },
         "message": {
           "type": "message",
           "settings": {
-            "text": "Livraison Offerte",
+            "text": "Livraison 100% gratuite",
+            "url": ""
+          }
+        },
+        "message_ij9kRh": {
+          "type": "message",
+          "settings": {
+            "text": "2 achetés = 1 offert !",
             "url": ""
           }
         }
       },
       "block_order": [
-        "message_ij9kRh",
-        "message"
+        "message_gxax6w",
+        "message",
+        "message_ij9kRh"
       ],
       "settings": {
         "enable_sticky": false,
         "autoplay": false,
         "cycle_speed": 6,
-        "text_size": "text-xs",
+        "text_size": "text-xxs",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
-        "background": "#04FFCB",
+        "background": "#00FFAE",
         "background_gradient": "",
-        "text_color": "#343434"
+        "text_color": "#FDFAFA"
       }
     },
     "header": {
@@ -50,18 +58,19 @@
       "settings": {
         "enable_sticky": true,
         "hide_on_scroll": false,
-        "logo_max_width": 120,
-        "logo_mobile_max_width": 115,
+        "logo": "shopify://shop_images/48876d08973b69bea8966b6918887d85_tplv-tiktokx-cropcenter_1080_1080.jpg",
+        "logo_max_width": 65,
+        "logo_mobile_max_width": 60,
         "menu": "main-menu",
         "sidebar_menu": "",
         "secondary_menu": "",
         "menu_open_trigger": "click",
         "opening_from": "left",
         "layout": "logo_left_navigation_center",
-        "show_social_media": true,
+        "show_social_media": false,
         "show_locale_selector": true,
-        "show_country_selector": true,
-        "show_country_flag": true,
+        "show_country_selector": false,
+        "show_country_flag": false,
         "show_country_name": false,
         "transparent_header_text_color": "#ffffff",
         "reduce_padding": true,
