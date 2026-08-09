@@ -1,6 +1,498 @@
+{% doc %}
+  @prompt
+    je vuet mettre juste en dessous de la barre verte : mon logo, une barre de recherche et un truc pour choisir la langue
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-header-bar-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.vertical_padding }}px 0;
+  }
+
+  .ai-header-bar__container-{{ ai_gen_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+    padding: 0 {{ block.settings.horizontal_padding }}px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: {{ block.settings.gap }}px;
+  }
+
+  .ai-header-bar__logo-{{ ai_gen_id }} {
+    flex-shrink: 0;
+  }
+
+  .ai-header-bar__logo-link-{{ ai_gen_id }} {
+    display: block;
+    line-height: 0;
+  }
+
+  .ai-header-bar__logo-image-{{ ai_gen_id }} {
+    max-width: {{ block.settings.logo_width }}px;
+    height: auto;
+    display: block;
+  }
+
+  .ai-header-bar__logo-placeholder-{{ ai_gen_id }} {
+    width: {{ block.settings.logo_width }}px;
+    height: 60px;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+
+  .ai-header-bar__logo-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    max-height: 40px;
+  }
+
+  .ai-header-bar__search-{{ ai_gen_id }} {
+    flex-grow: 1;
+    max-width: {{ block.settings.search_max_width }}px;
+  }
+
+  .ai-header-bar__search-form-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+  }
+
+  .ai-header-bar__search-input-{{ ai_gen_id }} {
+    width: 100%;
+    padding: {{ block.settings.search_padding }}px {{ block.settings.search_padding | plus: 40 }}px {{ block.settings.search_padding }}px {{ block.settings.search_padding }}px;
+    border: {{ block.settings.search_border_width }}px solid {{ block.settings.search_border_color }};
+    border-radius: {{ block.settings.search_border_radius }}px;
+    background-color: {{ block.settings.search_background }};
+    color: {{ block.settings.search_text_color }};
+    font-size: {{ block.settings.search_font_size }}px;
+  }
+
+  .ai-header-bar__search-input-{{ ai_gen_id }}::placeholder {
+    color: {{ block.settings.search_placeholder_color }};
+  }
+
+  .ai-header-bar__search-input-{{ ai_gen_id }}:focus {
+    outline: 2px solid {{ block.settings.search_focus_color }};
+    outline-offset: 2px;
+  }
+
+  .ai-header-bar__search-button-{{ ai_gen_id }} {
+    position: absolute;
+    right: {{ block.settings.search_padding | divided_by: 2 }}px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: {{ block.settings.search_icon_color }};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-header-bar__search-button-{{ ai_gen_id }}:hover {
+    opacity: 0.7;
+  }
+
+  .ai-header-bar__search-button-{{ ai_gen_id }} svg {
+    width: {{ block.settings.search_icon_size }}px;
+    height: {{ block.settings.search_icon_size }}px;
+  }
+
+  .ai-header-bar__language-{{ ai_gen_id }} {
+    flex-shrink: 0;
+  }
+
+  .ai-header-bar__language-select-{{ ai_gen_id }} {
+    padding: {{ block.settings.language_padding }}px {{ block.settings.language_padding | plus: 24 }}px {{ block.settings.language_padding }}px {{ block.settings.language_padding }}px;
+    border: {{ block.settings.language_border_width }}px solid {{ block.settings.language_border_color }};
+    border-radius: {{ block.settings.language_border_radius }}px;
+    background-color: {{ block.settings.language_background }};
+    color: {{ block.settings.language_text_color }};
+    font-size: {{ block.settings.language_font_size }}px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='{{ block.settings.language_text_color | remove: '#' }}' d='M6 8L2 4h8z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right {{ block.settings.language_padding | divided_by: 2 }}px center;
+  }
+
+  .ai-header-bar__language-select-{{ ai_gen_id }}:focus {
+    outline: 2px solid {{ block.settings.language_focus_color }};
+    outline-offset: 2px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-header-bar__container-{{ ai_gen_id }} {
+      flex-wrap: wrap;
+    }
+
+    .ai-header-bar__logo-{{ ai_gen_id }} {
+      order: 1;
+    }
+
+    .ai-header-bar__language-{{ ai_gen_id }} {
+      order: 2;
+    }
+
+    .ai-header-bar__search-{{ ai_gen_id }} {
+      order: 3;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .ai-header-bar__logo-image-{{ ai_gen_id }},
+    .ai-header-bar__logo-placeholder-{{ ai_gen_id }} {
+      max-width: {{ block.settings.logo_width | times: 0.7 }}px;
+    }
+  }
+{% endstyle %}
+
+<header-bar-{{ ai_gen_id }} class="ai-header-bar-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-header-bar__container-{{ ai_gen_id }}">
+    <div class="ai-header-bar__logo-{{ ai_gen_id }}">
+      <a href="{{ routes.root_url }}" class="ai-header-bar__logo-link-{{ ai_gen_id }}">
+        {% if block.settings.logo %}
+          <img
+            src="{{ block.settings.logo | image_url: width: 400 }}"
+            alt="{{ shop.name | escape }}"
+            width="{{ block.settings.logo.width }}"
+            height="{{ block.settings.logo.height }}"
+            loading="lazy"
+            class="ai-header-bar__logo-image-{{ ai_gen_id }}"
+          >
+        {% else %}
+          <div class="ai-header-bar__logo-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+      </a>
+    </div>
+
+    <div class="ai-header-bar__search-{{ ai_gen_id }}">
+      <form action="{{ routes.search_url }}" method="get" role="search" class="ai-header-bar__search-form-{{ ai_gen_id }}">
+        <input
+          type="search"
+          name="q"
+          class="ai-header-bar__search-input-{{ ai_gen_id }}"
+          placeholder="{{ block.settings.search_placeholder }}"
+          aria-label="{{ block.settings.search_placeholder }}"
+          value="{{ search.terms | escape }}"
+        >
+        <button type="submit" class="ai-header-bar__search-button-{{ ai_gen_id }}" aria-label="Rechercher">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.35-4.35"></path>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <div class="ai-header-bar__language-{{ ai_gen_id }}">
+      {% form 'localization', return_to: request.path %}
+        <select
+          name="locale_code"
+          class="ai-header-bar__language-select-{{ ai_gen_id }}"
+          aria-label="Sélectionner la langue"
+          onchange="this.form.submit()"
+        >
+          {% for locale in localization.available_languages %}
+            <option value="{{ locale.iso_code }}" {% if locale.iso_code == localization.language.iso_code %}selected{% endif %}>
+              {{ locale.endonym_name | capitalize }}
+            </option>
+          {% endfor %}
+        </select>
+      {% endform %}
+    </div>
+  </div>
+</header-bar-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class HeaderBar{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.searchForm = this.querySelector('.ai-header-bar__search-form-{{ ai_gen_id }}');
+        this.searchInput = this.querySelector('.ai-header-bar__search-input-{{ ai_gen_id }}');
+        
+        if (this.searchForm) {
+          this.searchForm.addEventListener('submit', (e) => {
+            if (!this.searchInput.value.trim()) {
+              e.preventDefault();
+            }
+          });
+        }
+      }
+    }
+
+    customElements.define('header-bar-{{ ai_gen_id }}', HeaderBar{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Header logo et recherche",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Disposition"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Largeur maximale",
+      "min": 1000,
+      "max": 1800,
+      "step": 100,
+      "unit": "px",
+      "default": 1600
+    },
+    {
+      "type": "range",
+      "id": "vertical_padding",
+      "label": "Espacement vertical",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "horizontal_padding",
+      "label": "Espacement horizontal",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Espacement entre éléments",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Couleur de fond",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Image du logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Largeur du logo",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 150
+    },
+    {
+      "type": "header",
+      "content": "Barre de recherche"
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Texte placeholder",
+      "default": "Rechercher un produit..."
+    },
+    {
+      "type": "range",
+      "id": "search_max_width",
+      "label": "Largeur maximale",
+      "min": 300,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "search_padding",
+      "label": "Espacement interne",
+      "min": 8,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "search_border_radius",
+      "label": "Arrondi des coins",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "search_border_width",
+      "label": "Épaisseur bordure",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "search_font_size",
+      "label": "Taille du texte",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "search_icon_size",
+      "label": "Taille de l'icône",
+      "min": 16,
+      "max": 28,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "search_background",
+      "label": "Fond",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "search_text_color",
+      "label": "Couleur du texte",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "search_placeholder_color",
+      "label": "Couleur placeholder",
+      "default": "#999999"
+    },
+    {
+      "type": "color",
+      "id": "search_border_color",
+      "label": "Couleur bordure",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "search_icon_color",
+      "label": "Couleur icône",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "search_focus_color",
+      "label": "Couleur focus",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "header",
+      "content": "Sélecteur de langue"
+    },
+    {
+      "type": "range",
+      "id": "language_padding",
+      "label": "Espacement interne",
+      "min": 8,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "language_border_radius",
+      "label": "Arrondi des coins",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "language_border_width",
+      "label": "Épaisseur bordure",
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "range",
+      "id": "language_font_size",
+      "label": "Taille du texte",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "color",
+      "id": "language_background",
+      "label": "Fond",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "language_text_color",
+      "label": "Couleur du texte",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "language_border_color",
+      "label": "Couleur bordure",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "language_focus_color",
+      "label": "Couleur focus",
+      "default": "#1a1a1a"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Header logo et recherche"
+    }
+  ]
+}
 {% endschema %}
