@@ -12,16 +12,16 @@
     "slideshow_TEBwWb": {
       "type": "slideshow",
       "blocks": {
-        "image_ndNJfN": {
+        "image_E7WmFa": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/nk_scorpion_hero.jpg",
-            "mobile_image": "shopify://shop_images/nk_scorpion_hero.jpg",
-            "content_max_width": 780,
+            "image": "shopify://shop_images/jude-bellingham-predator.jpg",
+            "mobile_image": "shopify://shop_images/jude-bellingham-predator.jpg",
+            "content_max_width": 660,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "subheading": "Tell your story",
-            "title": "Slide 1",
+            "title": "Slide title",
             "heading_tag": "h0",
             "button_text": "",
             "button_link": "",
@@ -56,16 +56,16 @@
             "background_gradient": ""
           }
         },
-        "image_E7WmFa": {
+        "image_ndNJfN": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/A_Banners_CactusJack_2.webp",
-            "mobile_image": "shopify://shop_images/A_Banners_CactusJack_2_30006a7a-b87f-416b-b760-5e10158fbcc5.webp",
+            "image": "shopify://shop_images/nk_scorpion_hero.jpg",
+            "mobile_image": "shopify://shop_images/nk_scorpion_hero.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
             "subheading": "Tell your story",
-            "title": "Slide title",
+            "title": "Slide 1",
             "heading_tag": "h0",
             "button_text": "",
             "button_link": "",
@@ -80,9 +80,9 @@
         }
       },
       "block_order": [
-        "image_ndNJfN",
+        "image_E7WmFa",
         "image_TkmwRV",
-        "image_E7WmFa"
+        "image_ndNJfN"
       ],
       "name": "Slideshow",
       "settings": {
@@ -294,7 +294,7 @@
         "subheading": "",
         "title": "",
         "content": "<h5><strong>RETROUVE TES </strong><em>JOUEURS PRÉFÉRÉS</em></h5>",
-        "background": "#FBFFE6",
+        "background": "#fbffe6",
         "background_gradient": "",
         "text_color": ""
       }
@@ -399,8 +399,8 @@
         "heading_gradient": "",
         "button_background": "",
         "button_text_color": "",
-        "accordion_background": "#FBFFE6",
-        "accordion_text_color": "#1A1A1A"
+        "accordion_background": "#fbffe6",
+        "accordion_text_color": "#1a1a1a"
       }
     }
   },

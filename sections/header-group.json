@@ -17,14 +17,14 @@
         "message_ij9kRh": {
           "type": "message",
           "settings": {
-            "text": "Livraison Offerte dès 100€ D'Achat",
+            "text": "Buy two = Get 1 free !",
             "url": ""
           }
         },
         "message": {
           "type": "message",
           "settings": {
-            "text": "Service Client Français : +33 7 71 55 13 75",
+            "text": "Livraison Offerte",
             "url": ""
           }
         }
@@ -40,7 +40,7 @@
         "text_size": "text-xs",
         "navigation_mode": "scrolling",
         "scrolling_speed": 10,
-        "background": "#D3FC01",
+        "background": "#04FFCB",
         "background_gradient": "",
         "text_color": "#343434"
       }
