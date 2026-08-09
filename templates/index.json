@@ -223,6 +223,58 @@
         "product_card_text_color": ""
       }
     },
+    "featured_collection_JCd9YQ": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "",
+        "products": [
+          "f50-elite-hyperfast-9",
+          "air-zoom-mercurial-vapor-xv-elite-fg-54",
+          "f50-elite-hyperfast-3",
+          "air-zoom-mercurial-vapor-xv-elite-fg-53",
+          "air-zoom-mercurial-vapor-xv-elite-fg-55",
+          "air-zoom-mercurial-vapor-xv-elite-fg-56",
+          "f50-elite-hyperfast-7",
+          "air-zoom-mercurial-vapor-xv-elite-fg-57",
+          "air-zoom-mercurial-vapor-xv-elite-fg-58",
+          "air-zoom-mercurial-vapor-17-elite-fg",
+          "f50-elite-hyperfast-1",
+          "air-zoom-mercurial-vapor-xvi-elite-patta-1",
+          "air-zoom-mercurial-vapor-xv-elite-fg-35",
+          "air-zoom-mercurial-vapor-xv-elite-fg-49",
+          "air-zoom-mercurial-vapor-xv-elite-fg-50",
+          "air-zoom-mercurial-vapor-xv-elite-fg-51",
+          "air-zoom-mercurial-vapor-xv-elite-fg-52",
+          "f50-elite-hyperfast-4",
+          "f50-elite-hyperfast-5",
+          "f50-elite-hyperfast-6",
+          "f50-elite-hyperfast-8",
+          "f50-elite-hyperfast-10",
+          "f50-elite-hyperfast-11",
+          "f50-elite-hyperfast",
+          "f50-elite-hyperfast-2"
+        ],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 6,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 3,
+        "subheading": "",
+        "title": "NOUVEAUTÉS",
+        "content": "",
+        "link_url": "",
+        "link_text": "Découvrir",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -280,6 +332,7 @@
     "slideshow_TEBwWb",
     "collection_list_UcD6BR",
     "featured_collection_bzeT64",
+    "featured_collection_JCd9YQ",
     "faq"
   ]
 }
