@@ -86,7 +86,7 @@
       ],
       "name": "Slideshow",
       "settings": {
-        "full_width": true,
+        "full_width": false,
         "allow_transparent_header": true,
         "show_initial_transition": false,
         "image_size": "lg",
@@ -94,7 +94,7 @@
         "transition_type": "fade_with_text",
         "autoplay": false,
         "cycle_speed": 6,
-        "background": "#f2f2f2",
+        "background": "#FFFFFF",
         "background_gradient": ""
       }
     },
