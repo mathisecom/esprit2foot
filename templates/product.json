@@ -50,6 +50,12 @@
             "payment_button_text_color": ""
           }
         },
+        "liquid_bgMFP8": {
+          "type": "liquid",
+          "settings": {
+            "liquid": ""
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -65,6 +71,7 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "liquid_bgMFP8",
         "description"
       ],
       "settings": {
