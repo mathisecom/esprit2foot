@@ -271,8 +271,8 @@
         "heading_gradient": "",
         "button_background": "",
         "button_text_color": "",
-        "accordion_background": "",
-        "accordion_text_color": ""
+        "accordion_background": "#FBFFE6",
+        "accordion_text_color": "#1A1A1A"
       }
     }
   },
