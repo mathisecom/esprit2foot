@@ -94,7 +94,7 @@
         "transition_type": "fade_with_text",
         "autoplay": false,
         "cycle_speed": 6,
-        "background": "#FFFFFF",
+        "background": "#ffffff",
         "background_gradient": ""
       }
     },
@@ -254,7 +254,7 @@
         "166442457738b23caf-2"
       ],
       "settings": {
-        "full_width": false,
+        "full_width": true,
         "subheading": "",
         "title": "QUESTIONS FRÉQUENTES",
         "content": "",
