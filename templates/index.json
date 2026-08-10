@@ -326,11 +326,12 @@
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify://shop_images/VAPOR_17_ELITE_FG_T.webp",
             "subheading": "Terrain Sec",
             "title": "FG",
             "url": "",
             "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 30
@@ -340,11 +341,12 @@
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify://shop_images/VAPOR_17_ELITE_AG-PRO_T.webp",
             "subheading": "Terrain Synthétique",
             "title": "AG",
             "url": "",
             "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 30
@@ -354,11 +356,12 @@
           "type": "collection",
           "settings": {
             "collection": "",
+            "image": "shopify://shop_images/VAPOR_17_ELITE_SG-PRO_T.webp",
             "subheading": "Terrain Gras",
             "title": "SG",
             "url": "",
             "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 30
