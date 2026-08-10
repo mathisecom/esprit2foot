@@ -18,8 +18,8 @@
             "image": "shopify://shop_images/jude-bellingham-predator.jpg",
             "mobile_image": "shopify://shop_images/jude-bellingham-predator.jpg",
             "content_max_width": 660,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
             "subheading": "\" S'INSPIRER DES MEILLEURS \"",
             "title": "La célèbre Adidas Predator de Jude Bellingham",
             "heading_tag": "h1",
@@ -28,8 +28,8 @@
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
+            "overlay_color": "#FFFFFF",
+            "overlay_opacity": 5,
             "background": "",
             "background_gradient": ""
           }
@@ -40,8 +40,8 @@
             "image": "shopify://shop_images/5c909f96-919c-4a5a-a7a6-44cd48a49148.webp",
             "mobile_image": "shopify://shop_images/5c909f96-919c-4a5a-a7a6-44cd48a49148.webp",
             "content_max_width": 780,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "mobile_text_position": "place-self-end-start text-start",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "subheading": "CHOISISSEZ VOTRE CAMP",
             "title": "Adidas \" Chaos vs Control \" Pack",
             "heading_tag": "h1",
@@ -50,8 +50,8 @@
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0,
+            "overlay_color": "#FF3C3C",
+            "overlay_opacity": 10,
             "background": "",
             "background_gradient": ""
           }
@@ -61,19 +61,19 @@
           "settings": {
             "image": "shopify://shop_images/1765802942-pack.2e16d0ba.fill-600x750.webp",
             "mobile_image": "shopify://shop_images/1765802942-pack.2e16d0ba.fill-600x750.webp",
-            "content_max_width": 1200,
+            "content_max_width": 840,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
-            "subheading": "MÈNEREZ-VOUS L'ATTAQUE ?",
-            "title": "Découvrez le nouveau Attack Pack de chez Nike",
+            "subheading": "MENEZ L'ATTAQUE !",
+            "title": "Découvrez le nouveau Attack Pack de Nike",
             "heading_tag": "h1",
             "button_text": "",
             "button_link": "",
-            "text_color": "#ffffff",
+            "text_color": "#FFFFFF",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 21,
+            "overlay_opacity": 30,
             "background": "",
             "background_gradient": ""
           }
@@ -105,7 +105,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/580x580_2.jpg",
+            "image": "shopify://shop_images/0c49c2c5bd48.webp",
             "subheading": "",
             "title": "NIKE",
             "url": "",
@@ -113,14 +113,14 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 8
           }
         },
         "collection_K4iLgR": {
           "type": "collection",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/580x580_1.jpg",
+            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_015350.png",
             "subheading": "",
             "title": "ADIDAS",
             "url": "",
@@ -128,39 +128,55 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         },
         "collection_Y6LAUJ": {
           "type": "collection",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/580x580_3.jpg",
+            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_020321.png",
             "subheading": "",
             "title": "PUMA",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_WqeByN": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_020004.png",
+            "subheading": "",
+            "title": "NEW BALANCE",
             "url": "",
             "heading_tag": "h2",
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 0
           }
         }
       },
       "block_order": [
         "collection_BhUaFk",
         "collection_K4iLgR",
-        "collection_Y6LAUJ"
+        "collection_Y6LAUJ",
+        "collection_WqeByN"
       ],
       "name": "Collection list",
       "settings": {
         "full_width": true,
         "stack_collections": false,
-        "collections_per_row_mobile": "1",
+        "collections_per_row_mobile": "2",
         "collections_per_row": 3,
-        "show_progress_bar": false,
+        "show_progress_bar": true,
         "subheading": "",
-        "title": "NOS COLLECTIONS",
+        "title": "NOS MARQUES",
         "content": "",
         "link_url": "",
         "link_text": "",
@@ -229,9 +245,9 @@
         "item_Y9aj77": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/17.webp",
+            "image": "shopify://shop_images/images_12.jpg",
             "column_size": "4",
-            "title": "",
+            "title": "JUDE BELLINGHAM",
             "heading_tag": "h4",
             "content": "",
             "link_url": "",
@@ -242,9 +258,9 @@
         "item_LUgrTp": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/16.webp",
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack.jpg",
             "column_size": "4",
-            "title": "",
+            "title": "LAMINE YAMAL",
             "heading_tag": "h4",
             "content": "",
             "link_url": "",
@@ -255,9 +271,9 @@
         "item_kKGWje": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/18.webp",
+            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_022925.png",
             "column_size": "4",
-            "title": "",
+            "title": "LEO MESSI",
             "heading_tag": "h4",
             "content": "",
             "link_url": "",
@@ -268,9 +284,9 @@
         "item_VnUzyf": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/19.webp",
+            "image": "shopify://shop_images/nike-mercurial-25-ans-kylian-mbappe-2023-football-boots.jpg",
             "column_size": "4",
-            "title": "",
+            "title": "KYLIAN MBAPPE",
             "heading_tag": "h4",
             "content": "",
             "link_url": "",
