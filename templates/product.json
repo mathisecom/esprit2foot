@@ -271,7 +271,7 @@
           "settings": {
             "round_avatar": true,
             "show_rating": true,
-            "rating": 4,
+            "rating": 5,
             "author": "Noé S.",
             "title": "Qualité au top",
             "content": "<p>Bien reçu la paire, franchement rien à dire qualité au top et livraison rapide. 👌🔥</p>"
@@ -294,16 +294,52 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 4,
-            "author": "Joshua A.",
-            "title": "Testimonial 3",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "author": "Julien H.",
+            "title": "Super Propre",
+            "content": "<p>Paire reçue ✅ franchement super propre, bonne taille et confortable. Merci pour le sérieux 🙏</p>"
+          }
+        },
+        "testimonial_fEAw3P": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Théo J.",
+            "title": "Encore mieux en vrai",
+            "content": "<p>J’ai reçu les crampons ils sont encore mieux en vrai 🔥 Merci je repasserai commande.</p>"
+          }
+        },
+        "testimonial_DeMcrN": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "George L.",
+            "title": "Qualité au Rendez-Vous",
+            "content": "<p>Merci beaucoup pour la paire, mon fils est trop content. Livraison nickel et qualité au rendez-vous 👍</p>"
+          }
+        },
+        "testimonial_VWVzw7": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Olivier G.",
+            "title": "Tout est carré merci 🤝",
+            "content": "<p>Première commande chez vous et franchement pas déçu. Paire reçue rapidement, tout est carré merci 🤝</p>"
           }
         }
       },
       "block_order": [
         "testimonial_TQkrMd",
         "testimonial_VH9FP8",
-        "testimonial_KrDYPb"
+        "testimonial_KrDYPb",
+        "testimonial_fEAw3P",
+        "testimonial_DeMcrN",
+        "testimonial_VWVzw7"
       ],
       "name": "Testimonials",
       "settings": {
