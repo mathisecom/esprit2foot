@@ -458,6 +458,7 @@
         "image_48MKJB": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/crampons-foot-footpack-8-800x800-c-center.jpg",
             "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center text-center",
