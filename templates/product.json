@@ -305,6 +305,7 @@
         "item_YrXY9Y",
         "item_afrNNX"
       ],
+      "disabled": true,
       "name": "FAQ",
       "settings": {
         "full_width": true,

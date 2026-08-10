@@ -210,23 +210,7 @@
       "settings": {
         "collection": "",
         "products": [
-          "f50-elite-hyperfast-9",
-          "f50-elite-hyperfast-3",
-          "f50-elite-hyperfast-7",
-          "air-zoom-mercurial-vapor-xv-elite-fg-58",
-          "air-zoom-mercurial-vapor-17-elite-fg",
-          "f50-elite-hyperfast-1",
-          "air-zoom-mercurial-vapor-xvi-elite-patta-1",
-          "air-zoom-mercurial-vapor-xv-elite-fg-35",
-          "air-zoom-mercurial-vapor-xv-elite-fg-49",
-          "f50-elite-hyperfast-4",
-          "f50-elite-hyperfast-5",
-          "f50-elite-hyperfast-6",
-          "f50-elite-hyperfast-8",
-          "f50-elite-hyperfast-10",
-          "f50-elite-hyperfast-11",
-          "f50-elite-hyperfast",
-          "f50-elite-hyperfast-2"
+          "air-mercurial"
         ],
         "full_width": true,
         "stack_products": false,
