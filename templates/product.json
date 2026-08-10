@@ -281,10 +281,12 @@
         "image_pyzQ3q": {
           "type": "image",
           "settings": {
-            "media_width": 50,
+            "image": "shopify://shop_images/crampons-foot-footpack-8-800x800-c-center.jpg",
+            "media_width": 45,
             "media_position": "start",
             "text_position": "place-self-center text-center",
             "icon": "none",
+            "custom_icon": "shopify://shop_images/icone_7.png",
             "icon_width": 48,
             "subheading": "",
             "title": "Heading",
