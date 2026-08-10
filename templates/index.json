@@ -150,6 +150,7 @@
           "type": "collection",
           "settings": {
             "collection": "new-balance",
+            "image": "shopify://shop_images/bota-new-balance-furon-pro-fg-v9-white-alkaline-green-0.webp",
             "subheading": "",
             "title": "NEW BALANCE",
             "url": "",
