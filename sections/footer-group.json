@@ -92,7 +92,8 @@
         "newsletter": {
           "type": "newsletter",
           "settings": {
-            "image_width": 150,
+            "image": "shopify://shop_images/Nouveau_projet_21.png",
+            "image_width": 190,
             "heading_size": "h5",
             "title": "Newsletters",
             "content": "<p>Soyez le premier à découvrir nos actualités et nouveautés en vous abonnant !</p>"
