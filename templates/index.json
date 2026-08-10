@@ -37,8 +37,6 @@
         "image_TkmwRV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/5c909f96-919c-4a5a-a7a6-44cd48a49148.webp",
-            "mobile_image": "shopify://shop_images/5c909f96-919c-4a5a-a7a6-44cd48a49148.webp",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
@@ -59,8 +57,6 @@
         "image_ndNJfN": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/1765802942-pack.2e16d0ba.fill-600x750.webp",
-            "mobile_image": "shopify://shop_images/1765802942-pack.2e16d0ba.fill-600x750.webp",
             "content_max_width": 840,
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-center sm:text-center",
@@ -104,42 +100,36 @@
         "image_DCU4ja": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/9.avif",
             "url": ""
           }
         },
         "image_c4b6fw": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/8.avif",
             "url": ""
           }
         },
         "image_B7Tdcr": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/12.avif",
             "url": ""
           }
         },
         "image_VJ8eXm": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/10.avif",
             "url": ""
           }
         },
         "image_CVTL4n": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/7.avif",
             "url": ""
           }
         },
         "image_iM9iVi": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/13.avif",
             "url": ""
           }
         }
@@ -197,7 +187,6 @@
           "type": "collection",
           "settings": {
             "collection": "nike",
-            "image": "shopify://shop_images/0c49c2c5bd48.webp",
             "subheading": "",
             "title": "NIKE",
             "url": "",
@@ -212,7 +201,6 @@
           "type": "collection",
           "settings": {
             "collection": "adidas",
-            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_015350.png",
             "subheading": "",
             "title": "ADIDAS",
             "url": "",
@@ -227,7 +215,6 @@
           "type": "collection",
           "settings": {
             "collection": "puma",
-            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_020321.png",
             "subheading": "",
             "title": "PUMA",
             "url": "",
@@ -242,7 +229,6 @@
           "type": "collection",
           "settings": {
             "collection": "new-balance",
-            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_020004.png",
             "subheading": "",
             "title": "NEW BALANCE",
             "url": "",
@@ -346,7 +332,6 @@
         "item_Y9aj77": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/images_12.jpg",
             "column_size": "4",
             "title": "JUDE BELLINGHAM",
             "heading_tag": "h4",
@@ -359,7 +344,6 @@
         "item_LUgrTp": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack.jpg",
             "column_size": "4",
             "title": "LAMINE YAMAL",
             "heading_tag": "h4",
@@ -372,7 +356,6 @@
         "item_kKGWje": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack.webp",
             "column_size": "4",
             "title": "LEO MESSI",
             "heading_tag": "h4",
@@ -385,7 +368,6 @@
         "item_VnUzyf": {
           "type": "item",
           "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_1.webp",
             "column_size": "4",
             "title": "KYLIAN MBAPPE",
             "heading_tag": "h4",
@@ -474,12 +456,10 @@
         "image_48MKJB": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/crampons-foot-footpack-8-800x800-c-center.jpg",
             "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center text-center",
             "icon": "none",
-            "custom_icon": "shopify://shop_images/icone_7.png",
             "icon_width": 56,
             "subheading": "À PROPOS DE NOUS",
             "title": "Des crampons qui font la différence.",
@@ -561,35 +541,30 @@
         "image_nmma9e": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_10.png",
             "url": ""
           }
         },
         "image_nEacqn": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_9.png",
             "url": ""
           }
         },
         "image_DxDP8q": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_8.png",
             "url": ""
           }
         },
         "image_EcG8m9": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_7.png",
             "url": ""
           }
         },
         "image_3NweCt": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_6.png",
             "url": ""
           }
         }
