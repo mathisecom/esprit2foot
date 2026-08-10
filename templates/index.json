@@ -528,7 +528,8 @@
         "image_48MKJB": {
           "type": "image",
           "settings": {
-            "media_width": 50,
+            "image": "shopify://shop_images/crampons_esprit_2_FOOT.jpg",
+            "media_width": 45,
             "media_position": "start",
             "text_position": "place-self-center text-center",
             "icon": "none",
