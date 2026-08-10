@@ -17,21 +17,21 @@
         "message_gxax6w": {
           "type": "message",
           "settings": {
-            "text": "La meilleure qualité du marché !",
+            "text": "LA MEILLEURE QUALITÉ DU MARCHÉ !",
             "url": ""
           }
         },
         "message": {
           "type": "message",
           "settings": {
-            "text": "Livraison 100% Gratuite",
+            "text": "LIVRAISON 100% GRATUITE",
             "url": ""
           }
         },
         "message_ij9kRh": {
           "type": "message",
           "settings": {
-            "text": "2 achetés = 1 OFFERT !",
+            "text": "2 ACHETÉS = 1 OFFERT !",
             "url": ""
           }
         }
@@ -50,7 +50,7 @@
         "scrolling_speed": 10,
         "background": "#00ffae",
         "background_gradient": "",
-        "text_color": "#fdfafa"
+        "text_color": "#000000"
       }
     },
     "header": {
