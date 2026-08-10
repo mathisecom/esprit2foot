@@ -627,10 +627,10 @@
           "settings": {
             "round_avatar": true,
             "show_rating": true,
-            "rating": 4,
-            "author": "John S.",
-            "title": "Testimonial 1",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "rating": 5,
+            "author": "Noé S.",
+            "title": "Qualité au top",
+            "content": "<p>Bien reçu la paire, franchement rien à dire qualité au top et livraison rapide. 👌🔥</p>"
           }
         },
         "testimonial_PGrFG3": {
@@ -639,9 +639,9 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
-            "author": "Mary U.",
-            "title": "Testimonial 2",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "author": "Mark R.",
+            "title": "Je recommande fort 🤝",
+            "content": "<p>J’ai reçu mes crampons aujourd’hui ils sont incroyables 😍 merci encore je recommande fort 🤝</p>"
           }
         },
         "testimonial_JBJjXd": {
@@ -649,10 +649,10 @@
           "settings": {
             "round_avatar": true,
             "show_rating": true,
-            "rating": 4,
-            "author": "Joshua A.",
-            "title": "Testimonial 3",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "rating": 5,
+            "author": "Julien H.",
+            "title": "Super Propre",
+            "content": "<p>Paire reçue ✅ franchement super propre, bonne taille et confortable. Merci pour le sérieux 🙏</p>"
           }
         },
         "testimonial_qzUkzd": {
@@ -661,9 +661,9 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 4,
-            "author": "",
-            "title": "Testimonial",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "author": "Théo J.",
+            "title": "Encore mieux en vrai",
+            "content": "<p>J’ai reçu les crampons ils sont encore mieux en vrai 😂🔥 merci je repasserai commande</p>"
           }
         },
         "testimonial_iCXGAy": {
@@ -671,10 +671,21 @@
           "settings": {
             "round_avatar": true,
             "show_rating": true,
-            "rating": 4,
-            "author": "",
-            "title": "Testimonial",
-            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+            "rating": 5,
+            "author": "George L.",
+            "title": "Qualité au Rendez-Vous",
+            "content": "<p>Merci beaucoup pour la paire, mon fils est trop content 😍 livraison nickel et qualité au rendez-vous 👍</p>"
+          }
+        },
+        "testimonial_UHhrat": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Olivier G.",
+            "title": "Tout est carré merci 🤝",
+            "content": "<p>Première commande chez vous et franchement pas déçu 💪 paire reçue rapidement, tout est carré merci 🤝</p>"
           }
         }
       },
@@ -683,7 +694,8 @@
         "testimonial_PGrFG3",
         "testimonial_JBJjXd",
         "testimonial_qzUkzd",
-        "testimonial_iCXGAy"
+        "testimonial_iCXGAy",
+        "testimonial_UHhrat"
       ],
       "name": "Testimonials",
       "settings": {
