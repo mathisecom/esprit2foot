@@ -196,7 +196,7 @@
         "collection_BhUaFk": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "nike",
             "image": "shopify://shop_images/0c49c2c5bd48.webp",
             "subheading": "",
             "title": "NIKE",
@@ -211,7 +211,7 @@
         "collection_K4iLgR": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "adidas",
             "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_015350.png",
             "subheading": "",
             "title": "ADIDAS",
@@ -226,7 +226,7 @@
         "collection_Y6LAUJ": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "puma",
             "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_020321.png",
             "subheading": "",
             "title": "PUMA",
@@ -241,7 +241,7 @@
         "collection_WqeByN": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "new-balance",
             "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_020004.png",
             "subheading": "",
             "title": "NEW BALANCE",
