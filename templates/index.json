@@ -413,40 +413,82 @@
         "collection_kLdbmj": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "f50",
             "subheading": "",
             "title": "F50",
             "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 35
           }
         },
-        "collection_c47Xhj": {
+        "collection_qWUcyP": {
           "type": "collection",
           "settings": {
-            "collection": "",
-            "subheading": "",
-            "title": "Vapor",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        },
-        "collection_JgJgQf": {
-          "type": "collection",
-          "settings": {
-            "collection": "",
+            "collection": "vapor",
             "subheading": "",
             "title": "",
             "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 35
+          }
+        },
+        "collection_QnDPmF": {
+          "type": "collection",
+          "settings": {
+            "collection": "tiempo",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 35
+          }
+        },
+        "collection_4rR8iJ": {
+          "type": "collection",
+          "settings": {
+            "collection": "superfly",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 35
+          }
+        },
+        "collection_Qkmnat": {
+          "type": "collection",
+          "settings": {
+            "collection": "phantom",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 35
+          }
+        },
+        "collection_Ny3wJw": {
+          "type": "collection",
+          "settings": {
+            "collection": "predator",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 30
@@ -455,8 +497,11 @@
       },
       "block_order": [
         "collection_kLdbmj",
-        "collection_c47Xhj",
-        "collection_JgJgQf"
+        "collection_qWUcyP",
+        "collection_QnDPmF",
+        "collection_4rR8iJ",
+        "collection_Qkmnat",
+        "collection_Ny3wJw"
       ],
       "name": "Collection list",
       "settings": {
@@ -483,7 +528,6 @@
         "image_48MKJB": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/crampons-foot-footpack-8-800x800-c-center.jpg",
             "media_width": 50,
             "media_position": "start",
             "text_position": "place-self-center text-center",
