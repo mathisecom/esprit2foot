@@ -28,7 +28,7 @@
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
-            "overlay_color": "#FFFFFF",
+            "overlay_color": "#ffffff",
             "overlay_opacity": 5,
             "background": "",
             "background_gradient": ""
@@ -50,7 +50,7 @@
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
-            "overlay_color": "#FF3C3C",
+            "overlay_color": "#ff3c3c",
             "overlay_opacity": 10,
             "background": "",
             "background_gradient": ""
@@ -69,7 +69,7 @@
             "heading_tag": "h1",
             "button_text": "",
             "button_link": "",
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
@@ -140,7 +140,7 @@
             "title": "PUMA",
             "url": "",
             "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
+            "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0
