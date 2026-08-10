@@ -28,7 +28,7 @@
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
-            "overlay_color": "#1A1A1A",
+            "overlay_color": "#1a1a1a",
             "overlay_opacity": 34,
             "background": "",
             "background_gradient": ""
@@ -435,12 +435,36 @@
             "title": "Testimonial 3",
             "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
           }
+        },
+        "testimonial_qzUkzd": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "",
+            "title": "Testimonial",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        },
+        "testimonial_iCXGAy": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "",
+            "title": "Testimonial",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
         }
       },
       "block_order": [
         "testimonial_zmpkfe",
         "testimonial_PGrFG3",
-        "testimonial_JBJjXd"
+        "testimonial_JBJjXd",
+        "testimonial_qzUkzd",
+        "testimonial_iCXGAy"
       ],
       "name": "Testimonials",
       "settings": {
