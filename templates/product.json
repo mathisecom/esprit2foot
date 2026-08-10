@@ -110,6 +110,150 @@
         "input_text_color": ""
       }
     },
+    "logoscroll_RnCMqr": {
+      "type": "logoscroll",
+      "blocks": {
+        "image_gqC3Vc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_10.png",
+            "url": ""
+          }
+        },
+        "image_6dWjKg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_9.png",
+            "url": ""
+          }
+        },
+        "image_4MbLWY": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_8.png",
+            "url": ""
+          }
+        },
+        "image_8ebcWt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_7.png",
+            "url": ""
+          }
+        },
+        "image_J6K7Ti": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_6.png",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_gqC3Vc",
+        "image_6dWjKg",
+        "image_4MbLWY",
+        "image_8ebcWt",
+        "image_J6K7Ti"
+      ],
+      "name": "SS - Scrolling logo cloud #5",
+      "settings": {
+        "layout_radius": 30,
+        "layout_border_thickness": 0,
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 18,
+        "heading_size_mobile": 18,
+        "heading_height": 130,
+        "scrolling_velocity": 30,
+        "scrolling_velocity_mobile": 18,
+        "scrolling_direction": "left",
+        "pause_hover": false,
+        "scrolling_gap": 40,
+        "scrolling_gap_mobile": 20,
+        "card_width_desktop": 130,
+        "card_width_mobile": 130,
+        "heading_color": "#121212",
+        "layout_bg_color": "#FFFFFF",
+        "layout_border_color": "#121212",
+        "background_color": "#FFFFFF",
+        "border_color": "#121212",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 0,
+        "full_width": false,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "testimonials_qtFiFM": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_TQkrMd": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "John S.",
+            "title": "Testimonial 1",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        },
+        "testimonial_VH9FP8": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 5,
+            "author": "Mary U.",
+            "title": "Testimonial 2",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        },
+        "testimonial_KrDYPb": {
+          "type": "testimonial",
+          "settings": {
+            "round_avatar": true,
+            "show_rating": true,
+            "rating": 4,
+            "author": "Joshua A.",
+            "title": "Testimonial 3",
+            "content": "<p>Share what your customers are saying about your products, customer service or shipping rates.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_TQkrMd",
+        "testimonial_VH9FP8",
+        "testimonial_KrDYPb"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "full_width": true,
+        "stack_testimonials": false,
+        "subheading": "",
+        "title": "",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "testimonial_card_background": "",
+        "testimonial_card_text_color": ""
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -135,6 +279,8 @@
   },
   "order": [
     "main",
+    "logoscroll_RnCMqr",
+    "testimonials_qtFiFM",
     "related-products"
   ]
 }
