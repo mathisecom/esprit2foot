@@ -97,6 +97,16 @@
             "content": "<p>Toutes tes commandes partiront de France.</p><ul><li><strong>En France</strong>, la livraison peut prendre de <strong>1 à 5 jours</strong> ouvrés selon le transporteur que tu choisiras au moment du paiement.</li><li><strong>En Europe</strong>, avec la livraison standard Colissimo, les délais varient selon la distance de ton pays par rapport à la France ; avec DHL Express, cela prend de <strong>2 à 4 jours ouvrés.</strong></li><li><strong>À l'international</strong>, la livraison standard Colissimo <strong>prend de 1 à 3 semaines</strong> ouvrées, tandis que DHL Express prend de 3 à 6 jours ouvrés.</li><li><strong>Retours :</strong> Tu dois effectuer ta demande de retour via le formulaire dédié dans les <strong>14 jours</strong> suivant la réception de ta commande.</li></ul>",
             "page": ""
           }
+        },
+        "collapsible_text_mAYQGg": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Notre Engagement",
+            "content": "<p>Nous souhaitons proposer une expérience d'achat claire, transparente et fiable. </p><p>Certains produits disponibles sur notre boutique sont <strong>détenus en stock</strong>, tandis que <strong>d'autres sont proposés **sur commande**.</strong> </p><p>Lorsqu'un produit est proposé sur commande, cette information est indiquée sur sa fiche produit avant la validation de la commande.</p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -111,7 +121,8 @@
         "liquid_bgMFP8",
         "liquid_BnYtXq",
         "description",
-        "collapsible_text_xpWjYi"
+        "collapsible_text_xpWjYi",
+        "collapsible_text_mAYQGg"
       ],
       "settings": {
         "full_width": true,
@@ -149,9 +160,9 @@
             "content": "<p>On sélectionne les modèles les plus demandés et on te guide pour choisir vite, sans te perdre dans un catalogue.</p>",
             "link_text": "",
             "link_url": "",
-            "background": "#01FFAE",
+            "background": "#01ffae",
             "background_gradient": "",
-            "text_color": "#0D0D0D",
+            "text_color": "#0d0d0d",
             "text_gradient": "",
             "button_background": "",
             "button_text_color": ""
