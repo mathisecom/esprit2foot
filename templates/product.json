@@ -131,6 +131,43 @@
         "input_text_color": ""
       }
     },
+    "media_with_text_4XKhtF": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_pyzQ3q": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/crampons-foot-footpack-8-800x800-c-center.jpg",
+            "media_width": 45,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "custom_icon": "shopify://shop_images/icone_7.png",
+            "icon_width": 48,
+            "subheading": "À PROPOS DE NOUS",
+            "title": "Des crampons qui font la différence.",
+            "content": "<p>On sélectionne les modèles les plus demandés et on te guide pour choisir vite, sans te perdre dans un catalogue.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#01FFAE",
+            "background_gradient": "",
+            "text_color": "#0D0D0D",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_pyzQ3q"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
+    },
     "logoscroll_RnCMqr": {
       "type": "logoscroll",
       "blocks": {
@@ -275,43 +312,6 @@
         "testimonial_card_text_color": ""
       }
     },
-    "media_with_text_4XKhtF": {
-      "type": "media-with-text",
-      "blocks": {
-        "image_pyzQ3q": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/crampons-foot-footpack-8-800x800-c-center.jpg",
-            "media_width": 45,
-            "media_position": "start",
-            "text_position": "place-self-center text-center",
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/icone_7.png",
-            "icon_width": 48,
-            "subheading": "",
-            "title": "Heading",
-            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
-            "link_text": "",
-            "link_url": "",
-            "background": "#01FFAE",
-            "background_gradient": "",
-            "text_color": "#0D0D0D",
-            "text_gradient": "",
-            "button_background": "",
-            "button_text_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_pyzQ3q"
-      ],
-      "name": "Media with text",
-      "settings": {
-        "full_width": false,
-        "alternate_media_position": false,
-        "spacing": "small"
-      }
-    },
     "faq_tdqe7U": {
       "type": "faq",
       "blocks": {
@@ -391,9 +391,9 @@
   },
   "order": [
     "main",
+    "media_with_text_4XKhtF",
     "logoscroll_RnCMqr",
     "testimonials_qtFiFM",
-    "media_with_text_4XKhtF",
     "faq_tdqe7U",
     "related-products"
   ]
