@@ -715,6 +715,46 @@
         "testimonial_card_text_color": ""
       }
     },
+    "logo_list_M8meQF": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_q6mNTG": {
+          "type": "logo",
+          "settings": {
+            "logo_width": 120,
+            "link": ""
+          }
+        },
+        "logo_QcxBmi": {
+          "type": "logo",
+          "settings": {
+            "logo_width": 120,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_q6mNTG",
+        "logo_QcxBmi"
+      ],
+      "disabled": true,
+      "name": "Logo list",
+      "settings": {
+        "full_width": true,
+        "stack_mobile": true,
+        "title": "",
+        "content": "<h5> SUIVEZ-NOUS</h5>",
+        "text_alignment": "center",
+        "items_per_row": 5,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "logo_item_background": "",
+        "logo_item_border": ""
+      }
+    },
     "faq": {
       "type": "faq",
       "blocks": {
@@ -782,6 +822,7 @@
     "scrolling_text_MBNpEd",
     "logoscroll_8WrQiQ",
     "testimonials_p6mp7i",
+    "logo_list_M8meQF",
     "faq"
   ]
 }
