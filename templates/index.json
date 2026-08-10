@@ -327,7 +327,7 @@
           "settings": {
             "collection": "",
             "subheading": "",
-            "title": "",
+            "title": "FG",
             "url": "",
             "heading_tag": "h2",
             "text_position": "place-self-center text-center",
@@ -341,7 +341,7 @@
           "settings": {
             "collection": "",
             "subheading": "",
-            "title": "",
+            "title": "AG",
             "url": "",
             "heading_tag": "h2",
             "text_position": "place-self-center text-center",
@@ -355,7 +355,7 @@
           "settings": {
             "collection": "",
             "subheading": "",
-            "title": "",
+            "title": "SG",
             "url": "",
             "heading_tag": "h2",
             "text_position": "place-self-center text-center",
@@ -378,8 +378,8 @@
         "collections_per_row": 3,
         "show_progress_bar": true,
         "subheading": "",
-        "title": "Collection list",
-        "content": "",
+        "title": "CHOISIS TA SEMELLE",
+        "content": "<p>ADAPTE TA SEMELLE À TOUT TYPE DE TERRAIN</p>",
         "link_url": "",
         "link_text": "",
         "background": "",
