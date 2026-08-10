@@ -452,6 +452,41 @@
         "product_card_text_color": ""
       }
     },
+    "media_with_text_98C7FQ": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_48MKJB": {
+          "type": "image",
+          "settings": {
+            "media_width": 50,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "icon_width": 48,
+            "subheading": "À PROPOS DE NOUS",
+            "title": "Des crampons qui font la différence.",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#01FFAE",
+            "background_gradient": "",
+            "text_color": "#1A1A1A",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_48MKJB"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
+    },
     "rich_text_UdD7NL": {
       "type": "rich-text",
       "blocks": {
@@ -713,6 +748,7 @@
     "featured_collection_bzeT64",
     "multi_column_h4QNhQ",
     "featured_collection_JCd9YQ",
+    "media_with_text_98C7FQ",
     "rich_text_UdD7NL",
     "logoscroll_8WrQiQ",
     "testimonials_p6mp7i",
