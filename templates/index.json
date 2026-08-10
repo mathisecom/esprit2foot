@@ -538,6 +538,23 @@
         "text_color": ""
       }
     },
+    "scrolling_text_MBNpEd": {
+      "type": "scrolling-text",
+      "disabled": true,
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "Satisfait ou Remboursé  Paiement 100% Sécurisé. Livraison Express Sécurisée. Service Client Français",
+        "text_size": "xsmall",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 10,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "text_gradient": ""
+      }
+    },
     "logoscroll_8WrQiQ": {
       "type": "logoscroll",
       "blocks": {
@@ -769,6 +786,7 @@
     "featured_collection_JCd9YQ",
     "media_with_text_98C7FQ",
     "rich_text_UdD7NL",
+    "scrolling_text_MBNpEd",
     "logoscroll_8WrQiQ",
     "testimonials_p6mp7i",
     "faq"
