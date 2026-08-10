@@ -407,6 +407,76 @@
         "product_card_text_color": ""
       }
     },
+    "collection_list_7khGbL": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_kLdbmj": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "F50",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_c47Xhj": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "Vapor",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        },
+        "collection_JgJgQf": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 30
+          }
+        }
+      },
+      "block_order": [
+        "collection_kLdbmj",
+        "collection_c47Xhj",
+        "collection_JgJgQf"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "full_width": true,
+        "stack_collections": false,
+        "collections_per_row_mobile": "1",
+        "collections_per_row": 3,
+        "show_progress_bar": true,
+        "subheading": "",
+        "title": "MODÈLES PHARES",
+        "content": "",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "media_with_text_98C7FQ": {
       "type": "media-with-text",
       "blocks": {
@@ -776,6 +846,7 @@
     "multi_column_h4QNhQ",
     "collection_list_fYBFCR",
     "featured_collection_JCd9YQ",
+    "collection_list_7khGbL",
     "media_with_text_98C7FQ",
     "rich_text_UdD7NL",
     "scrolling_text_MBNpEd",
