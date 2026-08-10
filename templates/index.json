@@ -279,6 +279,22 @@
         "heading_gradient": ""
       }
     },
+    "scrolling_text_ctzbLQ": {
+      "type": "scrolling-text",
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "OFFRE D'ÉTÉ : 2 ACHETÉS = 1 OFFERT !",
+        "text_size": "xsmall",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 10,
+        "background": "#01FFAE",
+        "background_gradient": "",
+        "text_color": "",
+        "text_gradient": ""
+      }
+    },
     "featured_collection_bzeT64": {
       "type": "featured-collection",
       "custom_css": [],
@@ -747,6 +763,7 @@
     "slideshow_TEBwWb",
     "logoscroll_Y76Pit",
     "collection_list_UcD6BR",
+    "scrolling_text_ctzbLQ",
     "featured_collection_bzeT64",
     "multi_column_h4QNhQ",
     "featured_collection_JCd9YQ",
