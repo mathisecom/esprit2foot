@@ -498,24 +498,35 @@
         "image_nmma9e": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_10.png",
             "url": ""
           }
         },
         "image_nEacqn": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_9.png",
             "url": ""
           }
         },
         "image_DxDP8q": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_8.png",
             "url": ""
           }
         },
         "image_EcG8m9": {
           "type": "image",
           "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_7.png",
+            "url": ""
+          }
+        },
+        "image_3NweCt": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/BANNER_MOBILE_6.png",
             "url": ""
           }
         }
@@ -524,7 +535,8 @@
         "image_nmma9e",
         "image_nEacqn",
         "image_DxDP8q",
-        "image_EcG8m9"
+        "image_EcG8m9",
+        "image_3NweCt"
       ],
       "name": "SS - Scrolling logo cloud #5",
       "settings": {
@@ -543,7 +555,7 @@
         "scrolling_gap": 70,
         "scrolling_gap_mobile": 30,
         "card_width_desktop": 130,
-        "card_width_mobile": 100,
+        "card_width_mobile": 130,
         "heading_color": "#121212",
         "layout_bg_color": "#FFFFFF",
         "layout_border_color": "#121212",
