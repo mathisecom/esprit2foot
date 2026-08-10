@@ -326,7 +326,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "subheading": "",
+            "subheading": "Terrain Sec",
             "title": "FG",
             "url": "",
             "heading_tag": "h2",
@@ -340,7 +340,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "subheading": "",
+            "subheading": "Terrain Synthétique",
             "title": "AG",
             "url": "",
             "heading_tag": "h2",
@@ -354,7 +354,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "subheading": "",
+            "subheading": "Terrain Gras",
             "title": "SG",
             "url": "",
             "heading_tag": "h2",
