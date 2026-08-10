@@ -59,7 +59,7 @@
         "enable_sticky": true,
         "hide_on_scroll": false,
         "logo": "shopify://shop_images/Nouveau_projet_20.png",
-        "logo_max_width": 100,
+        "logo_max_width": 140,
         "logo_mobile_max_width": 130,
         "menu": "main-menu",
         "sidebar_menu": "",
