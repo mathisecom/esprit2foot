@@ -12,10 +12,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "liquid_zBahwN": {
+        "liquid_7XHWzP": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div style=\"\n  background-color: #01FFAE;\n  color: #000000;\n  padding: 7px 14px;\n  margin-bottom: 10px;\n  text-align: center;\n  font-weight: 800;\n  font-size: 15px;\n  border: 1px solid #000000;\n  border-radius: 5px;\n  text-transform: uppercase;\n  box-shadow: 2px 2px 0 #000000;\n\">\n  2 ACHETÉS = 1 OFFERT !\n</div>"
+            "liquid": ""
           }
         },
         "title": {
@@ -28,6 +28,12 @@
           "type": "price",
           "settings": {
             "show_taxes_notice": false
+          }
+        },
+        "liquid_zBahwN": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div style=\"\n  background-color: #01FFAE;\n  color: #000000;\n  padding: 7px 14px;\n  margin-bottom: 10px;\n  text-align: center;\n  font-weight: 800;\n  font-size: 15px;\n  border: 1px solid #000000;\n  border-radius: 5px;\n  text-transform: uppercase;\n  box-shadow: 2px 2px 0 #000000;\n\">\n  2 ACHETÉS = 1 OFFERT !\n</div>"
           }
         },
         "variant_picker": {
@@ -82,9 +88,10 @@
         }
       },
       "block_order": [
-        "liquid_zBahwN",
+        "liquid_7XHWzP",
         "title",
         "price",
+        "liquid_zBahwN",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
