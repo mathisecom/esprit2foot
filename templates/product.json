@@ -107,6 +107,16 @@
             "content": "<p>Nous souhaitons proposer une expérience d'achat claire, transparente et fiable. </p><p>Certains produits disponibles sur notre boutique sont <strong>détenus en stock</strong>, tandis que <strong>d'autres sont proposés **sur commande**.</strong> </p><p>Lorsqu'un produit est proposé sur commande, cette information est indiquée sur sa fiche produit avant la validation de la commande.</p>",
             "page": ""
           }
+        },
+        "collapsible_text_r6WDfE": {
+          "type": "collapsible_text",
+          "settings": {
+            "icon": "none",
+            "icon_width": 20,
+            "title": "Transparence",
+            "content": "<p>Nous nous engageons à indiquer clairement lorsqu’un produit est proposé sur commande et à communiquer un délai de livraison estimé avant la validation de la commande.</p><p>En cas de difficulté exceptionnelle empêchant l’exécution de la commande, le client est informé de la situation.</p><p><strong>Produit clairement décrit • Prix clair • Délai annoncé • Engagement envers le client • Transparence</strong></p><p>Site : <strong>esprit2football.com</strong></p><p>Service client / SAV : <a href=\"mailto:esprit2foot.pro@gmail.com\"><strong>esprit2foot.pro@gmail.com</strong></a></p><p>WhatsApp : <strong>+33 7 71 55 13 75</strong></p>",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -122,7 +132,8 @@
         "liquid_BnYtXq",
         "description",
         "collapsible_text_xpWjYi",
-        "collapsible_text_mAYQGg"
+        "collapsible_text_mAYQGg",
+        "collapsible_text_r6WDfE"
       ],
       "settings": {
         "full_width": true,
