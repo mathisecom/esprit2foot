@@ -16,10 +16,10 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/jude-bellingham-predator.png",
-            "mobile_image": "shopify://shop_images/jude-bellingham-predator.jpg",
+            "mobile_image": "shopify://shop_images/jude-bellingham-predator_081d219b-4e18-47a9-bffa-3972679ee7fc.png",
             "content_max_width": 1060,
             "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
             "subheading": "\" S'INSPIRER DES MEILLEURS \"",
             "title": "La célèbre Adidas Predator de Jude Bellingham",
             "heading_tag": "h3",
@@ -29,7 +29,7 @@
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#1a1a1a",
-            "overlay_opacity": 8,
+            "overlay_opacity": 0,
             "background": "",
             "background_gradient": ""
           }
@@ -37,11 +37,11 @@
         "image_TkmwRV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/ra-mat-adidas-chaos-vs-control-pack-2_3860c60b5993461894785ddd9355da14.webp",
+            "image": "shopify://shop_images/727364_v2.jpg",
             "mobile_image": "shopify://shop_images/ra-mat-adidas-chaos-vs-control-pack-2_3860c60b5993461894785ddd9355da14.webp",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
-            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "subheading": "CHOISISSEZ VOTRE CAMP",
             "title": "Adidas \" Chaos vs Control \" Pack",
             "heading_tag": "h2",
@@ -63,7 +63,7 @@
             "mobile_image": "shopify://shop_images/1765802942-pack.2e16d0ba.fill-600x750_1.webp",
             "content_max_width": 840,
             "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-center sm:text-center",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "subheading": "MENEZ L'ATTAQUE !",
             "title": "Découvrez le nouveau Attack Pack de Nike",
             "heading_tag": "h2",
