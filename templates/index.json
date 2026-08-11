@@ -65,7 +65,7 @@
             "mobile_text_position": "place-self-center text-center",
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "subheading": "MENEZ L'ATTAQUE !",
-            "title": "Découvrez le nouveau Attack Pack de Nikee",
+            "title": "Découvrez le nouveau \" Attack Pack \"",
             "heading_tag": "h2",
             "button_text": "",
             "button_link": "",
@@ -107,13 +107,13 @@
             "collection": "n-ke",
             "image": "shopify://shop_images/Nouveau_projet_2.webp",
             "subheading": "",
-            "title": "NIKEE",
+            "title": "NKE",
             "url": "",
             "heading_tag": "h3",
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 20
+            "overlay_opacity": 8
           }
         },
         "collection_K4iLgR": {
@@ -128,7 +128,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 20
+            "overlay_opacity": 0
           }
         },
         "collection_Y6LAUJ": {
@@ -143,7 +143,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 20
+            "overlay_opacity": 0
           }
         },
         "collection_WqeByN": {
@@ -152,13 +152,13 @@
             "collection": "new-balance",
             "image": "shopify://shop_images/Nouveau_projet_3.webp",
             "subheading": "",
-            "title": "OLD BALANCE",
+            "title": "NB.",
             "url": "",
             "heading_tag": "h3",
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 20
+            "overlay_opacity": 10
           }
         }
       },
@@ -323,7 +323,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 25
           }
         },
         "collection_ejtpC6": {
@@ -338,7 +338,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 18
           }
         },
         "collection_BJWcV7": {
@@ -353,7 +353,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 30
+            "overlay_opacity": 22
           }
         }
       },
@@ -372,6 +372,223 @@
         "subheading": "",
         "title": "CHOISIS TA SEMELLE",
         "content": "<p>ADAPTE TA SEMELLE À TOUT TYPE DE TERRAIN</p>",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "collection_list_7khGbL": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_Ny3wJw": {
+          "type": "collection",
+          "settings": {
+            "collection": "predator",
+            "image": "shopify://shop_images/global_predator_goal_hunter_football_ss25_launch_pdp_banner_split_01_d_ab4b291866.avif",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_tjHTLB": {
+          "type": "collection",
+          "settings": {
+            "collection": "f50-1",
+            "image": "shopify://shop_images/0-movil.jpg",
+            "subheading": "",
+            "title": "F50",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_rWYDb3": {
+          "type": "collection",
+          "settings": {
+            "collection": "x-speedflow",
+            "image": "shopify://shop_images/Chaussure_X_Speedflow.1_Terrain_souple_Bleu_GW7457_HM55.jpg",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_qWUcyP": {
+          "type": "collection",
+          "settings": {
+            "collection": "vapor",
+            "image": "shopify://shop_images/crampons-mercurial-united-pack-nike-1024x587.jpg",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_QnDPmF": {
+          "type": "collection",
+          "settings": {
+            "collection": "tiempo",
+            "image": "shopify://shop_images/IMG_0972_1_1.webp",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_Qkmnat": {
+          "type": "collection",
+          "settings": {
+            "collection": "phantom",
+            "image": "shopify://shop_images/nike-phantom-6-high-1.avif",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_BBdNj6": {
+          "type": "collection",
+          "settings": {
+            "collection": "future",
+            "image": "shopify://shop_images/chaussure-puma-future-7-neymar-2024-2025-8-800x800-c-center.avif",
+            "subheading": "",
+            "title": "FUTURE",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_DqPjdb": {
+          "type": "collection",
+          "settings": {
+            "collection": "king",
+            "image": "shopify://shop_images/64a6e1f82f4b1.jpg",
+            "subheading": "",
+            "title": "KING",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_kCNYEx": {
+          "type": "collection",
+          "settings": {
+            "collection": "ultra",
+            "image": "shopify://shop_images/crampons-puma-arrival-pack-3.webp",
+            "subheading": "",
+            "title": "ULTRA",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_kLdbmj": {
+          "type": "collection",
+          "settings": {
+            "collection": "hypervenom",
+            "image": "shopify://shop_images/nike-hypervenom-rgn.png",
+            "subheading": "",
+            "title": "HYPERVENOM",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_3VHYgi": {
+          "type": "collection",
+          "settings": {
+            "collection": "f50",
+            "image": "shopify://shop_images/football_fw24_f50_launch_pdp_story_statement_image_copa_elite_d_8a683845cd_976399e9-2c58-4637-8200-f8229882e918.png",
+            "subheading": "",
+            "title": "COPA",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_bGKtDV": {
+          "type": "collection",
+          "settings": {
+            "collection": "nb-furon",
+            "image": "shopify://shop_images/crampons_new_balance_furon_v6_2-scaled.jpg",
+            "subheading": "",
+            "title": "NB. FURON",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        }
+      },
+      "block_order": [
+        "collection_Ny3wJw",
+        "collection_tjHTLB",
+        "collection_rWYDb3",
+        "collection_qWUcyP",
+        "collection_QnDPmF",
+        "collection_Qkmnat",
+        "collection_BBdNj6",
+        "collection_DqPjdb",
+        "collection_kCNYEx",
+        "collection_kLdbmj",
+        "collection_3VHYgi",
+        "collection_bGKtDV"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "full_width": true,
+        "stack_collections": false,
+        "collections_per_row_mobile": "1",
+        "collections_per_row": 3,
+        "show_progress_bar": true,
+        "subheading": "",
+        "title": "MODÈLES PHARES",
+        "content": "",
         "link_url": "",
         "link_text": "",
         "background": "",
@@ -405,127 +622,6 @@
         "heading_gradient": "",
         "product_card_background": "",
         "product_card_text_color": ""
-      }
-    },
-    "collection_list_7khGbL": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_kLdbmj": {
-          "type": "collection",
-          "settings": {
-            "collection": "f50",
-            "image": "shopify://shop_images/IMG_0972_1.webp",
-            "subheading": "",
-            "title": "F50",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 35
-          }
-        },
-        "collection_qWUcyP": {
-          "type": "collection",
-          "settings": {
-            "collection": "vapor",
-            "image": "shopify://shop_images/IMG_0972_1_72522c52-27d8-4c00-83f5-a93f08cb63a7.webp",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 35
-          }
-        },
-        "collection_QnDPmF": {
-          "type": "collection",
-          "settings": {
-            "collection": "tiempo",
-            "image": "shopify://shop_images/IMG_0972_1_1.webp",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 35
-          }
-        },
-        "collection_4rR8iJ": {
-          "type": "collection",
-          "settings": {
-            "collection": "superfly",
-            "image": "shopify://shop_images/IMG_0972_1_2.webp",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 35
-          }
-        },
-        "collection_Qkmnat": {
-          "type": "collection",
-          "settings": {
-            "collection": "phantom",
-            "image": "shopify://shop_images/IMG_0972_1_3.webp",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 35
-          }
-        },
-        "collection_Ny3wJw": {
-          "type": "collection",
-          "settings": {
-            "collection": "predator",
-            "image": "shopify://shop_images/IMG_0972_1_4.webp",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 30
-          }
-        }
-      },
-      "block_order": [
-        "collection_kLdbmj",
-        "collection_qWUcyP",
-        "collection_QnDPmF",
-        "collection_4rR8iJ",
-        "collection_Qkmnat",
-        "collection_Ny3wJw"
-      ],
-      "name": "Collection list",
-      "settings": {
-        "full_width": true,
-        "stack_collections": false,
-        "collections_per_row_mobile": "1",
-        "collections_per_row": 3,
-        "show_progress_bar": true,
-        "subheading": "",
-        "title": "MODÈLES PHARES",
-        "content": "",
-        "link_url": "",
-        "link_text": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
       }
     },
     "media_with_text_98C7FQ": {
@@ -896,8 +992,8 @@
     "featured_collection_bzeT64",
     "multi_column_h4QNhQ",
     "collection_list_fYBFCR",
-    "featured_collection_JCd9YQ",
     "collection_list_7khGbL",
+    "featured_collection_JCd9YQ",
     "media_with_text_98C7FQ",
     "rich_text_UdD7NL",
     "scrolling_text_MBNpEd",
