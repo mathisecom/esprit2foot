@@ -414,6 +414,7 @@
           "type": "collection",
           "settings": {
             "collection": "f50",
+            "image": "shopify://shop_images/IMG_0972_1.webp",
             "subheading": "",
             "title": "F50",
             "url": "",
@@ -428,6 +429,7 @@
           "type": "collection",
           "settings": {
             "collection": "vapor",
+            "image": "shopify://shop_images/IMG_0972_1_72522c52-27d8-4c00-83f5-a93f08cb63a7.webp",
             "subheading": "",
             "title": "",
             "url": "",
