@@ -94,7 +94,7 @@
             "icon": "picto-box",
             "icon_width": 20,
             "title": "Livraison & Retours",
-            "content": "<p>Nous expédions dans le monde entier.</p><ul><li>🚚 Livraison estimée : [10–18 jours]</li></ul><p></p><ul><li><strong>Retours :</strong> Tu dois effectuer ta demande de retour via le formulaire dédié dans les <strong>14 jours</strong> suivant la réception de ta commande.</li></ul>",
+            "content": "<p>Nous expédions dans le monde entier.</p><ul><li>🚚<strong> Livraison estimée</strong> : [10–18 jours]</li></ul><p></p><ul><li><strong>Retours :</strong> Tu dois effectuer ta demande de retour via le formulaire dédié dans les <strong>14 jours</strong> suivant la réception de ta commande.</li></ul>",
             "page": ""
           }
         },
