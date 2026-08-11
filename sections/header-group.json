@@ -61,7 +61,7 @@
         "hide_on_scroll": false,
         "logo": "shopify://shop_images/Nouveau_projet_20.png",
         "logo_max_width": 140,
-        "logo_mobile_max_width": 140,
+        "logo_mobile_max_width": 135,
         "menu": "main-menu",
         "sidebar_menu": "",
         "secondary_menu": "",
