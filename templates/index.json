@@ -347,7 +347,7 @@
           "type": "collection",
           "settings": {
             "collection": "",
-            "image": "shopify://shop_images/VAPOR_17_ELITE_SG-PRO_T.webp",
+            "image": "shopify://shop_images/VAPOR_17_ELITE_SG-PRO_T.png",
             "subheading": "Terrain Gras",
             "title": "SG",
             "url": "",
@@ -590,8 +590,9 @@
       "settings": {
         "collection": "best-sellers",
         "products": [
+          "f50-hyperfast-pack-chaos-vs-control-laceless",
           "mercurial-superfly-11-elite-mbappe-fg",
-          "f50-hyperfast-pack-chaos-vs-control-laceless"
+          "predator-tongue-chaos-vs-control-pack-fg"
         ],
         "full_width": true,
         "stack_products": false,
