@@ -24,7 +24,7 @@
             "icon_background": "",
             "icon_color": "",
             "title": "Livraison Offerte",
-            "content": "<p>Stock en France. Nous expédions nos colis en 24h à 48h ouvrés.</p>"
+            "content": "<p>Nous expédions nos colis en 24h à 48h ouvrés. Livraison en <strong>12-16 jours.</strong></p>"
           }
         },
         "customer-support": {
@@ -37,7 +37,7 @@
             "icon_background": "",
             "icon_color": "",
             "title": "Paiements Sécurisés",
-            "content": "<p>Les paiements sur notre site sont cryptés et sécurisés par 3D Secure.</p>"
+            "content": "<p>Les paiements sur notre site sont cryptés et <strong>sécurisés par 3D Secure.</strong></p>"
           }
         },
         "discount": {
@@ -50,7 +50,7 @@
             "icon_background": "",
             "icon_color": "",
             "title": "Service Client Français",
-            "content": "<p>Pour la moindre questions vous pouvez nous contacter.</p>"
+            "content": "<p>Pour la moindre questions vous pouvez <strong>nous contacter.</strong></p>"
           }
         }
       },
@@ -66,7 +66,7 @@
         "heading_tag": "h5",
         "text_alignment": "center",
         "icon_spacing": "small",
-        "background": "#01FFAE",
+        "background": "#01ffae",
         "background_gradient": "",
         "text_color": ""
       }
