@@ -94,7 +94,7 @@
             "icon": "none",
             "icon_width": 20,
             "title": "Livraison & Retours",
-            "content": "<p>Toutes tes commandes partiront de France.</p><ul><li><strong>En France</strong>, la livraison peut prendre de <strong>1 à 5 jours</strong> ouvrés selon le transporteur que tu choisiras au moment du paiement.</li><li><strong>En Europe</strong>, avec la livraison standard Colissimo, les délais varient selon la distance de ton pays par rapport à la France ; avec DHL Express, cela prend de <strong>2 à 4 jours ouvrés.</strong></li><li><strong>À l'international</strong>, la livraison standard Colissimo <strong>prend de 1 à 3 semaines</strong> ouvrées, tandis que DHL Express prend de 3 à 6 jours ouvrés.</li><li><strong>Retours :</strong> Tu dois effectuer ta demande de retour via le formulaire dédié dans les <strong>14 jours</strong> suivant la réception de ta commande.</li></ul>",
+            "content": "<p>Toutes tes commandes partiront de France.</p><ul><li><strong>En France</strong>, la livraison peut prendre de <strong>12-16 jours</strong> ouvrés selon le transporteur que tu choisiras au moment du paiement.</li></ul><p></p><ul><li><strong>Retours :</strong> Tu dois effectuer ta demande de retour via le formulaire dédié dans les <strong>14 jours</strong> suivant la réception de ta commande.</li></ul>",
             "page": ""
           }
         },
