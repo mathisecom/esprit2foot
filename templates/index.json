@@ -66,14 +66,14 @@
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "subheading": "MENEZ L'ATTAQUE !",
             "title": "Découvrez le nouveau \" Attack Pack \"",
-            "heading_tag": "h2",
+            "heading_tag": "h1",
             "button_text": "",
             "button_link": "",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 39,
+            "overlay_color": "#0E2E53",
+            "overlay_opacity": 24,
             "background": "",
             "background_gradient": ""
           }
