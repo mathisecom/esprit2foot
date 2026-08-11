@@ -433,7 +433,7 @@
           "type": "collection",
           "settings": {
             "collection": "vapor",
-            "image": "shopify://shop_images/crampons-mercurial-united-pack-nike-1024x587.jpg",
+            "image": "shopify://shop_images/crampons-mercurial-united-pack-nike-1024x587_95a4ff8b-ace3-4f74-af15-fdb5d5ebdc52.png",
             "subheading": "",
             "title": "",
             "url": "",
@@ -463,11 +463,56 @@
           "type": "collection",
           "settings": {
             "collection": "phantom",
-            "image": "shopify://shop_images/nike-phantom-6-high-1.avif",
+            "image": "shopify://shop_images/nike-phantom-6-high-1.png",
             "subheading": "",
             "title": "",
             "url": "",
             "heading_tag": "h3",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_kLdbmj": {
+          "type": "collection",
+          "settings": {
+            "collection": "hypervenom",
+            "image": "shopify://shop_images/hypervenom_fd369458-1d7f-4d5f-ac52-1413b51f46d2.png",
+            "subheading": "",
+            "title": "HYPERVENOM",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_3VHYgi": {
+          "type": "collection",
+          "settings": {
+            "collection": "f50",
+            "image": "shopify://shop_images/football_fw24_f50_launch_pdp_story_statement_image_copa_elite_d_8a683845cd_653e1d3b-4626-4c7a-a4bd-3553dec2c303.png",
+            "subheading": "",
+            "title": "COPA",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_bGKtDV": {
+          "type": "collection",
+          "settings": {
+            "collection": "nb-furon",
+            "image": "shopify://shop_images/crampons_new_balance_furon_v6_2-scaled_34454469-5e09-4334-858f-bb9c32957a6c.png",
+            "subheading": "",
+            "title": "NB. FURON",
+            "url": "",
+            "heading_tag": "h2",
             "text_position": "place-self-end text-end",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
@@ -489,73 +534,13 @@
             "overlay_opacity": 0
           }
         },
-        "collection_DqPjdb": {
-          "type": "collection",
-          "settings": {
-            "collection": "king",
-            "image": "shopify://shop_images/64a6e1f82f4b1.jpg",
-            "subheading": "",
-            "title": "KING",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
         "collection_kCNYEx": {
           "type": "collection",
           "settings": {
             "collection": "ultra",
-            "image": "shopify://shop_images/crampons-puma-arrival-pack-3.webp",
+            "image": "shopify://shop_images/crampons-puma-arrival-pack-3_bc5d6738-1e51-46ff-8f02-2d8c9f29c825.png",
             "subheading": "",
             "title": "ULTRA",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_kLdbmj": {
-          "type": "collection",
-          "settings": {
-            "collection": "hypervenom",
-            "image": "shopify://shop_images/nike-hypervenom-rgn.png",
-            "subheading": "",
-            "title": "HYPERVENOM",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_3VHYgi": {
-          "type": "collection",
-          "settings": {
-            "collection": "f50",
-            "image": "shopify://shop_images/football_fw24_f50_launch_pdp_story_statement_image_copa_elite_d_8a683845cd_976399e9-2c58-4637-8200-f8229882e918.png",
-            "subheading": "",
-            "title": "COPA",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_bGKtDV": {
-          "type": "collection",
-          "settings": {
-            "collection": "nb-furon",
-            "image": "shopify://shop_images/crampons_new_balance_furon_v6_2-scaled.jpg",
-            "subheading": "",
-            "title": "NB. FURON",
             "url": "",
             "heading_tag": "h2",
             "text_position": "place-self-end text-end",
@@ -572,12 +557,11 @@
         "collection_qWUcyP",
         "collection_QnDPmF",
         "collection_Qkmnat",
-        "collection_BBdNj6",
-        "collection_DqPjdb",
-        "collection_kCNYEx",
         "collection_kLdbmj",
         "collection_3VHYgi",
-        "collection_bGKtDV"
+        "collection_bGKtDV",
+        "collection_BBdNj6",
+        "collection_kCNYEx"
       ],
       "name": "Collection list",
       "settings": {
