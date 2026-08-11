@@ -17,19 +17,19 @@
           "settings": {
             "image": "shopify://shop_images/jude-bellingham-predator.jpg",
             "mobile_image": "shopify://shop_images/jude-bellingham-predator.jpg",
-            "content_max_width": 660,
-            "mobile_text_position": "place-self-end-center text-center",
-            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "content_max_width": 1060,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
             "subheading": "\" S'INSPIRER DES MEILLEURS \"",
             "title": "La célèbre Adidas Predator de Jude Bellingham",
-            "heading_tag": "h2",
+            "heading_tag": "h3",
             "button_text": "",
             "button_link": "",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#1a1a1a",
-            "overlay_opacity": 30,
+            "overlay_opacity": 8,
             "background": "",
             "background_gradient": ""
           }
@@ -37,8 +37,8 @@
         "image_TkmwRV": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/0c49c2c5bd48.webp",
-            "mobile_image": "shopify://shop_images/0c49c2c5bd48.webp",
+            "image": "shopify://shop_images/ra-mat-adidas-chaos-vs-control-pack-2_3860c60b5993461894785ddd9355da14.webp",
+            "mobile_image": "shopify://shop_images/ra-mat-adidas-chaos-vs-control-pack-2_3860c60b5993461894785ddd9355da14.webp",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
@@ -50,8 +50,8 @@
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
-            "overlay_color": "#ff3c3c",
-            "overlay_opacity": 30,
+            "overlay_color": "#9B2715",
+            "overlay_opacity": 14,
             "background": "",
             "background_gradient": ""
           }
@@ -62,8 +62,8 @@
             "image": "shopify://shop_images/1765802942-pack.2e16d0ba.fill-600x750_1.webp",
             "mobile_image": "shopify://shop_images/1765802942-pack.2e16d0ba.fill-600x750_1.webp",
             "content_max_width": 840,
-            "mobile_text_position": "place-self-end-center text-center",
-            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-center sm:text-center",
             "subheading": "MENEZ L'ATTAQUE !",
             "title": "Découvrez le nouveau Attack Pack de Nike",
             "heading_tag": "h2",
@@ -73,7 +73,7 @@
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 30,
+            "overlay_opacity": 14,
             "background": "",
             "background_gradient": ""
           }
@@ -686,7 +686,7 @@
         "padding_bottom": 0,
         "padding_horizontal": 5,
         "padding_horizontal_mobile": 0,
-        "full_width": true,
+        "full_width": false,
         "content_width": 1200,
         "border_thickness": 0,
         "section_radius": 0,
