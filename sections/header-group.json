@@ -23,6 +23,7 @@
         },
         "message_gxax6w": {
           "type": "message",
+          "disabled": true,
           "settings": {
             "text": "LA MEILLEURE QUALITÉ DU MARCHÉ !",
             "url": ""
