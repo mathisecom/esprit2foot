@@ -19,7 +19,7 @@
             "mobile_image": "shopify://shop_images/jude-bellingham-predator_081d219b-4e18-47a9-bffa-3972679ee7fc.png",
             "content_max_width": 1060,
             "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "subheading": "\" S'INSPIRER DES MEILLEURS \"",
             "title": "La célèbre Adisda Predator de Jude Bellingham",
             "heading_tag": "h3",
