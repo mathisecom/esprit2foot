@@ -83,7 +83,7 @@
         "description": {
           "type": "description",
           "settings": {
-            "icon": "none",
+            "icon": "picto-target",
             "icon_width": 20,
             "collapse_content": true
           }
@@ -91,7 +91,7 @@
         "collapsible_text_xpWjYi": {
           "type": "collapsible_text",
           "settings": {
-            "icon": "none",
+            "icon": "picto-box",
             "icon_width": 20,
             "title": "Livraison & Retours",
             "content": "<p>Nous expédions dans le monde entier.</p><ul><li>🚚 Livraison estimée : [10–18 jours]</li></ul><p></p><ul><li><strong>Retours :</strong> Tu dois effectuer ta demande de retour via le formulaire dédié dans les <strong>14 jours</strong> suivant la réception de ta commande.</li></ul>",
@@ -101,7 +101,7 @@
         "collapsible_text_mAYQGg": {
           "type": "collapsible_text",
           "settings": {
-            "icon": "none",
+            "icon": "picto-star",
             "icon_width": 20,
             "title": "Notre Engagement",
             "content": "<p><strong>NOTRE ENGAGEMENT🤝<br/></strong><br/>Nous souhaitons proposer une expérience d'achat claire, <strong>transparente et fiable</strong>.<br/><br/>Certains produits disponibles sur notre boutique sont détenus en stock,<strong> tandis que d'autres sont proposés sur commande</strong>.<br/><br/>Lorsqu'un produit est proposé sur commande, cette information est indiquée sur <strong>sa fiche produit </strong>avant la validation de la commande.<br/><br/><strong>📦 Produits sur commande<br/></strong><br/>Pour chaque produit sur commande, nous indiquons<strong> les caractéristiques essentielles du produit</strong>, notamment :<br/><br/>* la marque ;<br/>* le modèle ;<br/>* la pointure ;<br/>* la couleur ;<br/>* la version ;<br/>* les caractéristiques principales ;<br/>* le prix ;<br/>* le délai de livraison estimé.<br/><br/>Après validation et paiement de la commande, <strong>nous nous engageons à fournir un produit correspondant </strong>aux caractéristiques indiquées lors de la commande.<br/><br/>L'approvisionnement est ensuite effectué auprès de nos fournisseurs afin d'exécuter la commande.<br/><br/>Le fournisseur constitue uniquement notre moyen d'approvisionnement<strong> et nous sommes intermédiaire</strong> entre lui et le client à travers notre site web. Le client contracte directement avec notre boutique.</p>",
@@ -111,7 +111,7 @@
         "collapsible_text_r6WDfE": {
           "type": "collapsible_text",
           "settings": {
-            "icon": "none",
+            "icon": "picto-like",
             "icon_width": 20,
             "title": "Transparence",
             "content": "<p>Nous nous engageons à indiquer clairement lorsqu’un produit est proposé sur commande et à communiquer un délai de livraison estimé avant la validation de la commande.</p><p>En cas de difficulté exceptionnelle empêchant l’exécution de la commande, le client est informé de la situation.</p><p><strong>Produit clairement décrit • Prix clair • Délai annoncé • Engagement envers le client • Transparence</strong></p><p>Site : <strong>esprit2football.com</strong></p><p>Service client / SAV : <a href=\"mailto:esprit2foot.pro@gmail.com\"><strong>esprit2foot.pro@gmail.com</strong></a></p><p>WhatsApp : <strong>+33 7 71 55 13 75</strong></p>",
