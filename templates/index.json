@@ -208,9 +208,10 @@
       "custom_css": [],
       "name": "Featured collection",
       "settings": {
-        "collection": "",
+        "collection": "frontpage",
         "products": [
-          "mercurial-superfly-11-elite-mbappe-fg"
+          "mercurial-superfly-11-elite-mbappe-fg",
+          "f50-hyperfast-pack-chaos-vs-control-laceless"
         ],
         "full_width": true,
         "stack_products": false,
@@ -586,9 +587,10 @@
       "type": "featured-collection",
       "name": "Featured collection",
       "settings": {
-        "collection": "",
+        "collection": "best-sellers",
         "products": [
-          "mercurial-superfly-11-elite-mbappe-fg"
+          "mercurial-superfly-11-elite-mbappe-fg",
+          "f50-hyperfast-pack-chaos-vs-control-laceless"
         ],
         "full_width": true,
         "stack_products": false,
@@ -597,7 +599,7 @@
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 3,
         "subheading": "",
-        "title": "NOUVEAUTÉS",
+        "title": "BEST SELLERS",
         "content": "",
         "link_url": "",
         "link_text": "Découvrir",
