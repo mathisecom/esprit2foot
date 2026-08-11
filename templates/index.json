@@ -603,7 +603,9 @@
       "name": "Featured collection",
       "settings": {
         "collection": "",
-        "products": [],
+        "products": [
+          "mercurial-superfly-11-elite-mbappe-fg"
+        ],
         "full_width": true,
         "stack_products": false,
         "show_progress_bar": true,
