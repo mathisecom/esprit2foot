@@ -444,6 +444,7 @@
           "type": "collection",
           "settings": {
             "collection": "tiempo",
+            "image": "shopify://shop_images/IMG_0972_1_1.webp",
             "subheading": "",
             "title": "",
             "url": "",
@@ -458,6 +459,7 @@
           "type": "collection",
           "settings": {
             "collection": "superfly",
+            "image": "shopify://shop_images/IMG_0972_1_2.webp",
             "subheading": "",
             "title": "",
             "url": "",
@@ -472,6 +474,7 @@
           "type": "collection",
           "settings": {
             "collection": "phantom",
+            "image": "shopify://shop_images/IMG_0972_1_3.webp",
             "subheading": "",
             "title": "",
             "url": "",
@@ -486,6 +489,7 @@
           "type": "collection",
           "settings": {
             "collection": "predator",
+            "image": "shopify://shop_images/IMG_0972_1_4.webp",
             "subheading": "",
             "title": "",
             "url": "",
