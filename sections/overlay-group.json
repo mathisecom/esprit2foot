@@ -39,8 +39,10 @@
         "show_shipping_text": false,
         "show_view_cart_button": false,
         "show_checkout_button": true,
-        "recommendations_title": "Trending this month",
-        "products": [],
+        "recommendations_title": "TENDANCE CE MOIS-CI",
+        "products": [
+          "mercurial-superfly-11-elite-mbappe-fg"
+        ],
         "product_card_background": "#f2f2f2",
         "product_card_text_color": ""
       }
