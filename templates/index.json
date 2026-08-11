@@ -72,7 +72,7 @@
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
-            "overlay_color": "#0e2e53",
+            "overlay_color": "#0E2E53",
             "overlay_opacity": 24,
             "background": "",
             "background_gradient": ""
@@ -210,7 +210,7 @@
       "settings": {
         "collection": "",
         "products": [
-          "mercurial-superfly-11-elite-mbappe-fg"
+          "air-mercurial"
         ],
         "full_width": true,
         "stack_products": false,
@@ -433,7 +433,7 @@
           "type": "collection",
           "settings": {
             "collection": "vapor",
-            "image": "shopify://shop_images/crampons-mercurial-united-pack-nike-1024x587.jpg",
+            "image": "shopify://shop_images/crampons-mercurial-united-pack-nike-1024x587_403219e1-43a8-4f1a-8fab-3b57a1243802.png",
             "subheading": "",
             "title": "",
             "url": "",
@@ -463,7 +463,7 @@
           "type": "collection",
           "settings": {
             "collection": "phantom",
-            "image": "shopify://shop_images/nike-phantom-6-high-1.avif",
+            "image": "shopify://shop_images/nike-phantom-6-high-1_85f62d95-7946-47ee-9a05-4438340bfa8e.png",
             "subheading": "",
             "title": "",
             "url": "",
@@ -478,7 +478,7 @@
           "type": "collection",
           "settings": {
             "collection": "future",
-            "image": "shopify://shop_images/chaussure-puma-future-7-neymar-2024-2025-8-800x800-c-center.avif",
+            "image": "shopify://shop_images/chaussure-puma-future-7-neymar-2024-2025-8-800x800-c-center.png",
             "subheading": "",
             "title": "FUTURE",
             "url": "",
@@ -493,7 +493,7 @@
           "type": "collection",
           "settings": {
             "collection": "king",
-            "image": "shopify://shop_images/64a6e1f82f4b1.jpg",
+            "image": "shopify://shop_images/64a6e1f82f4b1.png",
             "subheading": "",
             "title": "KING",
             "url": "",
@@ -508,7 +508,7 @@
           "type": "collection",
           "settings": {
             "collection": "ultra",
-            "image": "shopify://shop_images/crampons-puma-arrival-pack-3.webp",
+            "image": "shopify://shop_images/crampons-puma-arrival-pack-3_d0ae1fab-cfce-48b7-9386-d9d0a99174fb.png",
             "subheading": "",
             "title": "ULTRA",
             "url": "",
@@ -516,14 +516,14 @@
             "text_position": "place-self-end text-end",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 0
+            "overlay_opacity": 11
           }
         },
         "collection_kLdbmj": {
           "type": "collection",
           "settings": {
             "collection": "hypervenom",
-            "image": "shopify://shop_images/nike-hypervenom-rgn.png",
+            "image": "shopify://shop_images/hypervenom_fd369458-1d7f-4d5f-ac52-1413b51f46d2.png",
             "subheading": "",
             "title": "HYPERVENOM",
             "url": "",
@@ -538,7 +538,7 @@
           "type": "collection",
           "settings": {
             "collection": "f50",
-            "image": "shopify://shop_images/football_fw24_f50_launch_pdp_story_statement_image_copa_elite_d_8a683845cd_976399e9-2c58-4637-8200-f8229882e918.png",
+            "image": "shopify://shop_images/football_fw24_f50_launch_pdp_story_statement_image_copa_elite_d_8a683845cd_f2ca3cef-d081-4ef2-aaba-a0c4090e89a6.png",
             "subheading": "",
             "title": "COPA",
             "url": "",
