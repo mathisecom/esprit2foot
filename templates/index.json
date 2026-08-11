@@ -105,7 +105,7 @@
           "type": "collection",
           "settings": {
             "collection": "n-ke",
-            "image": "shopify://shop_images/580x580_2.jpg",
+            "image": "shopify://shop_images/0c49c2c5bd48_0646bf9d-0bfd-424e-a988-ffaa9323f660.png",
             "subheading": "",
             "title": "NIKE",
             "url": "",
@@ -120,7 +120,7 @@
           "type": "collection",
           "settings": {
             "collection": "adidas",
-            "image": "shopify://shop_images/580x580_1.jpg",
+            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_015350.png",
             "subheading": "",
             "title": "ADIDAS",
             "url": "",
@@ -135,7 +135,7 @@
           "type": "collection",
           "settings": {
             "collection": "puma",
-            "image": "shopify://shop_images/580x580_3.jpg",
+            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_020321.png",
             "subheading": "",
             "title": "PUMA",
             "url": "",
@@ -150,7 +150,7 @@
           "type": "collection",
           "settings": {
             "collection": "new-balance",
-            "image": "shopify://shop_images/bota-new-balance-furon-pro-fg-v9-white-alkaline-green-0.webp",
+            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_020004.png",
             "subheading": "",
             "title": "NEW BALANCE",
             "url": "",
