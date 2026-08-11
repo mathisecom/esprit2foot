@@ -73,7 +73,6 @@
         "discount",
         "payment"
       ],
-      "disabled": true,
       "settings": {
         "full_width": true,
         "stack_on_mobile": false,
@@ -81,7 +80,7 @@
         "heading_tag": "h6",
         "text_alignment": "center",
         "icon_spacing": "small",
-        "background": "",
+        "background": "#01FFAE",
         "background_gradient": "",
         "text_color": ""
       }
