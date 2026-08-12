@@ -38,7 +38,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/727364_v2.jpg",
-            "mobile_image": "shopify://shop_images/ra-mat-adidas-chaos-vs-control-pack-2_3860c60b5993461894785ddd9355da14.webp",
+            "mobile_image": "shopify://shop_images/IMG_6001.png",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
@@ -50,8 +50,8 @@
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
-            "overlay_color": "#9b2715",
-            "overlay_opacity": 5,
+            "overlay_color": "#6A1002",
+            "overlay_opacity": 3,
             "background": "",
             "background_gradient": ""
           }
