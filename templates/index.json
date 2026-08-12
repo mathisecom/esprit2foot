@@ -590,8 +590,10 @@
       "settings": {
         "collection": "best-sellers",
         "products": [
-          "f50-hyperfast-pack-chaos-vs-control-laceless",
+          "sneakers-mind-001-black-orange",
           "mercurial-superfly-11-elite-mbappe-fg",
+          "f50-hyperfast-pack-chaos-vs-control-laceless",
+          "sneakers-mind-001-solar-red",
           "predator-tongue-chaos-vs-control-pack-fg"
         ],
         "full_width": true,
@@ -599,7 +601,7 @@
         "show_progress_bar": true,
         "products_count": 6,
         "products_per_row_mobile": "2",
-        "products_per_row_desktop": 3,
+        "products_per_row_desktop": 4,
         "subheading": "",
         "title": "BEST SELLERS",
         "content": "",
