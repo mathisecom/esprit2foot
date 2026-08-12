@@ -212,14 +212,16 @@
         "products": [
           "predator-tongue-chaos-vs-control-pack-fg",
           "mercurial-superfly-11-elite-mbappe-fg",
-          "f50-hyperfast-pack-chaos-vs-control-laceless"
+          "f50-hyperfast-pack-chaos-vs-control-laceless",
+          "predator-tongue-elite-ft-fg-core-black-white-lucid-red",
+          "predator-tongue-chaos-vs-control-pack-fg-laceless"
         ],
         "full_width": true,
         "stack_products": false,
         "show_progress_bar": true,
         "products_count": 6,
         "products_per_row_mobile": "2",
-        "products_per_row_desktop": 3,
+        "products_per_row_desktop": 4,
         "subheading": "",
         "title": "CRAMPONS DU MOMENT",
         "content": "",
