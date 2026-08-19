@@ -98,6 +98,48 @@
         "background_gradient": ""
       }
     },
+    "featured_collection_bzeT64": {
+      "type": "featured-collection",
+      "custom_css": [],
+      "name": "Featured collection",
+      "settings": {
+        "collection": "frontpage",
+        "products": [
+          "mercurial-vapor-17-elite-break-em-pack-ag-pro",
+          "f50-hyperfast-pack-chaos-vs-control-laceless",
+          "mercurial-superfly-11-elite-mbappe-fg",
+          "predator-tongue-chaos-vs-control-pack-fg",
+          "mercurial-vapor-16-air-zoom-elite-ag-pro-attack-pack",
+          "mercurial-vapor-9-elite-fg-pro-x-marcus-rashford",
+          "phantom-6-elite-low-cut-ag-pro-attack-pack",
+          "f50-elite-ag-ftwr-white-solar-red-lucid-blue",
+          "mercurial-superfly-11-fg-elite-scorpion-pack-limited-edition",
+          "mercurial-superfly-11-elite-ag-pro-break-em-pack",
+          "mercurial-superfly-11-elite-fg-breakout-pack",
+          "hypervenom-phantom-fg-elite-solv-guld-neon",
+          "future-9-ultimate-elite-fg-ag-showtime-pack",
+          "f50-elite-ag-coral-blaze-pack"
+        ],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 15,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "subheading": "",
+        "title": "CRAMPONS DU MOMENT",
+        "content": "",
+        "link_url": "",
+        "link_text": "Découvrir",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "collection_list_UcD6BR": {
       "type": "collection-list",
       "blocks": {
@@ -201,48 +243,6 @@
         "background_gradient": "",
         "text_color": "",
         "text_gradient": ""
-      }
-    },
-    "featured_collection_bzeT64": {
-      "type": "featured-collection",
-      "custom_css": [],
-      "name": "Featured collection",
-      "settings": {
-        "collection": "frontpage",
-        "products": [
-          "mercurial-vapor-17-elite-break-em-pack-ag-pro",
-          "f50-hyperfast-pack-chaos-vs-control-laceless",
-          "mercurial-superfly-11-elite-mbappe-fg",
-          "predator-tongue-chaos-vs-control-pack-fg",
-          "mercurial-vapor-16-air-zoom-elite-ag-pro-attack-pack",
-          "mercurial-vapor-9-elite-fg-pro-x-marcus-rashford",
-          "phantom-6-elite-low-cut-ag-pro-attack-pack",
-          "f50-elite-ag-ftwr-white-solar-red-lucid-blue",
-          "mercurial-superfly-11-fg-elite-scorpion-pack-limited-edition",
-          "mercurial-superfly-11-elite-ag-pro-break-em-pack",
-          "mercurial-superfly-11-elite-fg-breakout-pack",
-          "hypervenom-phantom-fg-elite-solv-guld-neon",
-          "future-9-ultimate-elite-fg-ag-showtime-pack",
-          "f50-elite-ag-coral-blaze-pack"
-        ],
-        "full_width": true,
-        "stack_products": false,
-        "show_progress_bar": true,
-        "products_count": 15,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "subheading": "",
-        "title": "CRAMPONS DU MOMENT",
-        "content": "",
-        "link_url": "",
-        "link_text": "Découvrir",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
       }
     },
     "multi_column_h4QNhQ": {
@@ -1000,13 +1000,13 @@
   },
   "order": [
     "slideshow_TEBwWb",
+    "featured_collection_bzeT64",
     "collection_list_UcD6BR",
     "scrolling_text_ctzbLQ",
-    "featured_collection_bzeT64",
-    "multi_column_h4QNhQ",
-    "collection_list_fYBFCR",
     "collection_list_7khGbL",
     "featured_collection_JCd9YQ",
+    "collection_list_fYBFCR",
+    "multi_column_h4QNhQ",
     "media_with_text_98C7FQ",
     "rich_text_UdD7NL",
     "scrolling_text_MBNpEd",
