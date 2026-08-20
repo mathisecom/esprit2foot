@@ -112,18 +112,21 @@
           "mercurial-vapor-16-air-zoom-elite-ag-pro-attack-pack",
           "mercurial-vapor-9-elite-fg-pro-x-marcus-rashford",
           "phantom-6-elite-low-cut-ag-pro-attack-pack",
-          "f50-elite-ag-ftwr-white-solar-red-lucid-blue",
           "mercurial-superfly-11-fg-elite-scorpion-pack-limited-edition",
-          "mercurial-superfly-11-elite-ag-pro-break-em-pack",
           "mercurial-superfly-11-elite-fg-breakout-pack",
           "hypervenom-phantom-fg-elite-solv-guld-neon",
           "future-9-ultimate-elite-fg-ag-showtime-pack",
-          "f50-elite-ag-coral-blaze-pack"
+          "f50-elite-fg-laceless-lamine-yamal-304-edition-limitee-rose-blanc",
+          "future-7-ultimate-elite-fg-ag-formula-pack",
+          "mercurial-superfly-11-elite-fg-break-em-pack",
+          "f50-hyperfast-fg-elite-too-light-pack",
+          "mercurial-vapor-15-elite-fg-disruption-pack",
+          "mercurial-vapor-15-elite-fg-gris-noir-multicolore"
         ],
         "full_width": true,
         "stack_products": false,
         "show_progress_bar": true,
-        "products_count": 15,
+        "products_count": 30,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 4,
         "subheading": "",
@@ -243,155 +246,6 @@
         "background_gradient": "",
         "text_color": "",
         "text_gradient": ""
-      }
-    },
-    "multi_column_h4QNhQ": {
-      "type": "multi-column",
-      "blocks": {
-        "item_Y9aj77": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/images_12.jpg",
-            "column_size": "4",
-            "title": "JUDE BELLINGHAM",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/beligol",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_LUgrTp": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack.jpg",
-            "column_size": "4",
-            "title": "LAMINE YAMAL",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/yamal",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_kKGWje": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_2.webp",
-            "column_size": "4",
-            "title": "LEO MESSI",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/messi",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_VnUzyf": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_1_1.webp",
-            "column_size": "4",
-            "title": "KYLIAN MBAPPE",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/mbappe",
-            "link_text": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "item_Y9aj77",
-        "item_LUgrTp",
-        "item_kKGWje",
-        "item_VnUzyf"
-      ],
-      "name": "Multi-column",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "gap": "medium",
-        "text_alignment": "center",
-        "subheading": "",
-        "title": "",
-        "content": "<h5><strong>RETROUVE TES </strong><em>JOUEURS PRÉFÉRÉS</em></h5>",
-        "background": "#fbffe6",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "collection_list_fYBFCR": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_x87WhH": {
-          "type": "collection",
-          "settings": {
-            "collection": "terrain-sec-fg",
-            "image": "shopify://shop_images/68786badbb0d.webp",
-            "subheading": "Terrain Sec",
-            "title": "FG",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 25
-          }
-        },
-        "collection_ejtpC6": {
-          "type": "collection",
-          "settings": {
-            "collection": "terrain-synthetique-ag",
-            "image": "shopify://shop_images/semelle-ag-adidas-predator-edge.webp",
-            "subheading": "Terrain Synthétique",
-            "title": "AG",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 18
-          }
-        },
-        "collection_BJWcV7": {
-          "type": "collection",
-          "settings": {
-            "collection": "terrain-gras-sg",
-            "image": "shopify://shop_images/VAPOR_17_ELITE_SG-PRO_T.png",
-            "subheading": "Terrain Gras",
-            "title": "SG",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 22
-          }
-        }
-      },
-      "block_order": [
-        "collection_x87WhH",
-        "collection_ejtpC6",
-        "collection_BJWcV7"
-      ],
-      "name": "Collection list",
-      "settings": {
-        "full_width": true,
-        "stack_collections": false,
-        "collections_per_row_mobile": "2",
-        "collections_per_row": 3,
-        "show_progress_bar": true,
-        "subheading": "",
-        "title": "CHOISIS TA SEMELLE",
-        "content": "<p>ADAPTE TA SEMELLE À TOUT TYPE DE TERRAIN</p>",
-        "link_url": "",
-        "link_text": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
       }
     },
     "collection_list_7khGbL": {
@@ -635,6 +489,155 @@
         "heading_gradient": "",
         "product_card_background": "",
         "product_card_text_color": ""
+      }
+    },
+    "collection_list_fYBFCR": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_x87WhH": {
+          "type": "collection",
+          "settings": {
+            "collection": "terrain-sec-fg",
+            "image": "shopify://shop_images/68786badbb0d.webp",
+            "subheading": "Terrain Sec",
+            "title": "FG",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 25
+          }
+        },
+        "collection_ejtpC6": {
+          "type": "collection",
+          "settings": {
+            "collection": "terrain-synthetique-ag",
+            "image": "shopify://shop_images/semelle-ag-adidas-predator-edge.webp",
+            "subheading": "Terrain Synthétique",
+            "title": "AG",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 18
+          }
+        },
+        "collection_BJWcV7": {
+          "type": "collection",
+          "settings": {
+            "collection": "terrain-gras-sg",
+            "image": "shopify://shop_images/VAPOR_17_ELITE_SG-PRO_T.png",
+            "subheading": "Terrain Gras",
+            "title": "SG",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 22
+          }
+        }
+      },
+      "block_order": [
+        "collection_x87WhH",
+        "collection_ejtpC6",
+        "collection_BJWcV7"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "full_width": true,
+        "stack_collections": false,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 3,
+        "show_progress_bar": true,
+        "subheading": "",
+        "title": "CHOISIS TA SEMELLE",
+        "content": "<p>ADAPTE TA SEMELLE À TOUT TYPE DE TERRAIN</p>",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
+    "multi_column_h4QNhQ": {
+      "type": "multi-column",
+      "blocks": {
+        "item_Y9aj77": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/images_12.jpg",
+            "column_size": "4",
+            "title": "JUDE BELLINGHAM",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/beligol",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_LUgrTp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack.jpg",
+            "column_size": "4",
+            "title": "LAMINE YAMAL",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/yamal",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_kKGWje": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_2.webp",
+            "column_size": "4",
+            "title": "LEO MESSI",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/messi",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_VnUzyf": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_1_1.webp",
+            "column_size": "4",
+            "title": "KYLIAN MBAPPE",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/mbappe",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_Y9aj77",
+        "item_LUgrTp",
+        "item_kKGWje",
+        "item_VnUzyf"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "center",
+        "subheading": "",
+        "title": "",
+        "content": "<h5><strong>RETROUVE TES </strong><em>JOUEURS PRÉFÉRÉS</em></h5>",
+        "background": "#fbffe6",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "media_with_text_98C7FQ": {
