@@ -249,6 +249,48 @@
         "text_gradient": ""
       }
     },
+    "featured_collection_JCd9YQ": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "best-sellers",
+        "products": [
+          "sneakers-mind-001-black-orange",
+          "phantom-6-elite-low-cut-ag-pro-chrome-black-pack",
+          "sneakers-mind-001-solar-red",
+          "predator-tongue-elite-ft-fg-core-black-white-lucid-red",
+          "future-7-ultimate-elite-fg-ag-formula-pack",
+          "mercurial-vapor-16-elite-pack-showtime-ag",
+          "future-8-ultimate-elite-fg-ag-unlimited-pack",
+          "f50-elite-ag-fast-reborn-pack",
+          "mercurial-vapor-15-elite-sg-pro-lucent-pack",
+          "hypervenom-phantom-rgn-fg-elite-orange",
+          "phantom-gx-elite-blast-pack-ag-pro",
+          "n-ke-shoebag-performance",
+          "phantom-gx-elite-blast-pack-ag-pro-copie",
+          "adidas-x-speedflow-1-sapphire-edge-pack-ag",
+          "phantom-gx-elite-blast-pack-ag-pro-copie-2"
+        ],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 15,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
+        "subheading": "",
+        "title": "NOS BEST SELLERS",
+        "content": "",
+        "link_url": "",
+        "link_text": "Découvrir",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "collection_list_7khGbL": {
       "type": "collection-list",
       "blocks": {
@@ -448,48 +490,6 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": ""
-      }
-    },
-    "featured_collection_JCd9YQ": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "collection": "best-sellers",
-        "products": [
-          "sneakers-mind-001-black-orange",
-          "phantom-6-elite-low-cut-ag-pro-chrome-black-pack",
-          "sneakers-mind-001-solar-red",
-          "predator-tongue-elite-ft-fg-core-black-white-lucid-red",
-          "future-7-ultimate-elite-fg-ag-formula-pack",
-          "mercurial-vapor-16-elite-pack-showtime-ag",
-          "future-8-ultimate-elite-fg-ag-unlimited-pack",
-          "f50-elite-ag-fast-reborn-pack",
-          "mercurial-vapor-15-elite-sg-pro-lucent-pack",
-          "hypervenom-phantom-rgn-fg-elite-orange",
-          "phantom-gx-elite-blast-pack-ag-pro",
-          "n-ke-shoebag-performance",
-          "phantom-gx-elite-blast-pack-ag-pro-copie",
-          "adidas-x-speedflow-1-sapphire-edge-pack-ag",
-          "phantom-gx-elite-blast-pack-ag-pro-copie-2"
-        ],
-        "full_width": true,
-        "stack_products": false,
-        "show_progress_bar": true,
-        "products_count": 15,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
-        "subheading": "",
-        "title": "NOS BEST SELLERS",
-        "content": "",
-        "link_url": "",
-        "link_text": "Découvrir",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
       }
     },
     "collection_list_fYBFCR": {
@@ -1007,8 +1007,8 @@
     "featured_collection_bzeT64",
     "collection_list_UcD6BR",
     "scrolling_text_ctzbLQ",
-    "collection_list_7khGbL",
     "featured_collection_JCd9YQ",
+    "collection_list_7khGbL",
     "collection_list_fYBFCR",
     "multi_column_h4QNhQ",
     "media_with_text_98C7FQ",
