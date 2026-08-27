@@ -17,7 +17,7 @@
         "apparition_delay": 5,
         "show_only_on_index": false,
         "show_only_for_visitors": false,
-        "show_only_once": true,
+        "show_only_once": false,
         "title": "Inscris-toi à la newsletter",
         "button_text": "[ JE REJOINS ]",
         "subtext": "Rejoins la <strong>E2F' Squad. </strong>Inscris-toi à la newsletter pour recevoir nos nouveautés, nos offres exclusives et quelques surprises réservées à la team, dont <strong>un code promo</strong> de 10% !"
