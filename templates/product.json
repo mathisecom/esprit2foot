@@ -94,7 +94,7 @@
             "icon": "picto-box",
             "icon_width": 20,
             "title": "Livraison & Retours",
-            "content": "<p>Nous expédions dans le monde entier.</p><ul><li>🚚<strong> Livraison estimée</strong> : [10–18 jours]</li></ul><p></p><ul><li><strong>Retours :</strong> Tu dois effectuer ta demande de retour via le formulaire dédié dans les <strong>14 jours</strong> suivant la réception de ta commande.</li></ul>",
+            "content": "<p>Nous expédions dans le monde entier.</p><ul><li>🚚<strong> Livraison estimée</strong> : [9–16 jours]</li></ul><p></p><ul><li><strong>Retours :</strong> Tu dois effectuer ta demande de retour via le formulaire dédié dans les <strong>14 jours</strong> suivant la réception de ta commande.</li></ul>",
             "page": ""
           }
         },
@@ -167,8 +167,8 @@
             "custom_icon": "shopify://shop_images/icone_7.png",
             "icon_width": 48,
             "subheading": "À PROPOS DE NOUS",
-            "title": "Des crampons qui font la différence.",
-            "content": "<p>On sélectionne les modèles les plus demandés et on te guide pour choisir vite, sans te perdre dans un catalogue.</p>",
+            "title": "Esprit2'FOOT - Votre confiance avant tout.",
+            "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
             "link_text": "",
             "link_url": "",
             "background": "#01ffae",
