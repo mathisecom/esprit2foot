@@ -17,7 +17,7 @@
         "message_ij9kRh": {
           "type": "message",
           "settings": {
-            "text": "95,99 LA PAIRE !",
+            "text": "-10% EN S'ABONNANT GRATUITEMENT A LA NEWSLETTER",
             "url": ""
           }
         },
@@ -44,10 +44,10 @@
       "settings": {
         "enable_sticky": false,
         "autoplay": false,
-        "cycle_speed": 6,
+        "cycle_speed": 4,
         "text_size": "text-xxs",
         "navigation_mode": "scrolling",
-        "scrolling_speed": 10,
+        "scrolling_speed": 15,
         "background": "#00ffae",
         "background_gradient": "",
         "text_color": "#000000"
