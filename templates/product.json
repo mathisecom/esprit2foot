@@ -427,13 +427,24 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "recommendations_count": 6,
-        "products": [],
+        "recommendations_count": 10,
+        "products": [
+          "mercurial-vapor-16-air-zoom-elite-se-fg-cosmic-speed-orange-1",
+          "chaussette-anti-derapantes",
+          "sneakers-mind-001-solar-red",
+          "n-ke-shoebag-performance",
+          "f50-hyperfast-pack-chaos-vs-control-laceless",
+          "phantom-6-elite-low-cut-fg-noir-chrome-vert",
+          "sneakers-mind-001-black-orange",
+          "mercurial-vapor-15-elite-fg-gris-noir-multicolore",
+          "shoebag-performance",
+          "mercurial-vapor-16-air-zoom-elite-sg-blanc-argente-noir"
+        ],
         "full_width": true,
         "stack_products": false,
         "show_progress_bar": true,
-        "products_per_row_mobile": "1",
-        "products_per_row_desktop": 3,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 4,
         "subheading": "",
         "title": "Vous Aimerez Aussi",
         "content": "",
