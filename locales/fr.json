@@ -443,6 +443,11 @@
   "shopify": {
     "links": {
       "powered_by_shopify": "‎ ‎ "
+    },
+    "checkout": {
+      "alternative_payment_method_banner": {
+        "or": "★★★★ 4/5| 672 Reviews and around 7000 Satisfied custmers"
+      }
     }
   }
 }
