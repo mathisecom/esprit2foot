@@ -45,7 +45,18 @@
     "cart_free_shipping_threshold": "20",
     "checkout_accent_color": "#f0c417",
     "checkout_button_color": "#1a1a1a",
-    "content_for_index": []
+    "content_for_index": [],
+    "blocks": {
+      "3952356182629730020": {
+        "type": "shopify://apps/qstomy/blocks/snippet/e6eee915-35f3-4263-ad38-6d12d36a17b6",
+        "disabled": false,
+        "settings": {
+          "hideWidgetSelector": "",
+          "initMode": "lazy",
+          "lazyTriggerSelector": ""
+        }
+      }
+    }
   },
   "presets": {
     "Sound": {
