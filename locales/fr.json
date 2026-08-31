@@ -447,6 +447,9 @@
     "checkout": {
       "alternative_payment_method_banner": {
         "or": "★★★★ 4/5 | 672 Reviews and around 7000 Satisfied custmers"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Inscris-toi à la newsletter et reçois nos codes promos, nouveautés et offres exclusives !"
       }
     }
   }
