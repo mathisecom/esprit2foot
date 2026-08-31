@@ -450,9 +450,6 @@
       },
       "marketing": {
         "accept_marketing_checkbox_label": "Inscris-toi à la newsletter et reçois nos codes promos, nouveautés et offres exclusives !"
-      },
-      "customer_account": {
-        "save_my_information_label": "."
       }
     }
   }
