@@ -59,8 +59,8 @@
         "image_E7WmFa": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/jude-bellingham-predator.png",
-            "mobile_image": "shopify://shop_images/jude-bellingham-predator_081d219b-4e18-47a9-bffa-3972679ee7fc.png",
+            "image": "shopify://shop_images/727332_v2.jpg",
+            "mobile_image": "shopify://shop_images/727332_v2.jpg",
             "content_max_width": 1060,
             "mobile_text_position": "place-self-end-start text-start",
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
