@@ -203,7 +203,7 @@
         "full_width": true,
         "stack_collections": false,
         "collections_per_row_mobile": "2",
-        "collections_per_row": 3,
+        "collections_per_row": 4,
         "show_progress_bar": true,
         "subheading": "",
         "title": "NOS MARQUES",
@@ -239,35 +239,8 @@
       "settings": {
         "collection": "best-sellers",
         "products": [
-          "mercurial-vapor-16-air-zoom-elite-fg-attack-pack",
-          "mercurial-vapor-16-air-zoom-elite-se-fg-cosmic-speed-orange-1",
-          "predator-26-tongue-sg-elite-gris-blanc-rouge",
-          "adidas-x-speedflow-fg-elite-champions-league-pack",
           "sneakers-mind-001-solar-red",
-          "mercurial-vapor-15-elite-fg-disruption-pack",
-          "sneakers-mind-001-black-orange",
-          "mercurial-vapor-16-air-zoom-elite-fg-blueprint-pack-copie",
-          "future-9-ultimate-elite-fg-ag-showtime-pack",
-          "chaussette-anti-derapantes",
-          "mercurial-vapor-9-elite-fg-socal-pack",
-          "f50-hyperfast-fg-elite-noir-beige-orange",
-          "mercurial-vapor-16-air-zoom-elite-sg-blanc-argente-noir",
-          "phantom-6-elite-low-cut-fg-alexis-putellas-personal-edition-cramoisi-vif-noir",
-          "phantom-6-elite-low-cut-fg-travis-scott-pack",
-          "phantom-6-elite-low-cut-fg-united-pack",
-          "phantom-6-elite-low-cut-fg-united-pack-1",
-          "phantom-6-elite-low-cut-fg-breakout-pack",
-          "adidas-x-speedflow-fg-elite-sapphire-edge-pack",
-          "predator-25-tongue-fg-elite-x-david-beckham-rose-blanc",
-          "predator-24-tongue-accuracy-fg-elite-x-tfg",
-          "predator-elite-fg-fold-over-tongue-x-jude-bellingham-noir-dore",
-          "mercurial-vapor-15-elite-fg-lucent-pack",
-          "mercurial-vapor-16-air-zoom-elite-fg-shadow-pack",
-          "mercurial-vapor-9-elite-fg-pro-x-marcus-rashford",
-          "hypervenom-phantom-rgn-fg-elite-orange",
-          "future-7-ultimate-elite-fg-ag-formula-pack-1",
-          "future-8-ultimate-elite-fg-ag-unlimited-pack",
-          "n-ke-shoebag-performance"
+          "mercurial-vapor-16-air-zoom-elite-fg-attack-pack"
         ],
         "full_width": true,
         "stack_products": false,
@@ -292,51 +265,6 @@
     "collection_list_7khGbL": {
       "type": "collection-list",
       "blocks": {
-        "collection_Ny3wJw": {
-          "type": "collection",
-          "settings": {
-            "collection": "predator",
-            "image": "shopify://shop_images/global_predator_goal_hunter_football_ss25_launch_pdp_banner_split_01_d_ab4b291866.avif",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_tjHTLB": {
-          "type": "collection",
-          "settings": {
-            "collection": "f50-1",
-            "image": "shopify://shop_images/0-movil.jpg",
-            "subheading": "",
-            "title": "F50",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_rWYDb3": {
-          "type": "collection",
-          "settings": {
-            "collection": "x-speedflow",
-            "image": "shopify://shop_images/Chaussure_X_Speedflow.1_Terrain_souple_Bleu_GW7457_HM55.jpg",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
         "collection_qWUcyP": {
           "type": "collection",
           "settings": {
@@ -372,6 +300,51 @@
           "settings": {
             "collection": "phantom",
             "image": "shopify://shop_images/nike-phantom-6-high-1.png",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_Ny3wJw": {
+          "type": "collection",
+          "settings": {
+            "collection": "predator",
+            "image": "shopify://shop_images/global_predator_goal_hunter_football_ss25_launch_pdp_banner_split_01_d_ab4b291866.avif",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-start text-start",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_tjHTLB": {
+          "type": "collection",
+          "settings": {
+            "collection": "f50-1",
+            "image": "shopify://shop_images/0-movil.jpg",
+            "subheading": "",
+            "title": "F50",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_rWYDb3": {
+          "type": "collection",
+          "settings": {
+            "collection": "x-speedflow",
+            "image": "shopify://shop_images/Chaussure_X_Speedflow.1_Terrain_souple_Bleu_GW7457_HM55.jpg",
             "subheading": "",
             "title": "",
             "url": "",
@@ -459,12 +432,12 @@
         }
       },
       "block_order": [
-        "collection_Ny3wJw",
-        "collection_tjHTLB",
-        "collection_rWYDb3",
         "collection_qWUcyP",
         "collection_QnDPmF",
         "collection_Qkmnat",
+        "collection_Ny3wJw",
+        "collection_tjHTLB",
+        "collection_rWYDb3",
         "collection_kLdbmj",
         "collection_3VHYgi",
         "collection_bGKtDV",
@@ -475,7 +448,7 @@
       "settings": {
         "full_width": true,
         "stack_collections": false,
-        "collections_per_row_mobile": "1",
+        "collections_per_row_mobile": "2",
         "collections_per_row": 3,
         "show_progress_bar": true,
         "subheading": "",
