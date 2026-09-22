@@ -353,7 +353,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 25
+            "overlay_opacity": 12
           }
         },
         "collection_ejtpC6": {
@@ -368,7 +368,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 18
+            "overlay_opacity": 10
           }
         },
         "collection_BJWcV7": {
@@ -383,7 +383,7 @@
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
-            "overlay_opacity": 22
+            "overlay_opacity": 10
           }
         }
       },
