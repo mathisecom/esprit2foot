@@ -481,9 +481,9 @@
         "text_style": "fill",
         "scrolling_mode": "auto",
         "scrolling_speed": 10,
-        "background": "#00ffee",
+        "background": "#000000",
         "background_gradient": "",
-        "text_color": "",
+        "text_color": "#FFFFFF",
         "text_gradient": ""
       }
     },
