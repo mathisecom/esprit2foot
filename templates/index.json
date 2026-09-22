@@ -139,29 +139,14 @@
           "type": "collection",
           "settings": {
             "collection": "n-ke",
-            "image": "shopify://shop_images/Nouveau_projet_2.webp",
+            "image": "shopify://shop_images/Design_sans_titre_7.png",
             "subheading": "",
-            "title": "NIKE",
+            "title": ".",
             "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 8
-          }
-        },
-        "collection_K4iLgR": {
-          "type": "collection",
-          "settings": {
-            "collection": "adidas",
-            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_015350.png",
-            "subheading": "",
-            "title": "ADISDA",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
+            "heading_tag": "h6",
+            "text_position": "place-self-end text-end",
+            "text_color": "#1D2332",
+            "overlay_color": "#FFFFFF",
             "overlay_opacity": 0
           }
         },
@@ -169,13 +154,28 @@
           "type": "collection",
           "settings": {
             "collection": "puma",
-            "image": "shopify://shop_images/Capture_d_ecran_2026-08-10_020321.png",
+            "image": "shopify://shop_images/Design_sans_titre_4.png",
             "subheading": "",
-            "title": "POMA",
+            "title": ".",
             "url": "",
             "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
+            "text_position": "place-self-end text-end",
+            "text_color": "#13336A",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_K4iLgR": {
+          "type": "collection",
+          "settings": {
+            "collection": "adidas",
+            "image": "shopify://shop_images/Design_sans_titre_1.png",
+            "subheading": "",
+            "title": ".",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end text-end",
+            "text_color": "#010101",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -184,22 +184,22 @@
           "type": "collection",
           "settings": {
             "collection": "new-balance",
-            "image": "shopify://shop_images/Nouveau_projet_3.webp",
+            "image": "shopify://shop_images/Design_sans_titre.png",
             "subheading": "",
-            "title": "NB.",
+            "title": ".",
             "url": "",
             "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
+            "text_position": "place-self-start-end text-end",
+            "text_color": "#0E0D12",
             "overlay_color": "#000000",
-            "overlay_opacity": 10
+            "overlay_opacity": 0
           }
         }
       },
       "block_order": [
         "collection_BhUaFk",
-        "collection_K4iLgR",
         "collection_Y6LAUJ",
+        "collection_K4iLgR",
         "collection_WqeByN"
       ],
       "name": "Collection list",
