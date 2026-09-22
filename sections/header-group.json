@@ -59,8 +59,8 @@
         "enable_sticky": true,
         "hide_on_scroll": false,
         "logo": "shopify://shop_images/Nouveau_projet_21.png",
-        "logo_max_width": 140,
-        "logo_mobile_max_width": 135,
+        "logo_max_width": 130,
+        "logo_mobile_max_width": 110,
         "menu": "main-menu",
         "sidebar_menu": "",
         "secondary_menu": "",
@@ -72,9 +72,9 @@
         "show_country_selector": false,
         "show_country_flag": false,
         "show_country_name": false,
-        "transparent_header_text_color": "#000000",
+        "transparent_header_text_color": "#FFFFFF",
         "transparent_logo": "shopify://shop_images/Nouveau_projet_21.png",
-        "reduce_padding": false,
+        "reduce_padding": true,
         "background_opacity": 100,
         "background_blur_radius": 0
       }
