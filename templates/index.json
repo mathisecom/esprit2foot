@@ -274,7 +274,7 @@
             "heading_tag": "h4",
             "content": "",
             "link_url": "shopify://collections/beligol",
-            "link_text": "",
+            "link_text": "CHOISIR SA PAIRE",
             "link_style": "button"
           }
         },
@@ -286,9 +286,9 @@
             "title": "LAMINE YAMAL",
             "heading_tag": "h4",
             "content": "",
-            "link_url": "https://esprit2foot.fr/collections/yamal",
-            "link_text": "",
-            "link_style": "link"
+            "link_url": "shopify://collections/yamal",
+            "link_text": "CHOISIR SA PAIRE",
+            "link_style": "button"
           }
         },
         "item_kKGWje": {
@@ -300,8 +300,8 @@
             "heading_tag": "h4",
             "content": "",
             "link_url": "shopify://collections/messi",
-            "link_text": "",
-            "link_style": "link"
+            "link_text": "CHOISIR SA PAIRE",
+            "link_style": "button"
           }
         },
         "item_VnUzyf": {
@@ -313,8 +313,8 @@
             "heading_tag": "h4",
             "content": "",
             "link_url": "shopify://collections/mbappe",
-            "link_text": "",
-            "link_style": "link"
+            "link_text": "CHOISIR SA PAIRE",
+            "link_style": "button"
           }
         }
       },
