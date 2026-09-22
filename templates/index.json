@@ -41,7 +41,7 @@
             "mobile_image": "shopify://shop_images/image_1.avif",
             "content_max_width": 840,
             "mobile_text_position": "place-self-end-center text-center",
-            "desktop_text_position": "sm:place-self-end-start sm:text-start",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
             "subheading": "« Break the lines. Break the records. Break 'Em. »",
             "title": "Collection Nike Break Em'",
             "heading_tag": "h1",
