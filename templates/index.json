@@ -12,6 +12,28 @@
     "slideshow_TEBwWb": {
       "type": "slideshow",
       "blocks": {
+        "image_E7WmFa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/727332_v2.jpg",
+            "mobile_image": "shopify://shop_images/727332_v2.jpg",
+            "content_max_width": 1060,
+            "mobile_text_position": "place-self-end-start text-start",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
+            "subheading": "\" S'INSPIRER DES MEILLEURS \"",
+            "title": "Les célèbres Predators Tongue de Jude Bellingham",
+            "heading_tag": "h2",
+            "button_text": "ACHETER MAINTENANT",
+            "button_link": "shopify://collections/predator",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
         "image_ndNJfN": {
           "type": "image",
           "settings": {
@@ -55,34 +77,12 @@
             "background": "",
             "background_gradient": ""
           }
-        },
-        "image_E7WmFa": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/727332_v2.jpg",
-            "mobile_image": "shopify://shop_images/727332_v2.jpg",
-            "content_max_width": 1060,
-            "mobile_text_position": "place-self-end-start text-start",
-            "desktop_text_position": "sm:place-self-end-start sm:text-start",
-            "subheading": "\" S'INSPIRER DES MEILLEURS \"",
-            "title": "Les célèbres Predators Tongue de Jude Bellingham",
-            "heading_tag": "h2",
-            "button_text": "ACHETER MAINTENANT",
-            "button_link": "shopify://collections/predator",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#000000",
-            "overlay_opacity": 13,
-            "background": "",
-            "background_gradient": ""
-          }
         }
       },
       "block_order": [
+        "image_E7WmFa",
         "image_ndNJfN",
-        "image_TkmwRV",
-        "image_E7WmFa"
+        "image_TkmwRV"
       ],
       "name": "Slideshow",
       "settings": {
