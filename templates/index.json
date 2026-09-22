@@ -12,6 +12,28 @@
     "slideshow_TEBwWb": {
       "type": "slideshow",
       "blocks": {
+        "image_ndNJfN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/gu1-1.jpg",
+            "mobile_image": "shopify://shop_images/1765802942-pack.2e16d0ba.fill-600x750_1.webp",
+            "content_max_width": 840,
+            "mobile_text_position": "place-self-center text-center",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
+            "subheading": "« Break the lines. Break the records. Break 'Em. »",
+            "title": "Découvrez le nouveau Attack Pack",
+            "heading_tag": "h1",
+            "button_text": "",
+            "button_link": "",
+            "text_color": "#FFFFFF",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#0e2e53",
+            "overlay_opacity": 8,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
         "image_E7WmFa": {
           "type": "image",
           "settings": {
@@ -19,7 +41,7 @@
             "mobile_image": "shopify://shop_images/jude-bellingham-predator_081d219b-4e18-47a9-bffa-3972679ee7fc.png",
             "content_max_width": 1060,
             "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-end-start sm:text-start",
+            "desktop_text_position": "sm:place-self-end-center sm:text-center",
             "subheading": "\" S'INSPIRER DES MEILLEURS \"",
             "title": "Découvrez la célébre PREDATOR Fold-Over de Jude Bellingham",
             "heading_tag": "h2",
@@ -44,7 +66,7 @@
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "subheading": "CHOISISSEZ VOTRE CAMP",
             "title": "Adisda \" Chaos vs Control \" Pack",
-            "heading_tag": "h2",
+            "heading_tag": "h1",
             "button_text": "",
             "button_link": "shopify://products/f50-hyperfast-pack-chaos-vs-control-laceless",
             "text_color": "#ffffff",
@@ -55,39 +77,17 @@
             "background": "",
             "background_gradient": ""
           }
-        },
-        "image_ndNJfN": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/1765802942-pack.2e16d0ba.fill-600x750_1.webp",
-            "mobile_image": "shopify://shop_images/1765802942-pack.2e16d0ba.fill-600x750_1.webp",
-            "content_max_width": 840,
-            "mobile_text_position": "place-self-center text-center",
-            "desktop_text_position": "sm:place-self-end-start sm:text-start",
-            "subheading": "MENEZ L'ATTAQUE !",
-            "title": "Découvrez le nouveau Attack Pack",
-            "heading_tag": "h1",
-            "button_text": "",
-            "button_link": "",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#0e2e53",
-            "overlay_opacity": 24,
-            "background": "",
-            "background_gradient": ""
-          }
         }
       },
       "block_order": [
+        "image_ndNJfN",
         "image_E7WmFa",
-        "image_TkmwRV",
-        "image_ndNJfN"
+        "image_TkmwRV"
       ],
       "name": "Slideshow",
       "settings": {
         "full_width": true,
-        "allow_transparent_header": true,
+        "allow_transparent_header": false,
         "show_initial_transition": false,
         "image_size": "lg",
         "controls_type": "dots",
@@ -255,7 +255,7 @@
         "text_style": "fill",
         "scrolling_mode": "auto",
         "scrolling_speed": 10,
-        "background": "#01ffae",
+        "background": "#00FFEE",
         "background_gradient": "",
         "text_color": "",
         "text_gradient": ""
@@ -685,7 +685,7 @@
             "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
             "link_text": "VOIR NOS COLLECTIONS",
             "link_url": "",
-            "background": "#01ffae",
+            "background": "#00FFEE",
             "background_gradient": "",
             "text_color": "#1a1a1a",
             "text_gradient": "",
