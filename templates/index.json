@@ -34,6 +34,28 @@
             "background_gradient": ""
           }
         },
+        "image_TkmwRV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/727362.jpg",
+            "mobile_image": "shopify://shop_images/cover_chaosvscontrol_adidas.jpg",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
+            "subheading": "« Choisissez votre camp. »",
+            "title": "Adidas \" Chaos vs Control \" Pack",
+            "heading_tag": "h2",
+            "button_text": "ACHETER MAINTENANT",
+            "button_link": "https://esprit2foot.fr/search?q=chaos+vs+control&type=product",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#6a1002",
+            "overlay_opacity": 3,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
         "image_E7WmFa": {
           "type": "image",
           "settings": {
@@ -55,34 +77,12 @@
             "background": "",
             "background_gradient": ""
           }
-        },
-        "image_TkmwRV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/727364_v2.jpg",
-            "mobile_image": "shopify://shop_images/IMG_6001.png",
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-end-center text-center",
-            "desktop_text_position": "sm:place-self-end-start sm:text-start",
-            "subheading": "« Choisissez votre camp. »",
-            "title": "Adidas \" Chaos vs Control \" Pack",
-            "heading_tag": "h2",
-            "button_text": "ACHETER MAINTENANT",
-            "button_link": "https://esprit2foot.fr/search?q=chaos+vs+control&type=product",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#6a1002",
-            "overlay_opacity": 3,
-            "background": "",
-            "background_gradient": ""
-          }
         }
       },
       "block_order": [
         "image_ndNJfN",
-        "image_E7WmFa",
-        "image_TkmwRV"
+        "image_TkmwRV",
+        "image_E7WmFa"
       ],
       "name": "Slideshow",
       "settings": {
