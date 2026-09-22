@@ -47,7 +47,7 @@
             "heading_tag": "h2",
             "button_text": "ACHETER MAINTENANT",
             "button_link": "https://esprit2foot.fr/search?type=product&q=Break+Em",
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
@@ -60,7 +60,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/727362.jpg",
-            "mobile_image": "shopify://shop_images/cover_chaosvscontrol_adidas.jpg",
+            "mobile_image": "shopify://shop_images/727362.jpg",
             "content_max_width": 780,
             "mobile_text_position": "place-self-end-start text-start",
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
@@ -109,9 +109,9 @@
           "f50-hyperfast-laceless-fg-elite-final-rush-pack"
         ],
         "full_width": true,
-        "stack_products": false,
+        "stack_products": true,
         "show_progress_bar": true,
-        "products_count": 30,
+        "products_count": 2,
         "products_per_row_mobile": "2",
         "products_per_row_desktop": 2,
         "subheading": "",
@@ -137,7 +137,7 @@
             "collection": "n-ke",
             "image": "shopify://shop_images/Nouveau_projet_2.webp",
             "subheading": "",
-            "title": "N!KE",
+            "title": "NIKE",
             "url": "",
             "heading_tag": "h3",
             "text_position": "place-self-end-center text-center",
@@ -227,7 +227,7 @@
         "text_style": "fill",
         "scrolling_mode": "auto",
         "scrolling_speed": 10,
-        "background": "#00FFEE",
+        "background": "#00ffee",
         "background_gradient": "",
         "text_color": "",
         "text_gradient": ""
@@ -260,6 +260,82 @@
         "heading_gradient": "",
         "product_card_background": "",
         "product_card_text_color": ""
+      }
+    },
+    "multi_column_h4QNhQ": {
+      "type": "multi-column",
+      "blocks": {
+        "item_Y9aj77": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/images_12.jpg",
+            "column_size": "4",
+            "title": "JUDE BELLINGHAM",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/beligol",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_LUgrTp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack.jpg",
+            "column_size": "4",
+            "title": "LAMINE YAMAL",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/yamal",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_kKGWje": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_2.webp",
+            "column_size": "4",
+            "title": "LEO MESSI",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/messi",
+            "link_text": "",
+            "link_style": "link"
+          }
+        },
+        "item_VnUzyf": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_1_1.webp",
+            "column_size": "4",
+            "title": "KYLIAN MBAPPE",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/mbappe",
+            "link_text": "",
+            "link_style": "link"
+          }
+        }
+      },
+      "block_order": [
+        "item_Y9aj77",
+        "item_LUgrTp",
+        "item_kKGWje",
+        "item_VnUzyf"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "medium",
+        "text_alignment": "center",
+        "subheading": "",
+        "title": "",
+        "content": "<h5><strong>RETROUVE TES </strong><em>JOUEURS PRÉFÉRÉS</em></h5>",
+        "background": "#fbffe6",
+        "background_gradient": "",
+        "text_color": ""
       }
     },
     "collection_list_fYBFCR": {
@@ -536,82 +612,6 @@
         "heading_gradient": ""
       }
     },
-    "multi_column_h4QNhQ": {
-      "type": "multi-column",
-      "blocks": {
-        "item_Y9aj77": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/images_12.jpg",
-            "column_size": "4",
-            "title": "JUDE BELLINGHAM",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/beligol",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_LUgrTp": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack.jpg",
-            "column_size": "4",
-            "title": "LAMINE YAMAL",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/yamal",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_kKGWje": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_2.webp",
-            "column_size": "4",
-            "title": "LEO MESSI",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/messi",
-            "link_text": "",
-            "link_style": "link"
-          }
-        },
-        "item_VnUzyf": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_1_1.webp",
-            "column_size": "4",
-            "title": "KYLIAN MBAPPE",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/mbappe",
-            "link_text": "",
-            "link_style": "link"
-          }
-        }
-      },
-      "block_order": [
-        "item_Y9aj77",
-        "item_LUgrTp",
-        "item_kKGWje",
-        "item_VnUzyf"
-      ],
-      "name": "Multi-column",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "gap": "medium",
-        "text_alignment": "center",
-        "subheading": "",
-        "title": "",
-        "content": "<h5><strong>RETROUVE TES </strong><em>JOUEURS PRÉFÉRÉS</em></h5>",
-        "background": "#fbffe6",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "media_with_text_98C7FQ": {
       "type": "media-with-text",
       "blocks": {
@@ -630,7 +630,7 @@
             "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
             "link_text": "VOIR NOS COLLECTIONS",
             "link_url": "",
-            "background": "#00FFEE",
+            "background": "#00ffee",
             "background_gradient": "",
             "text_color": "#1a1a1a",
             "text_gradient": "",
@@ -978,10 +978,10 @@
     "featured_collection_bzeT64",
     "collection_list_UcD6BR",
     "scrolling_text_ctzbLQ",
-    "collection_list_fYBFCR",
-    "collection_list_7khGbL",
     "featured_collection_JCd9YQ",
     "multi_column_h4QNhQ",
+    "collection_list_fYBFCR",
+    "collection_list_7khGbL",
     "media_with_text_98C7FQ",
     "rich_text_UdD7NL",
     "scrolling_text_MBNpEd",
