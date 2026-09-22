@@ -105,11 +105,11 @@
       "settings": {
         "collection": "frontpage",
         "products": [
-          "mercurial-superfly-11-elite-fg-break-em-pack",
-          "f50-hyperfast-pack-chaos-vs-control-laceless",
-          "predator-26-tongue-fg-elite-x-zizou-blanc-dore",
-          "f50-hyperfast-laceless-fg-elite-final-rush-pack",
           "mercurial-superfly-11-elite-fg-breakout-pack",
+          "mercurial-superfly-11-elite-fg-break-em-pack",
+          "predator-26-tongue-fg-elite-x-zizou-blanc-dore",
+          "f50-hyperfast-pack-chaos-vs-control-laceless",
+          "f50-hyperfast-laceless-fg-elite-final-rush-pack",
           "f50-fg-elite-laceless-x-leo-messi"
         ],
         "full_width": true,
