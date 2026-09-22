@@ -22,7 +22,7 @@
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "subheading": "\" S'INSPIRER DES MEILLEURS \"",
             "title": "Les célèbres Predators Tongue de Jude Bellingham",
-            "heading_tag": "h2",
+            "heading_tag": "h1",
             "button_text": "ACHETER MAINTENANT",
             "button_link": "shopify://collections/predator",
             "text_color": "#ffffff",
@@ -41,17 +41,17 @@
             "mobile_image": "shopify://shop_images/image_1.avif",
             "content_max_width": 840,
             "mobile_text_position": "place-self-end-center text-center",
-            "desktop_text_position": "sm:place-self-end-center sm:text-center",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "subheading": "« Break the lines. Break the records. Break 'Em. »",
             "title": "Collection Nike Break Em'",
-            "heading_tag": "h2",
+            "heading_tag": "h1",
             "button_text": "ACHETER MAINTENANT",
             "button_link": "https://esprit2foot.fr/search?type=product&q=Break+Em",
             "text_color": "#ffffff",
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 8,
+            "overlay_opacity": 0,
             "background": "",
             "background_gradient": ""
           }
@@ -66,7 +66,7 @@
             "desktop_text_position": "sm:place-self-end-start sm:text-start",
             "subheading": "« Choisissez votre camp. »",
             "title": "Adidas \" Chaos vs Control \" Pack",
-            "heading_tag": "h2",
+            "heading_tag": "h1",
             "button_text": "ACHETER MAINTENANT",
             "button_link": "https://esprit2foot.fr/search?q=chaos+vs+control&type=product",
             "text_color": "#ffffff",
@@ -145,8 +145,8 @@
             "url": "",
             "heading_tag": "h6",
             "text_position": "place-self-end text-end",
-            "text_color": "#1D2332",
-            "overlay_color": "#FFFFFF",
+            "text_color": "#1d2332",
+            "overlay_color": "#ffffff",
             "overlay_opacity": 0
           }
         },
@@ -160,7 +160,7 @@
             "url": "",
             "heading_tag": "h3",
             "text_position": "place-self-end text-end",
-            "text_color": "#13336A",
+            "text_color": "#13336a",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
@@ -190,7 +190,7 @@
             "url": "",
             "heading_tag": "h3",
             "text_position": "place-self-start-end text-end",
-            "text_color": "#0E0D12",
+            "text_color": "#0e0d12",
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
