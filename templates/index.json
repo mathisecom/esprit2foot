@@ -225,14 +225,14 @@
       "name": "Scrolling text",
       "settings": {
         "full_width": true,
-        "text": "-13% EN S'ABONNANT GRATUITEMENT A LA NEWSLETTER",
+        "text": "-50% SUR VOTRE 3E ARTICLE",
         "text_size": "xsmall",
         "text_style": "fill",
         "scrolling_mode": "auto",
         "scrolling_speed": 10,
         "background": "#00ffee",
         "background_gradient": "",
-        "text_color": "",
+        "text_color": "#000000",
         "text_gradient": ""
       }
     },
@@ -474,14 +474,14 @@
       "name": "Scrolling text",
       "settings": {
         "full_width": true,
-        "text": "LIVRAISON GRATUITE",
+        "text": "-13% EN S'ABONNANT GRATUITEMENT A LA NEWSLETTER",
         "text_size": "xsmall",
         "text_style": "fill",
         "scrolling_mode": "auto",
-        "scrolling_speed": 10,
+        "scrolling_speed": 8,
         "background": "#000000",
         "background_gradient": "",
-        "text_color": "#ffffff",
+        "text_color": "#00FFF3",
         "text_gradient": ""
       }
     },
