@@ -33,7 +33,7 @@
         "liquid_zBahwN": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div style=\"\n  background-color: #01FFAE;\n  color: #000000;\n  padding: 7px 14px;\n  margin-bottom: 10px;\n  text-align: center;\n  font-weight: 800;\n  font-size: 15px;\n  border: 1px solid #000000;\n  border-radius: 5px;\n  text-transform: uppercase;\n  box-shadow: 2px 2px 0 #000000;\n\">\n  LIVRAISON OFFERTE !\n</div>"
+            "liquid": "<div style=\"\n  background-color: #00FFF5;\n  color: #000000;\n  padding: 7px 14px;\n  margin-bottom: 10px;\n  text-align: center;\n  font-weight: 800;\n  font-size: 15px;\n  border: 1px solid #000000;\n  border-radius: 5px;\n  text-transform: uppercase;\n  box-shadow: 2px 2px 0 #000000;\n\">\n  LIVRAISON OFFERTE !\n</div>"
           }
         },
         "variant_picker": {
@@ -159,7 +159,7 @@
         "image_pyzQ3q": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/crampons_esprit_2_FOOT.jpg",
+            "image": "shopify://shop_images/8443e5a9-f59f-47a6-8cf0-50c8c88d7a3b.png",
             "media_width": 45,
             "media_position": "start",
             "text_position": "place-self-center text-center",
@@ -171,7 +171,7 @@
             "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
             "link_text": "",
             "link_url": "",
-            "background": "#01ffae",
+            "background": "#00FFF5",
             "background_gradient": "",
             "text_color": "#0d0d0d",
             "text_gradient": "",
