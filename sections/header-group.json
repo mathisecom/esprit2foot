@@ -21,13 +21,6 @@
             "url": ""
           }
         },
-        "message_gxax6w": {
-          "type": "message",
-          "settings": {
-            "text": "LA MEILLEURE QUALITÉ DU MARCHÉ !",
-            "url": ""
-          }
-        },
         "message": {
           "type": "message",
           "settings": {
@@ -38,7 +31,6 @@
       },
       "block_order": [
         "message_ij9kRh",
-        "message_gxax6w",
         "message"
       ],
       "settings": {
