@@ -482,7 +482,7 @@
         "background": "#000000",
         "background_gradient": "",
         "text_color": "#00fff5",
-        "text_gradient": ""
+        "text_gradient": "linear-gradient(228deg, rgba(0, 255, 245, 1) 14%, rgba(247, 246, 246, 1) 83%)"
       }
     },
     "collection_list_fYBFCR": {
