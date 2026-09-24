@@ -21,7 +21,7 @@
             "mobile_text_position": "place-self-end-center text-center",
             "desktop_text_position": "sm:place-self-end-center sm:text-center",
             "subheading": "« Break the lines. Break the records. Break 'Em. »",
-            "title": "Collection Nike Break Em'",
+            "title": "Nouveauté : Collection Break Em'",
             "heading_tag": "h1",
             "button_text": "ACHETER MAINTENANT",
             "button_link": "https://esprit2foot.fr/search?type=product&q=Break+Em",
@@ -29,7 +29,7 @@
             "button_background": "#ffffff",
             "button_text_color": "#000000",
             "overlay_color": "#000000",
-            "overlay_opacity": 5,
+            "overlay_opacity": 10,
             "background": "",
             "background_gradient": ""
           }
