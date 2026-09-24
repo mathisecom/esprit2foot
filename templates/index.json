@@ -230,7 +230,7 @@
         "text_style": "fill",
         "scrolling_mode": "auto",
         "scrolling_speed": 10,
-        "background": "#00FFF5",
+        "background": "#00fff5",
         "background_gradient": "",
         "text_color": "#000000",
         "text_gradient": ""
@@ -271,6 +271,21 @@
     "collection_list_7khGbL": {
       "type": "collection-list",
       "blocks": {
+        "collection_tjHTLB": {
+          "type": "collection",
+          "settings": {
+            "collection": "f50-1",
+            "image": "shopify://shop_images/0-movil.jpg",
+            "subheading": "",
+            "title": "F50",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
         "collection_qWUcyP": {
           "type": "collection",
           "settings": {
@@ -286,21 +301,6 @@
             "overlay_opacity": 0
           }
         },
-        "collection_QnDPmF": {
-          "type": "collection",
-          "settings": {
-            "collection": "tiempo",
-            "image": "shopify://shop_images/IMG_0972_1_1.webp",
-            "subheading": "",
-            "title": "",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
         "collection_Qkmnat": {
           "type": "collection",
           "settings": {
@@ -310,6 +310,21 @@
             "title": "",
             "url": "",
             "heading_tag": "h3",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_kCNYEx": {
+          "type": "collection",
+          "settings": {
+            "collection": "ultra",
+            "image": "shopify://shop_images/crampons-puma-arrival-pack-3_bc5d6738-1e51-46ff-8f02-2d8c9f29c825.png",
+            "subheading": "",
+            "title": "ULTRA",
+            "url": "",
+            "heading_tag": "h2",
             "text_position": "place-self-end text-end",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
@@ -331,15 +346,30 @@
             "overlay_opacity": 0
           }
         },
-        "collection_tjHTLB": {
+        "collection_bGKtDV": {
           "type": "collection",
           "settings": {
-            "collection": "f50-1",
-            "image": "shopify://shop_images/0-movil.jpg",
+            "collection": "nb-furon",
+            "image": "shopify://shop_images/crampons_new_balance_furon_v6_2-scaled_34454469-5e09-4334-858f-bb9c32957a6c.png",
             "subheading": "",
-            "title": "F50",
+            "title": "NB. FURON",
             "url": "",
             "heading_tag": "h2",
+            "text_position": "place-self-end text-end",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_QnDPmF": {
+          "type": "collection",
+          "settings": {
+            "collection": "tiempo",
+            "image": "shopify://shop_images/IMG_0972_1_1.webp",
+            "subheading": "",
+            "title": "",
+            "url": "",
+            "heading_tag": "h3",
             "text_position": "place-self-end-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
@@ -391,21 +421,6 @@
             "overlay_opacity": 0
           }
         },
-        "collection_bGKtDV": {
-          "type": "collection",
-          "settings": {
-            "collection": "nb-furon",
-            "image": "shopify://shop_images/crampons_new_balance_furon_v6_2-scaled_34454469-5e09-4334-858f-bb9c32957a6c.png",
-            "subheading": "",
-            "title": "NB. FURON",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
         "collection_BBdNj6": {
           "type": "collection",
           "settings": {
@@ -420,42 +435,27 @@
             "overlay_color": "#000000",
             "overlay_opacity": 0
           }
-        },
-        "collection_kCNYEx": {
-          "type": "collection",
-          "settings": {
-            "collection": "ultra",
-            "image": "shopify://shop_images/crampons-puma-arrival-pack-3_bc5d6738-1e51-46ff-8f02-2d8c9f29c825.png",
-            "subheading": "",
-            "title": "ULTRA",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
         }
       },
       "block_order": [
-        "collection_qWUcyP",
-        "collection_QnDPmF",
-        "collection_Qkmnat",
-        "collection_Ny3wJw",
         "collection_tjHTLB",
+        "collection_qWUcyP",
+        "collection_Qkmnat",
+        "collection_kCNYEx",
+        "collection_Ny3wJw",
+        "collection_bGKtDV",
+        "collection_QnDPmF",
         "collection_rWYDb3",
         "collection_kLdbmj",
         "collection_3VHYgi",
-        "collection_bGKtDV",
-        "collection_BBdNj6",
-        "collection_kCNYEx"
+        "collection_BBdNj6"
       ],
       "name": "Collection list",
       "settings": {
         "full_width": true,
         "stack_collections": false,
         "collections_per_row_mobile": "2",
-        "collections_per_row": 3,
+        "collections_per_row": 4,
         "show_progress_bar": true,
         "subheading": "",
         "title": "MODÈLES PHARES",
@@ -481,7 +481,7 @@
         "scrolling_speed": 8,
         "background": "#000000",
         "background_gradient": "",
-        "text_color": "#00FFF5",
+        "text_color": "#00fff5",
         "text_gradient": ""
       }
     },
@@ -652,7 +652,7 @@
             "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
             "link_text": "VOIR NOS COLLECTIONS",
             "link_url": "shopify://collections/nos-crampons",
-            "background": "#00FFF5",
+            "background": "#00fff5",
             "background_gradient": "",
             "text_color": "#1a1a1a",
             "text_gradient": "",
