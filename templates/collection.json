@@ -17,16 +17,16 @@
         "enable_parallax": true,
         "show_collection_title": true,
         "show_collection_description": true,
-        "show_collection_image": true,
-        "collection_title_size": "h3",
+        "show_collection_image": false,
+        "collection_title_size": "h2",
         "image_size": "auto",
         "mobile_text_position": "place-self-center text-center",
-        "desktop_text_position": "sm:place-self-center sm:text-center",
+        "desktop_text_position": "sm:place-self-center-start sm:text-start",
         "featured_product": "",
         "featured_product_heading": "Featured product",
         "text_color": "#ffffff",
         "overlay_color": "#000000",
-        "overlay_opacity": 30
+        "overlay_opacity": 14
       }
     },
     "main": {
