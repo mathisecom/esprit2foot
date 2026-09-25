@@ -17,7 +17,7 @@
         "apparition_delay": 3,
         "show_only_on_index": true,
         "show_only_for_visitors": true,
-        "show_only_once": false,
+        "show_only_once": true,
         "title": "Inscris-toi à la newsletter",
         "button_text": "[ JE REJOINS LA TEAM ]",
         "subtext": "<em><strong>DEVIENS UN MEMBRE EN ESPRIT. &nbsp;Inscris-toi à la newsletter pour recevoir nos nouveautés, nos offres exclusives et quelques surprises réservées à la team, dont un code promo de 10% !</strong></em>"
