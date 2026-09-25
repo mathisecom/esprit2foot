@@ -21,9 +21,11 @@
   <div {% render 'section-properties', tight: is_tight %}>
     {%- capture section_content -%}
       {%- for i in (1..10) -%}
-        <span class="scrolling-text__text heading {% unless forloop.first %}motion-reduce:hidden{% endunless %}" {% unless forloop.first %}aria-hidden="true"{% endunless %}>
+        <button onclick="document.getElementById('newsletter-drawer').show()" style="background:none;border:none;cursor:pointer;padding:0;">
+          <span class="scrolling-text__text heading {% unless forloop.first %}motion-reduce:hidden{% endunless %}" {% unless forloop.first %}aria-hidden="true"{% endunless %}>
           {%- render 'styled-text', content: section.settings.text, gradient: section.settings.text_gradient, style: section.settings.text_style -%}
-        </span>
+          </span>
+        </button>
       {%- endfor -%}
     {%- endcapture -%}
 
