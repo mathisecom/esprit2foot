@@ -13,15 +13,14 @@
   "sections": {
     "newsletter-popup": {
       "type": "newsletter-popup",
-      "disabled": true,
       "settings": {
         "apparition_delay": 3,
         "show_only_on_index": true,
-        "show_only_for_visitors": false,
+        "show_only_for_visitors": true,
         "show_only_once": false,
         "title": "Inscris-toi à la newsletter",
-        "button_text": "[ JE REJOINS ]",
-        "subtext": "Rejoins la <strong>E2F' Squad. </strong>Inscris-toi à la newsletter pour recevoir nos nouveautés, nos offres exclusives et quelques surprises réservées à la team, dont <strong>un code promo</strong> de 13% !"
+        "button_text": "[ JE REJOINS LA TEAM ]",
+        "subtext": "<em><strong>DEVIENS UN MEMBRE EN ESPRIT. &nbsp;Inscris-toi à la newsletter pour recevoir nos nouveautés, nos offres exclusives et quelques surprises réservées à la team, dont un code promo de 10% !</strong></em>"
       }
     },
     "privacy-banner": {
@@ -41,7 +40,7 @@
         "show_checkout_button": true,
         "recommendations_title": "",
         "products": [],
-        "product_card_background": "#FFFFFF",
+        "product_card_background": "#ffffff",
         "product_card_text_color": ""
       }
     },
