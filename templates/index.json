@@ -220,54 +220,6 @@
         "heading_gradient": ""
       }
     },
-    "scrolling_text_ctzbLQ": {
-      "type": "scrolling-text",
-      "name": "Scrolling text",
-      "settings": {
-        "full_width": true,
-        "text": "-50% SUR VOTRE 3E ARTICLE",
-        "text_size": "xsmall",
-        "text_style": "fill",
-        "scrolling_mode": "auto",
-        "scrolling_speed": 10,
-        "background": "#00fff5",
-        "background_gradient": "",
-        "text_color": "#000000",
-        "text_gradient": ""
-      }
-    },
-    "featured_collection_JCd9YQ": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "collection": "best-sellers",
-        "products": [
-          "predator-26-tongue-fg-elite-gris-blanc-rouge",
-          "sneakers-mind-001-solar-red",
-          "mercurial-vapor-16-air-zoom-elite-fg-attack-pack",
-          "sneakers-mind-001-black-orange",
-          "mercurial-vapor-15-elite-fg-gris-noir-multicolore"
-        ],
-        "full_width": true,
-        "stack_products": false,
-        "show_progress_bar": true,
-        "products_count": 5,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 5,
-        "subheading": "",
-        "title": "NOS BEST SELLERS",
-        "content": "",
-        "link_url": "",
-        "link_text": "Découvrir les tops ventes",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
-      }
-    },
     "collection_list_7khGbL": {
       "type": "collection-list",
       "blocks": {
@@ -467,6 +419,54 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": ""
+      }
+    },
+    "scrolling_text_ctzbLQ": {
+      "type": "scrolling-text",
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "-50% SUR VOTRE 3E ARTICLE",
+        "text_size": "xsmall",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 10,
+        "background": "#00fff5",
+        "background_gradient": "",
+        "text_color": "#000000",
+        "text_gradient": ""
+      }
+    },
+    "featured_collection_JCd9YQ": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "best-sellers",
+        "products": [
+          "predator-26-tongue-fg-elite-gris-blanc-rouge",
+          "sneakers-mind-001-solar-red",
+          "mercurial-vapor-16-air-zoom-elite-fg-attack-pack",
+          "sneakers-mind-001-black-orange",
+          "mercurial-vapor-15-elite-fg-gris-noir-multicolore"
+        ],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 5,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "",
+        "title": "NOS BEST SELLERS",
+        "content": "",
+        "link_url": "",
+        "link_text": "Découvrir les tops ventes",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
       }
     },
     "scrolling_text_mRWVdk": {
@@ -999,10 +999,10 @@
     "slideshow_TEBwWb",
     "featured_collection_bzeT64",
     "collection_list_UcD6BR",
-    "scrolling_text_ctzbLQ",
+    "scrolling_text_mRWVdk",
     "featured_collection_JCd9YQ",
     "collection_list_7khGbL",
-    "scrolling_text_mRWVdk",
+    "scrolling_text_ctzbLQ",
     "collection_list_fYBFCR",
     "multi_column_h4QNhQ",
     "media_with_text_98C7FQ",
