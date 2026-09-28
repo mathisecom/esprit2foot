@@ -54,7 +54,7 @@
         "liquid_XE4atr": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"product-info__block-item\" data-block-id=\"liquid_xgmDkm\" data-block-type=\"liquid\"><div class=\"product-info__liquid\">\n              <div class=\"product-info__liquid\">\n            <div class=\"product-info__liquid\">\n            <!-- VALORISE — Livraison dynamique (court, mobile, point animé) -->\n<div class=\"valo-delivery\" id=\"valoDelivery\" role=\"status\">\n  <style>\n    .valo-delivery{\n      display:flex; align-items:center; gap:6px;\n      justify-content:center;\n      font-size:12px; font-weight:500; color:#111;\n      background:transparent; padding:4px 0;\n      white-space:nowrap;\n    }\n    .valo-delivery .dot{\n      width:9px; height:9px; border-radius:9999px;\n      background:rgba(34,197,94,.25);\n      box-shadow:0 0 0 0 rgba(34,197,94,.35);\n      animation:valoPulse 1.6s infinite;\n      flex-shrink:0;\n    }\n    .valo-delivery b{\n      color:#262324; font-weight:600;\n    }\n    @keyframes valoPulse{\n      0%{box-shadow:0 0 0 0 rgba(34,197,94,.35);}\n      70%{box-shadow:0 0 0 6px rgba(34,197,94,0);}\n      100%{box-shadow:0 0 0 0 rgba(34,197,94,0);}\n    }\n    @media(max-width:420px){\n      .valo-delivery{font-size:11px; gap:5px; white-space:normal;}\n    }\n  </style>\n\n  <span class=\"dot\" aria-hidden=\"true\"></span>\n  <span id=\"valoDeliveryText\">En stock · Livraison express <b>jeu 13 août</b> – <b>ven 14 août</b></span>\n\n  <script>\n    (function(){\n      const el = document.getElementById(\"valoDeliveryText\");\n      const today = new Date();\n\n      // ajoute des jours en sautant le dimanche\n      function addDaysSkipSunday(date, days){\n        const d = new Date(date);\n        let added = 0;\n        while(added < days){\n          d.setDate(d.getDate() + 1);\n          if (d.getDay() !== 0) added++; // 0 = dimanche\n        }\n        return d;\n      }\n\n      // expédition le lendemain\n      const ship = new Date(today);\n      ship.setDate(ship.getDate() + 1);\n      if (ship.getDay() === 0) ship.setDate(ship.getDate() + 1); // si dimanche → lundi\n\n      // fenêtre 48–72h ouvrées\n      const min = addDaysSkipSunday(ship, 9 );\n      const max = addDaysSkipSunday(ship, 16);\n\n      const opt = { weekday: \"short\", day: \"numeric\", month: \"short\" };\n      const s1 = min.toLocaleDateString(\"fr-FR\", opt).replace(\".\", \"\");\n      const s2 = max.toLocaleDateString(\"fr-FR\", opt).replace(\".\", \"\");\n\n      // version courte pour mobile\n      el.innerHTML = `Sur commande · Livraison Estimée <b>${s1}</b> – <b>${s2}</b>`;\n    })();\n  </script>\n</div>\n          </div>\n          </div>\n            </div></div>"
+            "liquid": "<div class=\"product-info__block-item\" data-block-id=\"liquid_xgmDkm\" data-block-type=\"liquid\">\n  <div class=\"product-info__liquid\">\n\n    <!-- VALORISE — Livraison dynamique + FOMO -->\n    <div class=\"valo-delivery\" id=\"valoDelivery\" role=\"status\">\n\n      <style>\n        .valo-delivery {\n          display: flex;\n          align-items: center;\n          gap: 6px;\n          justify-content: center;\n          font-size: 12px;\n          font-weight: 500;\n          color: #111;\n          background: transparent;\n          padding: 4px 0;\n          white-space: nowrap;\n        }\n\n        .valo-delivery .dot {\n          width: 9px;\n          height: 9px;\n          border-radius: 9999px;\n          background: #ef4444;\n          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);\n          animation: valoPulse 1.6s infinite;\n          flex-shrink: 0;\n        }\n\n        .valo-delivery b {\n          color: #262324;\n          font-weight: 600;\n        }\n\n        @keyframes valoPulse {\n          0% {\n            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);\n          }\n\n          70% {\n            box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);\n          }\n\n          100% {\n            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);\n          }\n        }\n\n        @media (max-width: 420px) {\n          .valo-delivery {\n            font-size: 11px;\n            gap: 5px;\n            white-space: normal;\n          }\n        }\n      </style>\n\n      <span class=\"dot\" aria-hidden=\"true\"></span>\n\n      <span id=\"valoDeliveryText\">\n        Stocks limités · Livraison estimée <b>jeu 13 août</b> – <b>ven 14 août</b>\n      </span>\n\n      <script>\n        (function () {\n          const el = document.getElementById(\"valoDeliveryText\");\n          const today = new Date();\n\n          // Ajoute des jours en sautant le dimanche\n          function addDaysSkipSunday(date, days) {\n            const d = new Date(date);\n            let added = 0;\n\n            while (added < days) {\n              d.setDate(d.getDate() + 1);\n\n              if (d.getDay() !== 0) {\n                added++;\n              }\n            }\n\n            return d;\n          }\n\n          // Expédition le lendemain\n          const ship = new Date(today);\n          ship.setDate(ship.getDate() + 1);\n\n          // Si l'expédition tombe un dimanche → lundi\n          if (ship.getDay() === 0) {\n            ship.setDate(ship.getDate() + 1);\n          }\n\n          // Fenêtre de livraison\n          const min = addDaysSkipSunday(ship, 9);\n          const max = addDaysSkipSunday(ship, 16);\n\n          const opt = {\n            weekday: \"short\",\n            day: \"numeric\",\n            month: \"short\"\n          };\n\n          const s1 = min\n            .toLocaleDateString(\"fr-FR\", opt)\n            .replace(\".\", \"\");\n\n          const s2 = max\n            .toLocaleDateString(\"fr-FR\", opt)\n            .replace(\".\", \"\");\n\n          // Texte dynamique\n          el.innerHTML =\n            `Stocks limités · Livraison estimée <b>${s1}</b> – <b>${s2}</b>`;\n        })();\n      </script>\n\n    </div>\n\n  </div>\n</div>"
           }
         },
         "buy_buttons": {
@@ -151,43 +151,6 @@
         "text_color": "",
         "input_background": "rgba(0,0,0,0)",
         "input_text_color": ""
-      }
-    },
-    "media_with_text_4XKhtF": {
-      "type": "media-with-text",
-      "blocks": {
-        "image_pyzQ3q": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/8443e5a9-f59f-47a6-8cf0-50c8c88d7a3b.png",
-            "media_width": 45,
-            "media_position": "start",
-            "text_position": "place-self-center text-center",
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/icone_7.png",
-            "icon_width": 48,
-            "subheading": "À PROPOS DE NOUS",
-            "title": "Esprit2'FOOT - Votre confiance avant tout.",
-            "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
-            "link_text": "",
-            "link_url": "",
-            "background": "#00FFF5",
-            "background_gradient": "",
-            "text_color": "#0d0d0d",
-            "text_gradient": "",
-            "button_background": "",
-            "button_text_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_pyzQ3q"
-      ],
-      "name": "Media with text",
-      "settings": {
-        "full_width": false,
-        "alternate_media_position": false,
-        "spacing": "small"
       }
     },
     "logoscroll_RnCMqr": {
@@ -370,6 +333,43 @@
         "testimonial_card_text_color": ""
       }
     },
+    "media_with_text_4XKhtF": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_pyzQ3q": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/8443e5a9-f59f-47a6-8cf0-50c8c88d7a3b.png",
+            "media_width": 45,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "custom_icon": "shopify://shop_images/icone_7.png",
+            "icon_width": 48,
+            "subheading": "À PROPOS DE NOUS",
+            "title": "Esprit2'FOOT - Votre confiance avant tout.",
+            "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
+            "link_text": "",
+            "link_url": "",
+            "background": "#00fff5",
+            "background_gradient": "",
+            "text_color": "#0d0d0d",
+            "text_gradient": "",
+            "button_background": "",
+            "button_text_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_pyzQ3q"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
+    },
     "faq_tdqe7U": {
       "type": "faq",
       "blocks": {
@@ -460,9 +460,9 @@
   },
   "order": [
     "main",
-    "media_with_text_4XKhtF",
     "logoscroll_RnCMqr",
     "testimonials_qtFiFM",
+    "media_with_text_4XKhtF",
     "faq_tdqe7U",
     "related-products"
   ]
