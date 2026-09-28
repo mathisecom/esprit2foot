@@ -54,7 +54,7 @@
         "liquid_XE4atr": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"product-info__block-item\" data-block-id=\"liquid_xgmDkm\" data-block-type=\"liquid\">\n  <div class=\"product-info__liquid\">\n\n    <!-- VALORISE — Livraison dynamique + FOMO -->\n    <div class=\"valo-delivery\" id=\"valoDelivery\" role=\"status\">\n\n      <style>\n        .valo-delivery {\n          display: flex;\n          align-items: center;\n          gap: 6px;\n          justify-content: center;\n          font-size: 12px;\n          font-weight: 500;\n          color: #111;\n          background: transparent;\n          padding: 4px 0;\n          white-space: nowrap;\n        }\n\n        .valo-delivery .dot {\n          width: 9px;\n          height: 9px;\n          border-radius: 9999px;\n          background: #ef4444;\n          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);\n          animation: valoPulse 1.6s infinite;\n          flex-shrink: 0;\n        }\n\n        .valo-delivery b {\n          color: #262324;\n          font-weight: 600;\n        }\n\n        @keyframes valoPulse {\n          0% {\n            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);\n          }\n\n          70% {\n            box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);\n          }\n\n          100% {\n            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);\n          }\n        }\n\n        @media (max-width: 420px) {\n          .valo-delivery {\n            font-size: 11px;\n            gap: 5px;\n            white-space: normal;\n          }\n        }\n      </style>\n\n      <span class=\"dot\" aria-hidden=\"true\"></span>\n\n      <span id=\"valoDeliveryText\">\n        Stocks limités · Livraison estimée <b>jeu 13 août</b> – <b>ven 14 août</b>\n      </span>\n\n      <script>\n        (function () {\n          const el = document.getElementById(\"valoDeliveryText\");\n          const today = new Date();\n\n          // Ajoute des jours en sautant le dimanche\n          function addDaysSkipSunday(date, days) {\n            const d = new Date(date);\n            let added = 0;\n\n            while (added < days) {\n              d.setDate(d.getDate() + 1);\n\n              if (d.getDay() !== 0) {\n                added++;\n              }\n            }\n\n            return d;\n          }\n\n          // Expédition le lendemain\n          const ship = new Date(today);\n          ship.setDate(ship.getDate() + 1);\n\n          // Si l'expédition tombe un dimanche → lundi\n          if (ship.getDay() === 0) {\n            ship.setDate(ship.getDate() + 1);\n          }\n\n          // Fenêtre de livraison\n          const min = addDaysSkipSunday(ship, 9);\n          const max = addDaysSkipSunday(ship, 16);\n\n          const opt = {\n            weekday: \"short\",\n            day: \"numeric\",\n            month: \"short\"\n          };\n\n          const s1 = min\n            .toLocaleDateString(\"fr-FR\", opt)\n            .replace(\".\", \"\");\n\n          const s2 = max\n            .toLocaleDateString(\"fr-FR\", opt)\n            .replace(\".\", \"\");\n\n          // Texte dynamique\n          el.innerHTML =\n            `Stocks limités · Livraison estimée <b>${s1}</b> – <b>${s2}</b>`;\n        })();\n      </script>\n\n    </div>\n\n  </div>\n</div>"
+            "liquid": "<div class=\"product-info__block-item\" data-block-id=\"liquid_xgmDkm\" data-block-type=\"liquid\">\n  <div class=\"product-info__liquid\">\n\n    <!-- VALORISE — Livraison dynamique + FOMO -->\n    <div class=\"valo-delivery\" id=\"valoDelivery\" role=\"status\">\n\n      <style>\n        .valo-delivery {\n          display: flex;\n          align-items: center;\n          gap: 6px;\n          justify-content: center;\n          font-size: 12px;\n          font-weight: 500;\n          color: #111;\n          background: transparent;\n          padding: 4px 0;\n          white-space: nowrap;\n        }\n\n        .valo-delivery .dot {\n          width: 9px;\n          height: 9px;\n          border-radius: 9999px;\n          background: #ef4444;\n          box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);\n          animation: valoPulse 1.6s infinite;\n          flex-shrink: 0;\n        }\n\n        .valo-delivery b {\n          color: #262324;\n          font-weight: 600;\n        }\n\n        @keyframes valoPulse {\n          0% {\n            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);\n          }\n\n          70% {\n            box-shadow: 0 0 0 6px rgba(239, 68, 68, 0);\n          }\n\n          100% {\n            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);\n          }\n        }\n\n        @media (max-width: 420px) {\n          .valo-delivery {\n            font-size: 11px;\n            gap: 5px;\n            white-space: normal;\n          }\n        }\n      </style>\n\n      <span class=\"dot\" aria-hidden=\"true\"></span>\n\n      <span id=\"valoDeliveryText\">\n        Stocks limité · Livraison estimée <b>jeu 13 août</b> – <b>ven 14 août</b>\n      </span>\n\n      <script>\n        (function () {\n          const el = document.getElementById(\"valoDeliveryText\");\n          const today = new Date();\n\n          // Ajoute des jours en sautant le dimanche\n          function addDaysSkipSunday(date, days) {\n            const d = new Date(date);\n            let added = 0;\n\n            while (added < days) {\n              d.setDate(d.getDate() + 1);\n\n              if (d.getDay() !== 0) {\n                added++;\n              }\n            }\n\n            return d;\n          }\n\n          // Expédition le lendemain\n          const ship = new Date(today);\n          ship.setDate(ship.getDate() + 1);\n\n          // Si l'expédition tombe un dimanche → lundi\n          if (ship.getDay() === 0) {\n            ship.setDate(ship.getDate() + 1);\n          }\n\n          // Fenêtre de livraison\n          const min = addDaysSkipSunday(ship, 9);\n          const max = addDaysSkipSunday(ship, 16);\n\n          const opt = {\n            weekday: \"short\",\n            day: \"numeric\",\n            month: \"short\"\n          };\n\n          const s1 = min\n            .toLocaleDateString(\"fr-FR\", opt)\n            .replace(\".\", \"\");\n\n          const s2 = max\n            .toLocaleDateString(\"fr-FR\", opt)\n            .replace(\".\", \"\");\n\n          // Texte dynamique\n          el.innerHTML =\n            `Stocks limités · Livraison estimée <b>${s1}</b> – <b>${s2}</b>`;\n        })();\n      </script>\n\n    </div>\n\n  </div>\n</div>"
           }
         },
         "buy_buttons": {
@@ -138,7 +138,7 @@
       "settings": {
         "full_width": true,
         "show_fixed_add_to_cart": true,
-        "desktop_media_width": 55,
+        "desktop_media_width": 40,
         "desktop_media_layout": "carousel_thumbnails_left",
         "mobile_media_size": "contained",
         "mobile_carousel_control": "thumbnails",
@@ -156,54 +156,46 @@
     "logoscroll_RnCMqr": {
       "type": "logoscroll",
       "blocks": {
+        "image_ED6GWP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9175.jpg",
+            "url": ""
+          }
+        },
         "image_gqC3Vc": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_10.png",
+            "image": "shopify://shop_images/IMG_7369_00ab58b8-0d16-43ea-95eb-6544d912b87a.jpg",
             "url": ""
           }
         },
         "image_6dWjKg": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_9.png",
+            "image": "shopify://shop_images/IMG_7368.heic",
             "url": ""
           }
         },
         "image_4MbLWY": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_8.png",
-            "url": ""
-          }
-        },
-        "image_8ebcWt": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_7.png",
-            "url": ""
-          }
-        },
-        "image_J6K7Ti": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_6.png",
+            "image": "shopify://shop_images/IMG_9171.heic",
             "url": ""
           }
         }
       },
       "block_order": [
+        "image_ED6GWP",
         "image_gqC3Vc",
         "image_6dWjKg",
-        "image_4MbLWY",
-        "image_8ebcWt",
-        "image_J6K7Ti"
+        "image_4MbLWY"
       ],
       "name": "SS - Scrolling logo cloud #5",
       "settings": {
-        "layout_radius": 30,
+        "layout_radius": 0,
         "layout_border_thickness": 0,
-        "heading": "",
+        "heading": "<p>LA PREUVE EN PHOTOS</p>",
         "heading_custom": false,
         "heading_font": "josefin_sans_n4",
         "heading_size": 18,
@@ -211,7 +203,7 @@
         "heading_height": 130,
         "scrolling_velocity": 30,
         "scrolling_velocity_mobile": 18,
-        "scrolling_direction": "left",
+        "scrolling_direction": "right",
         "pause_hover": false,
         "scrolling_gap": 40,
         "scrolling_gap_mobile": 20,
@@ -246,9 +238,9 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
-            "author": "Noé S.",
+            "author": "Berat Gemici",
             "title": "Qualité au top",
-            "content": "<p>Bien reçu la paire, franchement rien à dire qualité au top et livraison rapide. 👌🔥</p>"
+            "content": "<p>Bien reçu la paire, franchement rien à dire qualité au top</p>"
           }
         },
         "testimonial_VH9FP8": {
@@ -257,7 +249,7 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
-            "author": "Mark R.",
+            "author": "Corentin Combe",
             "title": "Je recommande fort 🤝",
             "content": "<p>J’ai reçu mes crampons aujourd’hui ils sont incroyables 😍 merci encore je recommande fort 🤝</p>"
           }
@@ -268,7 +260,7 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 4,
-            "author": "Julien H.",
+            "author": "Théo Deville",
             "title": "Super Propre",
             "content": "<p>Paire reçue ✅ franchement super propre, bonne taille et confortable. Merci pour le sérieux 🙏</p>"
           }
@@ -279,7 +271,7 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 4,
-            "author": "Théo J.",
+            "author": "Steve Rosa",
             "title": "Encore mieux en vrai",
             "content": "<p>J’ai reçu les crampons ils sont encore mieux en vrai 🔥 Merci je repasserai commande.</p>"
           }
@@ -290,8 +282,8 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
-            "author": "George L.",
-            "title": "Qualité au Rendez-Vous",
+            "author": "Caroline",
+            "title": "Livraison rapide",
             "content": "<p>Merci beaucoup pour la paire, mon fils est trop content. Livraison nickel et qualité au rendez-vous 👍</p>"
           }
         },
@@ -301,7 +293,7 @@
             "round_avatar": true,
             "show_rating": true,
             "rating": 5,
-            "author": "Olivier G.",
+            "author": "Antonin Palomino",
             "title": "Tout est carré merci 🤝",
             "content": "<p>Première commande chez vous et franchement pas déçu. Paire reçue rapidement, tout est carré merci 🤝</p>"
           }
@@ -320,7 +312,7 @@
         "full_width": true,
         "stack_testimonials": false,
         "subheading": "",
-        "title": "",
+        "title": "CE QU'EN DISENT NOS PLAYERS",
         "content": "",
         "link_url": "",
         "link_text": "",
