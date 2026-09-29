@@ -228,12 +228,12 @@
         "text": "-50% SUR VOTRE 3E ARTICLE",
         "text_size": "xsmall",
         "text_style": "fill",
-        "scrolling_mode": "scroll",
+        "scrolling_mode": "auto",
         "scrolling_speed": 8,
         "background": "#00fff5",
         "background_gradient": "",
         "text_color": "#000000",
-        "text_gradient": "linear-gradient(90deg, rgba(3, 3, 3, 1) 26%, rgba(255, 255, 255, 1) 89%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 1) 90%)"
+        "text_gradient": ""
       }
     },
     "featured_collection_JCd9YQ": {
