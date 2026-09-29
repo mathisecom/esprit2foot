@@ -249,98 +249,6 @@
         "testimonial_card_text_color": ""
       }
     },
-    "logoscroll_RnCMqr": {
-      "type": "logoscroll",
-      "blocks": {
-        "image_Q7tg4p": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9202.jpg",
-            "url": ""
-          }
-        },
-        "image_g6Nzmx": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9204.jpg",
-            "url": ""
-          }
-        },
-        "image_ED6GWP": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9175.jpg",
-            "url": ""
-          }
-        },
-        "image_gqC3Vc": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_7369_00ab58b8-0d16-43ea-95eb-6544d912b87a.jpg",
-            "url": ""
-          }
-        },
-        "image_6dWjKg": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9171.jpg",
-            "url": ""
-          }
-        },
-        "image_4MbLWY": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9197.jpg",
-            "url": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_Q7tg4p",
-        "image_g6Nzmx",
-        "image_ED6GWP",
-        "image_gqC3Vc",
-        "image_6dWjKg",
-        "image_4MbLWY"
-      ],
-      "name": "SS - Scrolling logo cloud #5",
-      "settings": {
-        "layout_radius": 0,
-        "layout_border_thickness": 0,
-        "heading": "",
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 10,
-        "heading_size_mobile": 18,
-        "heading_height": 130,
-        "scrolling_velocity": 30,
-        "scrolling_velocity_mobile": 18,
-        "scrolling_direction": "right",
-        "pause_hover": false,
-        "scrolling_gap": 40,
-        "scrolling_gap_mobile": 20,
-        "card_width_desktop": 130,
-        "card_width_mobile": 130,
-        "heading_color": "#121212",
-        "layout_bg_color": "#ffffff",
-        "layout_border_color": "#121212",
-        "background_color": "#ffffff",
-        "border_color": "#121212",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 0,
-        "full_width": false,
-        "content_width": 1200,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
-      }
-    },
     "media_with_text_4XKhtF": {
       "type": "media-with-text",
       "blocks": {
@@ -359,7 +267,7 @@
             "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
             "link_text": "",
             "link_url": "",
-            "background": "#00FFF5",
+            "background": "#00fff5",
             "background_gradient": "",
             "text_color": "#000000",
             "text_gradient": "",
@@ -482,7 +390,7 @@
         "button_text": "",
         "button_url": "",
         "text_position": "start",
-        "background": "#FFFFFF",
+        "background": "#ffffff",
         "background_gradient": "",
         "text_color": "",
         "heading_color": "",
@@ -519,7 +427,6 @@
   "order": [
     "main",
     "testimonials_qtFiFM",
-    "logoscroll_RnCMqr",
     "media_with_text_4XKhtF",
     "faq_tdqe7U",
     "faq_fEHUdd",

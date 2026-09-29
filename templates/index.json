@@ -220,6 +220,54 @@
         "heading_gradient": ""
       }
     },
+    "scrolling_text_mRWVdk": {
+      "type": "scrolling-text",
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "-10% EN S'ABONNANT GRATUITEMENT A LA NEWSLETTER",
+        "text_size": "xsmall",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 8,
+        "background": "#000000",
+        "background_gradient": "",
+        "text_color": "#00fff5",
+        "text_gradient": "linear-gradient(119deg, rgba(0, 255, 245, 1) 2%, rgba(255, 255, 255, 1) 80.216%, rgba(255, 255, 255, 1) 97%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+      }
+    },
+    "featured_collection_JCd9YQ": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "best-sellers",
+        "products": [
+          "predator-26-tongue-fg-elite-gris-blanc-rouge",
+          "sneakers-mind-001-solar-red",
+          "mercurial-vapor-16-air-zoom-elite-fg-attack-pack",
+          "sneakers-mind-001-black-orange",
+          "mercurial-vapor-15-elite-fg-gris-noir-multicolore"
+        ],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 5,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "",
+        "title": "NOS BEST SELLERS",
+        "content": "",
+        "link_url": "",
+        "link_text": "Découvrir les tops ventes",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
     "collection_list_7khGbL": {
       "type": "collection-list",
       "blocks": {
@@ -437,54 +485,6 @@
         "text_gradient": ""
       }
     },
-    "featured_collection_JCd9YQ": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "collection": "best-sellers",
-        "products": [
-          "predator-26-tongue-fg-elite-gris-blanc-rouge",
-          "sneakers-mind-001-solar-red",
-          "mercurial-vapor-16-air-zoom-elite-fg-attack-pack",
-          "sneakers-mind-001-black-orange",
-          "mercurial-vapor-15-elite-fg-gris-noir-multicolore"
-        ],
-        "full_width": true,
-        "stack_products": false,
-        "show_progress_bar": true,
-        "products_count": 5,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 5,
-        "subheading": "",
-        "title": "NOS BEST SELLERS",
-        "content": "",
-        "link_url": "",
-        "link_text": "Découvrir les tops ventes",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
-      }
-    },
-    "scrolling_text_mRWVdk": {
-      "type": "scrolling-text",
-      "name": "Scrolling text",
-      "settings": {
-        "full_width": true,
-        "text": "-10% EN S'ABONNANT GRATUITEMENT A LA NEWSLETTER",
-        "text_size": "xsmall",
-        "text_style": "fill",
-        "scrolling_mode": "auto",
-        "scrolling_speed": 8,
-        "background": "#000000",
-        "background_gradient": "",
-        "text_color": "#00fff5",
-        "text_gradient": "linear-gradient(119deg, rgba(0, 255, 245, 1) 2%, rgba(255, 255, 255, 1) 80.216%, rgba(255, 255, 255, 1) 97%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
-      }
-    },
     "collection_list_fYBFCR": {
       "type": "collection-list",
       "blocks": {
@@ -671,39 +671,6 @@
         "spacing": "small"
       }
     },
-    "rich_text_UdD7NL": {
-      "type": "rich-text",
-      "blocks": {
-        "subheading_AeVgmY": {
-          "type": "subheading",
-          "settings": {
-            "text": "ILS EN PARLENT MIEUX QUE NOUS"
-          }
-        },
-        "heading_QmrzgG": {
-          "type": "heading",
-          "settings": {
-            "text": "NOS CLIENTS SATISFAITS",
-            "heading_tag": "h3",
-            "text_color": "",
-            "gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "subheading_AeVgmY",
-        "heading_QmrzgG"
-      ],
-      "name": "Rich text",
-      "settings": {
-        "full_width": true,
-        "content_width": "small",
-        "text_position": "center",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "scrolling_text_MBNpEd": {
       "type": "scrolling-text",
       "disabled": true,
@@ -719,90 +686,6 @@
         "background_gradient": "",
         "text_color": "",
         "text_gradient": ""
-      }
-    },
-    "logoscroll_8WrQiQ": {
-      "type": "logoscroll",
-      "blocks": {
-        "image_nmma9e": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_7368.png",
-            "url": ""
-          }
-        },
-        "image_nEacqn": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/IMG_7369.jpg",
-            "url": ""
-          }
-        },
-        "image_DxDP8q": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_10.png",
-            "url": ""
-          }
-        },
-        "image_EcG8m9": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_8.png",
-            "url": ""
-          }
-        },
-        "image_3NweCt": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/BANNER_MOBILE_9.png",
-            "url": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_nmma9e",
-        "image_nEacqn",
-        "image_DxDP8q",
-        "image_EcG8m9",
-        "image_3NweCt"
-      ],
-      "name": "SS - Scrolling logo cloud #5",
-      "settings": {
-        "layout_radius": 30,
-        "layout_border_thickness": 0,
-        "heading": "",
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 18,
-        "heading_size_mobile": 18,
-        "heading_height": 130,
-        "scrolling_velocity": 30,
-        "scrolling_velocity_mobile": 30,
-        "scrolling_direction": "left",
-        "pause_hover": false,
-        "scrolling_gap": 70,
-        "scrolling_gap_mobile": 30,
-        "card_width_desktop": 130,
-        "card_width_mobile": 130,
-        "heading_color": "#121212",
-        "layout_bg_color": "#ffffff",
-        "layout_border_color": "#121212",
-        "background_color": "#ffffff",
-        "border_color": "#121212",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "margin_horizontal": 0,
-        "margin_horizontal_mobile": 0,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_horizontal": 5,
-        "padding_horizontal_mobile": 0,
-        "full_width": false,
-        "content_width": 1200,
-        "border_thickness": 0,
-        "section_radius": 0,
-        "lazy": true
       }
     },
     "testimonials_p6mp7i": {
@@ -1006,9 +889,7 @@
     "collection_list_fYBFCR",
     "multi_column_h4QNhQ",
     "media_with_text_98C7FQ",
-    "rich_text_UdD7NL",
     "scrolling_text_MBNpEd",
-    "logoscroll_8WrQiQ",
     "testimonials_p6mp7i",
     "logo_list_M8meQF",
     "faq"
