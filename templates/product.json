@@ -432,28 +432,6 @@
         "accordion_text_color": ""
       }
     },
-    "related-products": {
-      "type": "related-products",
-      "settings": {
-        "recommendations_count": 5,
-        "products": [],
-        "full_width": true,
-        "stack_products": false,
-        "show_progress_bar": true,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 5,
-        "subheading": "",
-        "title": "Vous aimerez aussi",
-        "content": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
-      }
-    },
     "faq_fEHUdd": {
       "type": "faq",
       "blocks": {
@@ -499,8 +477,8 @@
         "title": "FAQ",
         "content": "<p>&nbsp;Besoin d’aide Player ?&nbsp;</p>",
         "team_avatar_width": 160,
-        "support_hours": "Notre service client est disponible 6j/7, de 9h à 19h. Notre assistant IA reste disponible 24h/24 et 7j/7 pour répondre à tes questions à tout moment.",
-        "answer_time": "Average answer time: 24h",
+        "support_hours": "Notre service client est disponible 6j/7, de 9h à 19h.",
+        "answer_time": "Notre assistant IA reste disponible 24h/24 et 7j/7 pour répondre à tes questions à tout moment.",
         "button_text": "",
         "button_url": "",
         "text_position": "center",
@@ -514,6 +492,28 @@
         "accordion_background": "",
         "accordion_text_color": ""
       }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "recommendations_count": 5,
+        "products": [],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "",
+        "title": "Vous aimerez aussi",
+        "content": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
     }
   },
   "order": [
@@ -522,7 +522,7 @@
     "logoscroll_RnCMqr",
     "media_with_text_4XKhtF",
     "faq_tdqe7U",
-    "related-products",
-    "faq_fEHUdd"
+    "faq_fEHUdd",
+    "related-products"
   ]
 }
