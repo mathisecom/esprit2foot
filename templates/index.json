@@ -220,20 +220,20 @@
         "heading_gradient": ""
       }
     },
-    "scrolling_text_mRWVdk": {
+    "scrolling_text_ctzbLQ": {
       "type": "scrolling-text",
       "name": "Scrolling text",
       "settings": {
         "full_width": true,
-        "text": "-10% EN S'ABONNANT GRATUITEMENT A LA NEWSLETTER",
+        "text": "-50% SUR VOTRE 3E ARTICLE",
         "text_size": "xsmall",
         "text_style": "fill",
         "scrolling_mode": "auto",
-        "scrolling_speed": 8,
-        "background": "#000000",
+        "scrolling_speed": 10,
+        "background": "#00fff5",
         "background_gradient": "",
-        "text_color": "#00fff5",
-        "text_gradient": "linear-gradient(119deg, rgba(0, 255, 245, 1) 2%, rgba(255, 255, 255, 1) 80.216%, rgba(255, 255, 255, 1) 97%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+        "text_color": "#000000",
+        "text_gradient": ""
       }
     },
     "featured_collection_JCd9YQ": {
@@ -469,20 +469,20 @@
         "heading_gradient": ""
       }
     },
-    "scrolling_text_ctzbLQ": {
+    "scrolling_text_mRWVdk": {
       "type": "scrolling-text",
       "name": "Scrolling text",
       "settings": {
         "full_width": true,
-        "text": "-50% SUR VOTRE 3E ARTICLE",
+        "text": "-10% EN S'ABONNANT GRATUITEMENT A LA NEWSLETTER",
         "text_size": "xsmall",
         "text_style": "fill",
         "scrolling_mode": "auto",
-        "scrolling_speed": 10,
-        "background": "#00fff5",
+        "scrolling_speed": 8,
+        "background": "#000000",
         "background_gradient": "",
-        "text_color": "#000000",
-        "text_gradient": ""
+        "text_color": "#00fff5",
+        "text_gradient": "linear-gradient(119deg, rgba(0, 255, 245, 1) 2%, rgba(255, 255, 255, 1) 80.216%, rgba(255, 255, 255, 1) 97%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
       }
     },
     "collection_list_fYBFCR": {
@@ -629,9 +629,96 @@
         "subheading": "",
         "title": "",
         "content": "<h5><strong>RETROUVE TES </strong><em>JOUEURS PRÉFÉRÉS</em></h5>",
-        "background": "#fbffe6",
+        "background": "#FFFFFF",
         "background_gradient": "",
         "text_color": ""
+      }
+    },
+    "scrolling_text_MBNpEd": {
+      "type": "scrolling-text",
+      "disabled": true,
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "Satisfait ou Remboursé  Paiement 100% Sécurisé. Livraison Express Sécurisée. Service Client Français",
+        "text_size": "xsmall",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 10,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "text_gradient": ""
+      }
+    },
+    "e2f_retours_players_9CGtq3": {
+      "type": "e2f-retours-players",
+      "blocks": {
+        "review_pDtXL3": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
+            "name": "Yanis",
+            "product_name": "F50 Hyperfast",
+            "verified": true
+          }
+        },
+        "review_dkLYG3": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
+            "name": "Yanis",
+            "product_name": "F50 Hyperfast",
+            "verified": true
+          }
+        },
+        "review_VwVXBE": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
+            "name": "Yanis",
+            "product_name": "F50 Hyperfast",
+            "verified": true
+          }
+        },
+        "review_gXRVwc": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
+            "name": "Yanis",
+            "product_name": "F50 Hyperfast",
+            "verified": true
+          }
+        }
+      },
+      "block_order": [
+        "review_pDtXL3",
+        "review_dkLYG3",
+        "review_VwVXBE",
+        "review_gXRVwc"
+      ],
+      "name": "E2F - Retours Players",
+      "settings": {
+        "eyebrow": "AVIS CLIENTS AVEC PHOTOS & VIDÉOS",
+        "heading": "MERCI POUR",
+        "heading_accent": "VOS RETOURS !",
+        "score_label": "NOTE MOYENNE",
+        "rating": "4,8",
+        "rating_text": "Basé sur les avis de nos Players.",
+        "review_count": "+300 avis clients",
+        "background": "#0A0A0A",
+        "card_background": "#FFFFFF",
+        "text_color": "#FFFFFF",
+        "muted_color": "#929292",
+        "accent_color": "#00FFF5",
+        "padding_top": 60,
+        "padding_bottom": 70,
+        "mobile_padding_top": 45,
+        "mobile_padding_bottom": 45
       }
     },
     "media_with_text_98C7FQ": {
@@ -652,7 +739,7 @@
             "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
             "link_text": "Notre sélection",
             "link_url": "shopify://collections/nos-crampons",
-            "background": "#00fff5",
+            "background": "#FFFFFF",
             "background_gradient": "",
             "text_color": "#1a1a1a",
             "text_gradient": "",
@@ -669,119 +756,6 @@
         "full_width": false,
         "alternate_media_position": false,
         "spacing": "small"
-      }
-    },
-    "scrolling_text_MBNpEd": {
-      "type": "scrolling-text",
-      "disabled": true,
-      "name": "Scrolling text",
-      "settings": {
-        "full_width": true,
-        "text": "Satisfait ou Remboursé  Paiement 100% Sécurisé. Livraison Express Sécurisée. Service Client Français",
-        "text_size": "xsmall",
-        "text_style": "fill",
-        "scrolling_mode": "auto",
-        "scrolling_speed": 10,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "text_gradient": ""
-      }
-    },
-    "testimonials_p6mp7i": {
-      "type": "testimonials",
-      "blocks": {
-        "testimonial_zmpkfe": {
-          "type": "testimonial",
-          "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 5,
-            "author": "Noé S.",
-            "title": "Qualité au top",
-            "content": "<p>Bien reçu la paire, franchement rien à dire qualité au top et livraison rapide. 👌🔥</p>"
-          }
-        },
-        "testimonial_PGrFG3": {
-          "type": "testimonial",
-          "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 5,
-            "author": "Mark R.",
-            "title": "Je recommande fort 🤝",
-            "content": "<p>J’ai reçu mes crampons aujourd’hui ils sont incroyables 😍 merci encore je recommande fort 🤝</p>"
-          }
-        },
-        "testimonial_JBJjXd": {
-          "type": "testimonial",
-          "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 5,
-            "author": "Julien H.",
-            "title": "Super Propre",
-            "content": "<p>Paire reçue ✅ franchement super propre, bonne taille et confortable. Merci pour le sérieux 🙏</p>"
-          }
-        },
-        "testimonial_qzUkzd": {
-          "type": "testimonial",
-          "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 4,
-            "author": "Théo J.",
-            "title": "Encore mieux en vrai",
-            "content": "<p>J’ai reçu les crampons ils sont encore mieux en vrai 🔥 Merci je repasserai commande.</p>"
-          }
-        },
-        "testimonial_iCXGAy": {
-          "type": "testimonial",
-          "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 5,
-            "author": "George L.",
-            "title": "Qualité au Rendez-Vous",
-            "content": "<p>Merci beaucoup pour la paire, mon fils est trop content. Livraison nickel et qualité au rendez-vous 👍</p>"
-          }
-        },
-        "testimonial_UHhrat": {
-          "type": "testimonial",
-          "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 5,
-            "author": "Olivier G.",
-            "title": "Tout est carré merci 🤝",
-            "content": "<p>Première commande chez vous et franchement pas déçu. Paire reçue rapidement, tout est carré merci 🤝</p>"
-          }
-        }
-      },
-      "block_order": [
-        "testimonial_zmpkfe",
-        "testimonial_PGrFG3",
-        "testimonial_JBJjXd",
-        "testimonial_qzUkzd",
-        "testimonial_iCXGAy",
-        "testimonial_UHhrat"
-      ],
-      "name": "Testimonials",
-      "settings": {
-        "full_width": true,
-        "stack_testimonials": false,
-        "subheading": "",
-        "title": "",
-        "content": "",
-        "link_url": "",
-        "link_text": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "testimonial_card_background": "",
-        "testimonial_card_text_color": ""
       }
     },
     "logo_list_M8meQF": {
@@ -882,15 +856,15 @@
     "slideshow_TEBwWb",
     "featured_collection_bzeT64",
     "collection_list_UcD6BR",
-    "scrolling_text_mRWVdk",
+    "scrolling_text_ctzbLQ",
     "featured_collection_JCd9YQ",
     "collection_list_7khGbL",
-    "scrolling_text_ctzbLQ",
+    "scrolling_text_mRWVdk",
     "collection_list_fYBFCR",
     "multi_column_h4QNhQ",
-    "media_with_text_98C7FQ",
     "scrolling_text_MBNpEd",
-    "testimonials_p6mp7i",
+    "e2f_retours_players_9CGtq3",
+    "media_with_text_98C7FQ",
     "logo_list_M8meQF",
     "faq"
   ]

@@ -11,27 +11,38 @@
 >
   <div class="e2f-reviews__inner">
 
+    <!-- HEADER -->
     <div class="e2f-reviews__top">
+
       <div class="e2f-reviews__titles">
 
         {% if section.settings.eyebrow != blank %}
           <div class="e2f-reviews__eyebrow">
+            <span></span>
             {{ section.settings.eyebrow }}
           </div>
         {% endif %}
 
         <h2 class="e2f-reviews__heading">
-          <span>{{ section.settings.heading }}</span>
+          {{ section.settings.heading }}
 
           {% if section.settings.heading_accent != blank %}
-            <em>{{ section.settings.heading_accent }}</em>
+            <strong>{{ section.settings.heading_accent }}</strong>
           {% endif %}
         </h2>
 
+        {% if section.settings.subtitle != blank %}
+          <p class="e2f-reviews__subtitle">
+            {{ section.settings.subtitle }}
+          </p>
+        {% endif %}
+
       </div>
+
 
       {% if section.blocks.size > 1 %}
         <div class="e2f-reviews__arrows">
+
           <button
             type="button"
             class="e2f-review-arrow"
@@ -49,15 +60,20 @@
           >
             →
           </button>
+
         </div>
       {% endif %}
+
     </div>
 
 
+    <!-- CONTENT -->
     <div class="e2f-reviews__content">
 
-      <!-- NOTE GLOBALE -->
+      <!-- SCORE -->
       <aside class="e2f-score">
+
+        <div class="e2f-score__accent"></div>
 
         {% if section.settings.score_label != blank %}
           <div class="e2f-score__label">
@@ -70,12 +86,7 @@
           <span>/5</span>
         </div>
 
-        <div class="e2f-score__line"></div>
-
-        <div
-          class="e2f-stars"
-          aria-label="{{ section.settings.rating }} sur 5"
-        >
+        <div class="e2f-score__stars">
           ★★★★★
         </div>
 
@@ -84,27 +95,37 @@
         </p>
 
         {% if section.settings.review_count != blank %}
-          <strong class="e2f-score__count">
+          <div class="e2f-score__count">
             {{ section.settings.review_count }}
-          </strong>
+          </div>
         {% endif %}
+
+        <div class="e2f-score__brand">
+          ESPRIT2'FOOT
+          <span>T'ES EN ESPRIT.</span>
+        </div>
 
       </aside>
 
 
-      <!-- SLIDER AVIS -->
+      <!-- REVIEWS -->
       <div
         class="e2f-reviews__track"
         id="e2f-review-track-{{ section.id }}"
       >
 
         {% for block in section.blocks %}
+
           <article
             class="e2f-review-card"
             {{ block.shopify_attributes }}
           >
 
             <div class="e2f-review-card__media">
+
+              <div class="e2f-review-card__index">
+                {% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}
+              </div>
 
               {% if block.settings.video != blank %}
 
@@ -119,7 +140,7 @@
                 }}
 
                 <span class="e2f-review-card__badge">
-                  ▶ VIDÉO
+                  VIDÉO PLAYER
                 </span>
 
               {% elsif block.settings.image != blank %}
@@ -130,20 +151,19 @@
                   | image_tag:
                     loading: 'lazy',
                     widths: '300, 500, 700, 900',
-                    sizes: '(max-width: 749px) 78vw, 320px',
+                    sizes: '(max-width: 749px) 82vw, 330px',
                     class: 'e2f-review-card__image'
                 }}
 
                 <span class="e2f-review-card__badge">
-                  PHOTO CLIENT
+                  PHOTO PLAYER
                 </span>
 
               {% else %}
 
                 <div class="e2f-review-card__placeholder">
-                  AJOUTE UNE PHOTO
-                  <br>
-                  OU UNE VIDÉO
+                  <strong>TON MÉDIA ICI</strong>
+                  <span>Photo ou vidéo client</span>
                 </div>
 
               {% endif %}
@@ -154,6 +174,7 @@
             <div class="e2f-review-card__body">
 
               <div class="e2f-review-card__meta">
+
                 <div class="e2f-review-card__stars">
                   {% for i in (1..5) %}
                     {% if i <= block.settings.stars %}
@@ -166,9 +187,10 @@
 
                 {% if block.settings.verified %}
                   <span class="e2f-review-card__verified">
-                    ✓ Avis client
+                    ✓ ACHAT VÉRIFIÉ
                   </span>
                 {% endif %}
+
               </div>
 
 
@@ -182,10 +204,11 @@
               <div class="e2f-review-card__footer">
 
                 <div class="e2f-review-card__avatar">
-                  {{ block.settings.name | slice: 0 | upcase }}
+                  {{ block.settings.name | slice: 0, 1 | upcase }}
                 </div>
 
-                <div>
+                <div class="e2f-review-card__identity">
+
                   {% if block.settings.name != blank %}
                     <strong class="e2f-review-card__name">
                       {{ block.settings.name }}
@@ -193,10 +216,11 @@
                   {% endif %}
 
                   {% if block.settings.product_name != blank %}
-                    <div class="e2f-review-card__product">
-                      A acheté : {{ block.settings.product_name }}
-                    </div>
+                    <span class="e2f-review-card__product">
+                      {{ block.settings.product_name }}
+                    </span>
                   {% endif %}
+
                 </div>
 
               </div>
@@ -204,6 +228,7 @@
             </div>
 
           </article>
+
         {% endfor %}
 
       </div>
@@ -217,10 +242,10 @@
 <style>
   #e2f-reviews-{{ section.id }} {
     width: 100%;
+    overflow: hidden;
+    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
     background: var(--e2f-bg);
     color: var(--e2f-text);
-    padding: {{ section.settings.padding_top }}px 0 {{ section.settings.padding_bottom }}px;
-    overflow: hidden;
   }
 
   #e2f-reviews-{{ section.id }} * {
@@ -240,84 +265,142 @@
     align-items: flex-end;
     justify-content: space-between;
     gap: 30px;
-    margin-bottom: 34px;
+    margin-bottom: 32px;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-reviews__eyebrow {
-    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-bottom: 11px;
+
     color: var(--e2f-accent);
 
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1;
-    font-weight: 900;
-    letter-spacing: 0.12em;
+    font-weight: 800;
+    letter-spacing: .16em;
     text-transform: uppercase;
+  }
+
+  #e2f-reviews-{{ section.id }} .e2f-reviews__eyebrow span {
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    background: var(--e2f-accent);
   }
 
   #e2f-reviews-{{ section.id }} .e2f-reviews__heading {
+    max-width: 1000px;
+
     margin: 0;
+
     color: var(--e2f-text);
 
-    font-family: var(--heading-font-family, inherit);
-    font-size: clamp(34px, 4.2vw, 66px);
-    line-height: 0.94;
+    font-family:
+      var(--text-font-family),
+      Arial,
+      Helvetica,
+      sans-serif;
 
-    font-weight: 900;
-    letter-spacing: -0.045em;
+    font-size: clamp(33px, 4vw, 62px);
+    line-height: .98;
+
+    font-weight: 850;
+    letter-spacing: -.045em;
     text-transform: uppercase;
   }
 
-  #e2f-reviews-{{ section.id }} .e2f-reviews__heading span,
-  #e2f-reviews-{{ section.id }} .e2f-reviews__heading em {
-    display: inline;
-  }
+  #e2f-reviews-{{ section.id }} .e2f-reviews__heading strong {
+    position: relative;
 
-  #e2f-reviews-{{ section.id }} .e2f-reviews__heading em {
+    display: inline-block;
+
     margin-left: 8px;
+
     color: var(--e2f-accent);
-    font-style: italic;
+
+    font-weight: 850;
+    font-style: normal;
+  }
+
+  #e2f-reviews-{{ section.id }} .e2f-reviews__heading strong::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 38%;
+    height: 3px;
+
+    background: var(--e2f-accent);
+  }
+
+  #e2f-reviews-{{ section.id }} .e2f-reviews__subtitle {
+    max-width: 600px;
+
+    margin: 17px 0 0;
+
+    color: var(--e2f-muted);
+
+    font-size: 13px;
+    line-height: 1.5;
   }
 
 
-  /* ARROWS */
+  /* NAV */
 
   #e2f-reviews-{{ section.id }} .e2f-reviews__arrows {
     display: flex;
-    gap: 8px;
+    gap: 7px;
     flex-shrink: 0;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-arrow {
-    width: 46px;
-    height: 46px;
+    width: 44px;
+    height: 44px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(255,255,255,.22);
+    padding: 0;
+
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 0;
+
     background: transparent;
     color: var(--e2f-text);
 
-    font-size: 20px;
+    font-size: 18px;
+
     cursor: pointer;
 
-    transition: .2s ease;
+    transition:
+      background .2s ease,
+      color .2s ease,
+      border-color .2s ease;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-arrow:hover {
     background: var(--e2f-accent);
-    color: #000;
     border-color: var(--e2f-accent);
+    color: #050505;
   }
 
 
-  /* MAIN LAYOUT */
+  /* LAYOUT */
 
   #e2f-reviews-{{ section.id }} .e2f-reviews__content {
     display: grid;
-    grid-template-columns: 250px minmax(0, 1fr);
-    gap: 18px;
+
+    grid-template-columns: 215px minmax(0, 1fr);
+
+    gap: 16px;
     align-items: stretch;
   }
 
@@ -327,97 +410,114 @@
   #e2f-reviews-{{ section.id }} .e2f-score {
     position: relative;
 
-    min-height: 520px;
-    padding: 28px 25px;
+    min-height: 500px;
 
-    background: #080a0a;
-    border: 1px solid rgba(255,255,255,.08);
+    padding: 26px 22px;
 
     display: flex;
     flex-direction: column;
+
+    background: #080909;
+
+    border-top: 1px solid rgba(255,255,255,.15);
+    border-right: 1px solid rgba(255,255,255,.10);
+    border-bottom: 1px solid rgba(255,255,255,.10);
   }
 
-  #e2f-reviews-{{ section.id }} .e2f-score::before {
-    content: "";
+  #e2f-reviews-{{ section.id }} .e2f-score__accent {
     position: absolute;
 
     top: 0;
-    right: 0;
+    left: 0;
 
-    width: 40%;
-    height: 150px;
+    width: 4px;
+    height: 105px;
 
     background: var(--e2f-accent);
-    opacity: .07;
-
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
   }
 
   #e2f-reviews-{{ section.id }} .e2f-score__label {
-    position: relative;
-    z-index: 1;
+    margin-bottom: 18px;
 
-    display: inline-block;
-    align-self: flex-start;
+    color: var(--e2f-accent);
 
-    padding: 6px 10px;
-
-    background: var(--e2f-accent);
-    color: #000;
-
-    font-size: 11px;
+    font-size: 10px;
     line-height: 1;
-    font-weight: 900;
-    letter-spacing: .06em;
+
+    font-weight: 850;
+    letter-spacing: .14em;
     text-transform: uppercase;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-score__number {
-    margin-top: 18px;
+    color: #fff;
 
-    color: var(--e2f-accent);
+    font-size: clamp(58px, 5vw, 76px);
+    line-height: .88;
 
-    font-size: 72px;
-    line-height: .92;
-    font-weight: 950;
-    letter-spacing: -5px;
+    font-weight: 850;
+    letter-spacing: -.07em;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-score__number span {
-    font-size: 22px;
-    letter-spacing: -1px;
+    margin-left: 3px;
+
+    color: var(--e2f-accent);
+
+    font-size: 20px;
+    letter-spacing: -.03em;
   }
 
-  #e2f-reviews-{{ section.id }} .e2f-score__line {
-    width: 54px;
-    height: 4px;
+  #e2f-reviews-{{ section.id }} .e2f-score__stars {
+    margin-top: 24px;
 
-    margin: 20px 0 15px;
-
-    background: var(--e2f-accent);
-  }
-
-  #e2f-reviews-{{ section.id }} .e2f-stars {
     color: #ffb000;
-    font-size: 22px;
+
+    font-size: 18px;
     letter-spacing: 2px;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-score__text {
-    margin: 12px 0 0;
+    margin: 13px 0 0;
 
-    color: #aaa;
-    font-size: 12px;
-    line-height: 1.45;
+    color: #949494;
+
+    font-size: 11px;
+    line-height: 1.5;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-score__count {
+    margin-top: 8px;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 750;
+  }
+
+  #e2f-reviews-{{ section.id }} .e2f-score__brand {
     margin-top: auto;
     padding-top: 30px;
 
-    color: var(--e2f-text);
-    font-size: 14px;
-    line-height: 1.4;
+    border-top: 1px solid rgba(255,255,255,.10);
+
+    color: #fff;
+
+    font-size: 10px;
+    line-height: 1.3;
+
+    font-weight: 850;
+    letter-spacing: .08em;
+  }
+
+  #e2f-reviews-{{ section.id }} .e2f-score__brand span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--e2f-accent);
+
+    font-size: 9px;
   }
 
 
@@ -427,10 +527,11 @@
     min-width: 0;
 
     display: grid;
+
     grid-auto-flow: column;
     grid-auto-columns: minmax(285px, 330px);
 
-    gap: 12px;
+    gap: 11px;
 
     overflow-x: auto;
 
@@ -446,50 +547,76 @@
   }
 
 
-  /* REVIEW CARD */
+  /* CARDS */
 
   #e2f-reviews-{{ section.id }} .e2f-review-card {
+    position: relative;
+
     min-width: 0;
 
     background: var(--e2f-card);
     color: #111;
 
-    border: 1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.12);
 
     scroll-snap-align: start;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__media {
     position: relative;
+
     aspect-ratio: 4 / 5;
 
-    background: #171717;
     overflow: hidden;
+
+    background: #181818;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__image,
   #e2f-reviews-{{ section.id }} .e2f-review-card__video {
+    display: block;
+
     width: 100%;
     height: 100%;
 
-    display: block;
     object-fit: cover;
+  }
+
+  #e2f-reviews-{{ section.id }} .e2f-review-card__index {
+    position: absolute;
+    z-index: 3;
+
+    top: 11px;
+    right: 12px;
+
+    color: rgba(255,255,255,.82);
+
+    font-size: 11px;
+    line-height: 1;
+
+    font-weight: 800;
+    letter-spacing: .12em;
+
+    text-shadow: 0 1px 4px rgba(0,0,0,.45);
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__badge {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    z-index: 3;
 
-    padding: 6px 10px;
+    left: 0;
+    bottom: 0;
+
+    padding: 7px 10px;
 
     background: var(--e2f-accent);
-    color: #000;
+    color: #050505;
 
-    font-size: 10px;
+    font-size: 9px;
     line-height: 1;
+
     font-weight: 900;
-    letter-spacing: .05em;
+    letter-spacing: .09em;
     text-transform: uppercase;
   }
 
@@ -498,62 +625,75 @@
     height: 100%;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    color: #777;
+    gap: 5px;
 
-    font-size: 13px;
-    line-height: 1.4;
-    font-weight: 800;
+    color: #717171;
+
     text-align: center;
+    text-transform: uppercase;
+  }
+
+  #e2f-reviews-{{ section.id }} .e2f-review-card__placeholder strong {
+    color: #969696;
+
+    font-size: 12px;
+    letter-spacing: .07em;
+  }
+
+  #e2f-reviews-{{ section.id }} .e2f-review-card__placeholder span {
+    font-size: 10px;
   }
 
 
-  /* REVIEW CONTENT */
+  /* CARD BODY */
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__body {
-    padding: 17px 16px 18px;
+    padding: 17px 15px 18px;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__meta {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 10px;
 
     margin-bottom: 12px;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__stars {
-    color: #ffb000;
+    color: #ffab00;
 
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1;
+
     letter-spacing: 1px;
     white-space: nowrap;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__verified {
-    padding: 5px 8px;
+    color: #007f70;
 
-    background: rgba(0, 220, 190, .10);
-    color: #008c78;
-
-    font-size: 10px;
+    font-size: 9px;
     line-height: 1;
-    font-weight: 800;
 
-    transform: skew(-8deg);
+    font-weight: 850;
+    letter-spacing: .05em;
+    text-transform: uppercase;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__review {
-    min-height: 64px;
+    min-height: 65px;
 
-    color: #111;
+    color: #101010;
 
     font-size: 14px;
     line-height: 1.45;
+
     font-weight: 650;
   }
 
@@ -562,21 +702,22 @@
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__footer {
-    margin-top: 18px;
-    padding-top: 14px;
-
-    border-top: 1px solid #e7e7e7;
-
     display: flex;
     align-items: center;
+
     gap: 10px;
+
+    margin-top: 18px;
+    padding-top: 13px;
+
+    border-top: 1px solid #e3e3e3;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__avatar {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
 
-    flex: 0 0 32px;
+    flex: 0 0 30px;
 
     display: flex;
     align-items: center;
@@ -585,26 +726,36 @@
     background: #0b0b0b;
     color: var(--e2f-accent);
 
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 900;
+  }
 
-    transform: skew(-8deg);
+  #e2f-reviews-{{ section.id }} .e2f-review-card__identity {
+    min-width: 0;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__name {
     display: block;
 
     color: #111;
-    font-size: 13px;
+
+    font-size: 12px;
     line-height: 1.2;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__product {
+    display: block;
+
     margin-top: 3px;
 
-    color: #888;
-    font-size: 10px;
+    color: #919191;
+
+    font-size: 9px;
     line-height: 1.3;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
 
@@ -622,18 +773,26 @@
     }
 
     #e2f-reviews-{{ section.id }} .e2f-reviews__top {
-      margin-bottom: 23px;
-      align-items: flex-end;
+      margin-bottom: 24px;
     }
 
     #e2f-reviews-{{ section.id }} .e2f-reviews__heading {
-      font-size: clamp(31px, 10vw, 45px);
+      font-size: clamp(31px, 9vw, 43px);
+      line-height: 1;
     }
 
-    #e2f-reviews-{{ section.id }} .e2f-reviews__heading em {
+    #e2f-reviews-{{ section.id }} .e2f-reviews__heading strong {
       display: block;
-      margin-left: 0;
-      margin-top: 4px;
+
+      width: fit-content;
+
+      margin: 4px 0 0;
+    }
+
+    #e2f-reviews-{{ section.id }} .e2f-reviews__subtitle {
+      margin-top: 14px;
+
+      font-size: 12px;
     }
 
     #e2f-reviews-{{ section.id }} .e2f-reviews__arrows {
@@ -648,55 +807,62 @@
       min-height: auto;
 
       display: grid;
+
       grid-template-columns: auto 1fr;
-      column-gap: 18px;
+      column-gap: 17px;
       row-gap: 4px;
 
-      margin-bottom: 14px;
+      margin-bottom: 13px;
       padding: 18px;
+    }
+
+    #e2f-reviews-{{ section.id }} .e2f-score__accent {
+      height: 100%;
     }
 
     #e2f-reviews-{{ section.id }} .e2f-score__label {
       grid-column: 1 / -1;
+
       margin-bottom: 8px;
     }
 
     #e2f-reviews-{{ section.id }} .e2f-score__number {
       grid-row: 2 / 5;
 
+      font-size: 51px;
+    }
+
+    #e2f-reviews-{{ section.id }} .e2f-score__stars {
+      align-self: end;
+
       margin: 0;
 
-      font-size: 52px;
-      letter-spacing: -4px;
-    }
-
-    #e2f-reviews-{{ section.id }} .e2f-score__line {
-      display: none;
-    }
-
-    #e2f-reviews-{{ section.id }} .e2f-stars {
-      align-self: end;
-      font-size: 16px;
+      font-size: 15px;
     }
 
     #e2f-reviews-{{ section.id }} .e2f-score__text {
       margin: 0;
-      font-size: 11px;
+
+      font-size: 10px;
     }
 
     #e2f-reviews-{{ section.id }} .e2f-score__count {
       margin: 0;
-      padding: 0;
+
       font-size: 11px;
+    }
+
+    #e2f-reviews-{{ section.id }} .e2f-score__brand {
+      display: none;
     }
 
     #e2f-reviews-{{ section.id }} .e2f-reviews__track {
       width: calc(100vw - 12px);
 
-      grid-auto-columns: 80vw;
-
       margin-right: -12px;
       padding-right: 24px;
+
+      grid-auto-columns: 81vw;
 
       gap: 9px;
     }
@@ -714,45 +880,59 @@
 
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const track = document.getElementById('e2f-review-track-{{ section.id }}');
-    const prev = document.querySelector('[data-e2f-prev="{{ section.id }}"]');
-    const next = document.querySelector('[data-e2f-next="{{ section.id }}"]');
+  (function () {
+    function initE2FReviews() {
+      var track = document.getElementById('e2f-review-track-{{ section.id }}');
+      var prev = document.querySelector('[data-e2f-prev="{{ section.id }}"]');
+      var next = document.querySelector('[data-e2f-next="{{ section.id }}"]');
 
-    if (!track) return;
+      if (!track) return;
 
-    function getScrollAmount() {
-      const card = track.querySelector('.e2f-review-card');
+      function scrollAmount() {
+        var card = track.querySelector('.e2f-review-card');
 
-      if (!card) return 340;
+        if (!card) return 340;
 
-      return card.getBoundingClientRect().width + 12;
-    }
+        return card.getBoundingClientRect().width + 11;
+      }
 
-    if (prev) {
-      prev.addEventListener('click', function () {
-        track.scrollBy({
-          left: -getScrollAmount(),
-          behavior: 'smooth'
+      if (prev && !prev.dataset.e2fReady) {
+        prev.dataset.e2fReady = 'true';
+
+        prev.addEventListener('click', function () {
+          track.scrollBy({
+            left: -scrollAmount(),
+            behavior: 'smooth'
+          });
         });
-      });
+      }
+
+      if (next && !next.dataset.e2fReady) {
+        next.dataset.e2fReady = 'true';
+
+        next.addEventListener('click', function () {
+          track.scrollBy({
+            left: scrollAmount(),
+            behavior: 'smooth'
+          });
+        });
+      }
     }
 
-    if (next) {
-      next.addEventListener('click', function () {
-        track.scrollBy({
-          left: getScrollAmount(),
-          behavior: 'smooth'
-        });
-      });
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initE2FReviews);
+    } else {
+      initE2FReviews();
     }
-  });
+
+    document.addEventListener('shopify:section:load', initE2FReviews);
+  })();
 </script>
 
 
 {% schema %}
 {
-  "name": "E2F - Retours Players",
+  "name": "E2F - Retours Players V2",
   "tag": "section",
   "class": "shopify-section--e2f-reviews",
 
@@ -761,19 +941,25 @@
       "type": "text",
       "id": "eyebrow",
       "label": "Petit titre",
-      "default": "AVIS CLIENTS AVEC PHOTOS & VIDÉOS"
+      "default": "LA COMMUNAUTÉ E2F"
     },
     {
       "type": "text",
       "id": "heading",
       "label": "Titre",
-      "default": "MERCI POUR"
+      "default": "LES RETOURS DE"
     },
     {
       "type": "text",
       "id": "heading_accent",
       "label": "Partie turquoise",
-      "default": "VOS RETOURS !"
+      "default": "NOS PLAYERS."
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous-titre",
+      "default": "Photos, vidéos et avis envoyés par nos clients après réception de leur commande."
     },
 
     {
@@ -784,7 +970,7 @@
       "type": "text",
       "id": "score_label",
       "label": "Label",
-      "default": "NOTE MOYENNE"
+      "default": "NOTE DES PLAYERS"
     },
     {
       "type": "text",
@@ -813,7 +999,7 @@
       "type": "color",
       "id": "background",
       "label": "Fond",
-      "default": "#0A0A0A"
+      "default": "#080909"
     },
     {
       "type": "color",
@@ -831,12 +1017,12 @@
       "type": "color",
       "id": "muted_color",
       "label": "Texte secondaire",
-      "default": "#929292"
+      "default": "#898989"
     },
     {
       "type": "color",
       "id": "accent_color",
-      "label": "Turquoise Esprit2'FOOT",
+      "label": "Couleur Esprit2'FOOT",
       "default": "#00E6E6"
     },
 
@@ -852,7 +1038,7 @@
       "max": 140,
       "step": 5,
       "unit": "px",
-      "default": 70
+      "default": 65
     },
     {
       "type": "range",
@@ -862,7 +1048,7 @@
       "max": 140,
       "step": 5,
       "unit": "px",
-      "default": 70
+      "default": 65
     },
     {
       "type": "range",
@@ -872,7 +1058,7 @@
       "max": 100,
       "step": 5,
       "unit": "px",
-      "default": 45
+      "default": 40
     },
     {
       "type": "range",
@@ -882,7 +1068,7 @@
       "max": 100,
       "step": 5,
       "unit": "px",
-      "default": 45
+      "default": 40
     }
   ],
 
@@ -931,7 +1117,7 @@
         {
           "type": "checkbox",
           "id": "verified",
-          "label": "Afficher Avis client",
+          "label": "Afficher Achat vérifié",
           "default": true
         }
       ]
@@ -942,7 +1128,7 @@
 
   "presets": [
     {
-      "name": "E2F - Retours Players",
+      "name": "E2F - Retours Players V2",
       "blocks": [
         {
           "type": "review"
