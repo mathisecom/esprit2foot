@@ -13,36 +13,10 @@
       }
     }
 
-    /* On enlève UNIQUEMENT le style natif du bouton */
-    #shopify-section-{{ section.id }} .e2f-scrolling-button {
-      appearance: none;
-      -webkit-appearance: none;
-
-      display: inline-block;
-
-      padding: 0;
-      margin: 0;
-
-      border: 0;
-      background: none;
-
-      color: inherit;
-
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: inherit;
-      line-height: inherit;
-
-      text-align: inherit;
-
+    /* On ne touche pas au style original.
+       On ajoute seulement le curseur pour indiquer que c'est cliquable. */
+    #shopify-section-{{ section.id }} .e2f-newsletter-trigger {
       cursor: pointer;
-
-      white-space: nowrap;
-    }
-
-    #shopify-section-{{ section.id }} .e2f-scrolling-button:focus-visible {
-      outline: 2px solid currentColor;
-      outline-offset: 3px;
     }
   </style>
 
@@ -53,28 +27,49 @@
   <div {% render 'section-properties', tight: is_tight %}>
 
     {%- capture section_content -%}
+
       {%- for i in (1..10) -%}
 
-        <button
-          type="button"
-          class="scrolling-text__text e2f-scrolling-button {% unless forloop.first %}motion-reduce:hidden{% endunless %}"
-          onclick="var drawer = document.getElementById('newsletter-drawer'); if (drawer && typeof drawer.show === 'function') { drawer.show(); }"
-          {% unless forloop.first %}
+        <span
+          class="scrolling-text__text heading e2f-newsletter-trigger {% unless forloop.first %}motion-reduce:hidden{% endunless %}"
+
+          onclick="
+            var drawer = document.getElementById('newsletter-drawer');
+            if (drawer && typeof drawer.show === 'function') {
+              drawer.show();
+            }
+          "
+
+          {% if forloop.first %}
+            role="button"
+            tabindex="0"
+
+            onkeydown="
+              if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+
+                var drawer = document.getElementById('newsletter-drawer');
+
+                if (drawer && typeof drawer.show === 'function') {
+                  drawer.show();
+                }
+              }
+            "
+          {% else %}
             aria-hidden="true"
-            tabindex="-1"
-          {% endunless %}
+          {% endif %}
         >
-          <span class="heading">
-            {%- render 'styled-text',
-              content: section.settings.text,
-              gradient: section.settings.text_gradient,
-              style: section.settings.text_style
-            -%}
-          </span>
-        </button>
+          {%- render 'styled-text',
+            content: section.settings.text,
+            gradient: section.settings.text_gradient,
+            style: section.settings.text_style
+          -%}
+        </span>
 
       {%- endfor -%}
+
     {%- endcapture -%}
+
 
     <div class="scrolling-text {% if section.settings.scrolling_mode == 'scroll' %}scrolling-text--scroll{% else %}scrolling-text--auto{% endif %}">
 
@@ -96,6 +91,7 @@
       {%- endif -%}
 
     </div>
+
   </div>
 {%- endif -%}
 
@@ -105,9 +101,11 @@
   "name": "Scrolling text",
   "class": "shopify-section--scrolling-text",
   "tag": "section",
+
   "disabled_on": {
     "groups": ["header", "custom.overlay"]
   },
+
   "settings": [
     {
       "type": "checkbox",
@@ -217,6 +215,7 @@
       "label": "Text gradient"
     }
   ],
+
   "presets": [
     {
       "name": "Scrolling text"
