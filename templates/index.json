@@ -624,12 +624,12 @@
       "settings": {
         "full_width": true,
         "stack_on_mobile": false,
-        "gap": "medium",
+        "gap": "small",
         "text_alignment": "center",
         "subheading": "",
-        "title": "",
-        "content": "<h5><strong>RETROUVE TES </strong><em>JOUEURS PRÉFÉRÉS</em></h5>",
-        "background": "#FFF7E5",
+        "title": "RETROUVE TES JOUEURS PRÉFÉRÉS",
+        "content": "",
+        "background": "#FFF5EE",
         "background_gradient": "",
         "text_color": ""
       }
