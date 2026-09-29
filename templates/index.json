@@ -236,82 +236,6 @@
         "text_gradient": ""
       }
     },
-    "multi_column_h4QNhQ": {
-      "type": "multi-column",
-      "blocks": {
-        "item_Y9aj77": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/images_12.jpg",
-            "column_size": "4",
-            "title": "JUDE BELLINGHAM",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/beligol",
-            "link_text": "CHOISIR SA PAIRE",
-            "link_style": "button"
-          }
-        },
-        "item_LUgrTp": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack.jpg",
-            "column_size": "4",
-            "title": "LAMINE YAMAL",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/yamal",
-            "link_text": "CHOISIR SA PAIRE",
-            "link_style": "button"
-          }
-        },
-        "item_kKGWje": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_2.webp",
-            "column_size": "4",
-            "title": "LEO MESSI",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/messi",
-            "link_text": "CHOISIR SA PAIRE",
-            "link_style": "button"
-          }
-        },
-        "item_VnUzyf": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_1_1.webp",
-            "column_size": "4",
-            "title": "KYLIAN MBAPPE",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/mbappe",
-            "link_text": "CHOISIR SA PAIRE",
-            "link_style": "button"
-          }
-        }
-      },
-      "block_order": [
-        "item_Y9aj77",
-        "item_LUgrTp",
-        "item_kKGWje",
-        "item_VnUzyf"
-      ],
-      "name": "Multi-column",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "gap": "small",
-        "text_alignment": "start",
-        "subheading": "",
-        "title": "VOS JOUEURS FAVORIS",
-        "content": "",
-        "background": "#FFFFFF",
-        "background_gradient": "",
-        "text_color": "#000000"
-      }
-    },
     "collection_list_7khGbL": {
       "type": "collection-list",
       "blocks": {
@@ -511,6 +435,82 @@
         "text_color": "",
         "heading_color": "",
         "heading_gradient": ""
+      }
+    },
+    "multi_column_h4QNhQ": {
+      "type": "multi-column",
+      "blocks": {
+        "item_Y9aj77": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/images_12.jpg",
+            "column_size": "4",
+            "title": "JUDE BELLINGHAM",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/beligol",
+            "link_text": "CHOISIR SA PAIRE",
+            "link_style": "button"
+          }
+        },
+        "item_LUgrTp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack.jpg",
+            "column_size": "4",
+            "title": "LAMINE YAMAL",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/yamal",
+            "link_text": "CHOISIR SA PAIRE",
+            "link_style": "button"
+          }
+        },
+        "item_kKGWje": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_2.webp",
+            "column_size": "4",
+            "title": "LEO MESSI",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/messi",
+            "link_text": "CHOISIR SA PAIRE",
+            "link_style": "button"
+          }
+        },
+        "item_VnUzyf": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_1_1.webp",
+            "column_size": "4",
+            "title": "KYLIAN MBAPPE",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/mbappe",
+            "link_text": "CHOISIR SA PAIRE",
+            "link_style": "button"
+          }
+        }
+      },
+      "block_order": [
+        "item_Y9aj77",
+        "item_LUgrTp",
+        "item_kKGWje",
+        "item_VnUzyf"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "small",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "VOS JOUEURS FAVORIS",
+        "content": "",
+        "background": "#FFFFFF",
+        "background_gradient": "",
+        "text_color": "#000000"
       }
     },
     "scrolling_text_mRWVdk": {
@@ -860,10 +860,10 @@
     "featured_collection_bzeT64",
     "collection_list_UcD6BR",
     "scrolling_text_ctzbLQ",
-    "multi_column_h4QNhQ",
-    "collection_list_7khGbL",
-    "scrolling_text_mRWVdk",
     "featured_collection_JCd9YQ",
+    "multi_column_h4QNhQ",
+    "scrolling_text_mRWVdk",
+    "collection_list_7khGbL",
     "collection_list_fYBFCR",
     "scrolling_text_MBNpEd",
     "e2f_retours_players_9CGtq3",
