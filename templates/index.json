@@ -229,11 +229,11 @@
         "text_size": "xsmall",
         "text_style": "fill",
         "scrolling_mode": "auto",
-        "scrolling_speed": 6,
+        "scrolling_speed": 8,
         "background": "#00fff5",
         "background_gradient": "",
         "text_color": "#000000",
-        "text_gradient": "linear-gradient(54deg, rgba(3, 3, 3, 1) 14%, rgba(255, 255, 255, 1) 85%)"
+        "text_gradient": "linear-gradient(90deg, rgba(3, 3, 3, 1) 26%, rgba(255, 255, 255, 1) 89%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 1) 90%)"
       }
     },
     "featured_collection_JCd9YQ": {
