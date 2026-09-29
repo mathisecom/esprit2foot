@@ -375,7 +375,7 @@
       "settings": {
         "full_width": false,
         "alternate_media_position": false,
-        "spacing": "small"
+        "spacing": "large"
       }
     },
     "faq_tdqe7U": {
@@ -475,13 +475,13 @@
         "full_width": true,
         "subheading": "",
         "title": "FAQ",
-        "content": "<p>&nbsp;Besoin d’aide Player ?&nbsp;</p>",
-        "team_avatar_width": 160,
+        "content": "<h2><strong>Besoin d’aide Player ?&nbsp;</strong></h2>",
+        "team_avatar_width": 230,
         "support_hours": "Notre service client est disponible 6j/7, de 9h à 19h.",
         "answer_time": "Notre assistant IA reste disponible 24h/24 et 7j/7 pour répondre à tes questions à tout moment.",
         "button_text": "",
         "button_url": "",
-        "text_position": "center",
+        "text_position": "start",
         "background": "",
         "background_gradient": "",
         "text_color": "",
