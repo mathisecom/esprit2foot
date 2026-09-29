@@ -460,38 +460,46 @@
         "item_Dmdh9P": {
           "type": "item",
           "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "title": "Comment choisir ma pointure ? ",
+            "content": "<p>Pour nos crampons, tu peux partir sur ta pointure habituelle si tu aimes être bien maintenu. Si tu préfères avoir un peu plus d’espace et ne pas être trop serré, une pointure au-dessus peut être plus confortable. ⚽</p>"
           }
         },
         "item_GpBiFw": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "title": "Quels sont les délais de livraison ?",
+            "content": "<p>Nous expédions dans le monde entier. Selon le produit et son statut, le délai estimé est indiqué directement au moment de ta commande. Certains produits peuvent être disponibles en stock, tandis que d’autres sont proposés sur commande</p>"
           }
         },
         "item_hTcVcP": {
           "type": "item",
           "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "title": "Comment suivre ma commande ?",
+            "content": "<p>Dès que ton numéro de suivi est disponible, il t’est communiqué afin que tu puisses suivre ton colis jusqu’à sa livraison. Le suivi peut notamment être effectué via <strong>17TRACK</strong> ou le transporteur concerné.&nbsp;</p>"
+          }
+        },
+        "item_d49qtK": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je retourner ma commande ?",
+            "content": "<p>Oui. Une demande de retour peut être effectuée via le formulaire dédié dans les <strong>14 jours suivant la réception de ta commande</strong>, conformément aux conditions de retour de la boutique.</p>"
           }
         }
       },
       "block_order": [
         "item_Dmdh9P",
         "item_GpBiFw",
-        "item_hTcVcP"
+        "item_hTcVcP",
+        "item_d49qtK"
       ],
       "name": "FAQ",
       "settings": {
         "full_width": true,
         "subheading": "",
         "title": "FAQ",
-        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "content": "<p>&nbsp;Besoin d’aide Player ?&nbsp;</p>",
         "team_avatar_width": 160,
-        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
+        "support_hours": "Notre service client est disponible 6j/7, de 9h à 19h. Notre assistant IA reste disponible 24h/24 et 7j/7 pour répondre à tes questions à tout moment.",
         "answer_time": "Average answer time: 24h",
         "button_text": "",
         "button_url": "",
