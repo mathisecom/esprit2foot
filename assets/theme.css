@@ -4442,7 +4442,7 @@ product-rerender {
 
 @media (prefers-reduced-motion: no-preference) {
   .announcement-bar__item {
-    animation: translateFull var(--marquee-animation-duration, 0s) linear infinite;
+    animation: translateFull var(--marquee-animation-duration, 5s) linear infinite;
   }
 }
 
@@ -8085,7 +8085,7 @@ product-rerender {
   }
 
   .scrolling-text--auto .scrolling-text__text {
-    animation: translateFull var(--marquee-animation-duration, 0s) linear infinite;
+    animation: translateFull var(--marquee-animation-duration, 5s) linear infinite;
   }
 
   .scrolling-text--scroll .scrolling-text__wrapper {
