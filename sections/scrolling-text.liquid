@@ -4,124 +4,79 @@
   <style>
     #shopify-section-{{ section.id }} {
       --section-spacing-inline: 0;
-
-      --scrolling-text-font-size:
-        {% if section.settings.text_size == 'xsmall' %}
-          1.125rem
-        {% elsif section.settings.text_size == 'small' %}
-          2.5rem
-        {% elsif section.settings.text_size == 'medium' %}
-          3.75rem
-        {% elsif section.settings.text_size == 'large' %}
-          5rem
-        {% else %}
-          7.5rem
-        {% endif %};
+      --scrolling-text-font-size: {% if section.settings.text_size == 'xsmall' %}1.125rem{% elsif section.settings.text_size == 'small' %}2.5rem{% elsif section.settings.text_size == 'medium' %}3.75rem{% elsif section.settings.text_size == 'large' %}5rem{% else %}7.5rem{% endif %};
     }
 
     @media screen and (min-width: 700px) {
       #shopify-section-{{ section.id }} {
-        --scrolling-text-font-size:
-          {% if section.settings.text_size == 'xsmall' %}
-            1.5rem
-          {% elsif section.settings.text_size == 'small' %}
-            3.75rem
-          {% elsif section.settings.text_size == 'medium' %}
-            5rem
-          {% elsif section.settings.text_size == 'large' %}
-            8.75rem
-          {% else %}
-            12.5rem
-          {% endif %};
+        --scrolling-text-font-size: {% if section.settings.text_size == 'xsmall' %}1.5rem{% elsif section.settings.text_size == 'small' %}3.75rem{% elsif section.settings.text_size == 'medium' %}5rem{% elsif section.settings.text_size == 'large' %}8.75rem{% else %}12.5rem{% endif %};
       }
     }
 
-
-    /* Bouton animé directement par le composant du thème */
+    /* On enlève UNIQUEMENT le style natif du bouton */
     #shopify-section-{{ section.id }} .e2f-scrolling-button {
       appearance: none;
       -webkit-appearance: none;
 
       display: inline-block;
 
-      margin: 0;
       padding: 0;
+      margin: 0;
 
       border: 0;
-      border-radius: 0;
-
-      background: transparent;
+      background: none;
 
       color: inherit;
-      font: inherit;
+
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
 
       text-align: inherit;
-      text-decoration: none;
-
-      white-space: nowrap;
 
       cursor: pointer;
+
+      white-space: nowrap;
     }
 
     #shopify-section-{{ section.id }} .e2f-scrolling-button:focus-visible {
       outline: 2px solid currentColor;
-      outline-offset: 4px;
+      outline-offset: 3px;
     }
   </style>
-
 
   {%- if section.settings.text_size == 'xsmall' -%}
     {%- assign is_tight = true -%}
   {%- endif -%}
 
-
   <div {% render 'section-properties', tight: is_tight %}>
 
     {%- capture section_content -%}
-
       {%- for i in (1..10) -%}
 
         <button
           type="button"
-          class="scrolling-text__text heading e2f-scrolling-button {% unless forloop.first %}motion-reduce:hidden{% endunless %}"
-
-          onclick="
-            var drawer = document.getElementById('newsletter-drawer');
-
-            if (drawer && typeof drawer.show === 'function') {
-              drawer.show();
-            }
-          "
-
+          class="scrolling-text__text e2f-scrolling-button {% unless forloop.first %}motion-reduce:hidden{% endunless %}"
+          onclick="var drawer = document.getElementById('newsletter-drawer'); if (drawer && typeof drawer.show === 'function') { drawer.show(); }"
           {% unless forloop.first %}
             aria-hidden="true"
             tabindex="-1"
           {% endunless %}
         >
-
-          {%- render 'styled-text',
-            content: section.settings.text,
-            gradient: section.settings.text_gradient,
-            style: section.settings.text_style
-          -%}
-
+          <span class="heading">
+            {%- render 'styled-text',
+              content: section.settings.text,
+              gradient: section.settings.text_gradient,
+              style: section.settings.text_style
+            -%}
+          </span>
         </button>
 
       {%- endfor -%}
-
     {%- endcapture -%}
 
-
-    <div
-      class="
-        scrolling-text
-        {% if section.settings.scrolling_mode == 'scroll' %}
-          scrolling-text--scroll
-        {% else %}
-          scrolling-text--auto
-        {% endif %}
-      "
-    >
+    <div class="scrolling-text {% if section.settings.scrolling_mode == 'scroll' %}scrolling-text--scroll{% else %}scrolling-text--auto{% endif %}">
 
       {%- if section.settings.scrolling_mode == 'scroll' -%}
 
@@ -141,7 +96,6 @@
       {%- endif -%}
 
     </div>
-
   </div>
 {%- endif -%}
 
@@ -151,14 +105,9 @@
   "name": "Scrolling text",
   "class": "shopify-section--scrolling-text",
   "tag": "section",
-
   "disabled_on": {
-    "groups": [
-      "header",
-      "custom.overlay"
-    ]
+    "groups": ["header", "custom.overlay"]
   },
-
   "settings": [
     {
       "type": "checkbox",
@@ -242,7 +191,6 @@
       "label": "Automatic scrolling speed",
       "default": 10
     },
-
     {
       "type": "header",
       "content": "Colors",
@@ -269,7 +217,6 @@
       "label": "Text gradient"
     }
   ],
-
   "presets": [
     {
       "name": "Scrolling text"
