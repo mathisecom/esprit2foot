@@ -435,26 +435,15 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "recommendations_count": 10,
-        "products": [
-          "mercurial-vapor-16-air-zoom-elite-se-fg-cosmic-speed-orange-1",
-          "chaussette-anti-derapantes",
-          "sneakers-mind-001-solar-red",
-          "n-ke-shoebag-performance",
-          "f50-hyperfast-pack-chaos-vs-control-laceless",
-          "phantom-6-elite-low-cut-fg-noir-chrome-vert",
-          "sneakers-mind-001-black-orange",
-          "mercurial-vapor-15-elite-fg-gris-noir-multicolore",
-          "shoebag-performance",
-          "mercurial-vapor-16-air-zoom-elite-sg-blanc-argente-noir"
-        ],
+        "recommendations_count": 5,
+        "products": [],
         "full_width": true,
         "stack_products": false,
         "show_progress_bar": true,
         "products_per_row_mobile": "2",
-        "products_per_row_desktop": 4,
+        "products_per_row_desktop": 5,
         "subheading": "",
-        "title": "Vous Aimerez Aussi",
+        "title": "Vous aimerez aussi",
         "content": "",
         "background": "",
         "background_gradient": "",
@@ -464,6 +453,59 @@
         "product_card_background": "",
         "product_card_text_color": ""
       }
+    },
+    "faq_fEHUdd": {
+      "type": "faq",
+      "blocks": {
+        "item_Dmdh9P": {
+          "type": "item",
+          "settings": {
+            "title": "Do you ship overseas?",
+            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+          }
+        },
+        "item_GpBiFw": {
+          "type": "item",
+          "settings": {
+            "title": "How long will it take to get my orders?",
+            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+          }
+        },
+        "item_hTcVcP": {
+          "type": "item",
+          "settings": {
+            "title": "Any question?",
+            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_Dmdh9P",
+        "item_GpBiFw",
+        "item_hTcVcP"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "team_avatar_width": 160,
+        "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
+        "answer_time": "Average answer time: 24h",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
     }
   },
   "order": [
@@ -472,6 +514,7 @@
     "logoscroll_RnCMqr",
     "media_with_text_4XKhtF",
     "faq_tdqe7U",
-    "related-products"
+    "related-products",
+    "faq_fEHUdd"
   ]
 }
