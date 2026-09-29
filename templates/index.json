@@ -236,6 +236,130 @@
         "text_gradient": ""
       }
     },
+    "featured_collection_JCd9YQ": {
+      "type": "featured-collection",
+      "name": "Featured collection",
+      "settings": {
+        "collection": "best-sellers",
+        "products": [
+          "predator-26-tongue-fg-elite-gris-blanc-rouge",
+          "sneakers-mind-001-solar-red",
+          "mercurial-vapor-16-air-zoom-elite-fg-attack-pack",
+          "sneakers-mind-001-black-orange",
+          "mercurial-vapor-15-elite-fg-gris-noir-multicolore"
+        ],
+        "full_width": true,
+        "stack_products": false,
+        "show_progress_bar": true,
+        "products_count": 5,
+        "products_per_row_mobile": "2",
+        "products_per_row_desktop": 5,
+        "subheading": "",
+        "title": "NOS BEST SELLERS",
+        "content": "",
+        "link_url": "",
+        "link_text": "Découvrir les tops ventes",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "product_card_background": "",
+        "product_card_text_color": ""
+      }
+    },
+    "multi_column_h4QNhQ": {
+      "type": "multi-column",
+      "blocks": {
+        "item_Y9aj77": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/images_12.jpg",
+            "column_size": "4",
+            "title": "JUDE BELLINGHAM",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/beligol",
+            "link_text": "CHOISIR SA PAIRE",
+            "link_style": "button"
+          }
+        },
+        "item_LUgrTp": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack.jpg",
+            "column_size": "4",
+            "title": "LAMINE YAMAL",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/yamal",
+            "link_text": "CHOISIR SA PAIRE",
+            "link_style": "button"
+          }
+        },
+        "item_kKGWje": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_2.webp",
+            "column_size": "4",
+            "title": "LEO MESSI",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/messi",
+            "link_text": "CHOISIR SA PAIRE",
+            "link_style": "button"
+          }
+        },
+        "item_VnUzyf": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_1_1.webp",
+            "column_size": "4",
+            "title": "KYLIAN MBAPPE",
+            "heading_tag": "h4",
+            "content": "",
+            "link_url": "shopify://collections/mbappe",
+            "link_text": "CHOISIR SA PAIRE",
+            "link_style": "button"
+          }
+        }
+      },
+      "block_order": [
+        "item_Y9aj77",
+        "item_LUgrTp",
+        "item_kKGWje",
+        "item_VnUzyf"
+      ],
+      "name": "Multi-column",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "gap": "small",
+        "text_alignment": "start",
+        "subheading": "",
+        "title": "VOS JOUEURS FAVORIS",
+        "content": "",
+        "background": "#FFFFFF",
+        "background_gradient": "",
+        "text_color": "#000000"
+      }
+    },
+    "scrolling_text_mRWVdk": {
+      "type": "scrolling-text",
+      "name": "Scrolling text",
+      "settings": {
+        "full_width": true,
+        "text": "-10% EN S'ABONNANT GRATUITEMENT A LA NEWSLETTER",
+        "text_size": "xsmall",
+        "text_style": "fill",
+        "scrolling_mode": "auto",
+        "scrolling_speed": 8,
+        "background": "#000000",
+        "background_gradient": "",
+        "text_color": "#00fff5",
+        "text_gradient": "linear-gradient(119deg, rgba(0, 255, 245, 1) 2%, rgba(255, 255, 255, 1) 80.216%, rgba(255, 255, 255, 1) 97%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
+      }
+    },
     "collection_list_7khGbL": {
       "type": "collection-list",
       "blocks": {
@@ -437,130 +561,6 @@
         "heading_gradient": ""
       }
     },
-    "multi_column_h4QNhQ": {
-      "type": "multi-column",
-      "blocks": {
-        "item_Y9aj77": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/images_12.jpg",
-            "column_size": "4",
-            "title": "JUDE BELLINGHAM",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/beligol",
-            "link_text": "CHOISIR SA PAIRE",
-            "link_style": "button"
-          }
-        },
-        "item_LUgrTp": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack.jpg",
-            "column_size": "4",
-            "title": "LAMINE YAMAL",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/yamal",
-            "link_text": "CHOISIR SA PAIRE",
-            "link_style": "button"
-          }
-        },
-        "item_kKGWje": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_2.webp",
-            "column_size": "4",
-            "title": "LEO MESSI",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/messi",
-            "link_text": "CHOISIR SA PAIRE",
-            "link_style": "button"
-          }
-        },
-        "item_VnUzyf": {
-          "type": "item",
-          "settings": {
-            "image": "shopify://shop_images/crampons-adidas-coupe-du-monde-2026-road-to-glory-pack_1_1.webp",
-            "column_size": "4",
-            "title": "KYLIAN MBAPPE",
-            "heading_tag": "h4",
-            "content": "",
-            "link_url": "shopify://collections/mbappe",
-            "link_text": "CHOISIR SA PAIRE",
-            "link_style": "button"
-          }
-        }
-      },
-      "block_order": [
-        "item_Y9aj77",
-        "item_LUgrTp",
-        "item_kKGWje",
-        "item_VnUzyf"
-      ],
-      "name": "Multi-column",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "gap": "small",
-        "text_alignment": "start",
-        "subheading": "",
-        "title": "VOS JOUEURS FAVORIS",
-        "content": "",
-        "background": "#FFFFFF",
-        "background_gradient": "",
-        "text_color": "#000000"
-      }
-    },
-    "scrolling_text_mRWVdk": {
-      "type": "scrolling-text",
-      "name": "Scrolling text",
-      "settings": {
-        "full_width": true,
-        "text": "-10% EN S'ABONNANT GRATUITEMENT A LA NEWSLETTER",
-        "text_size": "xsmall",
-        "text_style": "fill",
-        "scrolling_mode": "auto",
-        "scrolling_speed": 8,
-        "background": "#000000",
-        "background_gradient": "",
-        "text_color": "#00fff5",
-        "text_gradient": "linear-gradient(119deg, rgba(0, 255, 245, 1) 2%, rgba(255, 255, 255, 1) 80.216%, rgba(255, 255, 255, 1) 97%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%)"
-      }
-    },
-    "featured_collection_JCd9YQ": {
-      "type": "featured-collection",
-      "name": "Featured collection",
-      "settings": {
-        "collection": "best-sellers",
-        "products": [
-          "predator-26-tongue-fg-elite-gris-blanc-rouge",
-          "sneakers-mind-001-solar-red",
-          "mercurial-vapor-16-air-zoom-elite-fg-attack-pack",
-          "sneakers-mind-001-black-orange",
-          "mercurial-vapor-15-elite-fg-gris-noir-multicolore"
-        ],
-        "full_width": true,
-        "stack_products": false,
-        "show_progress_bar": true,
-        "products_count": 5,
-        "products_per_row_mobile": "2",
-        "products_per_row_desktop": 5,
-        "subheading": "",
-        "title": "NOS BEST SELLERS",
-        "content": "",
-        "link_url": "",
-        "link_text": "Découvrir les tops ventes",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
-      }
-    },
     "collection_list_fYBFCR": {
       "type": "collection-list",
       "blocks": {
@@ -713,8 +713,8 @@
         "review_count": "+300 avis clients",
         "brand_logo": "shopify://shop_images/Nouveau_projet_21.avif",
         "logo_width": 160,
-        "background": "#ffffff",
-        "card_background": "#f5f5f5",
+        "background": "#FFFFFF",
+        "card_background": "#FFFFFF",
         "text_color": "#000000",
         "muted_color": "#ffb000",
         "accent_color": "#00fff5",
