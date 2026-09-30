@@ -153,77 +153,106 @@
         "input_text_color": ""
       }
     },
-    "e2f_retours_players_4bKmcP": {
+    "e2f_retours_players_AXxyHJ": {
       "type": "e2f-retours-players",
       "blocks": {
-        "review_yHby9Y": {
+        "review_TpEHGq": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/IMG_9175.jpg",
             "stars": 5,
-            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
-            "name": "Yanis",
-            "product_name": "F50 Hyperfast",
+            "review": "<p>Mais quelle qualité merci bro&nbsp;</p>",
+            "name": "Berat Gemici",
+            "product_name": "A acheté : Vapor 16 Elite Noir Multicolore",
             "verified": true
           }
         },
-        "review_CkJtyj": {
+        "review_RehUzn": {
           "type": "review",
           "settings": {
-            "stars": 5,
-            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
-            "name": "Yanis",
-            "product_name": "F50 Hyperfast",
+            "image": "shopify://shop_images/IMG_7369_00ab58b8-0d16-43ea-95eb-6544d912b87a.jpg",
+            "stars": 4,
+            "review": "<p>@esprit2foot Merci à toi franchement je suis surpris, les paires sont d'une qualité exceptionnelle !!</p>",
+            "name": "Noah Loison",
+            "product_name": "A acheté : Vapor 16 Elite Blanche",
             "verified": true
           }
         },
-        "review_LXteyh": {
+        "review_D6CRnm": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/IMG_9204.jpg",
             "stars": 5,
-            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
-            "name": "Yanis",
-            "product_name": "F50 Hyperfast",
+            "review": "<p>@esprit2foot allez en masse commander&nbsp;</p>",
+            "name": "Théo Deville",
+            "product_name": "A acheté : 2 Mercurial Vapor 15 Elite",
             "verified": true
           }
         },
-        "review_rigLWh": {
+        "review_RtcWqm": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/IMG_9171.jpg",
             "stars": 5,
-            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
+            "review": "<p>inpeccable merci</p>",
+            "name": "Houpert Amélie",
+            "product_name": "A acheté : Vapor 16 Elite Blanche",
+            "verified": true
+          }
+        },
+        "review_B79GWQ": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9197.jpg",
+            "stars": 4,
+            "review": "<p>La qualité c'est gavé bien merci je recommande</p>",
             "name": "Yanis",
-            "product_name": "F50 Hyperfast",
+            "product_name": "A acheté : Vapor 16 Elite Blanche",
+            "verified": true
+          }
+        },
+        "review_bLTipG": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9199.jpg",
+            "stars": 5,
+            "review": "<p>Propre frero merci</p>",
+            "name": "Jessica Kuhmichel",
+            "product_name": "A acheté : Vapor 16 Elite Pink Léopard",
             "verified": true
           }
         }
       },
       "block_order": [
-        "review_yHby9Y",
-        "review_CkJtyj",
-        "review_LXteyh",
-        "review_rigLWh"
+        "review_TpEHGq",
+        "review_RehUzn",
+        "review_D6CRnm",
+        "review_RtcWqm",
+        "review_B79GWQ",
+        "review_bLTipG"
       ],
       "name": "E2F - Retours Players",
       "settings": {
         "eyebrow": "AVIS CLIENTS AVEC PHOTOS & VIDÉOS",
         "heading": "MERCI POUR",
         "heading_accent": "VOS RETOURS !",
-        "subtitle": "Photos, vidéos et avis envoyés par nos Players après réception de leur commande.",
+        "subtitle": "",
         "score_label": "NOTE MOYENNE",
-        "rating": "4,8",
+        "rating": "4,6",
         "rating_text": "Basé sur les avis de nos Players.",
         "review_count": "+300 avis clients",
-        "logo_width": 140,
-        "background": "#FFFFFF",
-        "card_background": "#050505",
+        "brand_logo": "shopify://shop_images/Nouveau_projet_21.avif",
+        "logo_width": 160,
+        "background": "#ffffff",
+        "card_background": "#000000",
         "text_color": "#000000",
-        "review_text_color": "#FFFFFF",
-        "muted_color": "#FF8A00",
-        "accent_color": "#00E6E6",
-        "padding_top": 65,
-        "padding_bottom": 65,
-        "mobile_padding_top": 40,
-        "mobile_padding_bottom": 40
+        "review_text_color": "#ffffff",
+        "muted_color": "#ffb000",
+        "accent_color": "#00fff5",
+        "padding_top": 55,
+        "padding_bottom": 90,
+        "mobile_padding_top": 45,
+        "mobile_padding_bottom": 45
       }
     },
     "media_with_text_4XKhtF": {
@@ -244,7 +273,7 @@
             "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
             "link_text": "Notre sélection",
             "link_url": "shopify://collections/nos-crampons",
-            "background": "#E4E4E4",
+            "background": "#F3F3F3",
             "background_gradient": "",
             "text_color": "#000000",
             "text_gradient": "",
@@ -403,7 +432,7 @@
   },
   "order": [
     "main",
-    "e2f_retours_players_4bKmcP",
+    "e2f_retours_players_AXxyHJ",
     "media_with_text_4XKhtF",
     "faq_tdqe7U",
     "faq_fEHUdd",
