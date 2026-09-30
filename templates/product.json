@@ -207,6 +207,17 @@
     "e2f_retours_players_AXxyHJ": {
       "type": "e2f-retours-players",
       "blocks": {
+        "review_RehUzn": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/IMG_7369_00ab58b8-0d16-43ea-95eb-6544d912b87a.jpg",
+            "stars": 4,
+            "review": "<p>@esprit2foot Merci à toi franchement je suis surpris, les paires sont d'une qualité exceptionnelle !!</p>",
+            "name": "Noah Loison",
+            "product_name": "A acheté : Vapor 16 Elite Blanche",
+            "verified": true
+          }
+        },
         "review_WtkB3p": {
           "type": "review",
           "settings": {
@@ -226,17 +237,6 @@
             "review": "<p>Mais quelle qualité merci bro&nbsp;</p>",
             "name": "Berat Gemici",
             "product_name": "A acheté : Vapor 16 Elite Noir Multicolore",
-            "verified": true
-          }
-        },
-        "review_RehUzn": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/IMG_7369_00ab58b8-0d16-43ea-95eb-6544d912b87a.jpg",
-            "stars": 4,
-            "review": "<p>@esprit2foot Merci à toi franchement je suis surpris, les paires sont d'une qualité exceptionnelle !!</p>",
-            "name": "Noah Loison",
-            "product_name": "A acheté : Vapor 16 Elite Blanche",
             "verified": true
           }
         },
@@ -286,9 +286,9 @@
         }
       },
       "block_order": [
+        "review_RehUzn",
         "review_WtkB3p",
         "review_TpEHGq",
-        "review_RehUzn",
         "review_D6CRnm",
         "review_RtcWqm",
         "review_B79GWQ",
