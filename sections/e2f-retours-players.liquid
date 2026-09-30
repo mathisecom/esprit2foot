@@ -7,6 +7,7 @@
     --e2f-text: {{ section.settings.text_color }};
     --e2f-muted: {{ section.settings.muted_color }};
     --e2f-accent: {{ section.settings.accent_color }};
+    --e2f-review-text: {{ section.settings.review_text_color }};
   "
 >
   <div class="e2f-reviews__inner">
@@ -23,9 +24,11 @@
           </div>
         {% endif %}
 
-        <h2 class="e2f-reviews__heading">
-          {{ section.settings.heading }}
-        </h2>
+        {% if section.settings.heading != blank %}
+          <h2 class="e2f-reviews__heading">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
 
         {% if section.settings.heading_accent != blank %}
           <div class="e2f-reviews__heading-accent">
@@ -44,13 +47,20 @@
 
       {% if section.blocks.size > 1 %}
         <div class="e2f-reviews__arrows">
+
           <button
             type="button"
             class="e2f-review-arrow"
             data-e2f-prev="{{ section.id }}"
             aria-label="Avis précédent"
           >
-            ←
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M15 18L9 12L15 6"></path>
+            </svg>
           </button>
 
           <button
@@ -59,8 +69,15 @@
             data-e2f-next="{{ section.id }}"
             aria-label="Avis suivant"
           >
-            →
+            <svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M9 6L15 12L9 18"></path>
+            </svg>
           </button>
+
         </div>
       {% endif %}
 
@@ -70,7 +87,7 @@
     <!-- CONTENU -->
     <div class="e2f-reviews__content">
 
-      <!-- SCORE -->
+      <!-- NOTE -->
       <aside class="e2f-score">
 
         <div class="e2f-score__line"></div>
@@ -183,7 +200,7 @@
             </div>
 
 
-            <!-- BODY -->
+            <!-- AVIS -->
             <div class="e2f-review-card__body">
 
               <div class="e2f-review-card__topline">
@@ -253,9 +270,10 @@
 
 
 <style>
-  /* =========================================
+
+  /* ==========================
      BASE
-  ========================================= */
+  ========================== */
 
   #e2f-reviews-{{ section.id }} {
     width: 100%;
@@ -278,9 +296,9 @@
   }
 
 
-  /* =========================================
+  /* ==========================
      HEADER
-  ========================================= */
+  ========================== */
 
   #e2f-reviews-{{ section.id }} .e2f-reviews__top {
     display: flex;
@@ -312,10 +330,10 @@
   }
 
   #e2f-reviews-{{ section.id }} .e2f-reviews__eyebrow-line {
+    display: block;
+
     width: 26px;
     height: 2px;
-
-    display: block;
 
     background: var(--e2f-accent);
   }
@@ -333,7 +351,6 @@
       sans-serif;
 
     font-size: clamp(36px, 4.1vw, 66px);
-
     line-height: .94;
 
     font-weight: 900;
@@ -342,11 +359,6 @@
     text-transform: uppercase;
   }
 
-
-  /*
-    Partie turquoise volontairement séparée :
-    moins proche du style "mot en italique dans le titre"
-  */
 
   #e2f-reviews-{{ section.id }} .e2f-reviews__heading-accent {
     position: relative;
@@ -364,7 +376,6 @@
       sans-serif;
 
     font-size: clamp(36px, 4.1vw, 66px);
-
     line-height: .94;
 
     font-weight: 900;
@@ -400,12 +411,13 @@
   }
 
 
-  /* =========================================
+  /* ==========================
      FLÈCHES
-  ========================================= */
+  ========================== */
 
   #e2f-reviews-{{ section.id }} .e2f-reviews__arrows {
     display: flex;
+    align-items: center;
 
     gap: 8px;
 
@@ -413,46 +425,85 @@
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-arrow {
-    width: 44px;
-    height: 44px;
+    appearance: none !important;
+    -webkit-appearance: none !important;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 44px !important;
+    height: 44px !important;
 
-    padding: 0;
+    min-width: 44px !important;
+    min-height: 44px !important;
 
-    border: 1px solid rgba(8, 8, 8, 1);
+    padding: 0 !important;
+    margin: 0 !important;
 
-    background: black;
-    color: rgba(255, 255, 255, 1)000ff;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-    font-size: 18px;
+    border: 1px solid rgba(0, 0, 0, .22) !important;
+    border-radius: 0 !important;
+
+    background: transparent !important;
+    background-color: transparent !important;
+
+    box-shadow: none !important;
+
+    color: #000000 !important;
 
     cursor: pointer;
 
+    overflow: hidden;
+
     transition:
-      background .2s ease,
-      border-color .2s ease,
-      color .2s ease;
+      background-color .2s ease,
+      border-color .2s ease;
+  }
+
+  /* On neutralise les effets globaux du thème */
+  #e2f-reviews-{{ section.id }} .e2f-review-arrow::before,
+  #e2f-reviews-{{ section.id }} .e2f-review-arrow::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  #e2f-reviews-{{ section.id }} .e2f-review-arrow svg {
+    display: block !important;
+
+    width: 20px !important;
+    height: 20px !important;
+
+    fill: none !important;
+
+    stroke: #000000 !important;
+    stroke-width: 1.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+
+    pointer-events: none;
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-arrow:hover {
-    background: var(--e2f-accent);
-    border-color: var(--e2f-accent);
+    background: var(--e2f-accent) !important;
+    background-color: var(--e2f-accent) !important;
 
-    color: #ffffffff;
+    border-color: var(--e2f-accent) !important;
+  }
+
+  #e2f-reviews-{{ section.id }} .e2f-review-arrow:hover svg {
+    stroke: #000000 !important;
   }
 
 
-  /* =========================================
-     LAYOUT PRINCIPAL
-  ========================================= */
+  /* ==========================
+     LAYOUT
+  ========================== */
 
   #e2f-reviews-{{ section.id }} .e2f-reviews__content {
     display: grid;
 
-    grid-template-columns: 220px minmax(0, 1fr);
+    grid-template-columns:
+      220px minmax(0, 1fr);
 
     gap: 14px;
 
@@ -460,9 +511,9 @@
   }
 
 
-  /* =========================================
-     SCORE
-  ========================================= */
+  /* ==========================
+     NOTE
+  ========================== */
 
   #e2f-reviews-{{ section.id }} .e2f-score {
     position: relative;
@@ -508,7 +559,7 @@
   }
 
   #e2f-reviews-{{ section.id }} .e2f-score__number {
-    color: #fff;
+    color: #ffffff;
 
     font-size: 72px;
     line-height: .88;
@@ -550,7 +601,7 @@
   #e2f-reviews-{{ section.id }} .e2f-score__count {
     margin-top: 9px;
 
-    color: #fff;
+    color: #ffffff;
 
     font-size: 13px;
     line-height: 1.3;
@@ -566,7 +617,8 @@
 
     padding-top: 26px;
 
-    border-top: 1px solid rgba(255,255,255,.10);
+    border-top:
+      1px solid rgba(255,255,255,.10);
   }
 
   #e2f-reviews-{{ section.id }} .e2f-score__logo-image {
@@ -584,9 +636,9 @@
   }
 
 
-  /* =========================================
+  /* ==========================
      SLIDER
-  ========================================= */
+  ========================== */
 
   #e2f-reviews-{{ section.id }} .e2f-reviews__track {
     min-width: 0;
@@ -615,18 +667,19 @@
   }
 
 
-  /* =========================================
-     CARTES
-  ========================================= */
+  /* ==========================
+     CARTE
+  ========================== */
 
   #e2f-reviews-{{ section.id }} .e2f-review-card {
     min-width: 0;
 
     background: var(--e2f-card);
 
-    color: #fff;
+    color: #ffffff;
 
-    border: 1px solid rgba(255,255,255,.12);
+    border:
+      1px solid rgba(255,255,255,.12);
 
     scroll-snap-align: start;
   }
@@ -682,7 +735,7 @@
   }
 
 
-  /* LABEL PHOTO / VIDEO */
+  /* LABEL */
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__type {
     position: absolute;
@@ -723,7 +776,7 @@
 
     gap: 5px;
 
-    color: #777;
+    color: #777777;
 
     text-align: center;
   }
@@ -738,7 +791,7 @@
   #e2f-reviews-{{ section.id }} .e2f-review-card__placeholder strong {
     margin-top: 6px;
 
-    color: #aaa;
+    color: #aaaaaa;
 
     font-size: 11px;
 
@@ -748,15 +801,15 @@
   }
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__placeholder small {
-    color: #666;
+    color: #666666;
 
     font-size: 10px;
   }
 
 
-  /* =========================================
-     CONTENU AVIS
-  ========================================= */
+  /* ==========================
+     TEXTE AVIS
+  ========================== */
 
   #e2f-reviews-{{ section.id }} .e2f-review-card__body {
     padding: 17px 16px 18px;
@@ -802,7 +855,7 @@
   #e2f-reviews-{{ section.id }} .e2f-review-card__review {
     min-height: 70px;
 
-    color: #ffffffff;
+    color: var(--e2f-review-text);
 
     font-size: 14px;
     line-height: 1.5;
@@ -859,7 +912,7 @@
   #e2f-reviews-{{ section.id }} .e2f-review-card__customer-text strong {
     display: block;
 
-    color: #fff;
+    color: var(--e2f-review-text);
 
     font-size: 12px;
     line-height: 1.2;
@@ -870,7 +923,7 @@
 
     margin-top: 3px;
 
-    color: #777;
+    color: #777777;
 
     font-size: 9px;
     line-height: 1.3;
@@ -883,9 +936,9 @@
   }
 
 
-  /* =========================================
+  /* ==========================
      MOBILE
-  ========================================= */
+  ========================== */
 
   @media screen and (max-width: 749px) {
 
@@ -897,16 +950,16 @@
         {{ section.settings.mobile_padding_bottom }}px;
     }
 
+
     #e2f-reviews-{{ section.id }} .e2f-reviews__inner {
       width: calc(100% - 24px);
     }
 
 
-    /* HEADER */
-
     #e2f-reviews-{{ section.id }} .e2f-reviews__top {
       margin-bottom: 24px;
     }
+
 
     #e2f-reviews-{{ section.id }} .e2f-reviews__heading,
     #e2f-reviews-{{ section.id }} .e2f-reviews__heading-accent {
@@ -914,11 +967,13 @@
         clamp(31px, 10vw, 44px);
     }
 
+
     #e2f-reviews-{{ section.id }} .e2f-reviews__heading-accent::after {
       bottom: -8px;
 
       width: 50px;
     }
+
 
     #e2f-reviews-{{ section.id }} .e2f-reviews__subtitle {
       margin-top: 20px;
@@ -926,16 +981,16 @@
       font-size: 12px;
     }
 
+
     #e2f-reviews-{{ section.id }} .e2f-reviews__arrows {
       display: none;
     }
 
 
-    /* SCORE */
-
     #e2f-reviews-{{ section.id }} .e2f-reviews__content {
       display: block;
     }
+
 
     #e2f-reviews-{{ section.id }} .e2f-score {
       min-height: auto;
@@ -953,9 +1008,11 @@
       padding: 18px;
     }
 
+
     #e2f-reviews-{{ section.id }} .e2f-score__line {
       height: 100%;
     }
+
 
     #e2f-reviews-{{ section.id }} .e2f-score__label {
       grid-column: 1 / -1;
@@ -963,11 +1020,13 @@
       margin-bottom: 8px;
     }
 
+
     #e2f-reviews-{{ section.id }} .e2f-score__number {
       grid-row: 2 / 5;
 
       font-size: 52px;
     }
+
 
     #e2f-reviews-{{ section.id }} .e2f-score__stars {
       align-self: end;
@@ -977,11 +1036,13 @@
       font-size: 15px;
     }
 
+
     #e2f-reviews-{{ section.id }} .e2f-score__text {
       margin: 0;
 
       font-size: 10px;
     }
+
 
     #e2f-reviews-{{ section.id }} .e2f-score__count {
       margin: 0;
@@ -989,12 +1050,11 @@
       font-size: 11px;
     }
 
+
     #e2f-reviews-{{ section.id }} .e2f-score__logo {
       display: none;
     }
 
-
-    /* SLIDER */
 
     #e2f-reviews-{{ section.id }} .e2f-reviews__track {
       width: calc(100vw - 12px);
@@ -1009,11 +1069,10 @@
     }
 
 
-    /* CARD */
-
     #e2f-reviews-{{ section.id }} .e2f-review-card__body {
       padding: 14px;
     }
+
 
     #e2f-reviews-{{ section.id }} .e2f-review-card__review {
       min-height: 60px;
@@ -1021,11 +1080,13 @@
       font-size: 13px;
     }
 
+
     #e2f-reviews-{{ section.id }} .e2f-review-card__verified {
       font-size: 7px;
     }
 
   }
+
 </style>
 
 
@@ -1034,38 +1095,47 @@
 
     function initE2FReviews() {
 
-      var root = document.getElementById(
-        'e2f-reviews-{{ section.id }}'
-      );
+      var root =
+        document.getElementById(
+          'e2f-reviews-{{ section.id }}'
+        );
 
       if (!root) return;
 
 
-      var track = root.querySelector(
-        '#e2f-review-track-{{ section.id }}'
-      );
+      var track =
+        root.querySelector(
+          '#e2f-review-track-{{ section.id }}'
+        );
 
-      var prev = root.querySelector(
-        '[data-e2f-prev="{{ section.id }}"]'
-      );
+      var prev =
+        root.querySelector(
+          '[data-e2f-prev="{{ section.id }}"]'
+        );
 
-      var next = root.querySelector(
-        '[data-e2f-next="{{ section.id }}"]'
-      );
+      var next =
+        root.querySelector(
+          '[data-e2f-next="{{ section.id }}"]'
+        );
 
 
       if (!track) return;
 
 
-      function getScrollAmount() {
+      function getAmount() {
 
         var card =
-          track.querySelector('.e2f-review-card');
+          track.querySelector(
+            '.e2f-review-card'
+          );
 
-        if (!card) return 340;
+        if (!card) {
+          return 340;
+        }
 
         return
           card.getBoundingClientRect().width + 10;
+
       }
 
 
@@ -1077,23 +1147,14 @@
           'click',
           function () {
 
-            var card =
-              track.querySelector(
-                '.e2f-review-card'
-              );
-
-            var amount =
-              card
-                ? card.getBoundingClientRect().width + 10
-                : 340;
-
             track.scrollBy({
-              left: -amount,
+              left: -getAmount(),
               behavior: 'smooth'
             });
 
           }
         );
+
       }
 
 
@@ -1105,23 +1166,14 @@
           'click',
           function () {
 
-            var card =
-              track.querySelector(
-                '.e2f-review-card'
-              );
-
-            var amount =
-              card
-                ? card.getBoundingClientRect().width + 10
-                : 340;
-
             track.scrollBy({
-              left: amount,
+              left: getAmount(),
               behavior: 'smooth'
             });
 
           }
         );
+
       }
 
     }
@@ -1271,7 +1323,14 @@
     {
       "type": "color",
       "id": "text_color",
-      "label": "Texte",
+      "label": "Texte général",
+      "default": "#FFFFFF"
+    },
+
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Texte des avis",
       "default": "#FFFFFF"
     },
 
