@@ -1,12 +1,20 @@
+{%- comment -%}
+  E2F - PREUVE EN VIDÉO
+  3 vidéos + 3 covers sélectionnables depuis Shopify.
+{%- endcomment -%}
+
 <div
   id="e2f-proof-{{ block.id }}"
   class="e2f-proof"
   style="
     --e2f-proof-accent: {{ block.settings.accent_color }};
     --e2f-proof-text: {{ block.settings.text_color }};
+    --e2f-proof-muted: {{ block.settings.muted_color }};
+    --e2f-proof-play-bg: {{ block.settings.play_background }};
   "
 >
 
+  <!-- HEADER -->
   <div class="e2f-proof__header">
 
     {% if block.settings.title != blank %}
@@ -25,99 +33,117 @@
   </div>
 
 
+  <!-- VIDEOS -->
   <div class="e2f-proof__videos">
 
-    {% if block.settings.video_1 != blank %}
+    {% for i in (1..3) %}
 
-      <div class="e2f-proof-card">
+      {% liquid
+        case i
 
-        {% if block.settings.label_1 != blank %}
-          <div class="e2f-proof-card__label">
-            {{ block.settings.label_1 }}
+          when 1
+            assign video = block.settings.video_1
+            assign cover = block.settings.cover_1
+            assign label = block.settings.label_1
+            assign caption = block.settings.caption_1
+
+          when 2
+            assign video = block.settings.video_2
+            assign cover = block.settings.cover_2
+            assign label = block.settings.label_2
+            assign caption = block.settings.caption_2
+
+          when 3
+            assign video = block.settings.video_3
+            assign cover = block.settings.cover_3
+            assign label = block.settings.label_3
+            assign caption = block.settings.caption_3
+
+        endcase
+      %}
+
+
+      {% if video != blank %}
+
+        <article class="e2f-proof-card">
+
+          <div class="e2f-proof-card__media">
+
+            <!-- VIDEO -->
+            {{
+              video
+              | video_tag:
+                controls: true,
+                muted: true,
+                playsinline: true,
+                preload: 'metadata',
+                class: 'e2f-proof-card__video'
+            }}
+
+
+            <!-- COVER -->
+            {% if cover != blank %}
+
+              <button
+                type="button"
+                class="e2f-proof-card__cover"
+                aria-label="Lire la vidéo"
+              >
+
+                {{
+                  cover
+                  | image_url: width: 1400
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '300, 500, 700, 1000, 1400',
+                    sizes: '(max-width: 699px) 72vw, 33vw',
+                    class: 'e2f-proof-card__cover-image'
+                }}
+
+                <span class="e2f-proof-card__cover-overlay"></span>
+
+                <span class="e2f-proof-card__play">
+
+                  <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M8 5V19L19 12L8 5Z"></path>
+                  </svg>
+
+                </span>
+
+              </button>
+
+            {% endif %}
+
+
+            <!-- LABEL -->
+            {% if label != blank %}
+
+              <div class="e2f-proof-card__label">
+                {{ label }}
+              </div>
+
+            {% endif %}
+
+
+            <!-- CAPTION -->
+            {% if caption != blank %}
+
+              <div class="e2f-proof-card__caption">
+                {{ caption }}
+              </div>
+
+            {% endif %}
+
           </div>
-        {% endif %}
 
-        {{
-          block.settings.video_1
-          | video_tag:
-            controls: true,
-            muted: true,
-            playsinline: true,
-            preload: 'metadata',
-            class: 'e2f-proof-card__video'
-        }}
+        </article>
 
-        {% if block.settings.caption_1 != blank %}
-          <div class="e2f-proof-card__caption">
-            {{ block.settings.caption_1 }}
-          </div>
-        {% endif %}
+      {% endif %}
 
-      </div>
-
-    {% endif %}
-
-
-    {% if block.settings.video_2 != blank %}
-
-      <div class="e2f-proof-card">
-
-        {% if block.settings.label_2 != blank %}
-          <div class="e2f-proof-card__label">
-            {{ block.settings.label_2 }}
-          </div>
-        {% endif %}
-
-        {{
-          block.settings.video_2
-          | video_tag:
-            controls: true,
-            muted: true,
-            playsinline: true,
-            preload: 'metadata',
-            class: 'e2f-proof-card__video'
-        }}
-
-        {% if block.settings.caption_2 != blank %}
-          <div class="e2f-proof-card__caption">
-            {{ block.settings.caption_2 }}
-          </div>
-        {% endif %}
-
-      </div>
-
-    {% endif %}
-
-
-    {% if block.settings.video_3 != blank %}
-
-      <div class="e2f-proof-card">
-
-        {% if block.settings.label_3 != blank %}
-          <div class="e2f-proof-card__label">
-            {{ block.settings.label_3 }}
-          </div>
-        {% endif %}
-
-        {{
-          block.settings.video_3
-          | video_tag:
-            controls: true,
-            muted: true,
-            playsinline: true,
-            preload: 'metadata',
-            class: 'e2f-proof-card__video'
-        }}
-
-        {% if block.settings.caption_3 != blank %}
-          <div class="e2f-proof-card__caption">
-            {{ block.settings.caption_3 }}
-          </div>
-        {% endif %}
-
-      </div>
-
-    {% endif %}
+    {% endfor %}
 
 
     {% if block.settings.video_1 == blank
@@ -138,24 +164,46 @@
 
 <style>
 
+  /* =====================================
+     SECTION
+  ===================================== */
+
   #e2f-proof-{{ block.id }} {
     width: 100%;
 
-    padding: 16px 0 18px;
+    padding-top:
+      {{ block.settings.padding_top | default: 16 }}px;
 
-    border-top: 1px solid rgba(0,0,0,.12);
-    border-bottom: 1px solid rgba(0,0,0,.12);
+    padding-bottom:
+      {{ block.settings.padding_bottom | default: 18 }}px;
+
+    border-top:
+      1px solid rgba(0,0,0,.12);
+
+    border-bottom:
+      1px solid rgba(0,0,0,.12);
   }
 
+
+  #e2f-proof-{{ block.id }} * {
+    box-sizing: border-box;
+  }
+
+
+  /* =====================================
+     HEADER
+  ===================================== */
 
   #e2f-proof-{{ block.id }} .e2f-proof__header {
     display: flex;
 
     align-items: center;
 
-    gap: 8px;
+    gap: 9px;
 
-    margin-bottom: 11px;
+    margin-bottom: 12px;
+
+    flex-wrap: wrap;
   }
 
 
@@ -169,6 +217,7 @@
     color: var(--e2f-proof-text);
 
     font-size: 11px;
+
     line-height: 1;
 
     font-weight: 900;
@@ -182,26 +231,34 @@
   #e2f-proof-{{ block.id }} .e2f-proof__title span {
     display: block;
 
-    width: 15px;
+    width: 16px;
+
     height: 2px;
 
-    background: var(--e2f-proof-accent);
+    flex-shrink: 0;
+
+    background:
+      var(--e2f-proof-accent);
   }
 
 
   #e2f-proof-{{ block.id }} .e2f-proof__subtitle {
-    color: #888;
+    color:
+      var(--e2f-proof-muted);
 
     font-size: 8px;
+
     line-height: 1;
 
-    letter-spacing: .04em;
+    letter-spacing: .05em;
 
     text-transform: uppercase;
   }
 
 
-  /* 3 VIDEOS */
+  /* =====================================
+     GRID
+  ===================================== */
 
   #e2f-proof-{{ block.id }} .e2f-proof__videos {
     display: grid;
@@ -209,16 +266,29 @@
     grid-template-columns:
       repeat(3, minmax(0, 1fr));
 
-    gap: 7px;
+    gap:
+      {{ block.settings.gap | default: 7 }}px;
   }
 
 
   #e2f-proof-{{ block.id }} .e2f-proof-card {
+    min-width: 0;
+  }
+
+
+  /* =====================================
+     MEDIA
+  ===================================== */
+
+  #e2f-proof-{{ block.id }} .e2f-proof-card__media {
     position: relative;
 
-    min-width: 0;
+    width: 100%;
 
-    aspect-ratio: 4 / 5;
+    aspect-ratio:
+      {{ block.settings.ratio_width | default: 9 }}
+      /
+      {{ block.settings.ratio_height | default: 16 }};
 
     overflow: hidden;
 
@@ -226,40 +296,218 @@
   }
 
 
+  /* =====================================
+     VIDEO
+  ===================================== */
+
   #e2f-proof-{{ block.id }} .e2f-proof-card__video {
     display: block;
 
     width: 100%;
+
     height: 100%;
 
-    object-fit: cover;
+    object-fit:
+      {{ block.settings.video_fit | default: 'cover' }};
 
     background: #101114;
   }
 
 
-  /* LABEL */
+  /* =====================================
+     COVER
+  ===================================== */
+
+  #e2f-proof-{{ block.id }} .e2f-proof-card__cover {
+    appearance: none !important;
+
+    -webkit-appearance: none !important;
+
+    position: absolute;
+
+    z-index: 5;
+
+    inset: 0;
+
+    width: 100% !important;
+
+    height: 100% !important;
+
+    min-width: 0 !important;
+
+    min-height: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    overflow: hidden;
+
+    border: 0 !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    background: #000 !important;
+
+    cursor: pointer;
+  }
+
+
+  #e2f-proof-{{ block.id }} .e2f-proof-card__cover::before,
+  #e2f-proof-{{ block.id }} .e2f-proof-card__cover::after {
+    display: none !important;
+
+    content: none !important;
+  }
+
+
+  #e2f-proof-{{ block.id }} .e2f-proof-card__cover-image {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+      transform .35s ease;
+  }
+
+
+  #e2f-proof-{{ block.id }}
+  .e2f-proof-card__cover:hover
+  .e2f-proof-card__cover-image {
+    transform: scale(1.025);
+  }
+
+
+  /* petit overlay pour rendre le play visible */
+
+  #e2f-proof-{{ block.id }} .e2f-proof-card__cover-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(0,0,0,.30),
+        rgba(0,0,0,.02) 60%,
+        rgba(0,0,0,.08)
+      );
+
+    pointer-events: none;
+  }
+
+
+  /* =====================================
+     PLAY BUTTON
+  ===================================== */
+
+  #e2f-proof-{{ block.id }} .e2f-proof-card__play {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+      translate(-50%, -50%);
+
+    width:
+      {{ block.settings.play_size | default: 52 }}px;
+
+    height:
+      {{ block.settings.play_size | default: 52 }}px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 999px;
+
+    background:
+      var(--e2f-proof-play-bg);
+
+    border:
+      1px solid rgba(255,255,255,.65);
+
+    box-shadow:
+      0 6px 20px rgba(0,0,0,.20);
+
+    backdrop-filter:
+      blur(5px);
+
+    -webkit-backdrop-filter:
+      blur(5px);
+
+    pointer-events: none;
+
+    transition:
+      transform .2s ease;
+  }
+
+
+  #e2f-proof-{{ block.id }}
+  .e2f-proof-card__cover:hover
+  .e2f-proof-card__play {
+    transform:
+      translate(-50%, -50%)
+      scale(1.07);
+  }
+
+
+  #e2f-proof-{{ block.id }} .e2f-proof-card__play svg {
+    width: 18px;
+
+    height: 18px;
+
+    margin-left: 2px;
+
+    fill: #fff;
+
+    stroke: none;
+  }
+
+
+  /* =====================================
+     LABEL
+  ===================================== */
 
   #e2f-proof-{{ block.id }} .e2f-proof-card__label {
     position: absolute;
 
-    z-index: 3;
+    z-index: 8;
 
     top: 7px;
+
     left: 7px;
 
-    padding: 5px 7px;
+    max-width:
+      calc(100% - 14px);
 
-    background: var(--e2f-proof-accent);
+    padding:
+      5px 7px;
+
+    background:
+      var(--e2f-proof-accent);
 
     color: #000;
 
     font-size: 7px;
-    line-height: 1;
+
+    line-height: 1.15;
 
     font-weight: 900;
 
-    letter-spacing: .05em;
+    letter-spacing: .04em;
 
     text-transform: uppercase;
 
@@ -267,43 +515,56 @@
   }
 
 
-  /* LEGENDE */
+  /* =====================================
+     TEXTE EN BAS
+  ===================================== */
 
   #e2f-proof-{{ block.id }} .e2f-proof-card__caption {
     position: absolute;
 
-    z-index: 3;
+    z-index: 8;
 
     left: 0;
+
     right: 0;
+
     bottom: 0;
 
-    padding: 35px 8px 8px;
+    padding:
+      38px 9px 9px;
 
     background:
       linear-gradient(
         to top,
         rgba(0,0,0,.92),
-        rgba(0,0,0,0)
+        rgba(0,0,0,.55) 45%,
+        transparent
       );
 
     color: #fff;
 
     font-size: 8px;
-    line-height: 1.25;
 
-    font-weight: 700;
+    line-height: 1.3;
+
+    font-weight: 750;
 
     pointer-events: none;
   }
 
 
+  /* =====================================
+     EMPTY
+  ===================================== */
+
   #e2f-proof-{{ block.id }} .e2f-proof__empty {
-    grid-column: 1 / -1;
+    grid-column:
+      1 / -1;
 
     padding: 25px;
 
-    border: 1px dashed #ccc;
+    border:
+      1px dashed #ccc;
 
     color: #777;
 
@@ -313,16 +574,34 @@
   }
 
 
+  /* =====================================
+     MOBILE
+  ===================================== */
+
   @media screen and (max-width: 699px) {
+
+    #e2f-proof-{{ block.id }} {
+      padding-top:
+        {{ block.settings.mobile_padding_top | default: 14 }}px;
+
+      padding-bottom:
+        {{ block.settings.mobile_padding_bottom | default: 16 }}px;
+    }
+
 
     #e2f-proof-{{ block.id }} .e2f-proof__videos {
       display: flex;
 
-      gap: 7px;
+      gap:
+        {{ block.settings.gap | default: 7 }}px;
 
       overflow-x: auto;
 
-      scroll-snap-type: x mandatory;
+      scroll-snap-type:
+        x mandatory;
+
+      overscroll-behavior-x:
+        contain;
 
       scrollbar-width: none;
     }
@@ -334,7 +613,11 @@
 
 
     #e2f-proof-{{ block.id }} .e2f-proof-card {
-      flex: 0 0 72%;
+      flex:
+        0 0 {{ block.settings.mobile_width | default: 72 }}%;
+
+      min-width:
+        {{ block.settings.mobile_width | default: 72 }}%;
 
       scroll-snap-align: start;
     }
@@ -342,3 +625,195 @@
   }
 
 </style>
+
+
+<script>
+(function () {
+
+  function initE2FProof() {
+
+    var root =
+      document.getElementById(
+        'e2f-proof-{{ block.id }}'
+      );
+
+    if (!root) return;
+
+
+    var cards =
+      root.querySelectorAll(
+        '.e2f-proof-card'
+      );
+
+
+    cards.forEach(function(card) {
+
+      var cover =
+        card.querySelector(
+          '.e2f-proof-card__cover'
+        );
+
+      var video =
+        card.querySelector('video');
+
+
+      if (!cover || !video) return;
+
+
+      /*
+        Évite de créer plusieurs fois
+        le même event dans l'éditeur Shopify.
+      */
+
+      if (
+        cover.dataset.e2fReady ===
+        'true'
+      ) {
+        return;
+      }
+
+
+      cover.dataset.e2fReady =
+        'true';
+
+
+      /*
+        CLIC COVER
+      */
+
+      cover.addEventListener(
+        'click',
+        function(event) {
+
+          event.preventDefault();
+
+
+          /*
+            On coupe les autres vidéos.
+          */
+
+          root
+            .querySelectorAll('video')
+            .forEach(function(otherVideo) {
+
+              if (
+                otherVideo !== video
+                && !otherVideo.paused
+              ) {
+
+                otherVideo.pause();
+
+              }
+
+            });
+
+
+          /*
+            On remet les covers
+            des autres cartes.
+          */
+
+          root
+            .querySelectorAll(
+              '.e2f-proof-card__cover'
+            )
+            .forEach(function(otherCover) {
+
+              if (
+                otherCover !== cover
+              ) {
+
+                otherCover.style.display =
+                  '';
+
+              }
+
+            });
+
+
+          /*
+            Cache la cover actuelle.
+          */
+
+          cover.style.display =
+            'none';
+
+
+          /*
+            Lance la vidéo.
+          */
+
+          var playPromise =
+            video.play();
+
+
+          if (
+            playPromise !== undefined
+          ) {
+
+            playPromise.catch(
+              function() {
+
+                cover.style.display =
+                  '';
+
+              }
+            );
+
+          }
+
+        }
+      );
+
+
+      /*
+        FIN DE VIDEO :
+        on remet la cover.
+      */
+
+      video.addEventListener(
+        'ended',
+        function() {
+
+          video.currentTime = 0;
+
+          cover.style.display =
+            '';
+
+        }
+      );
+
+    });
+
+  }
+
+
+  if (
+    document.readyState ===
+    'loading'
+  ) {
+
+    document.addEventListener(
+      'DOMContentLoaded',
+      initE2FProof
+    );
+
+  } else {
+
+    initE2FProof();
+
+  }
+
+
+  /*
+    Important pour
+    l'éditeur Shopify.
+  */
+
+  document.addEventListener(
+    'shopify:section:load',
+    initE2FProof
+  );
+
+})();
+</script>
