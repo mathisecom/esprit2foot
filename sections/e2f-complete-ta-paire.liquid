@@ -1,0 +1,1263 @@
+<section
+  id="e2f-pair-{{ section.id }}"
+  class="e2f-pair"
+  style="
+    --e2f-bg: {{ section.settings.background }};
+    --e2f-card-bg: {{ section.settings.card_background }};
+    --e2f-text: {{ section.settings.text_color }};
+    --e2f-muted: {{ section.settings.muted_color }};
+    --e2f-accent: {{ section.settings.accent_color }};
+    --e2f-border: {{ section.settings.border_color }};
+  "
+>
+  <div class="e2f-pair__inner">
+
+    <!-- HEADER -->
+    <div class="e2f-pair__header">
+
+      <div class="e2f-pair__heading-wrap">
+
+        {% if section.settings.eyebrow != blank %}
+          <div class="e2f-pair__eyebrow">
+            <span></span>
+            {{ section.settings.eyebrow }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2 class="e2f-pair__heading">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.subtitle != blank %}
+          <p class="e2f-pair__subtitle">
+            {{ section.settings.subtitle }}
+          </p>
+        {% endif %}
+
+      </div>
+
+
+      {% if section.blocks.size > 1 %}
+        <div class="e2f-pair__arrows">
+
+          <button
+            type="button"
+            class="e2f-pair__arrow"
+            data-pair-prev="{{ section.id }}"
+            aria-label="Produits précédents"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 18L9 12L15 6"></path>
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="e2f-pair__arrow"
+            data-pair-next="{{ section.id }}"
+            aria-label="Produits suivants"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 6L15 12L9 18"></path>
+            </svg>
+          </button>
+
+        </div>
+      {% endif %}
+
+    </div>
+
+
+    <!-- PRODUITS -->
+    <div
+      class="e2f-pair__track"
+      id="e2f-pair-track-{{ section.id }}"
+    >
+
+      {% for block in section.blocks %}
+
+        {% assign item_product = block.settings.product %}
+
+        {% if item_product != blank %}
+
+          {% assign selected_variant = item_product.selected_or_first_available_variant %}
+
+          {% assign form_id = 'e2f-pair-form-' | append: section.id | append: '-' | append: block.id %}
+
+
+          <article
+            class="e2f-pair-card"
+            {{ block.shopify_attributes }}
+          >
+
+            <!-- IMAGE -->
+            <a
+              href="{{ item_product.url }}"
+              class="e2f-pair-card__image-wrap"
+            >
+
+              {% if item_product.featured_image != blank %}
+
+                {{
+                  item_product.featured_image
+                  | image_url: width: 500
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '120, 180, 260, 360, 500',
+                    sizes: '(max-width: 749px) 90px, 110px',
+                    class: 'e2f-pair-card__image',
+                    alt: item_product.title
+                }}
+
+              {% else %}
+
+                {{ 'product-1' | placeholder_svg_tag: 'e2f-pair-card__placeholder' }}
+
+              {% endif %}
+
+            </a>
+
+
+            <!-- INFOS -->
+            <div class="e2f-pair-card__info">
+
+              <a
+                href="{{ item_product.url }}"
+                class="e2f-pair-card__title"
+              >
+                {{ item_product.title }}
+              </a>
+
+
+              {% if block.settings.short_text != blank %}
+                <div class="e2f-pair-card__description">
+                  {{ block.settings.short_text }}
+                </div>
+              {% endif %}
+
+
+              <!-- PRIX -->
+              <div class="e2f-pair-card__price">
+
+                <span class="e2f-price-current">
+                  {{ selected_variant.price | money }}
+                </span>
+
+                <span
+                  class="e2f-price-compare"
+                  {% unless selected_variant.compare_at_price > selected_variant.price %}
+                    hidden
+                  {% endunless %}
+                >
+                  {% if selected_variant.compare_at_price > selected_variant.price %}
+                    {{ selected_variant.compare_at_price | money }}
+                  {% endif %}
+                </span>
+
+              </div>
+
+
+              <!-- FORMULAIRE PRODUIT -->
+              {% form
+                'product',
+                item_product,
+                id: form_id,
+                class: 'e2f-pair-card__form',
+                is: 'product-form'
+              %}
+
+                <input
+                  type="hidden"
+                  name="quantity"
+                  value="1"
+                >
+
+
+                {% if item_product.has_only_default_variant %}
+
+                  <input
+                    type="hidden"
+                    name="id"
+                    value="{{ selected_variant.id }}"
+                  >
+
+                {% else %}
+
+                  <select
+                    name="id"
+                    class="e2f-pair-card__variant"
+                    aria-label="Choisir une option pour {{ item_product.title | escape }}"
+                  >
+
+                    {% for variant in item_product.variants %}
+
+                      <option
+                        value="{{ variant.id }}"
+
+                        data-price="{{ variant.price | money | escape }}"
+
+                        data-compare="{% if variant.compare_at_price > variant.price %}{{ variant.compare_at_price | money | escape }}{% endif %}"
+
+                        {% if variant.id == selected_variant.id %}
+                          selected
+                        {% endif %}
+
+                        {% unless variant.available %}
+                          disabled
+                        {% endunless %}
+                      >
+
+                        {{ variant.title }}
+
+                        {% unless variant.available %}
+                          — Épuisé
+                        {% endunless %}
+
+                      </option>
+
+                    {% endfor %}
+
+                  </select>
+
+                {% endif %}
+
+
+                <buy-buttons
+                  template="{{ item_product.template_suffix }}"
+                  form="{{ form_id }}"
+                  class="e2f-pair-card__buy-buttons"
+                >
+
+                  <button
+                    type="submit"
+                    name="add"
+                    class="e2f-pair-card__add"
+
+                    {% unless selected_variant.available %}
+                      disabled
+                    {% endunless %}
+
+                    aria-label="Ajouter {{ item_product.title | escape }} au panier"
+                  >
+
+                    {% if selected_variant.available %}
+                      <span class="e2f-pair-card__plus">+</span>
+                      <span class="e2f-pair-card__add-text">
+                        Ajouter
+                      </span>
+                    {% else %}
+                      Épuisé
+                    {% endif %}
+
+                  </button>
+
+                </buy-buttons>
+
+              {% endform %}
+
+            </div>
+
+          </article>
+
+        {% endif %}
+
+      {% endfor %}
+
+
+      {% if section.blocks.size == 0 %}
+
+        <div class="e2f-pair__empty">
+          Ajoute tes accessoires depuis l’éditeur Shopify.
+        </div>
+
+      {% endif %}
+
+    </div>
+
+  </div>
+</section>
+
+
+<style>
+
+  /* =============================
+     SECTION
+  ============================= */
+
+  #e2f-pair-{{ section.id }} {
+    width: 100%;
+
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+
+    overflow: hidden;
+
+    background: var(--e2f-bg);
+
+    color: var(--e2f-text);
+  }
+
+  #e2f-pair-{{ section.id }} * {
+    box-sizing: border-box;
+  }
+
+  #e2f-pair-{{ section.id }} .e2f-pair__inner {
+    width: min(
+      {{ section.settings.max_width }}px,
+      calc(100% - 40px)
+    );
+
+    margin: 0 auto;
+  }
+
+
+  /* =============================
+     HEADER
+  ============================= */
+
+  #e2f-pair-{{ section.id }} .e2f-pair__header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 16px;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair__eyebrow {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 5px;
+
+    color: var(--e2f-accent);
+
+    font-size: 10px;
+
+    line-height: 1;
+
+    font-weight: 850;
+
+    letter-spacing: .11em;
+
+    text-transform: uppercase;
+  }
+
+  #e2f-pair-{{ section.id }} .e2f-pair__eyebrow span {
+    width: 18px;
+    height: 2px;
+
+    background: var(--e2f-accent);
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair__heading {
+    margin: 0;
+
+    color: var(--e2f-text);
+
+    font-size: clamp(20px, 2vw, 29px);
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -.035em;
+
+    text-transform: uppercase;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair__subtitle {
+    margin: 6px 0 0;
+
+    color: var(--e2f-muted);
+
+    font-size: 11px;
+
+    line-height: 1.4;
+  }
+
+
+  /* =============================
+     ARROWS
+  ============================= */
+
+  #e2f-pair-{{ section.id }} .e2f-pair__arrows {
+    display: flex;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair__arrow {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+
+    width: 36px !important;
+    height: 36px !important;
+
+    min-width: 36px !important;
+    min-height: 36px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    border:
+      1px solid var(--e2f-border) !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    color: var(--e2f-text) !important;
+
+    cursor: pointer;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair__arrow::before,
+  #e2f-pair-{{ section.id }} .e2f-pair__arrow::after {
+    content: none !important;
+
+    display: none !important;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair__arrow svg {
+    width: 17px;
+    height: 17px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    pointer-events: none;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair__arrow:hover {
+    background:
+      var(--e2f-accent) !important;
+
+    border-color:
+      var(--e2f-accent) !important;
+
+    color: #000 !important;
+  }
+
+
+  /* =============================
+     TRACK
+  ============================= */
+
+  #e2f-pair-{{ section.id }} .e2f-pair__track {
+    display: flex;
+
+    gap: 10px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-width: none;
+
+    overscroll-behavior-x: contain;
+  }
+
+  #e2f-pair-{{ section.id }} .e2f-pair__track::-webkit-scrollbar {
+    display: none;
+  }
+
+
+  /* =============================
+     CARD
+  ============================= */
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card {
+    position: relative;
+
+    flex:
+      0 0 {{ section.settings.card_width }}px;
+
+    min-width:
+      {{ section.settings.card_width }}px;
+
+    min-height: 118px;
+
+    display: grid;
+
+    grid-template-columns: 105px minmax(0,1fr);
+
+    gap: 10px;
+
+    padding: 9px;
+
+    background: var(--e2f-card-bg);
+
+    border:
+      1px solid var(--e2f-border);
+
+    scroll-snap-align: start;
+  }
+
+
+  /* =============================
+     IMAGE
+  ============================= */
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__image-wrap {
+    width: 105px;
+    height: 100px;
+
+    display: block;
+
+    overflow: hidden;
+
+    background: #f5f5f5;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__image,
+  #e2f-pair-{{ section.id }} .e2f-pair-card__placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+  }
+
+
+  /* =============================
+     INFOS
+  ============================= */
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__info {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__title {
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    color: var(--e2f-text);
+
+    font-size: 12px;
+
+    line-height: 1.15;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__description {
+    margin-top: 4px;
+
+    overflow: hidden;
+
+    color: var(--e2f-muted);
+
+    font-size: 9px;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+  }
+
+
+  /* =============================
+     PRICE
+  ============================= */
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__price {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 7px;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-price-current {
+    color: var(--e2f-text);
+
+    font-size: 13px;
+
+    font-weight: 900;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-price-compare {
+    color: var(--e2f-muted);
+
+    font-size: 9px;
+
+    text-decoration: line-through;
+  }
+
+
+  /* =============================
+     FORM
+  ============================= */
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__form {
+    margin-top: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding-top: 8px;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__variant {
+    width: 100%;
+    height: 29px;
+
+    min-width: 0;
+
+    padding: 0 25px 0 8px;
+
+    background: transparent;
+
+    color: var(--e2f-text);
+
+    border:
+      1px solid var(--e2f-border);
+
+    border-radius: 0;
+
+    font-size: 9px;
+
+    cursor: pointer;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__buy-buttons {
+    flex-shrink: 0;
+  }
+
+
+  /* IMPORTANT :
+     neutralise le style global
+     des boutons du thème
+  */
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__add {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+
+    width: 30px !important;
+    height: 30px !important;
+
+    min-width: 30px !important;
+    min-height: 30px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background:
+      var(--e2f-accent) !important;
+
+    color: #000 !important;
+
+    border:
+      1px solid var(--e2f-accent) !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    font-size: 18px !important;
+
+    line-height: 1 !important;
+
+    font-weight: 600 !important;
+
+    cursor: pointer;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__add::before,
+  #e2f-pair-{{ section.id }} .e2f-pair-card__add::after {
+    content: none !important;
+
+    display: none !important;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__add:hover {
+    background: var(--e2f-text) !important;
+
+    border-color: var(--e2f-text) !important;
+
+    color: var(--e2f-bg) !important;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__add:disabled {
+    opacity: .4;
+
+    cursor: not-allowed;
+  }
+
+
+  #e2f-pair-{{ section.id }} .e2f-pair-card__add-text {
+    display: none;
+  }
+
+
+  /* =============================
+     EMPTY
+  ============================= */
+
+  #e2f-pair-{{ section.id }} .e2f-pair__empty {
+    width: 100%;
+
+    padding: 30px;
+
+    border:
+      1px dashed var(--e2f-border);
+
+    color: var(--e2f-muted);
+
+    text-align: center;
+
+    font-size: 12px;
+  }
+
+
+  /* =============================
+     MOBILE
+  ============================= */
+
+  @media screen and (max-width: 749px) {
+
+    #e2f-pair-{{ section.id }} {
+      padding-top:
+        {{ section.settings.mobile_padding_top }}px;
+
+      padding-bottom:
+        {{ section.settings.mobile_padding_bottom }}px;
+    }
+
+
+    #e2f-pair-{{ section.id }} .e2f-pair__inner {
+      width:
+        calc(100% - 24px);
+    }
+
+
+    #e2f-pair-{{ section.id }} .e2f-pair__header {
+      margin-bottom: 13px;
+    }
+
+
+    #e2f-pair-{{ section.id }} .e2f-pair__heading {
+      font-size: 20px;
+    }
+
+
+    #e2f-pair-{{ section.id }} .e2f-pair__subtitle {
+      font-size: 10px;
+    }
+
+
+    #e2f-pair-{{ section.id }} .e2f-pair__arrows {
+      display: none;
+    }
+
+
+    #e2f-pair-{{ section.id }} .e2f-pair__track {
+      width: calc(100vw - 12px);
+
+      margin-right: -12px;
+
+      padding-right: 24px;
+    }
+
+
+    #e2f-pair-{{ section.id }} .e2f-pair-card {
+      flex: 0 0 82vw;
+
+      min-width: 82vw;
+
+      grid-template-columns:
+        88px minmax(0,1fr);
+
+      min-height: 108px;
+    }
+
+
+    #e2f-pair-{{ section.id }} .e2f-pair-card__image-wrap {
+      width: 88px;
+      height: 88px;
+    }
+
+  }
+
+</style>
+
+
+<script>
+  (function () {
+
+    function initE2FPair() {
+
+      var root =
+        document.getElementById(
+          'e2f-pair-{{ section.id }}'
+        );
+
+      if (!root) return;
+
+
+      var track =
+        root.querySelector(
+          '#e2f-pair-track-{{ section.id }}'
+        );
+
+      var prev =
+        root.querySelector(
+          '[data-pair-prev="{{ section.id }}"]'
+        );
+
+      var next =
+        root.querySelector(
+          '[data-pair-next="{{ section.id }}"]'
+        );
+
+
+      if (!track) return;
+
+
+      /* ==========================
+         FLÈCHES
+      ========================== */
+
+      function scrollAmount() {
+
+        var card =
+          track.querySelector(
+            '.e2f-pair-card'
+          );
+
+        if (!card) {
+          return 350;
+        }
+
+
+        var styles =
+          window.getComputedStyle(track);
+
+        var gap =
+          parseFloat(styles.gap);
+
+        if (isNaN(gap)) {
+          gap = 10;
+        }
+
+
+        return (
+          card.getBoundingClientRect().width
+          + gap
+        );
+
+      }
+
+
+      if (prev) {
+
+        prev.onclick = function(event) {
+
+          event.preventDefault();
+
+          track.scrollBy({
+            left: -scrollAmount(),
+            behavior: 'smooth'
+          });
+
+        };
+
+      }
+
+
+      if (next) {
+
+        next.onclick = function(event) {
+
+          event.preventDefault();
+
+          track.scrollBy({
+            left: scrollAmount(),
+            behavior: 'smooth'
+          });
+
+        };
+
+      }
+
+
+      /* ==========================
+         VARIANTES / PRIX
+      ========================== */
+
+      var selectors =
+        root.querySelectorAll(
+          '.e2f-pair-card__variant'
+        );
+
+
+      selectors.forEach(function(select) {
+
+        select.addEventListener(
+          'change',
+          function() {
+
+            var card =
+              select.closest(
+                '.e2f-pair-card'
+              );
+
+            if (!card) return;
+
+
+            var option =
+              select.options[
+                select.selectedIndex
+              ];
+
+
+            var currentPrice =
+              card.querySelector(
+                '.e2f-price-current'
+              );
+
+            var comparePrice =
+              card.querySelector(
+                '.e2f-price-compare'
+              );
+
+
+            if (
+              currentPrice
+              && option.dataset.price
+            ) {
+
+              currentPrice.textContent =
+                option.dataset.price;
+
+            }
+
+
+            if (comparePrice) {
+
+              if (
+                option.dataset.compare
+                && option.dataset.compare !== ''
+              ) {
+
+                comparePrice.textContent =
+                  option.dataset.compare;
+
+                comparePrice.hidden = false;
+
+              } else {
+
+                comparePrice.hidden = true;
+
+              }
+
+            }
+
+          }
+        );
+
+      });
+
+    }
+
+
+    if (
+      document.readyState === 'loading'
+    ) {
+
+      document.addEventListener(
+        'DOMContentLoaded',
+        initE2FPair
+      );
+
+    } else {
+
+      initE2FPair();
+
+    }
+
+
+    document.addEventListener(
+      'shopify:section:load',
+      initE2FPair
+    );
+
+  })();
+</script>
+
+
+{% schema %}
+{
+  "name": "E2F - Complète ta paire",
+  "tag": "section",
+  "class": "shopify-section--e2f-pair",
+
+  "settings": [
+
+    {
+      "type": "header",
+      "content": "Titres"
+    },
+
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Petit titre",
+      "default": "ESPRIT2'FOOT"
+    },
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre",
+      "default": "COMPLÈTE TA PAIRE"
+    },
+
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous-titre",
+      "default": "Ajoute les essentiels à ta commande."
+    },
+
+
+    {
+      "type": "header",
+      "content": "Design"
+    },
+
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Largeur maximale",
+      "min": 800,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "default": 1400
+    },
+
+    {
+      "type": "range",
+      "id": "card_width",
+      "label": "Largeur des produits",
+      "min": 260,
+      "max": 420,
+      "step": 10,
+      "unit": "px",
+      "default": 330
+    },
+
+
+    {
+      "type": "header",
+      "content": "Couleurs"
+    },
+
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Fond de la section",
+      "default": "#FFFFFF"
+    },
+
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Fond des produits",
+      "default": "#F7F7F7"
+    },
+
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Texte principal",
+      "default": "#111111"
+    },
+
+    {
+      "type": "color",
+      "id": "muted_color",
+      "label": "Texte secondaire",
+      "default": "#777777"
+    },
+
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Turquoise Esprit2'FOOT",
+      "default": "#00E6E6"
+    },
+
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Bordures",
+      "default": "#DDDDDD"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Espacements"
+    },
+
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Haut ordinateur",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 25
+    },
+
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bas ordinateur",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 25
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Haut mobile",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Bas mobile",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    }
+
+  ],
+
+
+  "blocks": [
+
+    {
+      "type": "product",
+      "name": "Accessoire",
+
+      "settings": [
+
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Produit"
+        },
+
+        {
+          "type": "text",
+          "id": "short_text",
+          "label": "Petit texte",
+          "default": "Complète ton équipement."
+        }
+
+      ]
+    }
+
+  ],
+
+
+  "max_blocks": 8,
+
+
+  "presets": [
+    {
+      "name": "E2F - Complète ta paire",
+      "blocks": [
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        },
+        {
+          "type": "product"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
