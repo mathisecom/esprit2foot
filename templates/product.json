@@ -207,6 +207,17 @@
     "e2f_retours_players_AXxyHJ": {
       "type": "e2f-retours-players",
       "blocks": {
+        "review_WtkB3p": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-09-30_at_14.40.49.jpg",
+            "stars": 5,
+            "review": "<p>merci @esprit2foot</p>",
+            "name": "Antonin Palomino",
+            "product_name": "A acheté : F50 Hyperfast",
+            "verified": true
+          }
+        },
         "review_TpEHGq": {
           "type": "review",
           "settings": {
@@ -275,6 +286,7 @@
         }
       },
       "block_order": [
+        "review_WtkB3p",
         "review_TpEHGq",
         "review_RehUzn",
         "review_D6CRnm",
@@ -294,9 +306,9 @@
         "review_count": "+300 avis clients",
         "brand_logo": "shopify://shop_images/Nouveau_projet_21.avif",
         "logo_width": 145,
-        "background": "#ffffff",
+        "background": "#000000",
         "card_background": "#000000",
-        "text_color": "#000000",
+        "text_color": "#FFFFFF",
         "review_text_color": "#ffffff",
         "muted_color": "#ffb000",
         "accent_color": "#00fff5",
