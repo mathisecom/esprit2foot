@@ -80,6 +80,38 @@
             "liquid": "<div style=\"display:flex; justify-content:center; align-items:center; gap:3rem;\">\n\n\n\n  <div style=\"display:flex; align-items:center; gap:0.6rem; font-size:9px; font-weight:500; letter-spacing:0.05em; color:#121212;\">\n\n    <img src=\"https://cdn.shopify.com/s/files/1/0673/2562/4490/files/delivery-svgrepo-com.svg?v=1774451949\" \n\n         alt=\"livraison\" width=\"16\" height=\"16\" loading=\"lazy\">\n\n    <span>EXPÉDITION SOUS 1 à 3 JOURS </span>\n\n  </div>\n\n\n\n  <div style=\"display:flex; align-items:center; gap:0.6rem; font-size:9px; font-weight:500; letter-spacing:0.05em; color:#121212;\">\n\n    <img src=\"https://cdn.shopify.com/s/files/1/0673/2562/4490/files/return-svgrepo-com.svg?v=1774451951\" \n\n         alt=\"retour\" width=\"16\" height=\"16\" loading=\"lazy\">\n\n    <span>RETOUR SOUS 14 JOURS</span>\n\n  </div>\n\n\n\n</div>"
           }
         },
+        "e2f_complete_bag_HKTGqD": {
+          "type": "e2f_complete_bag",
+          "settings": {
+            "title": "COMPLÈTE TON SAC",
+            "subtitle": "Coché, l’article part avec ta paire.",
+            "products": [
+              "n-ke-shoebag-performance",
+              "chaussette-anti-derapantes",
+              "sneakers-mind-001-solar-red",
+              "shoebag-performance",
+              "sneakers-mind-001-black-orange"
+            ],
+            "background": "#f7f7f7",
+            "text_color": "#111111",
+            "accent_color": "#00e6e6"
+          }
+        },
+        "e2f_proof_video_bpEGgf": {
+          "type": "e2f_proof_video",
+          "settings": {
+            "title": "LA PREUVE EN VIDÉO",
+            "subtitle": "FILMÉ PAR NOUS, SANS MONTAGE",
+            "label_1": "LA PAIRE",
+            "caption_1": "La paire filmée en vrai, avant expédition.",
+            "label_2": "LE COLIS",
+            "caption_2": "Préparée et contrôlée avant le départ.",
+            "label_3": "TERRAIN",
+            "caption_3": "Ce que ça donne une fois aux pieds.",
+            "text_color": "#111111",
+            "accent_color": "#00e6e6"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -130,6 +162,8 @@
         "buy_buttons",
         "liquid_bgMFP8",
         "liquid_BnYtXq",
+        "e2f_complete_bag_HKTGqD",
+        "e2f_proof_video_bpEGgf",
         "description",
         "collapsible_text_xpWjYi",
         "collapsible_text_mAYQGg",
@@ -320,6 +354,43 @@
         "mobile_padding_bottom": 45
       }
     },
+    "media_with_text_nNJHUm": {
+      "type": "media-with-text",
+      "blocks": {
+        "image_Bf66xE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/8443e5a9-f59f-47a6-8cf0-50c8c88d7a3b.png",
+            "media_width": 45,
+            "media_position": "start",
+            "text_position": "place-self-center text-center",
+            "icon": "none",
+            "custom_icon": "shopify://shop_images/icone_7.png",
+            "icon_width": 52,
+            "subheading": "À PROPOS DE NOUS",
+            "title": "Esprit2'FOOT - Votre confiance avant tout.",
+            "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
+            "link_text": "Notre sélection",
+            "link_url": "shopify://collections/nos-crampons",
+            "background": "#e4e4e4",
+            "background_gradient": "",
+            "text_color": "#000000",
+            "text_gradient": "",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "image_Bf66xE"
+      ],
+      "name": "Media with text",
+      "settings": {
+        "full_width": false,
+        "alternate_media_position": false,
+        "spacing": "small"
+      }
+    },
     "faq_fEHUdd": {
       "type": "faq",
       "blocks": {
@@ -401,43 +472,6 @@
         "heading_gradient": "",
         "product_card_background": "",
         "product_card_text_color": ""
-      }
-    },
-    "media_with_text_nNJHUm": {
-      "type": "media-with-text",
-      "blocks": {
-        "image_Bf66xE": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/8443e5a9-f59f-47a6-8cf0-50c8c88d7a3b.png",
-            "media_width": 45,
-            "media_position": "start",
-            "text_position": "place-self-center text-center",
-            "icon": "none",
-            "custom_icon": "shopify://shop_images/icone_7.png",
-            "icon_width": 52,
-            "subheading": "À PROPOS DE NOUS",
-            "title": "Esprit2'FOOT - Votre confiance avant tout.",
-            "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
-            "link_text": "Notre sélection",
-            "link_url": "shopify://collections/nos-crampons",
-            "background": "#e4e4e4",
-            "background_gradient": "",
-            "text_color": "#000000",
-            "text_gradient": "",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "image_Bf66xE"
-      ],
-      "name": "Media with text",
-      "settings": {
-        "full_width": false,
-        "alternate_media_position": false,
-        "spacing": "small"
       }
     }
   },
