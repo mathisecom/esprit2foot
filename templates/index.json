@@ -556,7 +556,7 @@
         "subheading": "",
         "title": "VOS JOUEURS FAVORIS",
         "content": "",
-        "background": "#FFFAF0",
+        "background": "#fffaf0",
         "background_gradient": "",
         "text_color": "#000000"
       }
@@ -690,6 +690,27 @@
         "review_gXRVwc": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/IMG_9171.jpg",
+            "stars": 5,
+            "review": "<p>inpeccable merci</p>",
+            "name": "Houpert Amélie",
+            "product_name": "A acheté : Vapor 16 Elite Blanche",
+            "verified": true
+          }
+        },
+        "review_Vzabq4": {
+          "type": "review",
+          "settings": {
+            "stars": 5,
+            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
+            "name": "Yanis",
+            "product_name": "F50 Hyperfast",
+            "verified": true
+          }
+        },
+        "review_g9bEPa": {
+          "type": "review",
+          "settings": {
             "stars": 5,
             "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
             "name": "Yanis",
@@ -702,7 +723,9 @@
         "review_pDtXL3",
         "review_dkLYG3",
         "review_VwVXBE",
-        "review_gXRVwc"
+        "review_gXRVwc",
+        "review_Vzabq4",
+        "review_g9bEPa"
       ],
       "name": "E2F - Retours Players",
       "settings": {
@@ -716,9 +739,10 @@
         "review_count": "+300 avis clients",
         "brand_logo": "shopify://shop_images/Nouveau_projet_21.avif",
         "logo_width": 160,
-        "background": "#FFFFFF",
+        "background": "#ffffff",
         "card_background": "#000000",
         "text_color": "#000000",
+        "review_text_color": "#ffffff",
         "muted_color": "#ffb000",
         "accent_color": "#00fff5",
         "padding_top": 55,
@@ -745,11 +769,11 @@
             "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
             "link_text": "Notre sélection",
             "link_url": "shopify://collections/nos-crampons",
-            "background": "#E4E4E4",
+            "background": "#e4e4e4",
             "background_gradient": "",
             "text_color": "#000000",
             "text_gradient": "",
-            "button_background": "#FFFFFF",
+            "button_background": "#ffffff",
             "button_text_color": "#000000"
           }
         }
