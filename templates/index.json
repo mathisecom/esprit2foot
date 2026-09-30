@@ -712,10 +712,11 @@
         "review_g9bEPa": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/IMG_9199.jpg",
             "stars": 5,
-            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
-            "name": "Yanis",
-            "product_name": "F50 Hyperfast",
+            "review": "<p>Propre frero merci</p>",
+            "name": "Jessica Kuhmichel",
+            "product_name": "A acheté : Vapor 16 Elite Pink Léopard",
             "verified": true
           }
         }
