@@ -790,6 +790,67 @@
         "spacing": "small"
       }
     },
+    "faq_V6ja6K": {
+      "type": "faq",
+      "blocks": {
+        "item_hL7GLx": {
+          "type": "item",
+          "settings": {
+            "title": "Comment choisir ma pointure ? ",
+            "content": "<p>Pour nos crampons, tu peux partir sur ta pointure habituelle si tu aimes être bien maintenu. Si tu préfères avoir un peu plus d’espace et ne pas être trop serré, une pointure au-dessus peut être plus confortable. ⚽</p>"
+          }
+        },
+        "item_m4fTbp": {
+          "type": "item",
+          "settings": {
+            "title": "Quels sont les délais de livraison ?",
+            "content": "<p>Nous expédions dans le monde entier. Selon le produit et son statut, le délai estimé est indiqué directement au moment de ta commande. Certains produits peuvent être disponibles en stock, tandis que d’autres sont proposés sur commande</p>"
+          }
+        },
+        "item_CczzJJ": {
+          "type": "item",
+          "settings": {
+            "title": "Comment suivre ma commande ?",
+            "content": "<p>Dès que ton numéro de suivi est disponible, il t’est communiqué afin que tu puisses suivre ton colis jusqu’à sa livraison. Le suivi peut notamment être effectué via <strong>17TRACK</strong> ou le transporteur concerné.&nbsp;</p>"
+          }
+        },
+        "item_bLMXUf": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je retourner ma commande ?",
+            "content": "<p>Oui. Une demande de retour peut être effectuée via le formulaire dédié dans les <strong>14 jours suivant la réception de ta commande</strong>, conformément aux conditions de retour de la boutique.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_hL7GLx",
+        "item_m4fTbp",
+        "item_CczzJJ",
+        "item_bLMXUf"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "<h2><strong>Besoin d’aide Player ?&nbsp;</strong></h2>",
+        "team_avatar_width": 160,
+        "support_hours": "Notre service client est disponible 6j/7, de 9h à 19h.",
+        "answer_time": "Notre assistant IA reste disponible 24h/24 et 7j/7 pour répondre à tes questions à tout moment.",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "start",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
+      }
+    },
     "logo_list_M8meQF": {
       "type": "logo-list",
       "blocks": {
@@ -897,6 +958,7 @@
     "scrolling_text_MBNpEd",
     "e2f_retours_players_9CGtq3",
     "media_with_text_98C7FQ",
+    "faq_V6ja6K",
     "logo_list_M8meQF",
     "faq"
   ]
