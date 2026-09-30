@@ -654,17 +654,6 @@
     "e2f_retours_players_9CGtq3": {
       "type": "e2f-retours-players",
       "blocks": {
-        "review_pDtXL3": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/IMG_9175.jpg",
-            "stars": 5,
-            "review": "<p>Mais quelle qualité merci bro&nbsp;</p>",
-            "name": "Berat Gemici",
-            "product_name": "A acheté : Vapor 16 Elite Noir Multicolore",
-            "verified": true
-          }
-        },
         "review_dkLYG3": {
           "type": "review",
           "settings": {
@@ -673,6 +662,28 @@
             "review": "<p>@esprit2foot Merci à toi franchement je suis surpris, les paires sont d'une qualité exceptionnelle !!</p>",
             "name": "Noah Loison",
             "product_name": "A acheté : Vapor 16 Elite Blanche",
+            "verified": true
+          }
+        },
+        "review_wTFY67": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/WhatsApp_Image_2026-09-30_at_14.40.49.jpg",
+            "stars": 5,
+            "review": "<p>merci @esprit2foot&nbsp;</p>",
+            "name": "Antonin Palomino",
+            "product_name": "A acheté : F50 Hyperfast",
+            "verified": true
+          }
+        },
+        "review_pDtXL3": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/IMG_9175.jpg",
+            "stars": 5,
+            "review": "<p>Mais quelle qualité merci bro&nbsp;</p>",
+            "name": "Berat Gemici",
+            "product_name": "A acheté : Vapor 16 Elite Noir Multicolore",
             "verified": true
           }
         },
@@ -722,8 +733,9 @@
         }
       },
       "block_order": [
-        "review_pDtXL3",
         "review_dkLYG3",
+        "review_wTFY67",
+        "review_pDtXL3",
         "review_VwVXBE",
         "review_gXRVwc",
         "review_Vzabq4",
