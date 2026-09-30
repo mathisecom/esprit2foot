@@ -1,0 +1,344 @@
+<div
+  id="e2f-proof-{{ block.id }}"
+  class="e2f-proof"
+  style="
+    --e2f-proof-accent: {{ block.settings.accent_color }};
+    --e2f-proof-text: {{ block.settings.text_color }};
+  "
+>
+
+  <div class="e2f-proof__header">
+
+    {% if block.settings.title != blank %}
+      <div class="e2f-proof__title">
+        <span></span>
+        {{ block.settings.title }}
+      </div>
+    {% endif %}
+
+    {% if block.settings.subtitle != blank %}
+      <div class="e2f-proof__subtitle">
+        {{ block.settings.subtitle }}
+      </div>
+    {% endif %}
+
+  </div>
+
+
+  <div class="e2f-proof__videos">
+
+    {% if block.settings.video_1 != blank %}
+
+      <div class="e2f-proof-card">
+
+        {% if block.settings.label_1 != blank %}
+          <div class="e2f-proof-card__label">
+            {{ block.settings.label_1 }}
+          </div>
+        {% endif %}
+
+        {{
+          block.settings.video_1
+          | video_tag:
+            controls: true,
+            muted: true,
+            playsinline: true,
+            preload: 'metadata',
+            class: 'e2f-proof-card__video'
+        }}
+
+        {% if block.settings.caption_1 != blank %}
+          <div class="e2f-proof-card__caption">
+            {{ block.settings.caption_1 }}
+          </div>
+        {% endif %}
+
+      </div>
+
+    {% endif %}
+
+
+    {% if block.settings.video_2 != blank %}
+
+      <div class="e2f-proof-card">
+
+        {% if block.settings.label_2 != blank %}
+          <div class="e2f-proof-card__label">
+            {{ block.settings.label_2 }}
+          </div>
+        {% endif %}
+
+        {{
+          block.settings.video_2
+          | video_tag:
+            controls: true,
+            muted: true,
+            playsinline: true,
+            preload: 'metadata',
+            class: 'e2f-proof-card__video'
+        }}
+
+        {% if block.settings.caption_2 != blank %}
+          <div class="e2f-proof-card__caption">
+            {{ block.settings.caption_2 }}
+          </div>
+        {% endif %}
+
+      </div>
+
+    {% endif %}
+
+
+    {% if block.settings.video_3 != blank %}
+
+      <div class="e2f-proof-card">
+
+        {% if block.settings.label_3 != blank %}
+          <div class="e2f-proof-card__label">
+            {{ block.settings.label_3 }}
+          </div>
+        {% endif %}
+
+        {{
+          block.settings.video_3
+          | video_tag:
+            controls: true,
+            muted: true,
+            playsinline: true,
+            preload: 'metadata',
+            class: 'e2f-proof-card__video'
+        }}
+
+        {% if block.settings.caption_3 != blank %}
+          <div class="e2f-proof-card__caption">
+            {{ block.settings.caption_3 }}
+          </div>
+        {% endif %}
+
+      </div>
+
+    {% endif %}
+
+
+    {% if block.settings.video_1 == blank
+      and block.settings.video_2 == blank
+      and block.settings.video_3 == blank
+    %}
+
+      <div class="e2f-proof__empty">
+        Ajoute tes vidéos depuis les réglages du bloc.
+      </div>
+
+    {% endif %}
+
+  </div>
+
+</div>
+
+
+<style>
+
+  #e2f-proof-{{ block.id }} {
+    width: 100%;
+
+    padding: 16px 0 18px;
+
+    border-top: 1px solid rgba(0,0,0,.12);
+    border-bottom: 1px solid rgba(0,0,0,.12);
+  }
+
+
+  #e2f-proof-{{ block.id }} .e2f-proof__header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 11px;
+  }
+
+
+  #e2f-proof-{{ block.id }} .e2f-proof__title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--e2f-proof-text);
+
+    font-size: 11px;
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: .07em;
+
+    text-transform: uppercase;
+  }
+
+
+  #e2f-proof-{{ block.id }} .e2f-proof__title span {
+    display: block;
+
+    width: 15px;
+    height: 2px;
+
+    background: var(--e2f-proof-accent);
+  }
+
+
+  #e2f-proof-{{ block.id }} .e2f-proof__subtitle {
+    color: #888;
+
+    font-size: 8px;
+    line-height: 1;
+
+    letter-spacing: .04em;
+
+    text-transform: uppercase;
+  }
+
+
+  /* 3 VIDEOS */
+
+  #e2f-proof-{{ block.id }} .e2f-proof__videos {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 7px;
+  }
+
+
+  #e2f-proof-{{ block.id }} .e2f-proof-card {
+    position: relative;
+
+    min-width: 0;
+
+    aspect-ratio: 4 / 5;
+
+    overflow: hidden;
+
+    background: #101114;
+  }
+
+
+  #e2f-proof-{{ block.id }} .e2f-proof-card__video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    background: #101114;
+  }
+
+
+  /* LABEL */
+
+  #e2f-proof-{{ block.id }} .e2f-proof-card__label {
+    position: absolute;
+
+    z-index: 3;
+
+    top: 7px;
+    left: 7px;
+
+    padding: 5px 7px;
+
+    background: var(--e2f-proof-accent);
+
+    color: #000;
+
+    font-size: 7px;
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: .05em;
+
+    text-transform: uppercase;
+
+    pointer-events: none;
+  }
+
+
+  /* LEGENDE */
+
+  #e2f-proof-{{ block.id }} .e2f-proof-card__caption {
+    position: absolute;
+
+    z-index: 3;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 35px 8px 8px;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(0,0,0,.92),
+        rgba(0,0,0,0)
+      );
+
+    color: #fff;
+
+    font-size: 8px;
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    pointer-events: none;
+  }
+
+
+  #e2f-proof-{{ block.id }} .e2f-proof__empty {
+    grid-column: 1 / -1;
+
+    padding: 25px;
+
+    border: 1px dashed #ccc;
+
+    color: #777;
+
+    font-size: 10px;
+
+    text-align: center;
+  }
+
+
+  @media screen and (max-width: 699px) {
+
+    #e2f-proof-{{ block.id }} .e2f-proof__videos {
+      display: flex;
+
+      gap: 7px;
+
+      overflow-x: auto;
+
+      scroll-snap-type: x mandatory;
+
+      scrollbar-width: none;
+    }
+
+
+    #e2f-proof-{{ block.id }} .e2f-proof__videos::-webkit-scrollbar {
+      display: none;
+    }
+
+
+    #e2f-proof-{{ block.id }} .e2f-proof-card {
+      flex: 0 0 72%;
+
+      scroll-snap-align: start;
+    }
+
+  }
+
+</style>
