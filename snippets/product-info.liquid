@@ -356,13 +356,22 @@ Supported variables
           {%- endif -%}
 
         {%- when 'liquid' -%}
-          {%- if block.settings.liquid != blank -%}
-            <div class="product-info__liquid">
-              {{ block.settings.liquid }}
-            </div>
-          {%- endif -%}
+        {%- if block.settings.liquid != blank -%}
+          <div class="product-info__liquid">
+            {{ block.settings.liquid }}
+          </div>
+        {%- endif -%}
 
-        {%- when 'associated_products' -%}
+
+      {%- when 'e2f_complete_bag' -%}
+        {%- render 'e2f-complete-bag', block: block, product: product -%}
+
+
+      {%- when 'e2f_proof_video' -%}
+        {%- render 'e2f-proof-video', block: block, product: product -%}
+
+
+      {%- when 'associated_products' -%}
           <product-recommendations class="block" product="{{ product.id }}" limit="{{ block.settings.products_count }}" intent="complementary">
             {%- if recommendations.performed and recommendations.products_count > 0 -%}
               <div class="product-info__complementary-products v-stack gap-3 sm:gap-4">
