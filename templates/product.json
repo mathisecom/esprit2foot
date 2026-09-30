@@ -153,100 +153,77 @@
         "input_text_color": ""
       }
     },
-    "testimonials_qtFiFM": {
-      "type": "testimonials",
+    "e2f_retours_players_4bKmcP": {
+      "type": "e2f-retours-players",
       "blocks": {
-        "testimonial_TQkrMd": {
-          "type": "testimonial",
+        "review_yHby9Y": {
+          "type": "review",
           "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 5,
-            "author": "Berat Gemici",
-            "title": "Qualité au top",
-            "content": "<p>Bien reçu la paire, franchement rien à dire qualité au top</p>"
+            "stars": 5,
+            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
+            "name": "Yanis",
+            "product_name": "F50 Hyperfast",
+            "verified": true
           }
         },
-        "testimonial_VH9FP8": {
-          "type": "testimonial",
+        "review_CkJtyj": {
+          "type": "review",
           "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 5,
-            "author": "Corentin Combe",
-            "title": "Je recommande fort 🤝",
-            "content": "<p>J’ai reçu mes crampons aujourd’hui ils sont incroyables 😍 merci encore je recommande fort 🤝</p>"
+            "stars": 5,
+            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
+            "name": "Yanis",
+            "product_name": "F50 Hyperfast",
+            "verified": true
           }
         },
-        "testimonial_KrDYPb": {
-          "type": "testimonial",
+        "review_LXteyh": {
+          "type": "review",
           "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 4,
-            "author": "Théo Deville",
-            "title": "Super Propre",
-            "content": "<p>Paire reçue ✅ franchement super propre, bonne taille et confortable. Merci pour le sérieux 🙏</p>"
+            "stars": 5,
+            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
+            "name": "Yanis",
+            "product_name": "F50 Hyperfast",
+            "verified": true
           }
         },
-        "testimonial_fEAw3P": {
-          "type": "testimonial",
+        "review_rigLWh": {
+          "type": "review",
           "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 4,
-            "author": "Steve Rosa",
-            "title": "Encore mieux en vrai",
-            "content": "<p>J’ai reçu les crampons ils sont encore mieux en vrai 🔥 Merci je repasserai commande.</p>"
-          }
-        },
-        "testimonial_DeMcrN": {
-          "type": "testimonial",
-          "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 5,
-            "author": "Caroline",
-            "title": "Livraison rapide",
-            "content": "<p>Merci beaucoup pour la paire, mon fils est trop content. Livraison nickel et qualité au rendez-vous 👍</p>"
-          }
-        },
-        "testimonial_VWVzw7": {
-          "type": "testimonial",
-          "settings": {
-            "round_avatar": true,
-            "show_rating": true,
-            "rating": 5,
-            "author": "Antonin Palomino",
-            "title": "Tout est carré merci 🤝",
-            "content": "<p>Première commande chez vous et franchement pas déçu. Paire reçue rapidement, tout est carré merci 🤝</p>"
+            "stars": 5,
+            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
+            "name": "Yanis",
+            "product_name": "F50 Hyperfast",
+            "verified": true
           }
         }
       },
       "block_order": [
-        "testimonial_TQkrMd",
-        "testimonial_VH9FP8",
-        "testimonial_KrDYPb",
-        "testimonial_fEAw3P",
-        "testimonial_DeMcrN",
-        "testimonial_VWVzw7"
+        "review_yHby9Y",
+        "review_CkJtyj",
+        "review_LXteyh",
+        "review_rigLWh"
       ],
-      "name": "Testimonials",
+      "name": "E2F - Retours Players",
       "settings": {
-        "full_width": true,
-        "stack_testimonials": false,
-        "subheading": "",
-        "title": "CE QU'EN DISENT NOS PLAYERS",
-        "content": "",
-        "link_url": "",
-        "link_text": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "testimonial_card_background": "",
-        "testimonial_card_text_color": ""
+        "eyebrow": "AVIS CLIENTS AVEC PHOTOS & VIDÉOS",
+        "heading": "MERCI POUR",
+        "heading_accent": "VOS RETOURS !",
+        "subtitle": "Photos, vidéos et avis envoyés par nos Players après réception de leur commande.",
+        "score_label": "NOTE MOYENNE",
+        "rating": "4,8",
+        "rating_text": "Basé sur les avis de nos Players.",
+        "review_count": "+300 avis clients",
+        "logo_width": 140,
+        "background": "#FFFFFF",
+        "card_background": "#050505",
+        "text_color": "#000000",
+        "review_text_color": "#FFFFFF",
+        "muted_color": "#FF8A00",
+        "accent_color": "#00E6E6",
+        "padding_top": 65,
+        "padding_bottom": 65,
+        "mobile_padding_top": 40,
+        "mobile_padding_bottom": 40
       }
     },
     "media_with_text_4XKhtF": {
@@ -265,14 +242,14 @@
             "subheading": "À PROPOS DE NOUS",
             "title": "Esprit2'FOOT - Votre confiance avant tout.",
             "content": "<p>La fiabilité des sites d'équipements de football est souvent remise en question sur les réseaux. Certains disent avoir bien reçu leur commande, tandis que d'autres se plaignent de n'avoir obtenu aucune réponse depuis plusieurs mois. Trop souvent, certains concurrents cherchent à vendre un maximum, quitte à en oublier la relation avec leurs clients.</p><p>Chez Esprit2'FOOT, nous travaillons en restant au plus proche de nos clients afin de les rassurer et de leur garantir une expérience fiable. Notre priorité est de vous assurer que vous recevrez votre commande dans les temps, de vous répondre rapidement et de vous fournir un maximum d'informations afin que vous ne restiez jamais dans le flou.</p><p>Tout cela pour dire que notre objectif n'est pas d'être ceux qui vendent le plus, mais ceux en qui vous pouvez avoir le plus confiance. Des prix parmi les plus bas, un contrôle sérieux avant chaque expédition et un suivi rigoureux de chaque client et de chaque commande.</p><p><strong>Notre objectif : devenir la référence en termes de fiabilité, de relation client et de prix sur le marché des équipements de football.</strong></p>",
-            "link_text": "",
-            "link_url": "",
-            "background": "#00fff5",
+            "link_text": "Notre sélection",
+            "link_url": "shopify://collections/nos-crampons",
+            "background": "#E4E4E4",
             "background_gradient": "",
             "text_color": "#000000",
             "text_gradient": "",
-            "button_background": "",
-            "button_text_color": ""
+            "button_background": "#FFFFFF",
+            "button_text_color": "#000000"
           }
         }
       },
@@ -426,7 +403,7 @@
   },
   "order": [
     "main",
-    "testimonials_qtFiFM",
+    "e2f_retours_players_4bKmcP",
     "media_with_text_4XKhtF",
     "faq_tdqe7U",
     "faq_fEHUdd",
