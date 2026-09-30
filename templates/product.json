@@ -88,9 +88,7 @@
             "products": [
               "n-ke-shoebag-performance",
               "chaussette-anti-derapantes",
-              "sneakers-mind-001-solar-red",
-              "shoebag-performance",
-              "sneakers-mind-001-black-orange"
+              "sneakers-mind-001-solar-red"
             ],
             "background": "#f7f7f7",
             "text_color": "#111111",
@@ -102,12 +100,15 @@
           "settings": {
             "title": "LA PREUVE EN VIDÉO",
             "subtitle": "FILMÉ PAR NOUS, SANS MONTAGE",
+            "video_1": "shopify://files/videos/60d40f46-dfcc-4c47-8a9f-ed224a7584d2.mp4",
             "label_1": "LA PAIRE",
             "caption_1": "La paire filmée en vrai, avant expédition.",
+            "video_2": "shopify://files/videos/9b6e5764-abb5-4855-99a2-bb80ec5bd0ab.mp4",
             "label_2": "LE COLIS",
             "caption_2": "Préparée et contrôlée avant le départ.",
-            "label_3": "TERRAIN",
-            "caption_3": "Ce que ça donne une fois aux pieds.",
+            "video_3": "shopify://files/videos/v26044gc0000da8tp9fog65mohc8tn40.mp4",
+            "label_3": "TIKTOK",
+            "caption_3": "La Mercurial Vapor 15 un vrai banger",
             "text_color": "#111111",
             "accent_color": "#00e6e6"
           }
