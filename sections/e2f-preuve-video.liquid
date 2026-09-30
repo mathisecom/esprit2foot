@@ -1,0 +1,1092 @@
+<section
+  id="e2f-video-{{ section.id }}"
+  class="e2f-video"
+  style="
+    --e2f-video-bg: {{ section.settings.background }};
+    --e2f-video-text: {{ section.settings.text_color }};
+    --e2f-video-muted: {{ section.settings.muted_color }};
+    --e2f-video-accent: {{ section.settings.accent_color }};
+    --e2f-video-border: {{ section.settings.border_color }};
+  "
+>
+  <div class="e2f-video__inner">
+
+    <!-- HEADER -->
+    <div class="e2f-video__header">
+
+      <div>
+
+        {% if section.settings.eyebrow != blank %}
+          <div class="e2f-video__eyebrow">
+            <span></span>
+            {{ section.settings.eyebrow }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2 class="e2f-video__heading">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.subtitle != blank %}
+          <p class="e2f-video__subtitle">
+            {{ section.settings.subtitle }}
+          </p>
+        {% endif %}
+
+      </div>
+
+
+      {% if section.blocks.size > 1 %}
+        <div class="e2f-video__arrows">
+
+          <button
+            type="button"
+            class="e2f-video__arrow"
+            data-e2f-video-prev="{{ section.id }}"
+            aria-label="Vidéo précédente"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 18L9 12L15 6"></path>
+            </svg>
+          </button>
+
+          <button
+            type="button"
+            class="e2f-video__arrow"
+            data-e2f-video-next="{{ section.id }}"
+            aria-label="Vidéo suivante"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M9 6L15 12L9 18"></path>
+            </svg>
+          </button>
+
+        </div>
+      {% endif %}
+
+    </div>
+
+
+    <!-- VIDEOS -->
+    <div
+      class="e2f-video__track"
+      id="e2f-video-track-{{ section.id }}"
+    >
+
+      {% for block in section.blocks %}
+
+        <article
+          class="e2f-video-card"
+          {{ block.shopify_attributes }}
+        >
+
+          <div class="e2f-video-card__media">
+
+            {% if block.settings.video != blank %}
+
+              {{
+                block.settings.video
+                | video_tag:
+                  controls: true,
+                  muted: true,
+                  playsinline: true,
+                  preload: 'metadata',
+                  class: 'e2f-video-card__video'
+              }}
+
+            {% else %}
+
+              <div class="e2f-video-card__placeholder">
+                <span>+</span>
+                <strong>AJOUTE UNE VIDÉO</strong>
+                <small>Depuis l’éditeur Shopify</small>
+              </div>
+
+            {% endif %}
+
+
+            {% if block.settings.label != blank %}
+              <div class="e2f-video-card__label">
+                {{ block.settings.label }}
+              </div>
+            {% endif %}
+
+
+            {% if block.settings.caption != blank %}
+              <div class="e2f-video-card__caption">
+                {{ block.settings.caption }}
+              </div>
+            {% endif %}
+
+          </div>
+
+        </article>
+
+      {% endfor %}
+
+    </div>
+
+
+    {% if section.settings.show_reassurance %}
+
+      <div class="e2f-video__reassurance">
+
+        {% if section.settings.reassurance_1 != blank %}
+          <div>
+            <span>✓</span>
+            {{ section.settings.reassurance_1 }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.reassurance_2 != blank %}
+          <div>
+            <span>✓</span>
+            {{ section.settings.reassurance_2 }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.reassurance_3 != blank %}
+          <div>
+            <span>✓</span>
+            {{ section.settings.reassurance_3 }}
+          </div>
+        {% endif %}
+
+      </div>
+
+    {% endif %}
+
+  </div>
+</section>
+
+
+<style>
+
+  /* =========================
+     BASE
+  ========================= */
+
+  #e2f-video-{{ section.id }} {
+    width: 100%;
+
+    overflow: hidden;
+
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+
+    background: var(--e2f-video-bg);
+
+    color: var(--e2f-video-text);
+  }
+
+  #e2f-video-{{ section.id }} * {
+    box-sizing: border-box;
+  }
+
+  #e2f-video-{{ section.id }} .e2f-video__inner {
+    width: min(
+      {{ section.settings.max_width }}px,
+      calc(100% - 40px)
+    );
+
+    margin: 0 auto;
+  }
+
+
+  /* =========================
+     HEADER
+  ========================= */
+
+  #e2f-video-{{ section.id }} .e2f-video__header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 16px;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video__eyebrow {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 7px;
+
+    color: var(--e2f-video-accent);
+
+    font-size: 10px;
+    line-height: 1;
+
+    font-weight: 850;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+  }
+
+  #e2f-video-{{ section.id }} .e2f-video__eyebrow span {
+    display: block;
+
+    width: 18px;
+    height: 2px;
+
+    background: var(--e2f-video-accent);
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video__heading {
+    margin: 0;
+
+    color: var(--e2f-video-text);
+
+    font-family:
+      var(--text-font-family),
+      Arial,
+      Helvetica,
+      sans-serif;
+
+    font-size: clamp(23px, 2.3vw, 34px);
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -.04em;
+
+    text-transform: uppercase;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video__subtitle {
+    margin: 7px 0 0;
+
+    color: var(--e2f-video-muted);
+
+    font-size: 11px;
+    line-height: 1.4;
+
+    text-transform: uppercase;
+
+    letter-spacing: .04em;
+  }
+
+
+  /* =========================
+     ARROWS
+  ========================= */
+
+  #e2f-video-{{ section.id }} .e2f-video__arrows {
+    display: flex;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video__arrow {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+
+    width: 36px !important;
+    height: 36px !important;
+
+    min-width: 36px !important;
+    min-height: 36px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    color: var(--e2f-video-text) !important;
+
+    border:
+      1px solid var(--e2f-video-border) !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
+
+    cursor: pointer;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video__arrow::before,
+  #e2f-video-{{ section.id }} .e2f-video__arrow::after {
+    display: none !important;
+
+    content: none !important;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video__arrow svg {
+    width: 17px;
+    height: 17px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.8;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    pointer-events: none;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video__arrow:hover {
+    background:
+      var(--e2f-video-accent) !important;
+
+    border-color:
+      var(--e2f-video-accent) !important;
+
+    color: #000 !important;
+  }
+
+
+  /* =========================
+     TRACK
+  ========================= */
+
+  #e2f-video-{{ section.id }} .e2f-video__track {
+    display: grid;
+
+    grid-template-columns:
+      repeat({{ section.settings.columns_desktop }}, minmax(0, 1fr));
+
+    gap: {{ section.settings.gap }}px;
+
+    overflow: hidden;
+  }
+
+
+  /* =========================
+     VIDEO CARD
+  ========================= */
+
+  #e2f-video-{{ section.id }} .e2f-video-card {
+    min-width: 0;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video-card__media {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio:
+      {{ section.settings.video_ratio_width }}
+      /
+      {{ section.settings.video_ratio_height }};
+
+    overflow: hidden;
+
+    background: #111;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video-card__video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    background: #111;
+  }
+
+
+  /* =========================
+     LABEL
+  ========================= */
+
+  #e2f-video-{{ section.id }} .e2f-video-card__label {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 10px;
+    left: 10px;
+
+    padding: 6px 9px;
+
+    background: var(--e2f-video-accent);
+
+    color: #000;
+
+    font-size: 9px;
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+    pointer-events: none;
+  }
+
+
+  /* =========================
+     CAPTION
+  ========================= */
+
+  #e2f-video-{{ section.id }} .e2f-video-card__caption {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 40px 12px 11px;
+
+    background:
+      linear-gradient(
+        to top,
+        rgba(0,0,0,.9),
+        rgba(0,0,0,0)
+      );
+
+    color: #fff;
+
+    font-size: 10px;
+    line-height: 1.3;
+
+    font-weight: 750;
+
+    pointer-events: none;
+  }
+
+
+  /* =========================
+     PLACEHOLDER
+  ========================= */
+
+  #e2f-video-{{ section.id }} .e2f-video-card__placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    background: #151515;
+
+    color: #666;
+
+    text-align: center;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video-card__placeholder span {
+    color: var(--e2f-video-accent);
+
+    font-size: 34px;
+    line-height: 1;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video-card__placeholder strong {
+    margin-top: 4px;
+
+    color: #aaa;
+
+    font-size: 10px;
+
+    letter-spacing: .08em;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video-card__placeholder small {
+    color: #666;
+
+    font-size: 9px;
+  }
+
+
+  /* =========================
+     REASSURANCE
+  ========================= */
+
+  #e2f-video-{{ section.id }} .e2f-video__reassurance {
+    display: grid;
+
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-top: 24px;
+    padding-top: 18px;
+
+    border-top:
+      1px solid var(--e2f-video-border);
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video__reassurance div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: var(--e2f-video-muted);
+
+    font-size: 10px;
+    line-height: 1.3;
+  }
+
+
+  #e2f-video-{{ section.id }} .e2f-video__reassurance span {
+    color: var(--e2f-video-accent);
+
+    font-size: 13px;
+
+    font-weight: 900;
+  }
+
+
+  /* =========================
+     MOBILE
+  ========================= */
+
+  @media screen and (max-width: 749px) {
+
+    #e2f-video-{{ section.id }} {
+      padding-top:
+        {{ section.settings.mobile_padding_top }}px;
+
+      padding-bottom:
+        {{ section.settings.mobile_padding_bottom }}px;
+    }
+
+
+    #e2f-video-{{ section.id }} .e2f-video__inner {
+      width: calc(100% - 24px);
+    }
+
+
+    #e2f-video-{{ section.id }} .e2f-video__header {
+      margin-bottom: 13px;
+    }
+
+
+    #e2f-video-{{ section.id }} .e2f-video__heading {
+      font-size: 22px;
+    }
+
+
+    #e2f-video-{{ section.id }} .e2f-video__subtitle {
+      font-size: 9px;
+    }
+
+
+    #e2f-video-{{ section.id }} .e2f-video__arrows {
+      display: none;
+    }
+
+
+    #e2f-video-{{ section.id }} .e2f-video__track {
+      width: calc(100vw - 12px);
+
+      display: flex;
+
+      gap: 8px;
+
+      margin-right: -12px;
+
+      padding-right: 24px;
+
+      overflow-x: auto;
+
+      scroll-snap-type: x mandatory;
+
+      scrollbar-width: none;
+
+      overscroll-behavior-x: contain;
+    }
+
+
+    #e2f-video-{{ section.id }} .e2f-video__track::-webkit-scrollbar {
+      display: none;
+    }
+
+
+    #e2f-video-{{ section.id }} .e2f-video-card {
+      flex: 0 0 {{ section.settings.mobile_card_width }}%;
+
+      min-width:
+        {{ section.settings.mobile_card_width }}%;
+
+      scroll-snap-align: start;
+    }
+
+
+    #e2f-video-{{ section.id }} .e2f-video__reassurance {
+      grid-template-columns: 1fr;
+
+      gap: 9px;
+
+      margin-top: 18px;
+
+      padding-top: 15px;
+    }
+
+  }
+
+</style>
+
+
+<script>
+  (function () {
+
+    function initE2FVideo() {
+
+      var root =
+        document.getElementById(
+          'e2f-video-{{ section.id }}'
+        );
+
+      if (!root) return;
+
+
+      var track =
+        root.querySelector(
+          '#e2f-video-track-{{ section.id }}'
+        );
+
+      var prev =
+        root.querySelector(
+          '[data-e2f-video-prev="{{ section.id }}"]'
+        );
+
+      var next =
+        root.querySelector(
+          '[data-e2f-video-next="{{ section.id }}"]'
+        );
+
+
+      if (!track) return;
+
+
+      function getScrollAmount() {
+
+        var card =
+          track.querySelector(
+            '.e2f-video-card'
+          );
+
+        if (!card) {
+          return 320;
+        }
+
+
+        var styles =
+          window.getComputedStyle(track);
+
+
+        var gap =
+          parseFloat(styles.gap);
+
+
+        if (isNaN(gap)) {
+          gap = 8;
+        }
+
+
+        return (
+          card.getBoundingClientRect().width
+          + gap
+        );
+
+      }
+
+
+      if (prev) {
+
+        prev.onclick = function(event) {
+
+          event.preventDefault();
+
+          track.scrollBy({
+            left: -getScrollAmount(),
+            behavior: 'smooth'
+          });
+
+        };
+
+      }
+
+
+      if (next) {
+
+        next.onclick = function(event) {
+
+          event.preventDefault();
+
+          track.scrollBy({
+            left: getScrollAmount(),
+            behavior: 'smooth'
+          });
+
+        };
+
+      }
+
+    }
+
+
+    if (document.readyState === 'loading') {
+
+      document.addEventListener(
+        'DOMContentLoaded',
+        initE2FVideo
+      );
+
+    } else {
+
+      initE2FVideo();
+
+    }
+
+
+    document.addEventListener(
+      'shopify:section:load',
+      initE2FVideo
+    );
+
+  })();
+</script>
+
+
+{% schema %}
+{
+  "name": "E2F - Preuve en vidéo",
+  "tag": "section",
+  "class": "shopify-section--e2f-video",
+
+  "settings": [
+
+    {
+      "type": "header",
+      "content": "Titres"
+    },
+
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Petit titre",
+      "default": "ESPRIT2'FOOT"
+    },
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre",
+      "default": "LA PREUVE EN VIDÉO"
+    },
+
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sous-titre",
+      "default": "FILMÉ PAR NOUS, SANS MONTAGE."
+    },
+
+
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Largeur maximale",
+      "min": 700,
+      "max": 1600,
+      "step": 100,
+      "unit": "px",
+      "default": 1400
+    },
+
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "label": "Nombre de vidéos ordinateur",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
+    },
+
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Espace entre les vidéos",
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 8
+    },
+
+    {
+      "type": "range",
+      "id": "video_ratio_width",
+      "label": "Ratio largeur vidéo",
+      "min": 1,
+      "max": 16,
+      "step": 1,
+      "default": 4
+    },
+
+    {
+      "type": "range",
+      "id": "video_ratio_height",
+      "label": "Ratio hauteur vidéo",
+      "min": 1,
+      "max": 16,
+      "step": 1,
+      "default": 5
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_card_width",
+      "label": "Largeur vidéo mobile",
+      "min": 60,
+      "max": 95,
+      "step": 1,
+      "unit": "%",
+      "default": 78
+    },
+
+
+    {
+      "type": "header",
+      "content": "Réassurance"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "show_reassurance",
+      "label": "Afficher les éléments de réassurance",
+      "default": true
+    },
+
+    {
+      "type": "text",
+      "id": "reassurance_1",
+      "label": "Ligne 1",
+      "default": "Livraison offerte"
+    },
+
+    {
+      "type": "text",
+      "id": "reassurance_2",
+      "label": "Ligne 2",
+      "default": "Paiement 100 % sécurisé"
+    },
+
+    {
+      "type": "text",
+      "id": "reassurance_3",
+      "label": "Ligne 3",
+      "default": "Retour sous 14 jours"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Couleurs"
+    },
+
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Fond",
+      "default": "#FFFFFF"
+    },
+
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Texte principal",
+      "default": "#111111"
+    },
+
+    {
+      "type": "color",
+      "id": "muted_color",
+      "label": "Texte secondaire",
+      "default": "#777777"
+    },
+
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Turquoise Esprit2'FOOT",
+      "default": "#00E6E6"
+    },
+
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Bordures",
+      "default": "#DDDDDD"
+    },
+
+
+    {
+      "type": "header",
+      "content": "Espacements"
+    },
+
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Haut ordinateur",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 25
+    },
+
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bas ordinateur",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 25
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Haut mobile",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Bas mobile",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    }
+
+  ],
+
+
+  "blocks": [
+
+    {
+      "type": "video",
+      "name": "Vidéo",
+
+      "settings": [
+
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Vidéo"
+        },
+
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Petit label",
+          "default": "LA PAIRE"
+        },
+
+        {
+          "type": "text",
+          "id": "caption",
+          "label": "Texte en bas",
+          "default": "La paire filmée en vrai, avant expédition."
+        }
+
+      ]
+    }
+
+  ],
+
+
+  "max_blocks": 8,
+
+
+  "presets": [
+
+    {
+      "name": "E2F - Preuve en vidéo",
+
+      "blocks": [
+
+        {
+          "type": "video",
+          "settings": {
+            "label": "LA PAIRE",
+            "caption": "La paire filmée en vrai, avant expédition."
+          }
+        },
+
+        {
+          "type": "video",
+          "settings": {
+            "label": "LE COLIS",
+            "caption": "Préparée et contrôlée avant le départ."
+          }
+        },
+
+        {
+          "type": "video",
+          "settings": {
+            "label": "SUR LE TERRAIN",
+            "caption": "Ce que ça donne une fois aux pieds."
+          }
+        }
+
+      ]
+
+    }
+
+  ]
+}
+{% endschema %}
