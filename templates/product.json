@@ -204,71 +204,6 @@
         "input_text_color": ""
       }
     },
-    "e2f_complete_ta_paire_AkAeH3": {
-      "type": "e2f-complete-ta-paire",
-      "blocks": {
-        "product_hKP8xE": {
-          "type": "product",
-          "settings": {
-            "product": "chaussette-anti-derapantes",
-            "short_text": "Complète ton équipement."
-          }
-        },
-        "product_eRB4pz": {
-          "type": "product",
-          "settings": {
-            "product": "sneakers-mind-001-black-orange",
-            "short_text": "Complète ton équipement."
-          }
-        },
-        "product_gcBMJz": {
-          "type": "product",
-          "settings": {
-            "product": "n-ke-shoebag-performance",
-            "short_text": "Complète ton équipement."
-          }
-        },
-        "product_qBVLrt": {
-          "type": "product",
-          "settings": {
-            "product": "sneakers-mind-001-solar-red",
-            "short_text": "Complète ton équipement."
-          }
-        },
-        "product_H9Fpfk": {
-          "type": "product",
-          "settings": {
-            "product": "shoebag-performance",
-            "short_text": "Complète ton équipement."
-          }
-        }
-      },
-      "block_order": [
-        "product_hKP8xE",
-        "product_eRB4pz",
-        "product_gcBMJz",
-        "product_qBVLrt",
-        "product_H9Fpfk"
-      ],
-      "name": "E2F - Complète ta paire",
-      "settings": {
-        "eyebrow": "ESPRIT2'FOOT",
-        "heading": "COMPLÈTE TON SAC",
-        "subtitle": "Ajoute les essentiels à ta commande.",
-        "max_width": 1400,
-        "card_width": 330,
-        "background": "#ffffff",
-        "card_background": "#f7f7f7",
-        "text_color": "#111111",
-        "muted_color": "#777777",
-        "accent_color": "#00e6e6",
-        "border_color": "#dddddd",
-        "padding_top": 25,
-        "padding_bottom": 25,
-        "mobile_padding_top": 20,
-        "mobile_padding_bottom": 20
-      }
-    },
     "e2f_retours_players_AXxyHJ": {
       "type": "e2f-retours-players",
       "blocks": {
@@ -365,8 +300,8 @@
         "review_text_color": "#ffffff",
         "muted_color": "#ffb000",
         "accent_color": "#00fff5",
-        "padding_top": 55,
-        "padding_bottom": 90,
+        "padding_top": 60,
+        "padding_bottom": 20,
         "mobile_padding_top": 45,
         "mobile_padding_bottom": 45
       }
@@ -494,7 +429,6 @@
   },
   "order": [
     "main",
-    "e2f_complete_ta_paire_AkAeH3",
     "e2f_retours_players_AXxyHJ",
     "media_with_text_nNJHUm",
     "faq_fEHUdd",
