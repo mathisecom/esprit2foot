@@ -90,7 +90,7 @@
               "chaussette-anti-derapantes",
               "sneakers-mind-001-solar-red"
             ],
-            "background": "#FFFFFF",
+            "background": "#ffffff",
             "text_color": "#111111",
             "accent_color": "#00e6e6"
           }
@@ -98,8 +98,8 @@
         "e2f_proof_video_bpEGgf": {
           "type": "e2f_proof_video",
           "settings": {
-            "title": "LA PREUVE EN VIDÉO",
-            "subtitle": "FILMÉ PAR NOUS, SANS MONTAGE",
+            "title": "QUELQUES VIDÉOS",
+            "subtitle": "FILMÉ PAR NOUS, EN TOUTE TRANSPARENCE",
             "video_1": "shopify://files/videos/60d40f46-dfcc-4c47-8a9f-ed224a7584d2.mp4",
             "label_1": "LA PAIRE :  filmée en vrai, avant expédition.",
             "caption_1": "",
@@ -406,7 +406,7 @@
           "type": "item",
           "settings": {
             "title": "Quels sont les délais de livraison ?",
-            "content": "<p>Nous expédions dans le monde entier. Selon le produit et son statut, le délai estimé est indiqué directement sur le produit. Certains produits peuvent être disponibles en stock, tandis que d’autres sont proposés sur commande.</p>"
+            "content": "<p>Nous expédions dans le monde entier. Selon le produit et son statut, le délai estimé est indiqué directement sur le produit. Certains produits peuvent être disponibles en stock, tandis que d’autres sont proposés sur commande</p>"
           }
         },
         "item_hTcVcP": {
