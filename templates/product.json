@@ -206,12 +206,12 @@
         "subtitle": "Ajoute les essentiels à ta commande.",
         "max_width": 1400,
         "card_width": 330,
-        "background": "#FFFFFF",
-        "card_background": "#F7F7F7",
+        "background": "#ffffff",
+        "card_background": "#f7f7f7",
         "text_color": "#111111",
         "muted_color": "#777777",
-        "accent_color": "#00E6E6",
-        "border_color": "#DDDDDD",
+        "accent_color": "#00e6e6",
+        "border_color": "#dddddd",
         "padding_top": 25,
         "padding_bottom": 25,
         "mobile_padding_top": 20,
@@ -320,60 +320,6 @@
         "mobile_padding_bottom": 45
       }
     },
-    "faq_tdqe7U": {
-      "type": "faq",
-      "blocks": {
-        "item_H4yDqb": {
-          "type": "item",
-          "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
-          }
-        },
-        "item_YrXY9Y": {
-          "type": "item",
-          "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
-          }
-        },
-        "item_afrNNX": {
-          "type": "item",
-          "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_H4yDqb",
-        "item_YrXY9Y",
-        "item_afrNNX"
-      ],
-      "disabled": true,
-      "name": "FAQ",
-      "settings": {
-        "full_width": true,
-        "subheading": "",
-        "title": "QUESTIONS FRÉQUENTES",
-        "content": "",
-        "team_avatar_width": 160,
-        "support_hours": "",
-        "answer_time": "",
-        "button_text": "",
-        "button_url": "",
-        "text_position": "center",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "button_background": "",
-        "button_text_color": "",
-        "accordion_background": "#fbffe6",
-        "accordion_text_color": ""
-      }
-    },
     "faq_fEHUdd": {
       "type": "faq",
       "blocks": {
@@ -462,7 +408,6 @@
     "main",
     "e2f_complete_ta_paire_AkAeH3",
     "e2f_retours_players_AXxyHJ",
-    "faq_tdqe7U",
     "faq_fEHUdd",
     "related-products"
   ]
