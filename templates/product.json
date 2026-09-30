@@ -406,7 +406,7 @@
           "type": "item",
           "settings": {
             "title": "Quels sont les délais de livraison ?",
-            "content": "<p>Nous expédions dans le monde entier. Selon le produit et son statut, le délai estimé est indiqué directement au moment de ta commande. Certains produits peuvent être disponibles en stock, tandis que d’autres sont proposés sur commande</p>"
+            "content": "<p>Nous expédions dans le monde entier. Selon le produit et son statut, le délai estimé est indiqué directement sur le produit. Certains produits peuvent être disponibles en stock, tandis que d’autres sont proposés sur commande.</p>"
           }
         },
         "item_hTcVcP": {
