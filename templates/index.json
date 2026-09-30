@@ -657,20 +657,22 @@
         "review_pDtXL3": {
           "type": "review",
           "settings": {
-            "stars": 4,
-            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
-            "name": "Yanis",
-            "product_name": "A acheté : F50 Hyperfast",
+            "image": "shopify://shop_images/IMG_9175.jpg",
+            "stars": 5,
+            "review": "<p>Mais quelle qualité merci bro&nbsp;</p>",
+            "name": "Berat Gemici",
+            "product_name": "A acheté : Vapor 16 Elite Noir Multicolore",
             "verified": true
           }
         },
         "review_dkLYG3": {
           "type": "review",
           "settings": {
-            "stars": 5,
-            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
-            "name": "Yanis",
-            "product_name": "F50 Hyperfast",
+            "image": "shopify://shop_images/IMG_7369_00ab58b8-0d16-43ea-95eb-6544d912b87a.jpg",
+            "stars": 4,
+            "review": "<p>@esprit2foot Merci à toi franchement je suis surpris, les paires sont d'une qualité exceptionnelle !!</p>",
+            "name": "Noah Loison",
+            "product_name": "A acheté : Vapor 16 Elite Blanche",
             "verified": true
           }
         },
