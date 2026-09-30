@@ -701,10 +701,11 @@
         "review_Vzabq4": {
           "type": "review",
           "settings": {
-            "stars": 5,
-            "review": "<p>Franchement la paire est incroyable, reçue nickel et exactement comme sur les photos.</p>",
+            "image": "shopify://shop_images/IMG_9197.jpg",
+            "stars": 4,
+            "review": "<p>La qualité c'est gavé bien merci je recommande</p>",
             "name": "Yanis",
-            "product_name": "F50 Hyperfast",
+            "product_name": "A acheté : Vapor 16 Elite Blanche",
             "verified": true
           }
         },
