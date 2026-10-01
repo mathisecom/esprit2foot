@@ -33,7 +33,7 @@
         "liquid_zBahwN": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div style=\"\n  background-color: #00FFF5;\n  color: #000000;\n  padding: 7px 14px;\n  margin-bottom: 10px;\n  text-align: center;\n  font-weight: 800;\n  font-size: 15px;\n  border: 1px solid #000000;\n  border-radius: 5px;\n  text-transform: uppercase;\n  box-shadow: 2px 2px 0 #000000;\n\">\n  LIVRAISON OFFERTE !\n</div>"
+            "liquid": "<div style=\"\n  background-color: #00FFF5;\n  color: #000000;\n  padding: 7px 14px;\n  margin-bottom: 10px;\n  text-align: center;\n  font-weight: 800;\n  font-size: 15px;\n  border: 1px solid #000000;\n  border-radius: 5px;\n  text-transform: uppercase;\n  box-shadow: 2px 2px 0 #000000;\n\">\n  -50% SUR VOTRE 3E ARTICLE !\n</div>"
           }
         },
         "variant_picker": {
@@ -306,7 +306,7 @@
         "review_count": "+300 avis clients",
         "brand_logo": "shopify://shop_images/Nouveau_projet_21.avif",
         "logo_width": 145,
-        "background": "#FFFFFF",
+        "background": "#ffffff",
         "card_background": "#000000",
         "text_color": "#000000",
         "review_text_color": "#ffffff",
