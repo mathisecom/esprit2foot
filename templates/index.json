@@ -105,7 +105,7 @@
       "settings": {
         "collection": "frontpage",
         "products": [
-          "predator-26-tongue-fg-elite-x-zizou-blanc-dore",
+          "phantom-6-elite-low-cut-fg-x-haaland-glacier-pack",
           "mercurial-superfly-11-elite-fg-break-em-pack",
           "f50-hyperfast-laceless-fg-elite-final-rush-pack",
           "mercurial-superfly-11-elite-fg-breakout-pack",
@@ -755,7 +755,7 @@
         "logo_width": 145,
         "background": "#000000",
         "card_background": "#000000",
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "review_text_color": "#ffffff",
         "muted_color": "#ffb000",
         "accent_color": "#00fff5",
