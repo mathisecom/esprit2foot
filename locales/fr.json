@@ -450,6 +450,10 @@
       },
       "marketing": {
         "accept_marketing_checkbox_label": "Inscris-toi à la newsletter et reçois nos codes promos, nouveautés et offres exclusives !"
+      },
+      "general": {
+        "complete_purchase_button_label": "Payer maintenant",
+        "pay_now_button_label": "Payer maintenant"
       }
     }
   }
