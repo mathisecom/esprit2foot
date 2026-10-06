@@ -828,7 +828,7 @@
           "type": "item",
           "settings": {
             "title": "Quels sont les délais de livraison ?",
-            "content": "<p>Nous expédions dans le monde entier. Selon le produit et son statut, le délai estimé est indiqué directement au moment de ta commande. Certains produits peuvent être disponibles en stock, tandis que d’autres sont proposés sur commande</p>"
+            "content": "<p>Le délai de livraison est indiqué directement sur la fiche produit ou avant la validation de la commande.<br/><br/>La livraison intervient généralement dans un délai de 9 à 16 jours.<br/><br/>Le délai contractuel maximal de livraison est fixé à 16 jours à compter de la validation et du paiement intégral de la commande.<br/><br/>Ce délai comprend notamment le temps nécessaire à l’approvisionnement et à l’expédition du produit<br/><br/></p>"
           }
         },
         "item_CczzJJ": {
