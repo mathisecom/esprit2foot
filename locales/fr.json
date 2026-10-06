@@ -453,7 +453,8 @@
       },
       "general": {
         "complete_purchase_button_label": "Payer maintenant",
-        "pay_now_button_label": "Payer maintenant"
+        "pay_now_button_label": "Payer maintenant",
+        "continue_to_review": "Payer maintenant"
       }
     }
   }
