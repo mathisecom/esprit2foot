@@ -268,6 +268,207 @@
         "product_card_text_color": ""
       }
     },
+    "collection_list_7khGbL": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_qWUcyP": {
+          "type": "collection",
+          "settings": {
+            "collection": "vapor",
+            "image": "shopify://shop_images/crampons-mercurial-united-pack-nike-1024x587_95a4ff8b-ace3-4f74-af15-fdb5d5ebdc52.png",
+            "subheading": "",
+            "title": "MERCURIAL",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        },
+        "collection_tjHTLB": {
+          "type": "collection",
+          "settings": {
+            "collection": "f50-1",
+            "image": "shopify://shop_images/0-movil.jpg",
+            "subheading": "",
+            "title": "F50",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        },
+        "collection_Ny3wJw": {
+          "type": "collection",
+          "settings": {
+            "collection": "predator",
+            "image": "shopify://shop_images/global_predator_goal_hunter_football_ss25_launch_pdp_banner_split_01_d_ab4b291866.avif",
+            "subheading": "",
+            "title": "PREDATOR",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        },
+        "collection_Qkmnat": {
+          "type": "collection",
+          "settings": {
+            "collection": "phantom",
+            "image": "shopify://shop_images/nike-phantom-6-high-1.png",
+            "subheading": "",
+            "title": "PHANTOM",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        },
+        "collection_kCNYEx": {
+          "type": "collection",
+          "settings": {
+            "collection": "ultra",
+            "image": "shopify://shop_images/crampons-puma-arrival-pack-3_bc5d6738-1e51-46ff-8f02-2d8c9f29c825.png",
+            "subheading": "",
+            "title": "ULTRA",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        },
+        "collection_BBdNj6": {
+          "type": "collection",
+          "settings": {
+            "collection": "future",
+            "image": "shopify://shop_images/chaussure-puma-future-7-neymar-2024-2025-8-800x800-c-center.avif",
+            "subheading": "",
+            "title": "FUTURE",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        },
+        "collection_rWYDb3": {
+          "type": "collection",
+          "settings": {
+            "collection": "x-speedflow",
+            "image": "shopify://shop_images/Chaussure_X_Speedflow.1_Terrain_souple_Bleu_GW7457_HM55.jpg",
+            "subheading": "",
+            "title": "X SPEEDFLOW",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        },
+        "collection_kLdbmj": {
+          "type": "collection",
+          "settings": {
+            "collection": "hypervenom",
+            "image": "shopify://shop_images/hypervenom_fd369458-1d7f-4d5f-ac52-1413b51f46d2.png",
+            "subheading": "",
+            "title": "HYPERVENOM",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        },
+        "collection_bGKtDV": {
+          "type": "collection",
+          "settings": {
+            "collection": "nb-furon",
+            "image": "shopify://shop_images/crampons_new_balance_furon_v6_2-scaled_34454469-5e09-4334-858f-bb9c32957a6c.png",
+            "subheading": "",
+            "title": "NB. FURON",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        },
+        "collection_QnDPmF": {
+          "type": "collection",
+          "settings": {
+            "collection": "tiempo",
+            "image": "shopify://shop_images/IMG_0972_1_1.webp",
+            "subheading": "",
+            "title": "TIEMPO",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        },
+        "collection_3VHYgi": {
+          "type": "collection",
+          "settings": {
+            "collection": "f50",
+            "image": "shopify://shop_images/football_fw24_f50_launch_pdp_story_statement_image_copa_elite_d_8a683845cd_653e1d3b-4626-4c7a-a4bd-3553dec2c303.png",
+            "subheading": "",
+            "title": "COPA",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        }
+      },
+      "block_order": [
+        "collection_qWUcyP",
+        "collection_tjHTLB",
+        "collection_Ny3wJw",
+        "collection_Qkmnat",
+        "collection_kCNYEx",
+        "collection_BBdNj6",
+        "collection_rWYDb3",
+        "collection_kLdbmj",
+        "collection_bGKtDV",
+        "collection_QnDPmF",
+        "collection_3VHYgi"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "full_width": true,
+        "stack_collections": false,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 4,
+        "show_progress_bar": true,
+        "subheading": "",
+        "title": "MODÈLES INCONTOURNABLES",
+        "content": "<p>F50, MERCURIAL, PHANTOM… À SEULEMENT 109,99 €</p>",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "collection_list_fYBFCR": {
       "type": "collection-list",
       "blocks": {
@@ -332,207 +533,6 @@
         "subheading": "",
         "title": "CHOISIS TA SEMELLE",
         "content": "<p>ADAPTE TA SEMELLE À TOUT TYPE DE TERRAIN</p>",
-        "link_url": "",
-        "link_text": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
-      }
-    },
-    "collection_list_7khGbL": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_qWUcyP": {
-          "type": "collection",
-          "settings": {
-            "collection": "vapor",
-            "image": "shopify://shop_images/crampons-mercurial-united-pack-nike-1024x587_95a4ff8b-ace3-4f74-af15-fdb5d5ebdc52.png",
-            "subheading": "",
-            "title": "MERCURIAL",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_tjHTLB": {
-          "type": "collection",
-          "settings": {
-            "collection": "f50-1",
-            "image": "shopify://shop_images/0-movil.jpg",
-            "subheading": "",
-            "title": "F50",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_Ny3wJw": {
-          "type": "collection",
-          "settings": {
-            "collection": "predator",
-            "image": "shopify://shop_images/global_predator_goal_hunter_football_ss25_launch_pdp_banner_split_01_d_ab4b291866.avif",
-            "subheading": "",
-            "title": "PREDATOR",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_Qkmnat": {
-          "type": "collection",
-          "settings": {
-            "collection": "phantom",
-            "image": "shopify://shop_images/nike-phantom-6-high-1.png",
-            "subheading": "",
-            "title": "PHANTOM",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_kCNYEx": {
-          "type": "collection",
-          "settings": {
-            "collection": "ultra",
-            "image": "shopify://shop_images/crampons-puma-arrival-pack-3_bc5d6738-1e51-46ff-8f02-2d8c9f29c825.png",
-            "subheading": "",
-            "title": "ULTRA",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_BBdNj6": {
-          "type": "collection",
-          "settings": {
-            "collection": "future",
-            "image": "shopify://shop_images/chaussure-puma-future-7-neymar-2024-2025-8-800x800-c-center.avif",
-            "subheading": "",
-            "title": "FUTURE",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_rWYDb3": {
-          "type": "collection",
-          "settings": {
-            "collection": "x-speedflow",
-            "image": "shopify://shop_images/Chaussure_X_Speedflow.1_Terrain_souple_Bleu_GW7457_HM55.jpg",
-            "subheading": "",
-            "title": "X SPEEDFLOW",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_kLdbmj": {
-          "type": "collection",
-          "settings": {
-            "collection": "hypervenom",
-            "image": "shopify://shop_images/hypervenom_fd369458-1d7f-4d5f-ac52-1413b51f46d2.png",
-            "subheading": "",
-            "title": "HYPERVENOM",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_bGKtDV": {
-          "type": "collection",
-          "settings": {
-            "collection": "nb-furon",
-            "image": "shopify://shop_images/crampons_new_balance_furon_v6_2-scaled_34454469-5e09-4334-858f-bb9c32957a6c.png",
-            "subheading": "",
-            "title": "NB. FURON",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_QnDPmF": {
-          "type": "collection",
-          "settings": {
-            "collection": "tiempo",
-            "image": "shopify://shop_images/IMG_0972_1_1.webp",
-            "subheading": "",
-            "title": "TIEMPO",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_3VHYgi": {
-          "type": "collection",
-          "settings": {
-            "collection": "f50",
-            "image": "shopify://shop_images/football_fw24_f50_launch_pdp_story_statement_image_copa_elite_d_8a683845cd_653e1d3b-4626-4c7a-a4bd-3553dec2c303.png",
-            "subheading": "",
-            "title": "COPA",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        }
-      },
-      "block_order": [
-        "collection_qWUcyP",
-        "collection_tjHTLB",
-        "collection_Ny3wJw",
-        "collection_Qkmnat",
-        "collection_kCNYEx",
-        "collection_BBdNj6",
-        "collection_rWYDb3",
-        "collection_kLdbmj",
-        "collection_bGKtDV",
-        "collection_QnDPmF",
-        "collection_3VHYgi"
-      ],
-      "name": "Collection list",
-      "settings": {
-        "full_width": true,
-        "stack_collections": false,
-        "collections_per_row_mobile": "2",
-        "collections_per_row": 4,
-        "show_progress_bar": true,
-        "subheading": "",
-        "title": "MODÈLES INCONTOURNABLES",
-        "content": "<p>F50, MERCURIAL, PHANTOM… À SEULEMENT 109,99 €</p>",
         "link_url": "",
         "link_text": "",
         "background": "",
@@ -975,8 +975,8 @@
     "collection_list_UcD6BR",
     "scrolling_text_ctzbLQ",
     "featured_collection_JCd9YQ",
-    "collection_list_fYBFCR",
     "collection_list_7khGbL",
+    "collection_list_fYBFCR",
     "scrolling_text_mRWVdk",
     "multi_column_h4QNhQ",
     "scrolling_text_MBNpEd",
