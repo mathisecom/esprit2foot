@@ -352,7 +352,7 @@
             "subheading": "",
             "title": "MERCURIAL",
             "url": "",
-            "heading_tag": "h2",
+            "heading_tag": "h3",
             "text_position": "place-self-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
@@ -368,7 +368,7 @@
             "title": "F50",
             "url": "",
             "heading_tag": "h2",
-            "text_position": "place-self-end-center text-center",
+            "text_position": "place-self-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -383,7 +383,7 @@
             "title": "PREDATOR",
             "url": "",
             "heading_tag": "h3",
-            "text_position": "place-self-end-start text-start",
+            "text_position": "place-self-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -398,7 +398,7 @@
             "title": "PHANTOM",
             "url": "",
             "heading_tag": "h3",
-            "text_position": "place-self-end text-end",
+            "text_position": "place-self-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -413,82 +413,7 @@
             "title": "ULTRA",
             "url": "",
             "heading_tag": "h2",
-            "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_bGKtDV": {
-          "type": "collection",
-          "settings": {
-            "collection": "nb-furon",
-            "image": "shopify://shop_images/crampons_new_balance_furon_v6_2-scaled_34454469-5e09-4334-858f-bb9c32957a6c.png",
-            "subheading": "",
-            "title": "NB. FURON",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_QnDPmF": {
-          "type": "collection",
-          "settings": {
-            "collection": "tiempo",
-            "image": "shopify://shop_images/IMG_0972_1_1.webp",
-            "subheading": "",
-            "title": "TIEMPO",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_rWYDb3": {
-          "type": "collection",
-          "settings": {
-            "collection": "x-speedflow",
-            "image": "shopify://shop_images/Chaussure_X_Speedflow.1_Terrain_souple_Bleu_GW7457_HM55.jpg",
-            "subheading": "",
-            "title": "X SPEEDFLOW",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_kLdbmj": {
-          "type": "collection",
-          "settings": {
-            "collection": "hypervenom",
-            "image": "shopify://shop_images/hypervenom_fd369458-1d7f-4d5f-ac52-1413b51f46d2.png",
-            "subheading": "",
-            "title": "HYPERVENOM",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-start text-start",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_3VHYgi": {
-          "type": "collection",
-          "settings": {
-            "collection": "f50",
-            "image": "shopify://shop_images/football_fw24_f50_launch_pdp_story_statement_image_copa_elite_d_8a683845cd_653e1d3b-4626-4c7a-a4bd-3553dec2c303.png",
-            "subheading": "",
-            "title": "COPA",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-center text-center",
+            "text_position": "place-self-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -503,7 +428,82 @@
             "title": "FUTURE",
             "url": "",
             "heading_tag": "h2",
-            "text_position": "place-self-end-start text-start",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_rWYDb3": {
+          "type": "collection",
+          "settings": {
+            "collection": "x-speedflow",
+            "image": "shopify://shop_images/Chaussure_X_Speedflow.1_Terrain_souple_Bleu_GW7457_HM55.jpg",
+            "subheading": "",
+            "title": "X SPEEDFLOW",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_kLdbmj": {
+          "type": "collection",
+          "settings": {
+            "collection": "hypervenom",
+            "image": "shopify://shop_images/hypervenom_fd369458-1d7f-4d5f-ac52-1413b51f46d2.png",
+            "subheading": "",
+            "title": "HYPERVENOM",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_bGKtDV": {
+          "type": "collection",
+          "settings": {
+            "collection": "nb-furon",
+            "image": "shopify://shop_images/crampons_new_balance_furon_v6_2-scaled_34454469-5e09-4334-858f-bb9c32957a6c.png",
+            "subheading": "",
+            "title": "NB. FURON",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_QnDPmF": {
+          "type": "collection",
+          "settings": {
+            "collection": "tiempo",
+            "image": "shopify://shop_images/IMG_0972_1_1.webp",
+            "subheading": "",
+            "title": "TIEMPO",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
+        "collection_3VHYgi": {
+          "type": "collection",
+          "settings": {
+            "collection": "f50",
+            "image": "shopify://shop_images/football_fw24_f50_launch_pdp_story_statement_image_copa_elite_d_8a683845cd_653e1d3b-4626-4c7a-a4bd-3553dec2c303.png",
+            "subheading": "",
+            "title": "COPA",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -516,12 +516,12 @@
         "collection_Ny3wJw",
         "collection_Qkmnat",
         "collection_kCNYEx",
-        "collection_bGKtDV",
-        "collection_QnDPmF",
+        "collection_BBdNj6",
         "collection_rWYDb3",
         "collection_kLdbmj",
-        "collection_3VHYgi",
-        "collection_BBdNj6"
+        "collection_bGKtDV",
+        "collection_QnDPmF",
+        "collection_3VHYgi"
       ],
       "name": "Collection list",
       "settings": {
