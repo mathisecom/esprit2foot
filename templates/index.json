@@ -268,6 +268,79 @@
         "product_card_text_color": ""
       }
     },
+    "collection_list_fYBFCR": {
+      "type": "collection-list",
+      "blocks": {
+        "collection_x87WhH": {
+          "type": "collection",
+          "settings": {
+            "collection": "terrain-sec-fg",
+            "image": "shopify://shop_images/68786badbb0d.webp",
+            "subheading": "Terrain Sec",
+            "title": "FG",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 12
+          }
+        },
+        "collection_ejtpC6": {
+          "type": "collection",
+          "settings": {
+            "collection": "terrain-synthetique-ag",
+            "image": "shopify://shop_images/semelle-ag-adidas-predator-edge.webp",
+            "subheading": "Terrain Synthétique",
+            "title": "AG",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        },
+        "collection_BJWcV7": {
+          "type": "collection",
+          "settings": {
+            "collection": "terrain-gras-sg",
+            "image": "shopify://shop_images/VAPOR_17_ELITE_SG-PRO_T.png",
+            "subheading": "Terrain Gras",
+            "title": "SG vissés",
+            "url": "",
+            "heading_tag": "h2",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 10
+          }
+        }
+      },
+      "block_order": [
+        "collection_x87WhH",
+        "collection_ejtpC6",
+        "collection_BJWcV7"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "full_width": true,
+        "stack_collections": false,
+        "collections_per_row_mobile": "2",
+        "collections_per_row": 3,
+        "show_progress_bar": true,
+        "subheading": "",
+        "title": "CHOISIS TA SEMELLE",
+        "content": "<p>ADAPTE TA SEMELLE À TOUT TYPE DE TERRAIN</p>",
+        "link_url": "",
+        "link_text": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
+    },
     "collection_list_7khGbL": {
       "type": "collection-list",
       "blocks": {
@@ -559,79 +632,6 @@
         "background": "#fffaf0",
         "background_gradient": "",
         "text_color": "#000000"
-      }
-    },
-    "collection_list_fYBFCR": {
-      "type": "collection-list",
-      "blocks": {
-        "collection_x87WhH": {
-          "type": "collection",
-          "settings": {
-            "collection": "terrain-sec-fg",
-            "image": "shopify://shop_images/68786badbb0d.webp",
-            "subheading": "Terrain Sec",
-            "title": "FG",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 12
-          }
-        },
-        "collection_ejtpC6": {
-          "type": "collection",
-          "settings": {
-            "collection": "terrain-synthetique-ag",
-            "image": "shopify://shop_images/semelle-ag-adidas-predator-edge.webp",
-            "subheading": "Terrain Synthétique",
-            "title": "AG",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          }
-        },
-        "collection_BJWcV7": {
-          "type": "collection",
-          "settings": {
-            "collection": "terrain-gras-sg",
-            "image": "shopify://shop_images/VAPOR_17_ELITE_SG-PRO_T.png",
-            "subheading": "Terrain Gras",
-            "title": "SG",
-            "url": "",
-            "heading_tag": "h2",
-            "text_position": "place-self-end-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 10
-          }
-        }
-      },
-      "block_order": [
-        "collection_x87WhH",
-        "collection_ejtpC6",
-        "collection_BJWcV7"
-      ],
-      "name": "Collection list",
-      "settings": {
-        "full_width": true,
-        "stack_collections": false,
-        "collections_per_row_mobile": "2",
-        "collections_per_row": 3,
-        "show_progress_bar": true,
-        "subheading": "",
-        "title": "CHOISIS TA SEMELLE",
-        "content": "<p>ADAPTE TA SEMELLE À TOUT TYPE DE TERRAIN</p>",
-        "link_url": "",
-        "link_text": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
       }
     },
     "scrolling_text_MBNpEd": {
@@ -975,10 +975,10 @@
     "collection_list_UcD6BR",
     "scrolling_text_ctzbLQ",
     "featured_collection_JCd9YQ",
+    "collection_list_fYBFCR",
     "collection_list_7khGbL",
     "scrolling_text_mRWVdk",
     "multi_column_h4QNhQ",
-    "collection_list_fYBFCR",
     "scrolling_text_MBNpEd",
     "e2f_retours_players_9CGtq3",
     "media_with_text_98C7FQ",
