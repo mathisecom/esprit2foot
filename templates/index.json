@@ -344,6 +344,21 @@
     "collection_list_7khGbL": {
       "type": "collection-list",
       "blocks": {
+        "collection_qWUcyP": {
+          "type": "collection",
+          "settings": {
+            "collection": "vapor",
+            "image": "shopify://shop_images/crampons-mercurial-united-pack-nike-1024x587_95a4ff8b-ace3-4f74-af15-fdb5d5ebdc52.png",
+            "subheading": "",
+            "title": "MERCURIAL",
+            "url": "",
+            "heading_tag": "h3",
+            "text_position": "place-self-end-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 0
+          }
+        },
         "collection_tjHTLB": {
           "type": "collection",
           "settings": {
@@ -359,13 +374,13 @@
             "overlay_opacity": 0
           }
         },
-        "collection_qWUcyP": {
+        "collection_Ny3wJw": {
           "type": "collection",
           "settings": {
-            "collection": "vapor",
-            "image": "shopify://shop_images/crampons-mercurial-united-pack-nike-1024x587_95a4ff8b-ace3-4f74-af15-fdb5d5ebdc52.png",
+            "collection": "predator",
+            "image": "shopify://shop_images/global_predator_goal_hunter_football_ss25_launch_pdp_banner_split_01_d_ab4b291866.avif",
             "subheading": "",
-            "title": "MERCURIAL",
+            "title": "PREDATOR",
             "url": "",
             "heading_tag": "h3",
             "text_position": "place-self-end-start text-start",
@@ -399,21 +414,6 @@
             "url": "",
             "heading_tag": "h2",
             "text_position": "place-self-end text-end",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 0
-          }
-        },
-        "collection_Ny3wJw": {
-          "type": "collection",
-          "settings": {
-            "collection": "predator",
-            "image": "shopify://shop_images/global_predator_goal_hunter_football_ss25_launch_pdp_banner_split_01_d_ab4b291866.avif",
-            "subheading": "",
-            "title": "PREDATOR",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-end-start text-start",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
             "overlay_opacity": 0
@@ -511,11 +511,11 @@
         }
       },
       "block_order": [
-        "collection_tjHTLB",
         "collection_qWUcyP",
+        "collection_tjHTLB",
+        "collection_Ny3wJw",
         "collection_Qkmnat",
         "collection_kCNYEx",
-        "collection_Ny3wJw",
         "collection_bGKtDV",
         "collection_QnDPmF",
         "collection_rWYDb3",
