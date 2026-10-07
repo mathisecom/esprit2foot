@@ -352,7 +352,7 @@
             "subheading": "",
             "title": "MERCURIAL",
             "url": "",
-            "heading_tag": "h3",
+            "heading_tag": "h2",
             "text_position": "place-self-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
