@@ -835,7 +835,7 @@
           "type": "item",
           "settings": {
             "title": "Comment suivre ma commande ?",
-            "content": "<p>Dès que ton numéro de suivi est disponible, il t’est communiqué afin que tu puisses suivre ton colis jusqu’à sa livraison. Le suivi peut notamment être effectué via <strong>17TRACK</strong> ou le transporteur concerné.&nbsp;</p>"
+            "content": "<p>Dès que ton numéro de suivi est disponible, il t’est communiqué afin que tu puisses suivre ton colis jusqu’à sa livraison. Le suivi peut notamment être effectué via \" Suivre votre commande \" ou le transporteur concerné.&nbsp;</p>"
           }
         },
         "item_bLMXUf": {
