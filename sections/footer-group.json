@@ -79,9 +79,9 @@
           "settings": {
             "image": "shopify://shop_images/Nouveau_projet_21.png",
             "image_width": 190,
-            "heading_size": "h5",
+            "heading_size": "h4",
             "title": "Newsletters",
-            "content": "<p>Soyez le premier à découvrir nos actualités et nouveautés en vous abonnant !</p>"
+            "content": "<p>Soyez le premier à découvrir nos actualités et nouveautés en vous abonnant ! Recevez également un code promo de -10% par mail.</p>"
           }
         },
         "links": {
