@@ -19,8 +19,8 @@
             "icon_position": "aligned",
             "icon": "picto-award-gift",
             "icon_width": 28,
-            "title": "−5% SUR VOTRE PREMIERE COMMANDE",
-            "content": "<p>Entrez le code <strong>BIENVENUE </strong>ci dessus pour profiter d'une réduction.</p>",
+            "title": "−5% SUR VOTRE 1ERE COMMANDE",
+            "content": "<p>Entrez le code <strong>BIENVENUE </strong>ci dessus pour profiter d'une <strong>réduction</strong>.</p>",
             "background": "#e8e8e8",
             "text_color": "#000000"
           }
