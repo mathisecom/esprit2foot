@@ -12,13 +12,6 @@
     "main": {
       "type": "main-cart",
       "blocks": {
-        "totals": {
-          "type": "totals",
-          "settings": {
-            "show_order_weight": false,
-            "show_shipping_text": false
-          }
-        },
         "offer_HjkyVH": {
           "type": "offer",
           "settings": {
@@ -28,8 +21,15 @@
             "icon_width": 28,
             "title": "−5% SUR VOTRE PREMIERE COMMANDE",
             "content": "<p>Entrez le code <strong>BIENVENUE </strong>au paiement pour profiter de votre <strong>réduction</strong>.</p>",
-            "background": "#E8E8E8",
+            "background": "#e8e8e8",
             "text_color": "#000000"
+          }
+        },
+        "totals": {
+          "type": "totals",
+          "settings": {
+            "show_order_weight": false,
+            "show_shipping_text": false
           }
         },
         "checkout_button": {
@@ -38,8 +38,8 @@
         }
       },
       "block_order": [
-        "totals",
         "offer_HjkyVH",
+        "totals",
         "checkout_button"
       ],
       "settings": {
