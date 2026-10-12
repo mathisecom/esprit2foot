@@ -131,27 +131,67 @@
     Code promo
   </label>
 
-  <form id="CartDiscountForm" action="{{ routes.cart_url }}" method="get">
-    <div style="display:flex; gap:8px;">
-      <input
-        id="CartDiscountCode"
-        type="text"
-        name="discount"
-        placeholder="Entrez votre code"
-        autocomplete="off"
-        required
-        style="flex:1; min-width:0; padding:12px; border:1px solid #ccc; border-radius:6px;"
-      >
+ 
+<div class="cart-discount" style="margin-top:18px; margin-bottom:18px;">
+  <label for="CartDiscountCode" style="display:block; margin-bottom:8px; font-weight:600;">
+    Code promo
+  </label>
 
-      <button
-        type="submit"
-        style="padding:12px 16px; border:0; border-radius:6px; cursor:pointer;"
-      >
-        Appliquer
-      </button>
-    </div>
-  </form>
+  <div style="display:flex; gap:8px;">
+    <input
+      id="CartDiscountCode"
+      type="text"
+      placeholder="Entrez votre code"
+      autocomplete="off"
+      style="flex:1; min-width:0; padding:12px; border:1px solid #ccc; border-radius:6px;"
+    >
+
+    <button
+      type="button"
+      id="ApplyCartDiscount"
+      style="padding:12px 16px; border:0; border-radius:6px; cursor:pointer;"
+    >
+      Appliquer
+    </button>
+  </div>
+
+  <p id="CartDiscountMessage" style="margin-top:8px;" role="status"></p>
 </div>
+
+<script>
+  (function () {
+    var button = document.getElementById('ApplyCartDiscount');
+    var input = document.getElementById('CartDiscountCode');
+    var message = document.getElementById('CartDiscountMessage');
+
+    if (!button || !input || !message) return;
+
+    function applyDiscount() {
+      var code = input.value.trim();
+
+      if (!code) {
+        message.textContent = 'Entre un code promo.';
+        return;
+      }
+
+      message.textContent = 'Application du code…';
+
+      window.location.href =
+        '/discount/' + encodeURIComponent(code) +
+        '?redirect=' + encodeURIComponent('/cart');
+    }
+
+    button.addEventListener('click', applyDiscount);
+
+    input.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        event.preventDefault();
+        applyDiscount();
+      }
+    });
+  })();
+</script>
+
 
 
                       {%- if block.settings.show_shipping_text -%}
