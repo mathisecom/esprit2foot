@@ -35,12 +35,17 @@
         "checkout_button": {
           "type": "checkout_button",
           "settings": {}
+        },
+        "accelerated_buttons_WLzcry": {
+          "type": "accelerated_buttons",
+          "settings": {}
         }
       },
       "block_order": [
         "offer_HjkyVH",
         "totals",
-        "checkout_button"
+        "checkout_button",
+        "accelerated_buttons_WLzcry"
       ],
       "settings": {
         "show_shipping_estimator": false,
