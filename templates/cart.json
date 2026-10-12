@@ -19,9 +19,18 @@
             "show_shipping_text": false
           }
         },
-        "cart_note": {
-          "type": "cart_note",
-          "settings": {}
+        "offer_HjkyVH": {
+          "type": "offer",
+          "settings": {
+            "text_alignment": "start",
+            "icon_position": "aligned",
+            "icon": "picto-award-gift",
+            "icon_width": 28,
+            "title": "−5% SUR VOTRE PREMIERE COMMANDE",
+            "content": "<p>Entrez le code <strong>BIENVENUE </strong>au paiement pour profiter de votre <strong>réduction</strong>.</p>",
+            "background": "#E8E8E8",
+            "text_color": "#000000"
+          }
         },
         "checkout_button": {
           "type": "checkout_button",
@@ -30,11 +39,11 @@
       },
       "block_order": [
         "totals",
-        "cart_note",
+        "offer_HjkyVH",
         "checkout_button"
       ],
       "settings": {
-        "show_shipping_estimator": true,
+        "show_shipping_estimator": false,
         "show_payment_icons": true
       }
     }
