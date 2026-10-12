@@ -12,6 +12,13 @@
     "main": {
       "type": "main-cart",
       "blocks": {
+        "totals": {
+          "type": "totals",
+          "settings": {
+            "show_order_weight": false,
+            "show_shipping_text": false
+          }
+        },
         "offer_HjkyVH": {
           "type": "offer",
           "settings": {
@@ -25,13 +32,6 @@
             "text_color": "#000000"
           }
         },
-        "totals": {
-          "type": "totals",
-          "settings": {
-            "show_order_weight": false,
-            "show_shipping_text": false
-          }
-        },
         "checkout_button": {
           "type": "checkout_button",
           "settings": {}
@@ -42,8 +42,8 @@
         }
       },
       "block_order": [
-        "offer_HjkyVH",
         "totals",
+        "offer_HjkyVH",
         "checkout_button",
         "accelerated_buttons_WLzcry"
       ],
