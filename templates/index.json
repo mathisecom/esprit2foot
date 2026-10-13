@@ -547,7 +547,7 @@
       "name": "Scrolling text",
       "settings": {
         "full_width": true,
-        "text": "-10% EN S'ABONNANT GRATUITEMENT A LA NEWSLETTER",
+        "text": "-5% EN S'ABONNANT GRATUITEMENT A LA NEWSLETTER",
         "text_size": "xsmall",
         "text_style": "fill",
         "scrolling_mode": "auto",
