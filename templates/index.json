@@ -271,21 +271,6 @@
     "collection_list_7khGbL": {
       "type": "collection-list",
       "blocks": {
-        "collection_qWUcyP": {
-          "type": "collection",
-          "settings": {
-            "collection": "vapor",
-            "image": "shopify://shop_images/crampons-mercurial-united-pack-nike-1024x587_95a4ff8b-ace3-4f74-af15-fdb5d5ebdc52.png",
-            "subheading": "",
-            "title": "MERCURIAL",
-            "url": "",
-            "heading_tag": "h3",
-            "text_position": "place-self-center text-center",
-            "text_color": "#ffffff",
-            "overlay_color": "#000000",
-            "overlay_opacity": 5
-          }
-        },
         "collection_tjHTLB": {
           "type": "collection",
           "settings": {
@@ -295,6 +280,21 @@
             "title": "F50",
             "url": "",
             "heading_tag": "h2",
+            "text_position": "place-self-center text-center",
+            "text_color": "#ffffff",
+            "overlay_color": "#000000",
+            "overlay_opacity": 5
+          }
+        },
+        "collection_qWUcyP": {
+          "type": "collection",
+          "settings": {
+            "collection": "vapor",
+            "image": "shopify://shop_images/crampons-mercurial-united-pack-nike-1024x587_95a4ff8b-ace3-4f74-af15-fdb5d5ebdc52.png",
+            "subheading": "",
+            "title": "MERCURIAL",
+            "url": "",
+            "heading_tag": "h3",
             "text_position": "place-self-center text-center",
             "text_color": "#ffffff",
             "overlay_color": "#000000",
@@ -438,8 +438,8 @@
         }
       },
       "block_order": [
-        "collection_qWUcyP",
         "collection_tjHTLB",
+        "collection_qWUcyP",
         "collection_Ny3wJw",
         "collection_Qkmnat",
         "collection_kCNYEx",
