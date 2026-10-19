@@ -12,28 +12,6 @@
     "slideshow_TEBwWb": {
       "type": "slideshow",
       "blocks": {
-        "image_TkmwRV": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/87b1a812-2091-4eb6-8df7-1d29e052641f.png",
-            "mobile_image": "shopify://shop_images/final-rush-6.jpg",
-            "content_max_width": 780,
-            "mobile_text_position": "place-self-end-center text-center",
-            "desktop_text_position": "sm:place-self-end-start sm:text-start",
-            "subheading": "« New season, new chaos for F50. »",
-            "title": "Nouveauté : \" Final Rush \" Pack",
-            "heading_tag": "h2",
-            "button_text": "ACHETER MAINTENANT",
-            "button_link": "https://esprit2foot.fr/search?q=chaos+vs+control&type=product",
-            "text_color": "#ffffff",
-            "button_background": "#ffffff",
-            "button_text_color": "#000000",
-            "overlay_color": "#101010",
-            "overlay_opacity": 11,
-            "background": "",
-            "background_gradient": ""
-          }
-        },
         "image_ndNJfN": {
           "type": "image",
           "settings": {
@@ -52,6 +30,28 @@
             "button_text_color": "#000000",
             "overlay_color": "#000000",
             "overlay_opacity": 5,
+            "background": "",
+            "background_gradient": ""
+          }
+        },
+        "image_TkmwRV": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/87b1a812-2091-4eb6-8df7-1d29e052641f.png",
+            "mobile_image": "shopify://shop_images/final-rush-6.jpg",
+            "content_max_width": 780,
+            "mobile_text_position": "place-self-end-center text-center",
+            "desktop_text_position": "sm:place-self-end-start sm:text-start",
+            "subheading": "« New season, new chaos for F50. »",
+            "title": "Nouveauté : \" Final Rush \" Pack",
+            "heading_tag": "h2",
+            "button_text": "ACHETER MAINTENANT",
+            "button_link": "https://esprit2foot.fr/search?q=chaos+vs+control&type=product",
+            "text_color": "#ffffff",
+            "button_background": "#ffffff",
+            "button_text_color": "#000000",
+            "overlay_color": "#101010",
+            "overlay_opacity": 11,
             "background": "",
             "background_gradient": ""
           }
@@ -80,8 +80,8 @@
         }
       },
       "block_order": [
-        "image_TkmwRV",
         "image_ndNJfN",
+        "image_TkmwRV",
         "image_E7WmFa"
       ],
       "name": "Slideshow",
