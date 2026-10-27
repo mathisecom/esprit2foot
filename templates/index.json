@@ -651,6 +651,162 @@
         "text_gradient": ""
       }
     },
+    "collabs_a7VaHx": {
+      "type": "collabs",
+      "blocks": {
+        "influencer_je9cG9": {
+          "type": "influencer",
+          "settings": {
+            "photo_alt": "Vidéo de collaboration",
+            "platform": "TIKTOK",
+            "platform_icon": "♪",
+            "show_play": true,
+            "avatar_fallback": "EF",
+            "name": "PABLOBRIMEUX",
+            "handle": "@pablobrimeux",
+            "verified": true,
+            "verified_icon": "✓",
+            "video_url": "",
+            "button_icon": "▷",
+            "button_text": "Voir la vidéo",
+            "button_end_icon": "↗"
+          }
+        },
+        "influencer_qAWwDD": {
+          "type": "influencer",
+          "settings": {
+            "photo_alt": "Vidéo de collaboration",
+            "platform": "TIKTOK",
+            "platform_icon": "♪",
+            "show_play": true,
+            "avatar_fallback": "EF",
+            "name": "SAYAN",
+            "handle": "@sayan.off",
+            "verified": true,
+            "verified_icon": "✓",
+            "video_url": "",
+            "button_icon": "▷",
+            "button_text": "Voir la vidéo",
+            "button_end_icon": "↗"
+          }
+        },
+        "influencer_tBB3GV": {
+          "type": "influencer",
+          "settings": {
+            "photo_alt": "Vidéo de collaboration",
+            "platform": "INSTAGRAM",
+            "platform_icon": "◎",
+            "show_play": true,
+            "avatar_fallback": "EF",
+            "name": "GAMEMIXTREIZE",
+            "handle": "@gamemixtreize",
+            "verified": true,
+            "verified_icon": "✓",
+            "video_url": "",
+            "button_icon": "▷",
+            "button_text": "Voir la vidéo",
+            "button_end_icon": "↗"
+          }
+        },
+        "influencer_UdLwhd": {
+          "type": "influencer",
+          "settings": {
+            "photo_alt": "Vidéo de collaboration",
+            "platform": "TIKTOK",
+            "platform_icon": "♪",
+            "show_play": true,
+            "avatar_fallback": "EF",
+            "name": "RWANI10",
+            "handle": "@rwani10",
+            "verified": true,
+            "verified_icon": "✓",
+            "video_url": "",
+            "button_icon": "▷",
+            "button_text": "Voir la vidéo",
+            "button_end_icon": "↗"
+          }
+        },
+        "stat_qcqtnF": {
+          "type": "stat",
+          "settings": {
+            "icon": "♧",
+            "value": "+250K",
+            "label": "Abonnés cumulés"
+          }
+        },
+        "stat_4HgGYn": {
+          "type": "stat",
+          "settings": {
+            "icon": "▷",
+            "value": "+50",
+            "label": "Vidéos publiées"
+          }
+        },
+        "stat_GaHKLw": {
+          "type": "stat",
+          "settings": {
+            "icon": "🤝",
+            "value": "100%",
+            "label": "Collaborations vérifiées"
+          }
+        },
+        "stat_efcVFq": {
+          "type": "stat",
+          "settings": {
+            "icon": "ϟ",
+            "value": "",
+            "label": "Une visibilité auprès d'une vraie communauté football"
+          }
+        }
+      },
+      "block_order": [
+        "influencer_je9cG9",
+        "influencer_qAWwDD",
+        "influencer_tBB3GV",
+        "influencer_UdLwhd",
+        "stat_qcqtnF",
+        "stat_4HgGYn",
+        "stat_GaHKLw",
+        "stat_efcVFq"
+      ],
+      "name": "E2F - Nos collaborations",
+      "settings": {
+        "logo": "shopify://shop_images/Nouveau_projet_21.png",
+        "logo_alt": "",
+        "logo_text": "",
+        "logo_width": 240,
+        "title_black": "NOS",
+        "title_color": "COLLABORATIONS",
+        "subtitle": "Découvrez nos collaborations avec des créateurs de contenu passionnés de football.",
+        "title_size": 64,
+        "feature_heading": "NOS INFLUENCEURS",
+        "feature_number": "250K",
+        "feature_suffix": "+",
+        "feature_caption": "Abonnés cumulés",
+        "feature_icon": "🤝",
+        "feature_description": "Des collaborations avec des créateurs passionnés",
+        "feature_logo_alt": "Logo Esprit2'FOOT",
+        "feature_logo_text": "EF ESPRIT2'FOOT",
+        "feature_logo_width": 190,
+        "feature_number_size": 66,
+        "max_width": 1650,
+        "cards_visible": 4,
+        "card_gap": 20,
+        "card_radius": 20,
+        "stat_columns": "4",
+        "background": "#FFFFFF",
+        "white": "#FFFFFF",
+        "black": "#050809",
+        "turquoise": "#00DCD9",
+        "muted": "#62666D",
+        "feature_background": "#061012",
+        "feature_text": "#FFFFFF",
+        "feature_divider": "#FFFFFF",
+        "stats_background": "#E2FBFA",
+        "padding_top": 40,
+        "padding_bottom": 12
+      }
+    },
     "e2f_retours_players_9CGtq3": {
       "type": "e2f-retours-players",
       "blocks": {
@@ -765,7 +921,7 @@
         "review_count": "+300 avis clients",
         "brand_logo": "shopify://shop_images/Nouveau_projet_21.avif",
         "logo_width": 145,
-        "background": "#FFFFFF",
+        "background": "#ffffff",
         "card_background": "#000000",
         "text_color": "#000000",
         "review_text_color": "#ffffff",
@@ -980,6 +1136,7 @@
     "scrolling_text_mRWVdk",
     "multi_column_h4QNhQ",
     "scrolling_text_MBNpEd",
+    "collabs_a7VaHx",
     "e2f_retours_players_9CGtq3",
     "media_with_text_98C7FQ",
     "faq_V6ja6K",
