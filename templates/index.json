@@ -620,6 +620,7 @@
         "item_kKGWje",
         "item_VnUzyf"
       ],
+      "disabled": true,
       "name": "Multi-column",
       "settings": {
         "full_width": true,
@@ -657,17 +658,19 @@
         "influencer_je9cG9": {
           "type": "influencer",
           "settings": {
+            "photo": "shopify://shop_images/Capture_d_ecran_2026-10-27_a_21.34.53.png",
             "photo_alt": "Vidéo de collaboration",
             "platform": "TIKTOK",
             "platform_icon": "♪",
             "show_play": true,
+            "avatar": "shopify://shop_images/0cf78a8eb3caf53b35a39d1851b6b34c_tplv-tiktokx-cropcenter-1080-1080.jpg",
             "avatar_fallback": "EF",
-            "name": "PABLOBRIMEUX",
-            "handle": "@pablobrimeux",
+            "name": "Giovany",
+            "handle": "@giovany.69",
             "verified": true,
             "verified_icon": "✓",
-            "video_url": "",
-            "button_icon": "▷",
+            "video_url": "https://www.tiktok.com/@giovany.69/video/7700252531708022048?is_from_webapp=1&sender_device=pc&web_id=7701016814067582496",
+            "button_icon": "",
             "button_text": "Voir la vidéo",
             "button_end_icon": "↗"
           }
@@ -749,14 +752,6 @@
             "value": "100%",
             "label": "Collaborations vérifiées"
           }
-        },
-        "stat_efcVFq": {
-          "type": "stat",
-          "settings": {
-            "icon": "ϟ",
-            "value": "",
-            "label": "Une visibilité auprès d'une vraie communauté football"
-          }
         }
       },
       "block_order": [
@@ -766,45 +761,45 @@
         "influencer_UdLwhd",
         "stat_qcqtnF",
         "stat_4HgGYn",
-        "stat_GaHKLw",
-        "stat_efcVFq"
+        "stat_GaHKLw"
       ],
       "name": "E2F - Nos collaborations",
       "settings": {
-        "logo": "shopify://shop_images/Nouveau_projet_21.png",
+        "logo": "shopify://shop_images/Nouveau_projet_20.png",
         "logo_alt": "",
         "logo_text": "",
-        "logo_width": 240,
+        "logo_width": 210,
         "title_black": "NOS",
         "title_color": "COLLABORATIONS",
         "subtitle": "Découvrez nos collaborations avec des créateurs de contenu passionnés de football.",
         "title_size": 64,
-        "feature_heading": "NOS INFLUENCEURS",
-        "feature_number": "250K",
+        "feature_heading": "INFLUENCEURS",
+        "feature_number": "1,4M",
         "feature_suffix": "+",
         "feature_caption": "Abonnés cumulés",
-        "feature_icon": "🤝",
-        "feature_description": "Des collaborations avec des créateurs passionnés",
+        "feature_icon": "",
+        "feature_description": "ILS NOUS FONT CONFIANCE.",
+        "feature_logo": "shopify://shop_images/Nouveau_projet_21.png",
         "feature_logo_alt": "Logo Esprit2'FOOT",
         "feature_logo_text": "EF ESPRIT2'FOOT",
         "feature_logo_width": 190,
         "feature_number_size": 66,
-        "max_width": 1650,
-        "cards_visible": 4,
-        "card_gap": 20,
+        "max_width": 1800,
+        "cards_visible": 3,
+        "card_gap": 19,
         "card_radius": 20,
-        "stat_columns": "4",
+        "stat_columns": "3",
         "background": "#FFFFFF",
         "white": "#FFFFFF",
         "black": "#050809",
-        "turquoise": "#00DCD9",
+        "turquoise": "#00FFFB",
         "muted": "#62666D",
         "feature_background": "#061012",
         "feature_text": "#FFFFFF",
         "feature_divider": "#FFFFFF",
         "stats_background": "#E2FBFA",
-        "padding_top": 40,
-        "padding_bottom": 12
+        "padding_top": 64,
+        "padding_bottom": 0
       }
     },
     "e2f_retours_players_9CGtq3": {
