@@ -675,6 +675,26 @@
             "button_end_icon": "↗"
           }
         },
+        "influencer_UEHRUC": {
+          "type": "influencer",
+          "settings": {
+            "photo": "shopify://shop_images/Capture_d_ecran_2026-10-27_a_21.37.09.png",
+            "photo_alt": "Vidéo de collaboration",
+            "platform": "TIKTOK",
+            "platform_icon": "",
+            "show_play": true,
+            "avatar": "shopify://shop_images/0cf78a8eb3caf53b35a39d1851b6b34c_tplv-tiktokx-cropcenter-1080-1080.jpg",
+            "avatar_fallback": "EF",
+            "name": "Giovany",
+            "handle": "@giovany.69",
+            "verified": true,
+            "verified_icon": "✓",
+            "video_url": "https://www.tiktok.com/@giovany.69/video/7700702385039068448?is_from_webapp=1&sender_device=pc&web_id=7701016814067582496",
+            "button_icon": "",
+            "button_text": "Voir la vidéo",
+            "button_end_icon": "↗"
+          }
+        },
         "influencer_qAWwDD": {
           "type": "influencer",
           "settings": {
@@ -756,6 +776,7 @@
       },
       "block_order": [
         "influencer_je9cG9",
+        "influencer_UEHRUC",
         "influencer_qAWwDD",
         "influencer_tBB3GV",
         "influencer_UdLwhd",
