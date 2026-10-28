@@ -661,18 +661,15 @@
             "photo": "shopify://shop_images/Capture_d_ecran_2026-10-27_a_21.34.53.png",
             "photo_alt": "Vidéo de collaboration",
             "platform": "TIKTOK",
-            "platform_icon": "♪",
+            "platform_custom_label": "Vidéo",
             "show_play": true,
             "avatar": "shopify://shop_images/0cf78a8eb3caf53b35a39d1851b6b34c_tplv-tiktokx-cropcenter-1080-1080.jpg",
             "avatar_fallback": "EF",
             "name": "Giovany",
             "handle": "@giovany.69",
             "verified": true,
-            "verified_icon": "✓",
             "video_url": "https://www.tiktok.com/@giovany.69/video/7700252531708022048?is_from_webapp=1&sender_device=pc&web_id=7701016814067582496",
-            "button_icon": "",
-            "button_text": "Voir la vidéo",
-            "button_end_icon": "↗"
+            "button_text": "Voir la vidéo"
           }
         },
         "influencer_UEHRUC": {
@@ -681,18 +678,15 @@
             "photo": "shopify://shop_images/Capture_d_ecran_2026-10-27_a_21.37.09.png",
             "photo_alt": "Vidéo de collaboration",
             "platform": "TIKTOK",
-            "platform_icon": "♪",
+            "platform_custom_label": "Vidéo",
             "show_play": true,
             "avatar": "shopify://shop_images/0cf78a8eb3caf53b35a39d1851b6b34c_tplv-tiktokx-cropcenter-1080-1080.jpg",
             "avatar_fallback": "EF",
             "name": "Giovany",
             "handle": "@giovany.69",
             "verified": true,
-            "verified_icon": "✓",
             "video_url": "https://www.tiktok.com/@giovany.69/video/7700702385039068448?is_from_webapp=1&sender_device=pc&web_id=7701016814067582496",
-            "button_icon": "",
-            "button_text": "Voir la vidéo",
-            "button_end_icon": "↗"
+            "button_text": "Voir la vidéo"
           }
         },
         "influencer_qAWwDD": {
@@ -701,17 +695,14 @@
             "photo": "shopify://shop_images/Capture_d_ecran_2026-10-27_a_21.43.51.png",
             "photo_alt": "Vidéo de collaboration",
             "platform": "TIKTOK",
-            "platform_icon": "♪",
+            "platform_custom_label": "Vidéo",
             "show_play": true,
             "avatar_fallback": "EF",
             "name": "rayaneer69",
             "handle": "@rayaneer69",
             "verified": true,
-            "verified_icon": "✓",
             "video_url": "https://www.tiktok.com/@rayaneer69/video/7700638928314928417?is_from_webapp=1&sender_device=pc&web_id=7701016814067582496",
-            "button_icon": "",
-            "button_text": "Voir la vidéo",
-            "button_end_icon": "↗"
+            "button_text": "Voir la vidéo"
           }
         },
         "influencer_tBB3GV": {
@@ -719,17 +710,14 @@
           "settings": {
             "photo_alt": "Vidéo de collaboration",
             "platform": "INSTAGRAM",
-            "platform_icon": "◎",
+            "platform_custom_label": "Vidéo",
             "show_play": true,
             "avatar_fallback": "EF",
             "name": "GAMEMIXTREIZE",
             "handle": "@gamemixtreize",
             "verified": true,
-            "verified_icon": "✓",
             "video_url": "",
-            "button_icon": "▷",
-            "button_text": "Voir la vidéo",
-            "button_end_icon": "↗"
+            "button_text": "Voir la vidéo"
           }
         },
         "influencer_UdLwhd": {
@@ -737,31 +725,28 @@
           "settings": {
             "photo_alt": "Vidéo de collaboration",
             "platform": "TIKTOK",
-            "platform_icon": "♪",
+            "platform_custom_label": "Vidéo",
             "show_play": true,
             "avatar_fallback": "EF",
             "name": "RWANI10",
             "handle": "@rwani10",
             "verified": true,
-            "verified_icon": "✓",
             "video_url": "",
-            "button_icon": "▷",
-            "button_text": "Voir la vidéo",
-            "button_end_icon": "↗"
+            "button_text": "Voir la vidéo"
           }
         },
         "stat_qcqtnF": {
           "type": "stat",
           "settings": {
-            "icon": "♧",
-            "value": "+250K",
+            "icon_type": "users",
+            "value": "+1,4M",
             "label": "Abonnés cumulés"
           }
         },
         "stat_4HgGYn": {
           "type": "stat",
           "settings": {
-            "icon": "▷",
+            "icon_type": "play",
             "value": "+50",
             "label": "Vidéos publiées"
           }
@@ -769,9 +754,17 @@
         "stat_GaHKLw": {
           "type": "stat",
           "settings": {
-            "icon": "🤝",
+            "icon_type": "handshake",
             "value": "100%",
             "label": "Collaborations vérifiées"
+          }
+        },
+        "stat_maTHPA": {
+          "type": "stat",
+          "settings": {
+            "icon_type": "bolt",
+            "value": "",
+            "label": "Des vrais communautés autour d'un même sport !"
           }
         }
       },
@@ -783,7 +776,8 @@
         "influencer_UdLwhd",
         "stat_qcqtnF",
         "stat_4HgGYn",
-        "stat_GaHKLw"
+        "stat_GaHKLw",
+        "stat_maTHPA"
       ],
       "name": "E2F - Nos collaborations",
       "settings": {
@@ -799,18 +793,21 @@
         "feature_number": "1,4M",
         "feature_suffix": "+",
         "feature_caption": "Abonnés cumulés",
-        "feature_icon": "jh",
         "feature_description": "ILS NOUS FONT CONFIANCE.",
         "feature_logo": "shopify://shop_images/Nouveau_projet_21.png",
         "feature_logo_alt": "Logo Esprit2'FOOT",
         "feature_logo_text": "EF ESPRIT2'FOOT",
         "feature_logo_width": 190,
         "feature_number_size": 66,
+        "feature_width": 300,
         "max_width": 1800,
-        "cards_visible": 3,
+        "cards_visible_desktop": "3.3",
         "card_gap": 19,
         "card_radius": 20,
-        "stat_columns": "4",
+        "mobile_feature_width": 42,
+        "mobile_card_width": 88,
+        "padding_top": 64,
+        "padding_bottom": 0,
         "background": "#ffffff",
         "white": "#ffffff",
         "black": "#050809",
@@ -819,9 +816,7 @@
         "feature_background": "#061012",
         "feature_text": "#ffffff",
         "feature_divider": "#ffffff",
-        "stats_background": "#e2fbfa",
-        "padding_top": 64,
-        "padding_bottom": 0
+        "stats_bg": "#ffffff"
       }
     },
     "e2f_retours_players_9CGtq3": {
