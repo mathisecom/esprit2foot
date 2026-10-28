@@ -1,7 +1,5 @@
 
-{% liquid
-  assign sid = section.id
-%}
+{% assign sid = section.id %}
 
 <section id="e2fc-{{ sid }}" class="e2fc">
   <div class="e2fc-shell">
@@ -9,51 +7,43 @@
     <header class="e2fc-header">
       {% if section.settings.logo != blank %}
         {{ section.settings.logo | image_url: width: 500 | image_tag: class: 'e2fc-logo', alt: section.settings.logo_alt }}
-      {% elsif section.settings.logo_text != blank %}
+      {% else %}
         <div class="e2fc-logo-text">{{ section.settings.logo_text | escape }}</div>
       {% endif %}
 
       <h2>{{ section.settings.title_black | escape }}
         <span>{{ section.settings.title_color | escape }}</span>
       </h2>
-
       <div class="e2fc-underline"></div>
-
-      {% if section.settings.subtitle != blank %}
-        <p class="e2fc-subtitle">{{ section.settings.subtitle | escape }}</p>
-      {% endif %}
+      <p class="e2fc-subtitle">{{ section.settings.subtitle | escape }}</p>
 
       <div class="e2fc-arrows">
-        <button type="button" class="e2fc-arrow e2fc-prev" aria-label="Collaborations précédentes">‹</button>
-        <button type="button" class="e2fc-arrow e2fc-next" aria-label="Collaborations suivantes">›</button>
+        <button type="button" class="e2fc-arrow e2fc-prev" aria-label="Précédent">‹</button>
+        <button type="button" class="e2fc-arrow e2fc-next" aria-label="Suivant">›</button>
       </div>
     </header>
 
     <div class="e2fc-main">
+
       <aside class="e2fc-feature">
-        {% if section.settings.feature_heading != blank %}
-          <div class="e2fc-feature-heading">
-            <span></span>{{ section.settings.feature_heading | escape }}
-          </div>
-        {% endif %}
+        <div class="e2fc-feature-heading">
+          <span class="e2fc-line"></span>
+          {{ section.settings.feature_heading | escape }}
+        </div>
 
         <div class="e2fc-feature-number">
-          {{ section.settings.feature_number | escape }}
-          <span>{{ section.settings.feature_suffix | escape }}</span>
+          {{ section.settings.feature_number | escape }}<span>{{ section.settings.feature_suffix | escape }}</span>
         </div>
 
         <p class="e2fc-feature-caption">{{ section.settings.feature_caption | escape }}</p>
-
-        <div class="e2fc-feature-divider"></div>
+        <div class="e2fc-divider"></div>
 
         <div class="e2fc-feature-description">
-          {% if section.settings.feature_icon != blank %}
-            <span class="e2fc-feature-icon">{{ section.settings.feature_icon | escape }}</span>
-          {% endif %}
+          <span class="e2fc-feature-icon">{{ section.settings.feature_icon | escape }}</span>
           <p>{{ section.settings.feature_description | escape }}</p>
         </div>
 
-        <div class="e2fc-feature-divider"></div>
+        <div class="e2fc-divider"></div>
 
         {% if section.settings.feature_logo != blank %}
           {{ section.settings.feature_logo | image_url: width: 400 | image_tag: class: 'e2fc-feature-logo', alt: section.settings.feature_logo_alt }}
@@ -66,29 +56,53 @@
         {% for block in section.blocks %}
           {% if block.type == 'influencer' %}
             <article class="e2fc-card" {{ block.shopify_attributes }}>
-              <a class="e2fc-photo-link"
-                 href="{{ block.settings.video_url | default: '#' }}"
-                 {% if block.settings.video_url != blank %}target="_blank" rel="noopener noreferrer"{% endif %}
-                 aria-label="{{ block.settings.name | escape }} — {{ block.settings.button_text | escape }}">
+
+              {% if block.settings.video_url != blank %}
+                <a class="e2fc-photo-link" href="{{ block.settings.video_url }}" target="_blank" rel="noopener noreferrer" aria-label="Voir la vidéo de {{ block.settings.name | escape }}">
+              {% else %}
+                <div class="e2fc-photo-link">
+              {% endif %}
 
                 {% if block.settings.photo != blank %}
                   {{ block.settings.photo | image_url: width: 900 | image_tag: class: 'e2fc-photo', loading: 'lazy', alt: block.settings.photo_alt }}
                 {% else %}
-                  <div class="e2fc-photo-placeholder">
-                    <span>{{ block.settings.platform_icon | escape }}</span>
-                    <small>Ajoutez une photo</small>
-                  </div>
+                  <div class="e2fc-photo-placeholder">Ajoutez une photo dans l’éditeur Shopify</div>
                 {% endif %}
 
                 <span class="e2fc-platform">
-                  <span>{{ block.settings.platform_icon | escape }}</span>
+                  <span class="e2fc-platform-logo">
+                    {% case block.settings.platform %}
+                      {% when 'TIKTOK' %}
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <path fill="currentColor" d="M19.6 7.1a7.1 7.1 0 0 1-4.2-1.4v8.1a6.1 6.1 0 1 1-6.1-6.1c.4 0 .8 0 1.2.1v3.4a2.8 2.8 0 1 0 1.6 2.6V0h3.4c.3 2.6 1.9 4.6 4.1 5.2z"/>
+                        </svg>
+                      {% when 'INSTAGRAM' %}
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2.3"/>
+                          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2.3"/>
+                          <circle cx="17.7" cy="6.5" r="1.3" fill="currentColor"/>
+                        </svg>
+                      {% when 'YOUTUBE' %}
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                          <rect x="2" y="5" width="20" height="14" rx="4" fill="#FF0033"/>
+                          <path d="M10 8.5 16 12l-6 3.5z" fill="#FFFFFF"/>
+                        </svg>
+                      {% else %}
+                        {{ block.settings.platform_icon | escape }}
+                    {% endcase %}
+                  </span>
                   {{ block.settings.platform | escape }}
                 </span>
 
                 {% if block.settings.show_play %}
                   <span class="e2fc-play" aria-hidden="true">▶</span>
                 {% endif %}
-              </a>
+
+              {% if block.settings.video_url != blank %}
+                </a>
+              {% else %}
+                </div>
+              {% endif %}
 
               <div class="e2fc-profile">
                 {% if block.settings.avatar != blank %}
@@ -108,21 +122,20 @@
                 </div>
               </div>
 
-              {% if block.settings.button_text != blank %}
-                {% if block.settings.video_url != blank %}
-                  <a class="e2fc-button" href="{{ block.settings.video_url }}" target="_blank" rel="noopener noreferrer">
-                    <span>{{ block.settings.button_icon | escape }}</span>
-                    {{ block.settings.button_text | escape }}
-                    <span>{{ block.settings.button_end_icon | escape }}</span>
-                  </a>
-                {% else %}
-                  <span class="e2fc-button e2fc-button-disabled">
-                    <span>{{ block.settings.button_icon | escape }}</span>
-                    {{ block.settings.button_text | escape }}
-                    <span>{{ block.settings.button_end_icon | escape }}</span>
-                  </span>
-                {% endif %}
+              {% if block.settings.video_url != blank %}
+                <a class="e2fc-button" href="{{ block.settings.video_url }}" target="_blank" rel="noopener noreferrer">
+                  <span>{{ block.settings.button_icon | escape }}</span>
+                  {{ block.settings.button_text | escape }}
+                  <span>{{ block.settings.button_end_icon | escape }}</span>
+                </a>
+              {% else %}
+                <span class="e2fc-button e2fc-button-disabled">
+                  <span>{{ block.settings.button_icon | escape }}</span>
+                  {{ block.settings.button_text | escape }}
+                  <span>{{ block.settings.button_end_icon | escape }}</span>
+                </span>
               {% endif %}
+
             </article>
           {% endif %}
         {% endfor %}
@@ -138,7 +151,6 @@
             {% else %}
               <span class="e2fc-stat-icon">{{ block.settings.icon | escape }}</span>
             {% endif %}
-
             <div class="e2fc-stat-copy">
               <strong>{{ block.settings.value | escape }}</strong>
               <span>{{ block.settings.label | escape }}</span>
@@ -158,93 +170,578 @@
   --ec-white: {{ section.settings.white }};
   --ec-muted: {{ section.settings.muted }};
   --ec-stats-bg: {{ section.settings.stats_background }};
-  --ec-card-radius: {{ section.settings.card_radius }}px;
   background: {{ section.settings.background }};
   color: var(--ec-black);
   padding: {{ section.settings.padding_top }}px 24px {{ section.settings.padding_bottom }}px;
   font-family: inherit;
 }
-#e2fc-{{ sid }} * { box-sizing: border-box; }
-#e2fc-{{ sid }} .e2fc-shell { max-width: {{ section.settings.max_width }}px; margin: 0 auto; }
-#e2fc-{{ sid }} .e2fc-header { text-align: center; position: relative; margin-bottom: 54px; }
-#e2fc-{{ sid }} .e2fc-logo { display: block; width: {{ section.settings.logo_width }}px; max-width: 60%; height: auto; margin: 0 auto 25px; object-fit: contain; }
-#e2fc-{{ sid }} .e2fc-logo-text { font-size: 22px; font-weight: 950; margin-bottom: 24px; }
-#e2fc-{{ sid }} .e2fc-header h2 { margin: 0; font-size: clamp(32px, 4.3vw, {{ section.settings.title_size }}px); line-height: 1.08; font-weight: 950; letter-spacing: -1.8px; font-style: italic; text-transform: uppercase; }
+#e2fc-{{ sid }} *,
+#e2fc-{{ sid }} *::before,
+#e2fc-{{ sid }} *::after { box-sizing: border-box; }
+
+#e2fc-{{ sid }} .e2fc-shell {
+  max-width: {{ section.settings.max_width }}px;
+  margin: 0 auto;
+}
+#e2fc-{{ sid }} .e2fc-header {
+  text-align: center;
+  position: relative;
+  margin-bottom: 46px;
+}
+#e2fc-{{ sid }} .e2fc-logo {
+  display: block;
+  width: {{ section.settings.logo_width }}px;
+  max-width: 60%;
+  height: auto;
+  margin: 0 auto 22px;
+  object-fit: contain;
+}
+#e2fc-{{ sid }} .e2fc-logo-text {
+  font-size: 22px;
+  font-weight: 950;
+  margin-bottom: 22px;
+}
+#e2fc-{{ sid }} .e2fc-header h2 {
+  margin: 0;
+  font-size: clamp(32px, 4.2vw, {{ section.settings.title_size }}px);
+  line-height: 1.08;
+  font-weight: 950;
+  letter-spacing: -1.8px;
+  font-style: italic;
+  text-transform: uppercase;
+}
 #e2fc-{{ sid }} .e2fc-header h2 span { color: var(--ec-turquoise); }
-#e2fc-{{ sid }} .e2fc-underline { height: 7px; width: 150px; background: var(--ec-turquoise); border-radius: 8px; margin: 13px auto 14px; transform: rotate(-4deg); }
-#e2fc-{{ sid }} .e2fc-subtitle { color: var(--ec-muted); font-size: 17px; line-height: 1.5; margin: 0 auto; max-width: 800px; }
-#e2fc-{{ sid }} .e2fc-arrows { position: absolute; right: 0; bottom: 0; display: flex; gap: 14px; }
-#e2fc-{{ sid }} .e2fc-arrow { border: 1px solid #dedede; background: var(--ec-white); color: var(--ec-black); border-radius: 50%; width: 54px; height: 54px; font-size: 33px; line-height: 1; cursor: pointer; }
-#e2fc-{{ sid }} .e2fc-arrow:hover, #e2fc-{{ sid }} .e2fc-next { background: var(--ec-turquoise); border-color: var(--ec-turquoise); box-shadow: 0 3px 12px #00d8d833; }
-#e2fc-{{ sid }} .e2fc-main { display: grid; grid-template-columns: minmax(230px, .98fr) minmax(0, 4fr); gap: 28px; align-items: stretch; }
-#e2fc-{{ sid }} .e2fc-feature { background: {{ section.settings.feature_background }}; color: {{ section.settings.feature_text }}; border-radius: 27px; padding: 32px 27px; display: flex; flex-direction: column; min-width: 0; }
-#e2fc-{{ sid }} .e2fc-feature-heading { display: flex; align-items: center; gap: 15px; color: var(--ec-turquoise); font-weight: 900; font-size: 16px; text-transform: uppercase; }
-#e2fc-{{ sid }} .e2fc-feature-heading > span { display: block; width: 3px; height: 28px; background: var(--ec-turquoise); flex-shrink: 0; }
-#e2fc-{{ sid }} .e2fc-feature-number { margin-top: 23px; font-size: clamp(42px, 4vw, {{ section.settings.feature_number_size }}px); font-weight: 950; line-height: 1; letter-spacing: -2px; white-space: nowrap; }
+#e2fc-{{ sid }} .e2fc-underline {
+  height: 7px;
+  width: 150px;
+  background: var(--ec-turquoise);
+  border-radius: 8px;
+  margin: 13px auto 14px;
+  transform: rotate(-4deg);
+}
+#e2fc-{{ sid }} .e2fc-subtitle {
+  color: var(--ec-muted);
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 800px;
+}
+#e2fc-{{ sid }} .e2fc-arrows {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  gap: 12px;
+}
+#e2fc-{{ sid }} .e2fc-arrow {
+  border: 1px solid #dedede;
+  background: var(--ec-white);
+  color: var(--ec-black);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+}
+#e2fc-{{ sid }} .e2fc-arrow:hover,
+#e2fc-{{ sid }} .e2fc-next {
+  background: var(--ec-turquoise);
+  border-color: var(--ec-turquoise);
+  box-shadow: 0 3px 12px #00d8d833;
+}
+
+/* Layout ordinateur */
+#e2fc-{{ sid }} .e2fc-main {
+  display: grid;
+  grid-template-columns: minmax(230px, .98fr) minmax(0, 4fr);
+  gap: 26px;
+  align-items: stretch;
+}
+#e2fc-{{ sid }} .e2fc-feature {
+  background: {{ section.settings.feature_background }};
+  color: {{ section.settings.feature_text }};
+  border-radius: 25px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+#e2fc-{{ sid }} .e2fc-feature-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--ec-turquoise);
+  font-weight: 900;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+#e2fc-{{ sid }} .e2fc-line {
+  width: 3px;
+  height: 27px;
+  background: var(--ec-turquoise);
+  flex-shrink: 0;
+}
+#e2fc-{{ sid }} .e2fc-feature-number {
+  margin-top: 24px;
+  font-size: clamp(42px, 4vw, {{ section.settings.feature_number_size }}px);
+  font-weight: 950;
+  line-height: 1;
+  letter-spacing: -2px;
+  white-space: nowrap;
+}
 #e2fc-{{ sid }} .e2fc-feature-number span { color: var(--ec-turquoise); }
-#e2fc-{{ sid }} .e2fc-feature-caption { margin: 9px 0 25px; font-size: 15px; line-height: 1.4; }
-#e2fc-{{ sid }} .e2fc-feature-divider { height: 1px; background: {{ section.settings.feature_divider }}; opacity: .85; width: 100%; }
-#e2fc-{{ sid }} .e2fc-feature-description { display: grid; grid-template-columns: 55px minmax(0,1fr); gap: 12px; align-items: start; padding: 25px 0; }
-#e2fc-{{ sid }} .e2fc-feature-icon { font-size: 38px; color: var(--ec-turquoise); line-height: 1.2; }
-#e2fc-{{ sid }} .e2fc-feature-description p { margin: 0; font-size: 15px; line-height: 1.55; }
-#e2fc-{{ sid }} .e2fc-feature-logo { display: block; width: {{ section.settings.feature_logo_width }}px; max-width: 100%; height: auto; object-fit: contain; margin: auto auto 0; padding-top: 25px; }
-#e2fc-{{ sid }} .e2fc-feature-brand { margin: auto auto 0; padding-top: 25px; font-size: 18px; font-weight: 950; text-align: center; }
-#e2fc-{{ sid }} .e2fc-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 3 * {{ section.settings.card_gap }}px) / {{ section.settings.cards_visible }}); gap: {{ section.settings.card_gap }}px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; min-width: 0; }
+#e2fc-{{ sid }} .e2fc-feature-caption {
+  margin: 9px 0 25px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+#e2fc-{{ sid }} .e2fc-divider {
+  height: 1px;
+  background: {{ section.settings.feature_divider }};
+  opacity: .8;
+  width: 100%;
+}
+#e2fc-{{ sid }} .e2fc-feature-description {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 24px 0;
+}
+#e2fc-{{ sid }} .e2fc-feature-icon {
+  font-size: 35px;
+  color: var(--ec-turquoise);
+  line-height: 1.2;
+}
+#e2fc-{{ sid }} .e2fc-feature-description p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+#e2fc-{{ sid }} .e2fc-feature-logo {
+  display: block;
+  width: {{ section.settings.feature_logo_width }}px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: auto auto 0;
+  padding-top: 24px;
+}
+#e2fc-{{ sid }} .e2fc-feature-brand {
+  margin: auto auto 0;
+  padding-top: 24px;
+  font-size: 18px;
+  font-weight: 950;
+  text-align: center;
+}
+
+/* Cartes influenceurs */
+#e2fc-{{ sid }} .e2fc-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 3 * {{ section.settings.card_gap }}px) / {{ section.settings.cards_visible }});
+  gap: {{ section.settings.card_gap }}px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  min-width: 0;
+  -webkit-overflow-scrolling: touch;
+}
 #e2fc-{{ sid }} .e2fc-track::-webkit-scrollbar { display: none; }
-#e2fc-{{ sid }} .e2fc-card { min-width: 0; display: flex; flex-direction: column; background: var(--ec-white); border: 1px solid #e8e8e8; border-radius: var(--ec-card-radius); overflow: hidden; box-shadow: 0 3px 7px #00000012; scroll-snap-align: start; }
-#e2fc-{{ sid }} .e2fc-photo-link { display: block; position: relative; aspect-ratio: 1 / 1.08; overflow: hidden; background: #eee; text-decoration: none; color: inherit; }
-#e2fc-{{ sid }} .e2fc-photo { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+#e2fc-{{ sid }} .e2fc-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  background: var(--ec-white);
+  border: 1px solid #e8e8e8;
+  border-radius: {{ section.settings.card_radius }}px;
+  overflow: hidden;
+  box-shadow: 0 3px 7px #00000012;
+  scroll-snap-align: start;
+}
+#e2fc-{{ sid }} .e2fc-photo-link {
+  display: block;
+  position: relative;
+  aspect-ratio: 1 / 1.08;
+  overflow: hidden;
+  background: #eee;
+  text-decoration: none;
+  color: inherit;
+}
+#e2fc-{{ sid }} .e2fc-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
 #e2fc-{{ sid }} .e2fc-card:hover .e2fc-photo { transform: scale(1.035); }
-#e2fc-{{ sid }} .e2fc-photo-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; height: 100%; color: #555; }
-#e2fc-{{ sid }} .e2fc-photo-placeholder span { font-size: 42px; }
-#e2fc-{{ sid }} .e2fc-platform { position: absolute; top: 13px; left: 12px; display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; background: #05090b; color: white; border-radius: 30px; font-size: 11px; line-height: 1; font-weight: 900; text-transform: uppercase; }
-#e2fc-{{ sid }} .e2fc-platform span { color: var(--ec-turquoise); font-size: 16px; }
-#e2fc-{{ sid }} .e2fc-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); display: grid; place-items: center; width: 56px; height: 56px; border: 3px solid white; border-radius: 50%; color: white; background: #00000048; font-size: 22px; padding-left: 3px; }
-#e2fc-{{ sid }} .e2fc-profile { display: flex; align-items: center; gap: 11px; padding: 13px 15px 9px; min-width: 0; }
-#e2fc-{{ sid }} .e2fc-avatar, #e2fc-{{ sid }} .e2fc-avatar-placeholder { width: 43px; height: 43px; flex: 0 0 43px; border-radius: 50%; object-fit: cover; background: #e8eeee; }
-#e2fc-{{ sid }} .e2fc-avatar-placeholder { display: grid; place-items: center; font-weight: 900; }
+#e2fc-{{ sid }} .e2fc-photo-placeholder {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  padding: 20px;
+  color: #555;
+  text-align: center;
+}
+#e2fc-{{ sid }} .e2fc-platform {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  background: #05090b;
+  color: white;
+  border-radius: 30px;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+#e2fc-{{ sid }} .e2fc-platform-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+}
+#e2fc-{{ sid }} .e2fc-platform-logo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#e2fc-{{ sid }} .e2fc-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 55px;
+  height: 55px;
+  border: 3px solid white;
+  border-radius: 50%;
+  color: white;
+  background: #00000048;
+  font-size: 22px;
+  padding-left: 3px;
+}
+#e2fc-{{ sid }} .e2fc-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 13px 9px;
+  min-width: 0;
+}
+#e2fc-{{ sid }} .e2fc-avatar,
+#e2fc-{{ sid }} .e2fc-avatar-placeholder {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e8eeee;
+}
+#e2fc-{{ sid }} .e2fc-avatar-placeholder {
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+}
 #e2fc-{{ sid }} .e2fc-profile-info { min-width: 0; }
-#e2fc-{{ sid }} .e2fc-name-row { display: flex; align-items: center; gap: 5px; }
-#e2fc-{{ sid }} .e2fc-name-row h3 { margin: 0; font-size: clamp(12px, 1vw, 16px); line-height: 1.25; font-weight: 950; overflow-wrap: anywhere; }
-#e2fc-{{ sid }} .e2fc-verified { display: inline-grid; place-items: center; background: #0ba9eb; color: white; border-radius: 50%; width: 17px; height: 17px; font-size: 11px; flex-shrink: 0; }
-#e2fc-{{ sid }} .e2fc-profile-info p { margin: 3px 0 0; color: #73777b; font-size: 12px; overflow-wrap: anywhere; }
-#e2fc-{{ sid }} .e2fc-button { display: flex; align-items: center; justify-content: center; gap: 9px; margin: auto 13px 14px; padding: 9px 8px; min-height: 39px; border: 2px solid var(--ec-turquoise); border-radius: 30px; background: linear-gradient(100deg, white, #8af8f3); color: #050505; font-size: 13px; font-weight: 900; line-height: 1.2; text-align: center; text-decoration: none; }
+#e2fc-{{ sid }} .e2fc-name-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#e2fc-{{ sid }} .e2fc-name-row h3 {
+  margin: 0;
+  font-size: clamp(12px, 1vw, 16px);
+  line-height: 1.25;
+  font-weight: 950;
+  overflow-wrap: anywhere;
+}
+#e2fc-{{ sid }} .e2fc-verified {
+  display: inline-grid;
+  place-items: center;
+  background: #0ba9eb;
+  color: white;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+  font-size: 11px;
+  flex-shrink: 0;
+}
+#e2fc-{{ sid }} .e2fc-profile-info p {
+  margin: 3px 0 0;
+  color: #73777b;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+#e2fc-{{ sid }} .e2fc-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: auto 12px 13px;
+  padding: 9px 6px;
+  min-height: 39px;
+  border: 2px solid var(--ec-turquoise);
+  border-radius: 30px;
+  background: linear-gradient(100deg, white, #8af8f3);
+  color: #050505;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
 #e2fc-{{ sid }} a.e2fc-button:hover { background: var(--ec-turquoise); }
 #e2fc-{{ sid }} .e2fc-button > span { font-size: 16px; }
 #e2fc-{{ sid }} .e2fc-button-disabled { opacity: .7; }
-#e2fc-{{ sid }} .e2fc-stats { display: grid; grid-template-columns: repeat({{ section.settings.stat_columns }}, minmax(0,1fr)); margin-top: 28px; background: var(--ec-stats-bg); border-radius: 22px; overflow: hidden; }
-#e2fc-{{ sid }} .e2fc-stat { position: relative; display: flex; align-items: center; justify-content: center; gap: 20px; padding: 22px 18px; min-width: 0; }
-#e2fc-{{ sid }} .e2fc-stat:not(:last-child)::after { content: ""; position: absolute; right: 0; top: 18%; height: 64%; width: 1px; background: var(--ec-turquoise); }
-#e2fc-{{ sid }} .e2fc-stat-icon { font-size: 37px; line-height: 1; flex-shrink: 0; }
-#e2fc-{{ sid }} .e2fc-stat-image { width: 43px; height: 43px; object-fit: contain; flex-shrink: 0; }
-#e2fc-{{ sid }} .e2fc-stat-copy { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
-#e2fc-{{ sid }} .e2fc-stat-copy strong { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.1; font-weight: 950; overflow-wrap: anywhere; }
-#e2fc-{{ sid }} .e2fc-stat-copy > span { font-size: 13px; line-height: 1.45; font-weight: 650; overflow-wrap: anywhere; }
 
-@media(max-width: 1100px) {
-  #e2fc-{{ sid }} .e2fc-main { grid-template-columns: 220px minmax(0,1fr); gap: 16px; }
-  #e2fc-{{ sid }} .e2fc-feature { padding: 24px 20px; }
-  #e2fc-{{ sid }} .e2fc-track { grid-auto-columns: calc((100% - {{ section.settings.card_gap }}px) / 2); }
-  #e2fc-{{ sid }} .e2fc-arrows { position: static; justify-content: center; margin-top: 18px; }
-  #e2fc-{{ sid }} .e2fc-header { margin-bottom: 35px; }
-  #e2fc-{{ sid }} .e2fc-stat { gap: 10px; padding: 18px 10px; }
+/* Statistiques */
+#e2fc-{{ sid }} .e2fc-stats {
+  display: grid;
+  grid-template-columns: repeat({{ section.settings.stat_columns }}, minmax(0, 1fr));
+  margin-top: 27px;
+  background: var(--ec-stats-bg);
+  border-radius: 22px;
+  overflow: hidden;
 }
-@media(max-width: 700px) {
-  #e2fc-{{ sid }} { padding-left: 15px; padding-right: 15px; }
-  #e2fc-{{ sid }} .e2fc-header h2 { font-size: clamp(28px, 8vw, 42px); letter-spacing: -1px; }
-  #e2fc-{{ sid }} .e2fc-subtitle { font-size: 14px; }
-  #e2fc-{{ sid }} .e2fc-main { grid-template-columns: 1fr; }
-  #e2fc-{{ sid }} .e2fc-feature { padding: 23px; border-radius: 20px; }
-  #e2fc-{{ sid }} .e2fc-feature-number { font-size: 54px; }
-  #e2fc-{{ sid }} .e2fc-feature-logo, #e2fc-{{ sid }} .e2fc-feature-brand { margin-left: 0; margin-right: auto; }
-  #e2fc-{{ sid }} .e2fc-track { grid-auto-columns: minmax(0, 82%); gap: 14px; }
-  #e2fc-{{ sid }} .e2fc-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  #e2fc-{{ sid }} .e2fc-stat { justify-content: flex-start; padding: 18px 12px; }
+#e2fc-{{ sid }} .e2fc-stat {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 22px 16px;
+  min-width: 0;
+}
+#e2fc-{{ sid }} .e2fc-stat:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 18%;
+  height: 64%;
+  width: 1px;
+  background: var(--ec-turquoise);
+}
+#e2fc-{{ sid }} .e2fc-stat-icon {
+  font-size: 35px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+#e2fc-{{ sid }} .e2fc-stat-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+#e2fc-{{ sid }} .e2fc-stat-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+#e2fc-{{ sid }} .e2fc-stat-copy strong {
+  font-size: clamp(20px, 2.1vw, 32px);
+  line-height: 1.1;
+  font-weight: 950;
+  overflow-wrap: anywhere;
+}
+#e2fc-{{ sid }} .e2fc-stat-copy > span {
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+/* Tablettes */
+@media (max-width: 1100px) {
+  #e2fc-{{ sid }} .e2fc-main {
+    grid-template-columns: minmax(190px, .85fr) minmax(0, 2fr);
+    gap: 16px;
+  }
+  #e2fc-{{ sid }} .e2fc-feature { padding: 22px 17px; }
+  #e2fc-{{ sid }} .e2fc-track {
+    grid-auto-columns: calc((100% - {{ section.settings.card_gap }}px) / 2);
+  }
+  #e2fc-{{ sid }} .e2fc-arrows {
+    position: static;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+
+/* Téléphones : carte à gauche, carrousel à droite */
+@media (max-width: 700px) {
+  #e2fc-{{ sid }} { padding-left: 10px; padding-right: 10px; }
+
+  #e2fc-{{ sid }} .e2fc-header { margin-bottom: 20px; }
+  #e2fc-{{ sid }} .e2fc-logo { margin-bottom: 15px; }
+  #e2fc-{{ sid }} .e2fc-header h2 {
+    font-size: clamp(25px, 6vw, 38px);
+    letter-spacing: -1px;
+  }
+  #e2fc-{{ sid }} .e2fc-subtitle { font-size: 12px; }
+  #e2fc-{{ sid }} .e2fc-arrows {
+    position: static;
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+  }
+  #e2fc-{{ sid }} .e2fc-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 24px;
+  }
+
+  #e2fc-{{ sid }} .e2fc-main {
+    display: grid;
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+    gap: 9px;
+    align-items: stretch;
+  }
+
+  #e2fc-{{ sid }} .e2fc-feature {
+    min-width: 0;
+    padding: 13px 9px;
+    border-radius: 14px;
+  }
+  #e2fc-{{ sid }} .e2fc-feature-heading {
+    font-size: 10px;
+    line-height: 1.35;
+    gap: 6px;
+  }
+  #e2fc-{{ sid }} .e2fc-line { height: 20px; width: 2px; }
+  #e2fc-{{ sid }} .e2fc-feature-number {
+    margin-top: 15px;
+    font-size: clamp(25px, 7vw, 38px);
+    letter-spacing: -1px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  #e2fc-{{ sid }} .e2fc-feature-caption {
+    font-size: 10px;
+    margin: 6px 0 13px;
+  }
+  #e2fc-{{ sid }} .e2fc-feature-description {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    padding: 13px 0;
+  }
+  #e2fc-{{ sid }} .e2fc-feature-icon { font-size: 23px; }
+  #e2fc-{{ sid }} .e2fc-feature-description p {
+    font-size: 10px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+  #e2fc-{{ sid }} .e2fc-feature-logo {
+    width: 100%;
+    padding-top: 13px;
+  }
+  #e2fc-{{ sid }} .e2fc-feature-brand {
+    font-size: 10px;
+    padding-top: 13px;
+    overflow-wrap: anywhere;
+  }
+
+  #e2fc-{{ sid }} .e2fc-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    grid-auto-columns: 100%;
+    gap: 9px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    min-width: 0;
+    align-items: stretch;
+    -webkit-overflow-scrolling: touch;
+  }
+  #e2fc-{{ sid }} .e2fc-track::-webkit-scrollbar { display: none; }
+  #e2fc-{{ sid }} .e2fc-card {
+    width: 100%;
+    min-width: 0;
+    border-radius: 12px;
+    scroll-snap-align: start;
+  }
+  #e2fc-{{ sid }} .e2fc-photo-link { aspect-ratio: 3 / 4; }
+  #e2fc-{{ sid }} .e2fc-platform {
+    top: 6px;
+    left: 5px;
+    padding: 5px 6px;
+    gap: 4px;
+    font-size: 8px;
+  }
+  #e2fc-{{ sid }} .e2fc-platform-logo {
+    width: 13px;
+    height: 13px;
+    flex-basis: 13px;
+  }
+  #e2fc-{{ sid }} .e2fc-play {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+    border-width: 2px;
+  }
+  #e2fc-{{ sid }} .e2fc-profile {
+    padding: 8px 6px;
+    gap: 5px;
+  }
+  #e2fc-{{ sid }} .e2fc-avatar,
+  #e2fc-{{ sid }} .e2fc-avatar-placeholder {
+    width: 26px;
+    height: 26px;
+    flex-basis: 26px;
+  }
+  #e2fc-{{ sid }} .e2fc-name-row { gap: 3px; }
+  #e2fc-{{ sid }} .e2fc-name-row h3 { font-size: 10px; }
+  #e2fc-{{ sid }} .e2fc-verified {
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+  }
+  #e2fc-{{ sid }} .e2fc-profile-info p { font-size: 9px; }
+  #e2fc-{{ sid }} .e2fc-button {
+    min-height: 31px;
+    margin: auto 5px 7px;
+    padding: 5px 2px;
+    gap: 3px;
+    font-size: 9px;
+  }
+  #e2fc-{{ sid }} .e2fc-button > span { font-size: 10px; }
+
+  #e2fc-{{ sid }} .e2fc-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 14px;
+    border-radius: 13px;
+  }
+  #e2fc-{{ sid }} .e2fc-stat {
+    justify-content: flex-start;
+    padding: 12px 8px;
+    gap: 7px;
+  }
   #e2fc-{{ sid }} .e2fc-stat:nth-child(2)::after { display: none; }
-  #e2fc-{{ sid }} .e2fc-stat-icon { font-size: 29px; }
-  #e2fc-{{ sid }} .e2fc-stat-image { width: 31px; height: 31px; }
-  #e2fc-{{ sid }} .e2fc-stat-copy strong { font-size: 22px; }
-  #e2fc-{{ sid }} .e2fc-stat-copy > span { font-size: 11px; }
+  #e2fc-{{ sid }} .e2fc-stat-icon { font-size: 22px; }
+  #e2fc-{{ sid }} .e2fc-stat-image { width: 24px; height: 24px; }
+  #e2fc-{{ sid }} .e2fc-stat-copy strong { font-size: 17px; }
+  #e2fc-{{ sid }} .e2fc-stat-copy > span { font-size: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #e2fc-{{ sid }} * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
 }
 </style>
 
@@ -260,9 +757,12 @@
 
   function move(direction) {
     if (!track) return;
+
     var card = track.querySelector('.e2fc-card');
     if (!card) return;
-    var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+
+    var styles = window.getComputedStyle(track);
+    var gap = parseFloat(styles.columnGap) || 0;
     track.scrollBy({
       left: direction * (card.getBoundingClientRect().width + gap),
       behavior: 'smooth'
@@ -276,50 +776,53 @@
 
 {% schema %}
 {
-  "name": "E2F - Collaborations",
+  "name": "E2F Collaborations",
   "settings": [
     { "type": "image_picker", "id": "logo", "label": "Logo principal" },
     { "type": "text", "id": "logo_alt", "label": "Texte alternatif du logo", "default": "Esprit2'FOOT" },
     { "type": "text", "id": "logo_text", "label": "Texte si aucun logo", "default": "EF ESPRIT2'FOOT" },
     { "type": "range", "id": "logo_width", "label": "Largeur du logo", "min": 100, "max": 400, "step": 10, "unit": "px", "default": 240 },
-    { "type": "text", "id": "title_black", "label": "Début du titre", "default": "NOS" },
-    { "type": "text", "id": "title_color", "label": "Partie turquoise du titre", "default": "COLLABORATIONS" },
+    { "type": "text", "id": "title_black", "label": "Titre noir", "default": "NOS" },
+    { "type": "text", "id": "title_color", "label": "Titre turquoise", "default": "COLLABORATIONS" },
     { "type": "text", "id": "subtitle", "label": "Sous-titre", "default": "Découvrez nos collaborations avec des créateurs de contenu passionnés de football." },
     { "type": "range", "id": "title_size", "label": "Taille du titre", "min": 32, "max": 76, "step": 2, "unit": "px", "default": 64 },
-    { "type": "header", "content": "Carte noire à gauche" },
-    { "type": "text", "id": "feature_heading", "label": "Titre de la carte", "default": "NOS INFLUENCEURS" },
+
+    { "type": "header", "content": "Carte de présentation" },
+    { "type": "text", "id": "feature_heading", "label": "Petit titre", "default": "NOS INFLUENCEURS" },
     { "type": "text", "id": "feature_number", "label": "Chiffre principal", "default": "250K" },
-    { "type": "text", "id": "feature_suffix", "label": "Symbole après le chiffre", "default": "+" },
+    { "type": "text", "id": "feature_suffix", "label": "Suffixe du chiffre", "default": "+" },
     { "type": "text", "id": "feature_caption", "label": "Texte sous le chiffre", "default": "Abonnés cumulés" },
-    { "type": "text", "id": "feature_icon", "label": "Icône de description", "default": "🤝" },
+    { "type": "text", "id": "feature_icon", "label": "Icône de présentation", "default": "🤝" },
     { "type": "textarea", "id": "feature_description", "label": "Description", "default": "Des collaborations avec des créateurs passionnés" },
-    { "type": "image_picker", "id": "feature_logo", "label": "Logo en bas de la carte" },
+    { "type": "image_picker", "id": "feature_logo", "label": "Logo dans la carte noire" },
     { "type": "text", "id": "feature_logo_alt", "label": "Texte alternatif du logo", "default": "Logo Esprit2'FOOT" },
-    { "type": "text", "id": "feature_logo_text", "label": "Texte si aucun logo n'est ajouté", "default": "EF ESPRIT2'FOOT" },
+    { "type": "text", "id": "feature_logo_text", "label": "Texte si aucun logo", "default": "EF ESPRIT2'FOOT" },
     { "type": "range", "id": "feature_logo_width", "label": "Largeur du logo inférieur", "min": 80, "max": 280, "step": 10, "unit": "px", "default": 190 },
-    { "type": "range", "id": "feature_number_size", "label": "Taille du chiffre de gauche", "min": 42, "max": 76, "step": 2, "unit": "px", "default": 66 },
-    { "type": "header", "content": "Disposition" },
-    { "type": "range", "id": "max_width", "label": "Largeur totale", "min": 1000, "max": 1800, "step": 50, "unit": "px", "default": 1650 },
+    { "type": "range", "id": "feature_number_size", "label": "Taille du chiffre", "min": 42, "max": 76, "step": 2, "unit": "px", "default": 66 },
+
+    { "type": "header", "content": "Mise en page" },
+    { "type": "range", "id": "max_width", "label": "Largeur maximale", "min": 1000, "max": 1800, "step": 50, "unit": "px", "default": 1650 },
     { "type": "range", "id": "cards_visible", "label": "Cartes visibles sur ordinateur", "min": 2, "max": 4, "step": 1, "default": 4 },
-    { "type": "range", "id": "card_gap", "label": "Espace entre cartes", "min": 8, "max": 35, "step": 1, "unit": "px", "default": 20 },
+    { "type": "range", "id": "card_gap", "label": "Espace entre les cartes", "min": 8, "max": 35, "step": 1, "unit": "px", "default": 20 },
     { "type": "range", "id": "card_radius", "label": "Arrondi des cartes", "min": 0, "max": 30, "step": 2, "unit": "px", "default": 20 },
-    { "type": "header", "content": "Bandeau de statistiques" },
-    { "type": "select", "id": "stat_columns", "label": "Nombre de colonnes", "options": [
-      { "value": "2", "label": "2" },
-      { "value": "3", "label": "3" },
-      { "value": "4", "label": "4" }
+    { "type": "select", "id": "stat_columns", "label": "Colonnes des statistiques", "options": [
+      { "value": "2", "label": "2 colonnes" },
+      { "value": "3", "label": "3 colonnes" },
+      { "value": "4", "label": "4 colonnes" }
     ], "default": "4" },
+
     { "type": "header", "content": "Couleurs" },
     { "type": "color", "id": "background", "label": "Fond général", "default": "#FFFFFF" },
-    { "type": "color", "id": "white", "label": "Blanc des cartes", "default": "#FFFFFF" },
-    { "type": "color", "id": "black", "label": "Noir principal", "default": "#050809" },
-    { "type": "color", "id": "turquoise", "label": "Turquoise Esprit2'FOOT", "default": "#00DCD9" },
+    { "type": "color", "id": "white", "label": "Fond des cartes", "default": "#FFFFFF" },
+    { "type": "color", "id": "black", "label": "Texte principal", "default": "#050809" },
+    { "type": "color", "id": "turquoise", "label": "Turquoise", "default": "#00DCD9" },
     { "type": "color", "id": "muted", "label": "Texte secondaire", "default": "#62666D" },
-    { "type": "color", "id": "feature_background", "label": "Fond de la carte gauche", "default": "#061012" },
-    { "type": "color", "id": "feature_text", "label": "Texte de la carte gauche", "default": "#FFFFFF" },
-    { "type": "color", "id": "feature_divider", "label": "Séparateurs de gauche", "default": "#FFFFFF" },
-    { "type": "color", "id": "stats_background", "label": "Fond du bandeau inférieur", "default": "#E2FBFA" },
-    { "type": "header", "content": "Espacements" },
+    { "type": "color", "id": "feature_background", "label": "Fond de la carte noire", "default": "#061012" },
+    { "type": "color", "id": "feature_text", "label": "Texte de la carte noire", "default": "#FFFFFF" },
+    { "type": "color", "id": "feature_divider", "label": "Séparateurs de la carte", "default": "#FFFFFF" },
+    { "type": "color", "id": "stats_background", "label": "Fond des statistiques", "default": "#E2FBFA" },
+
+    { "type": "header", "content": "Espacement vertical" },
     { "type": "range", "id": "padding_top", "label": "Marge supérieure", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 40 },
     { "type": "range", "id": "padding_bottom", "label": "Marge inférieure", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 12 }
   ],
@@ -328,8 +831,8 @@
       "type": "influencer",
       "name": "Influenceur",
       "settings": [
-        { "type": "image_picker", "id": "photo", "label": "Grande photo / miniature" },
-        { "type": "text", "id": "photo_alt", "label": "Texte alternatif de la photo", "default": "Vidéo de collaboration" },
+        { "type": "image_picker", "id": "photo", "label": "Photo / miniature de la vidéo" },
+        { "type": "text", "id": "photo_alt", "label": "Description de la photo", "default": "Vidéo de collaboration" },
         { "type": "select", "id": "platform", "label": "Plateforme", "options": [
           { "value": "TIKTOK", "label": "TikTok" },
           { "value": "INSTAGRAM", "label": "Instagram" },
@@ -337,39 +840,39 @@
           { "value": "SNAPCHAT", "label": "Snapchat" },
           { "value": "AUTRE", "label": "Autre" }
         ], "default": "TIKTOK" },
-        { "type": "text", "id": "platform_icon", "label": "Icône de plateforme", "default": "♪" },
-        { "type": "checkbox", "id": "show_play", "label": "Afficher bouton lecture", "default": true },
+        { "type": "text", "id": "platform_icon", "label": "Icône pour une autre plateforme", "default": "▶" },
+        { "type": "checkbox", "id": "show_play", "label": "Afficher le bouton lecture", "default": true },
         { "type": "image_picker", "id": "avatar", "label": "Photo de profil" },
-        { "type": "text", "id": "avatar_fallback", "label": "Initiales si pas de photo", "default": "EF" },
-        { "type": "text", "id": "name", "label": "Nom affiché", "default": "NOM DU CRÉATEUR" },
-        { "type": "text", "id": "handle", "label": "Pseudo du créateur", "default": "@pseudo" },
-        { "type": "checkbox", "id": "verified", "label": "Afficher le badge de vérification", "default": true },
-        { "type": "text", "id": "verified_icon", "label": "Symbole de vérification", "default": "✓" },
-        { "type": "url", "id": "video_url", "label": "Lien de la vidéo" },
-        { "type": "text", "id": "button_icon", "label": "Icône avant le bouton", "default": "▷" },
+        { "type": "text", "id": "avatar_fallback", "label": "Initiales sans photo", "default": "EF" },
+        { "type": "text", "id": "name", "label": "Nom du créateur", "default": "NOM DU CRÉATEUR" },
+        { "type": "text", "id": "handle", "label": "Pseudo", "default": "@pseudo" },
+        { "type": "checkbox", "id": "verified", "label": "Afficher le badge vérifié", "default": true },
+        { "type": "text", "id": "verified_icon", "label": "Icône du badge", "default": "✓" },
+        { "type": "url", "id": "video_url", "label": "Lien cliquable de la vidéo" },
+        { "type": "text", "id": "button_icon", "label": "Icône avant le texte", "default": "▷" },
         { "type": "text", "id": "button_text", "label": "Texte du bouton", "default": "Voir la vidéo" },
-        { "type": "text", "id": "button_end_icon", "label": "Icône après le bouton", "default": "↗" }
+        { "type": "text", "id": "button_end_icon", "label": "Icône après le texte", "default": "↗" }
       ]
     },
     {
       "type": "stat",
-      "name": "Statistique inférieure",
+      "name": "Statistique",
       "settings": [
-        { "type": "image_picker", "id": "icon_image", "label": "Image d'icône personnalisée (facultatif)" },
-        { "type": "text", "id": "icon", "label": "Icône ou emoji si pas d'image", "default": "♧" },
-        { "type": "text", "id": "value", "label": "Chiffre / valeur", "default": "+250K" },
-        { "type": "text", "id": "label", "label": "Texte descriptif", "default": "Abonnés cumulés" }
+        { "type": "image_picker", "id": "icon_image", "label": "Image d'icône personnalisée" },
+        { "type": "text", "id": "icon", "label": "Icône ou emoji", "default": "♧" },
+        { "type": "text", "id": "value", "label": "Valeur principale", "default": "+250K" },
+        { "type": "text", "id": "label", "label": "Description", "default": "Abonnés cumulés" }
       ]
     }
   ],
   "presets": [
     {
-      "name": "E2F - Nos collaborations",
+      "name": "E2F Nos collaborations",
       "blocks": [
-        { "type": "influencer", "settings": { "platform": "TIKTOK", "platform_icon": "♪", "name": "PABLOBRIMEUX", "handle": "@pablobrimeux" } },
-        { "type": "influencer", "settings": { "platform": "TIKTOK", "platform_icon": "♪", "name": "SAYAN", "handle": "@sayan.off" } },
-        { "type": "influencer", "settings": { "platform": "INSTAGRAM", "platform_icon": "◎", "name": "GAMEMIXTREIZE", "handle": "@gamemixtreize" } },
-        { "type": "influencer", "settings": { "platform": "TIKTOK", "platform_icon": "♪", "name": "RWANI10", "handle": "@rwani10" } },
+        { "type": "influencer", "settings": { "platform": "TIKTOK", "name": "PABLOBRIMEUX", "handle": "@pablobrimeux" } },
+        { "type": "influencer", "settings": { "platform": "TIKTOK", "name": "SAYAN", "handle": "@sayan.off" } },
+        { "type": "influencer", "settings": { "platform": "INSTAGRAM", "name": "GAMEMIXTREIZE", "handle": "@gamemixtreize" } },
+        { "type": "influencer", "settings": { "platform": "TIKTOK", "name": "RWANI10", "handle": "@rwani10" } },
         { "type": "stat", "settings": { "icon": "♧", "value": "+250K", "label": "Abonnés cumulés" } },
         { "type": "stat", "settings": { "icon": "▷", "value": "+50", "label": "Vidéos publiées" } },
         { "type": "stat", "settings": { "icon": "🤝", "value": "100%", "label": "Collaborations vérifiées" } },
