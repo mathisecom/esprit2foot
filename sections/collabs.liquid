@@ -8,205 +8,124 @@
 
     <header class="e2fc-header">
       {% if section.settings.logo != blank %}
-        <img
-          class="e2fc-brand-logo"
-          src="{{ section.settings.logo | image_url: width: 500 }}"
-          alt="{{ shop.name | escape }}"
-          width="{{ section.settings.logo.width }}"
-          height="{{ section.settings.logo.height }}"
-          loading="lazy"
-        >
+        {{ section.settings.logo | image_url: width: 500 | image_tag: class: 'e2fc-logo', alt: section.settings.logo_alt }}
+      {% elsif section.settings.logo_text != blank %}
+        <div class="e2fc-logo-text">{{ section.settings.logo_text | escape }}</div>
       {% endif %}
 
-      <h2 class="e2fc-title">
-        <span>{{ section.settings.title_black | escape }}</span>
-        <span class="e2fc-title-accent">{{ section.settings.title_accent | escape }}</span>
+      <h2>{{ section.settings.title_black | escape }}
+        <span>{{ section.settings.title_color | escape }}</span>
       </h2>
+
+      <div class="e2fc-underline"></div>
 
       {% if section.settings.subtitle != blank %}
         <p class="e2fc-subtitle">{{ section.settings.subtitle | escape }}</p>
       {% endif %}
 
-      <div class="e2fc-controls">
-        <button class="e2fc-arrow e2fc-prev" type="button" aria-label="Créateur précédent">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg>
-        </button>
-        <button class="e2fc-arrow e2fc-next" type="button" aria-label="Créateur suivant">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>
-        </button>
+      <div class="e2fc-arrows">
+        <button type="button" class="e2fc-arrow e2fc-prev" aria-label="Collaborations précédentes">‹</button>
+        <button type="button" class="e2fc-arrow e2fc-next" aria-label="Collaborations suivantes">›</button>
       </div>
     </header>
 
     <div class="e2fc-main">
-
       <aside class="e2fc-feature">
-        <div class="e2fc-corner e2fc-corner-top" aria-hidden="true"></div>
-
-        <div class="e2fc-feature-heading">
-          <span class="e2fc-feature-line"></span>
-          <h3>{{ section.settings.feature_title | escape }}</h3>
-        </div>
-
-        {% if section.settings.feature_number != blank %}
-          <div class="e2fc-feature-number">
-            <span>{{ section.settings.feature_number | escape }}</span><b>+</b>
+        {% if section.settings.feature_heading != blank %}
+          <div class="e2fc-feature-heading">
+            <span></span>{{ section.settings.feature_heading | escape }}
           </div>
         {% endif %}
 
-        {% if section.settings.feature_number_label != blank %}
-          <p class="e2fc-feature-number-label">
-            {{ section.settings.feature_number_label | escape }}
-          </p>
-        {% endif %}
+        <div class="e2fc-feature-number">
+          {{ section.settings.feature_number | escape }}
+          <span>{{ section.settings.feature_suffix | escape }}</span>
+        </div>
+
+        <p class="e2fc-feature-caption">{{ section.settings.feature_caption | escape }}</p>
 
         <div class="e2fc-feature-divider"></div>
 
         <div class="e2fc-feature-description">
-          <svg viewBox="0 0 64 48" aria-hidden="true">
-            <path d="M23 28 14 37 3 26l12-16 11-5 8 2 6 8 7-4 9 3 5 11-15 17-8 2-6-5-5-1-4-5Z"/>
-            <path d="m15 10 12 11 9-5 8 6 6-5M23 28l7 7m-2-12 8 8m-3-15 6 6m-10 13 5 5m7-9 6 6"/>
-          </svg>
+          {% if section.settings.feature_icon != blank %}
+            <span class="e2fc-feature-icon">{{ section.settings.feature_icon | escape }}</span>
+          {% endif %}
           <p>{{ section.settings.feature_description | escape }}</p>
         </div>
 
         <div class="e2fc-feature-divider"></div>
 
-        <div class="e2fc-feature-brand">
-          {% if section.settings.feature_logo != blank %}
-            <img
-              src="{{ section.settings.feature_logo | image_url: width: 400 }}"
-              alt="{{ shop.name | escape }}"
-              width="{{ section.settings.feature_logo.width }}"
-              height="{{ section.settings.feature_logo.height }}"
-              loading="lazy"
-            >
-          {% else %}
-            <span class="e2fc-brand-monogram">EF</span>
-            <span class="e2fc-brand-name">ESPRIT<span>2’FOOT</span></span>
-          {% endif %}
-        </div>
-
-        <div class="e2fc-corner e2fc-corner-bottom" aria-hidden="true"></div>
+        {% if section.settings.feature_logo != blank %}
+          {{ section.settings.feature_logo | image_url: width: 400 | image_tag: class: 'e2fc-feature-logo', alt: section.settings.feature_logo_alt }}
+        {% else %}
+          <div class="e2fc-feature-brand">{{ section.settings.feature_logo_text | escape }}</div>
+        {% endif %}
       </aside>
 
-      <div class="e2fc-carousel">
-        <div class="e2fc-track" tabindex="0" aria-label="Carrousel des créateurs">
-          {% for block in section.blocks %}
-            {% if block.type == 'creator' %}
-              <article class="e2fc-card" {{ block.shopify_attributes }}>
+      <div class="e2fc-track" data-e2fc-track>
+        {% for block in section.blocks %}
+          {% if block.type == 'influencer' %}
+            <article class="e2fc-card" {{ block.shopify_attributes }}>
+              <a class="e2fc-photo-link"
+                 href="{{ block.settings.video_url | default: '#' }}"
+                 {% if block.settings.video_url != blank %}target="_blank" rel="noopener noreferrer"{% endif %}
+                 aria-label="{{ block.settings.name | escape }} — {{ block.settings.button_text | escape }}">
 
-                <a
-                  class="e2fc-media"
-                  {% if block.settings.video_url != blank %}
-                    href="{{ block.settings.video_url }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Voir la vidéo de {{ block.settings.name | escape }}"
-                  {% else %}
-                    href="#"
-                    aria-label="{{ block.settings.name | escape }}"
-                    onclick="return false;"
-                  {% endif %}
-                >
-                  {% if block.settings.cover != blank %}
-                    <img
-                      src="{{ block.settings.cover | image_url: width: 900 }}"
-                      alt="{{ block.settings.cover.alt | default: block.settings.name | escape }}"
-                      width="{{ block.settings.cover.width }}"
-                      height="{{ block.settings.cover.height }}"
-                      loading="lazy"
-                    >
-                  {% else %}
-                    <div class="e2fc-media-placeholder">
-                      <span class="e2fc-placeholder-play">▶</span>
-                      <span>Ajoutez une photo</span>
-                    </div>
-                  {% endif %}
-
-                  <span class="e2fc-social-pill">
-                    {% if block.settings.platform == 'TikTok' %}
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M16 3c.4 2.4 1.8 3.8 4 4v3.5a9 9 0 0 1-4-1.2v6.4a6.3 6.3 0 1 1-6.3-6.3c.5 0 1 0 1.4.2v3.8a2.7 2.7 0 1 0 1.3 2.3V3H16Z"/>
-                      </svg>
-                    {% elsif block.settings.platform == 'Instagram' %}
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <rect x="3" y="3" width="18" height="18" rx="5"/>
-                        <circle cx="12" cy="12" r="4"/>
-                        <circle cx="17.5" cy="6.5" r="1" class="e2fc-icon-fill"/>
-                      </svg>
-                    {% elsif block.settings.platform == 'YouTube' %}
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <rect x="2" y="5" width="20" height="14" rx="4"/>
-                        <path d="m10 9 5 3-5 3Z" class="e2fc-icon-fill"/>
-                      </svg>
-                    {% else %}
-                      <span class="e2fc-other-icon">↗</span>
-                    {% endif %}
-                    <span>{{ block.settings.platform | escape }}</span>
-                  </span>
-
-                  <span class="e2fc-play" aria-hidden="true">
-                    <svg viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></svg>
-                  </span>
-                </a>
-
-                <div class="e2fc-card-content">
-                  <div class="e2fc-profile">
-                    {% if block.settings.avatar != blank %}
-                      <img
-                        class="e2fc-avatar"
-                        src="{{ block.settings.avatar | image_url: width: 120 }}"
-                        alt=""
-                        width="{{ block.settings.avatar.width }}"
-                        height="{{ block.settings.avatar.height }}"
-                        loading="lazy"
-                      >
-                    {% else %}
-                      <div class="e2fc-avatar e2fc-avatar-placeholder" aria-hidden="true">
-                        {{ block.settings.name | slice: 0 | upcase }}
-                      </div>
-                    {% endif %}
-
-                    <div class="e2fc-person">
-                      <div class="e2fc-name-line">
-                        <strong>{{ block.settings.name | escape }}</strong>
-                        {% if block.settings.verified %}
-                          <span class="e2fc-verified" aria-label="Compte vérifié">✓</span>
-                        {% endif %}
-                      </div>
-                      {% if block.settings.handle != blank %}
-                        <span class="e2fc-handle">{{ block.settings.handle | escape }}</span>
-                      {% endif %}
-                    </div>
+                {% if block.settings.photo != blank %}
+                  {{ block.settings.photo | image_url: width: 900 | image_tag: class: 'e2fc-photo', loading: 'lazy', alt: block.settings.photo_alt }}
+                {% else %}
+                  <div class="e2fc-photo-placeholder">
+                    <span>{{ block.settings.platform_icon | escape }}</span>
+                    <small>Ajoutez une photo</small>
                   </div>
+                {% endif %}
 
-                  {% if block.settings.description != blank %}
-                    <p class="e2fc-description">{{ block.settings.description | escape }}</p>
-                  {% endif %}
+                <span class="e2fc-platform">
+                  <span>{{ block.settings.platform_icon | escape }}</span>
+                  {{ block.settings.platform | escape }}
+                </span>
 
-                  {% if block.settings.video_url != blank %}
-                    <a
-                      class="e2fc-button"
-                      href="{{ block.settings.video_url }}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 12 7-12 7Z"/></svg>
-                      <span>{{ block.settings.button_label | default: 'Voir la vidéo' | escape }}</span>
-                      <span class="e2fc-button-external" aria-hidden="true">↗</span>
-                    </a>
-                  {% else %}
-                    <span class="e2fc-button e2fc-button-disabled">
-                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 12 7-12 7Z"/></svg>
-                      <span>{{ block.settings.button_label | default: 'Voir la vidéo' | escape }}</span>
-                      <span class="e2fc-button-external" aria-hidden="true">↗</span>
-                    </span>
-                  {% endif %}
+                {% if block.settings.show_play %}
+                  <span class="e2fc-play" aria-hidden="true">▶</span>
+                {% endif %}
+              </a>
+
+              <div class="e2fc-profile">
+                {% if block.settings.avatar != blank %}
+                  {{ block.settings.avatar | image_url: width: 120 | image_tag: class: 'e2fc-avatar', loading: 'lazy', alt: block.settings.name | escape }}
+                {% else %}
+                  <span class="e2fc-avatar-placeholder">{{ block.settings.avatar_fallback | escape }}</span>
+                {% endif %}
+
+                <div class="e2fc-profile-info">
+                  <div class="e2fc-name-row">
+                    <h3>{{ block.settings.name | escape }}</h3>
+                    {% if block.settings.verified %}
+                      <span class="e2fc-verified" aria-label="Vérifié">{{ block.settings.verified_icon | escape }}</span>
+                    {% endif %}
+                  </div>
+                  <p>{{ block.settings.handle | escape }}</p>
                 </div>
-              </article>
-            {% endif %}
-          {% endfor %}
-        </div>
+              </div>
+
+              {% if block.settings.button_text != blank %}
+                {% if block.settings.video_url != blank %}
+                  <a class="e2fc-button" href="{{ block.settings.video_url }}" target="_blank" rel="noopener noreferrer">
+                    <span>{{ block.settings.button_icon | escape }}</span>
+                    {{ block.settings.button_text | escape }}
+                    <span>{{ block.settings.button_end_icon | escape }}</span>
+                  </a>
+                {% else %}
+                  <span class="e2fc-button e2fc-button-disabled">
+                    <span>{{ block.settings.button_icon | escape }}</span>
+                    {{ block.settings.button_text | escape }}
+                    <span>{{ block.settings.button_end_icon | escape }}</span>
+                  </span>
+                {% endif %}
+              {% endif %}
+            </article>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
 
@@ -214,31 +133,16 @@
       {% for block in section.blocks %}
         {% if block.type == 'stat' %}
           <div class="e2fc-stat" {{ block.shopify_attributes }}>
-            {% case block.settings.icon %}
-              {% when 'people' %}
-                <svg class="e2fc-stat-icon" viewBox="0 0 48 48" aria-hidden="true">
-                  <circle cx="24" cy="14" r="8"/>
-                  <path d="M8 39v-5a16 16 0 0 1 32 0v5Z"/>
-                  <path d="M10 16a6 6 0 0 0 0 12m28-12a6 6 0 0 1 0 12M4 39v-4a10 10 0 0 1 5-9m35 13v-4a10 10 0 0 0-5-9"/>
-                </svg>
-              {% when 'video' %}
-                <svg class="e2fc-stat-icon" viewBox="0 0 48 48" aria-hidden="true">
-                  <circle cx="24" cy="24" r="19"/>
-                  <path d="m20 15 14 9-14 9Z"/>
-                </svg>
-              {% when 'handshake' %}
-                <svg class="e2fc-stat-icon" viewBox="0 0 48 48" aria-hidden="true">
-                  <path d="m3 17 9-8 10 4 6-2 7 5 10-3 2 7-14 17-7-4-5-5-5 1-13-12Z"/>
-                  <path d="m12 9 10 11 7-4 7 5M17 28l5 5m0-9 7 7m0-11 7 6"/>
-                </svg>
-              {% else %}
-                <svg class="e2fc-stat-icon" viewBox="0 0 48 48" aria-hidden="true">
-                  <path d="M27 3 9 27h12l-2 18 20-27H26Z"/>
-                </svg>
-            {% endcase %}
+            {% if block.settings.icon_image != blank %}
+              {{ block.settings.icon_image | image_url: width: 100 | image_tag: class: 'e2fc-stat-image', alt: block.settings.label | escape }}
+            {% else %}
+              <span class="e2fc-stat-icon">{{ block.settings.icon | escape }}</span>
+            {% endif %}
 
-            <strong>{{ block.settings.value | escape }}</strong>
-            <span>{{ block.settings.label | escape }}</span>
+            <div class="e2fc-stat-copy">
+              <strong>{{ block.settings.value | escape }}</strong>
+              <span>{{ block.settings.label | escape }}</span>
+            </div>
           </div>
         {% endif %}
       {% endfor %}
@@ -248,1353 +152,228 @@
 </section>
 
 <style>
-  #e2fc-{{ sid }} {
-    --e2fc-turquoise: {{ section.settings.accent }};
-    --e2fc-ink: {{ section.settings.text_color }};
-    --e2fc-muted: {{ section.settings.muted_color }};
-    --e2fc-border: #e8e8e8;
-    background: {{ section.settings.background }};
-    color: var(--e2fc-ink);
-    padding: {{ section.settings.padding_top }}px 24px {{ section.settings.padding_bottom }}px;
-    overflow: hidden;
-  }
-
-  #e2fc-{{ sid }} *,
-  #e2fc-{{ sid }} *::before,
-  #e2fc-{{ sid }} *::after {
-    box-sizing: border-box;
-  }
-
-  #e2fc-{{ sid }} .e2fc-shell {
-    width: 100%;
-    max-width: {{ section.settings.max_width }}px;
-    margin: 0 auto;
-  }
-
-  #e2fc-{{ sid }} .e2fc-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  #e2fc-{{ sid }} .e2fc-brand-logo {
-    display: block;
-    width: min({{ section.settings.logo_width }}px, 75%);
-    height: auto;
-    max-height: 100px;
-    object-fit: contain;
-    margin: 0 auto 26px;
-  }
-
-  #e2fc-{{ sid }} .e2fc-title {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
-    gap: 0 14px;
-    margin: 0;
-    font-size: clamp(32px, 5.5vw, {{ section.settings.heading_size }}px);
-    line-height: 1.06;
-    letter-spacing: -.055em;
-    font-weight: 950;
-    text-transform: uppercase;
-    font-style: italic;
-  }
-
-  #e2fc-{{ sid }} .e2fc-title-accent {
-    position: relative;
-    color: var(--e2fc-turquoise);
-  }
-
-  #e2fc-{{ sid }} .e2fc-title-accent::after {
-    content: "";
-    position: absolute;
-    bottom: -9px;
-    left: 35%;
-    width: 30%;
-    height: 5px;
-    border-radius: 99px;
-    background: var(--e2fc-turquoise);
-  }
-
-  #e2fc-{{ sid }} .e2fc-subtitle {
-    max-width: 760px;
-    margin: 24px auto 28px;
-    color: var(--e2fc-ink);
-    font-size: clamp(15px, 2.2vw, 22px);
-    line-height: 1.45;
-    font-weight: 400;
-  }
-
-  #e2fc-{{ sid }} .e2fc-controls {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin: 0 0 30px;
-  }
-
-  #e2fc-{{ sid }} .e2fc-arrow {
-    display: grid;
-    place-items: center;
-    width: 56px;
-    height: 56px;
-    padding: 14px;
-    border: 2px solid var(--e2fc-border);
-    border-radius: 50%;
-    background: #fff;
-    color: #080808;
-    cursor: pointer;
-    transition: background .2s, border-color .2s, transform .2s;
-  }
-
-  #e2fc-{{ sid }} .e2fc-arrow svg {
-    width: 100%;
-    height: 100%;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 3.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  #e2fc-{{ sid }} .e2fc-arrow.e2fc-next {
-    border-color: var(--e2fc-turquoise);
-    background: var(--e2fc-turquoise);
-  }
-
-  #e2fc-{{ sid }} .e2fc-arrow:hover {
-    transform: translateY(-2px);
-    border-color: var(--e2fc-turquoise);
-  }
-
-  #e2fc-{{ sid }} .e2fc-main {
-    display: grid;
-    grid-template-columns: minmax(280px, .92fr) minmax(0, 1fr);
-    gap: 22px;
-    align-items: stretch;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    min-width: 0;
-    min-height: 480px;
-    padding: clamp(26px, 3.6vw, 44px);
-    overflow: hidden;
-    border-radius: 28px;
-    background: #020707;
-    color: #fff;
-    isolation: isolate;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature::before {
-    position: absolute;
-    z-index: -1;
-    right: -80px;
-    top: -70px;
-    width: 220px;
-    height: 220px;
-    border: 1px solid rgba(0, 229, 220, .14);
-    border-radius: 50%;
-    content: "";
-  }
-
-  #e2fc-{{ sid }} .e2fc-corner {
-    position: absolute;
-    z-index: -1;
-    width: 100px;
-    height: 16px;
-    background: var(--e2fc-turquoise);
-    transform: rotate(-48deg);
-  }
-
-  #e2fc-{{ sid }} .e2fc-corner::after {
-    position: absolute;
-    top: 0;
-    left: 25px;
-    width: 100%;
-    height: 100%;
-    background: var(--e2fc-turquoise);
-    content: "";
-  }
-
-  #e2fc-{{ sid }} .e2fc-corner-top {
-    top: 22px;
-    right: -22px;
-  }
-
-  #e2fc-{{ sid }} .e2fc-corner-bottom {
-    bottom: 23px;
-    left: -25px;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-heading {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    margin-bottom: 26px;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-line {
-    flex: 0 0 4px;
-    min-height: 68px;
-    border-radius: 5px;
-    background: var(--e2fc-turquoise);
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-heading h3 {
-    max-width: 300px;
-    margin: 0;
-    color: var(--e2fc-turquoise);
-    font-size: clamp(25px, 3.1vw, 39px);
-    font-weight: 950;
-    font-style: italic;
-    line-height: 1.12;
-    letter-spacing: -.04em;
-    text-transform: uppercase;
-    overflow-wrap: anywhere;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-number {
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    gap: 3px;
-    margin: 0;
-    font-size: clamp(55px, 7vw, 94px);
-    font-weight: 950;
-    line-height: .98;
-    letter-spacing: -.06em;
-    white-space: nowrap;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-number b {
-    color: var(--e2fc-turquoise);
-    font-weight: 950;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-number-label {
-    margin: 8px 0 22px;
-    color: #fff;
-    font-size: clamp(15px, 1.8vw, 21px);
-    text-align: center;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-divider {
-    width: 100%;
-    height: 1px;
-    flex-shrink: 0;
-    background: rgba(255,255,255,.75);
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-description {
-    display: grid;
-    grid-template-columns: 82px minmax(0, 1fr);
-    align-items: center;
-    gap: 18px;
-    padding: 24px 0;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-description svg {
-    width: 100%;
-    height: auto;
-    fill: none;
-    stroke: var(--e2fc-turquoise);
-    stroke-width: 2.2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-description p {
-    margin: 0;
-    color: #fff;
-    font-size: clamp(14px, 1.7vw, 20px);
-    line-height: 1.42;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-brand {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: auto;
-    padding-top: 22px;
-  }
-
-  #e2fc-{{ sid }} .e2fc-feature-brand img {
-    display: block;
-    width: min(100%, 260px);
-    max-height: 66px;
-    object-fit: contain;
-  }
-
-  #e2fc-{{ sid }} .e2fc-brand-monogram {
-    color: #fff;
-    font-size: 38px;
-    font-weight: 950;
-    font-style: italic;
-  }
-
-  #e2fc-{{ sid }} .e2fc-brand-name {
-    color: #fff;
-    font-size: clamp(13px, 1.6vw, 21px);
-    font-weight: 950;
-    font-style: italic;
-    white-space: nowrap;
-  }
-
-  #e2fc-{{ sid }} .e2fc-brand-name span {
-    color: var(--e2fc-turquoise);
-  }
-
-  #e2fc-{{ sid }} .e2fc-carousel {
-    min-width: 0;
-    overflow: hidden;
-  }
-
-  #e2fc-{{ sid }} .e2fc-track {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(260px, calc(50% - 8px));
-    align-items: stretch;
-    gap: 16px;
-    height: 100%;
-    padding: 2px 2px 12px;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  #e2fc-{{ sid }} .e2fc-track::-webkit-scrollbar {
-    display: none;
-  }
-
-  #e2fc-{{ sid }} .e2fc-card {
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    overflow: hidden;
-    border: 1px solid #e9e9e9;
-    border-radius: 26px;
-    background: #fff;
-    box-shadow: 0 7px 16px rgba(0,0,0,.11);
-    scroll-snap-align: start;
-  }
-
-  #e2fc-{{ sid }} .e2fc-media {
-    position: relative;
-    display: block;
-    flex-shrink: 0;
-    width: 100%;
-    aspect-ratio: {{ section.settings.media_ratio }};
-    overflow: hidden;
-    background: #e8ebed;
-    color: #080808;
-    text-decoration: none;
-  }
-
-  #e2fc-{{ sid }} .e2fc-media > img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .35s ease;
-  }
-
-  #e2fc-{{ sid }} .e2fc-media:hover > img {
-    transform: scale(1.035);
-  }
-
-  #e2fc-{{ sid }} .e2fc-media-placeholder {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    width: 100%;
-    height: 100%;
-    color: #444;
-    font-size: 12px;
-  }
-
-  #e2fc-{{ sid }} .e2fc-placeholder-play {
-    display: grid;
-    place-items: center;
-    width: 54px;
-    height: 54px;
-    padding-left: 4px;
-    border-radius: 50%;
-    background: var(--e2fc-turquoise);
-    color: #050505;
-    font-size: 22px;
-  }
-
-  #e2fc-{{ sid }} .e2fc-social-pill {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    max-width: calc(100% - 32px);
-    padding: 8px 13px;
-    border-radius: 50px;
-    background: #050505;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 900;
-    font-style: italic;
-    text-transform: uppercase;
-  }
-
-  #e2fc-{{ sid }} .e2fc-social-pill svg {
-    width: 25px;
-    height: 25px;
-    flex-shrink: 0;
-    fill: currentColor;
-    stroke: currentColor;
-    stroke-width: 1.5;
-  }
-
-  #e2fc-{{ sid }} .e2fc-social-pill svg rect,
-  #e2fc-{{ sid }} .e2fc-social-pill svg circle {
-    fill: none;
-  }
-
-  #e2fc-{{ sid }} .e2fc-social-pill svg .e2fc-icon-fill {
-    fill: currentColor;
-  }
-
-  #e2fc-{{ sid }} .e2fc-other-icon {
-    font-size: 23px;
-    font-style: normal;
-  }
-
-  #e2fc-{{ sid }} .e2fc-play {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    display: grid;
-    place-items: center;
-    width: 70px;
-    height: 70px;
-    padding: 18px;
-    border: 3px solid #fff;
-    border-radius: 50%;
-    background: rgba(0,0,0,.48);
-    color: #fff;
-    transform: translate(-50%, -50%);
-    transition: background .2s, transform .2s;
-  }
-
-  #e2fc-{{ sid }} .e2fc-play svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-    fill: currentColor;
-  }
-
-  #e2fc-{{ sid }} .e2fc-media:hover .e2fc-play {
-    background: var(--e2fc-turquoise);
-    color: #050505;
-    transform: translate(-50%, -50%) scale(1.06);
-  }
-
-  #e2fc-{{ sid }} .e2fc-card-content {
-    display: flex;
-    flex: 1 1 auto;
-    flex-direction: column;
-    gap: 16px;
-    padding: 17px;
-  }
-
-  #e2fc-{{ sid }} .e2fc-profile {
-    display: flex;
-    align-items: center;
-    gap: 11px;
-    min-width: 0;
-  }
-
-  #e2fc-{{ sid }} .e2fc-avatar {
-    display: block;
-    flex: 0 0 52px;
-    width: 52px;
-    height: 52px;
-    border: 1px solid #eee;
-    border-radius: 50%;
-    object-fit: cover;
-    background: #f0f0f0;
-  }
-
-  #e2fc-{{ sid }} .e2fc-avatar-placeholder {
-    display: grid;
-    place-items: center;
-    color: #111;
-    font-size: 18px;
-    font-weight: 900;
-  }
-
-  #e2fc-{{ sid }} .e2fc-person {
-    flex: 1 1 auto;
-    min-width: 0;
-  }
-
-  #e2fc-{{ sid }} .e2fc-name-line {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    min-width: 0;
-  }
-
-  #e2fc-{{ sid }} .e2fc-name-line strong {
-    overflow: hidden;
-    color: #080808;
-    font-size: clamp(13px, 1.35vw, 17px);
-    font-weight: 950;
-    line-height: 1.2;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  #e2fc-{{ sid }} .e2fc-verified {
-    display: grid;
-    place-items: center;
-    flex: 0 0 21px;
-    width: 21px;
-    height: 21px;
-    border-radius: 50%;
-    background: #12a9f7;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 900;
-  }
-
-  #e2fc-{{ sid }} .e2fc-handle {
-    display: block;
-    margin-top: 5px;
-    overflow: hidden;
-    color: #858585;
-    font-size: 13px;
-    line-height: 1.2;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  #e2fc-{{ sid }} .e2fc-description {
-    margin: 0;
-    color: #626262;
-    font-size: 13px;
-    line-height: 1.45;
-  }
-
-  #e2fc-{{ sid }} .e2fc-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    width: 100%;
-    min-height: 48px;
-    margin-top: auto;
-    padding: 10px 12px;
-    border: 2px solid var(--e2fc-turquoise);
-    border-radius: 50px;
-    background: linear-gradient(110deg, #fff 0%, #c7fffc 100%);
-    color: #080808;
-    font-size: clamp(12px, 1.3vw, 16px);
-    font-weight: 900;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-    box-shadow: 0 2px 5px rgba(0,0,0,.07);
-    transition: transform .2s, box-shadow .2s;
-  }
-
-  #e2fc-{{ sid }} .e2fc-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,.12);
-  }
-
-  #e2fc-{{ sid }} .e2fc-button svg {
-    flex: 0 0 21px;
-    width: 21px;
-    height: 21px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2.5;
-    stroke-linejoin: round;
-  }
-
-  #e2fc-{{ sid }} .e2fc-button-external {
-    font-size: 19px;
-    line-height: 1;
-  }
-
-  #e2fc-{{ sid }} .e2fc-button-disabled {
-    cursor: default;
-    opacity: .65;
-  }
-
-  #e2fc-{{ sid }} .e2fc-stats {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    margin-top: 24px;
-    padding: 24px 10px;
-    border: 1px solid #ededed;
-    border-radius: 30px;
-    background: #fff;
-    box-shadow: 0 10px 18px rgba(0,0,0,.09);
-  }
-
-  #e2fc-{{ sid }} .e2fc-stat {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
-    min-width: 0;
-    padding: 0 12px;
-    text-align: center;
-  }
-
-  #e2fc-{{ sid }} .e2fc-stat + .e2fc-stat {
-    border-left: 1px solid var(--e2fc-turquoise);
-  }
-
-  #e2fc-{{ sid }} .e2fc-stat-icon {
-    display: block;
-    width: 48px;
-    height: 48px;
-    margin-bottom: 3px;
-    fill: none;
-    stroke: var(--e2fc-turquoise);
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  #e2fc-{{ sid }} .e2fc-stat strong {
-    color: #080808;
-    font-size: clamp(22px, 3vw, 36px);
-    font-weight: 950;
-    line-height: 1;
-    letter-spacing: -.04em;
-    overflow-wrap: anywhere;
-  }
-
-  #e2fc-{{ sid }} .e2fc-stat > span:last-child {
-    max-width: 210px;
-    color: #101010;
-    font-size: clamp(11px, 1.5vw, 17px);
-    font-weight: 650;
-    line-height: 1.35;
-    overflow-wrap: anywhere;
-  }
-
-  @media (min-width: 1100px) {
-    #e2fc-{{ sid }} .e2fc-track {
-      grid-auto-columns: calc(50% - 8px);
-    }
-  }
-
-  @media (max-width: 749px) {
-    #e2fc-{{ sid }} {
-      padding: {{ section.settings.mobile_padding_top }}px 12px {{ section.settings.mobile_padding_bottom }}px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-brand-logo {
-      width: min({{ section.settings.mobile_logo_width }}px, 75%);
-      max-height: 65px;
-      margin-bottom: 18px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-title {
-      gap: 4px 8px;
-      font-size: clamp(24px, 6.3vw, 43px);
-      line-height: 1.06;
-    }
-
-    #e2fc-{{ sid }} .e2fc-title-accent::after {
-      bottom: -5px;
-      height: 3px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-subtitle {
-      max-width: 440px;
-      margin: 15px auto 18px;
-      font-size: clamp(12px, 3.4vw, 17px);
-      line-height: 1.4;
-    }
-
-    #e2fc-{{ sid }} .e2fc-controls {
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-arrow {
-      width: 42px;
-      height: 42px;
-      padding: 11px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-main {
-      grid-template-columns: minmax(0, .96fr) minmax(0, 1fr);
-      gap: 10px;
-      align-items: stretch;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature {
-      min-height: 0;
-      padding: 16px 12px;
-      border-radius: 18px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-heading {
-      gap: 9px;
-      margin-bottom: 17px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-line {
-      flex-basis: 3px;
-      min-height: 48px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-heading h3 {
-      font-size: clamp(17px, 4.8vw, 28px);
-      line-height: 1.1;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-number {
-      font-size: clamp(33px, 8.5vw, 59px);
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-number-label {
-      margin: 6px 0 15px;
-      font-size: clamp(11px, 3vw, 15px);
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-description {
-      grid-template-columns: 1fr;
-      justify-items: center;
-      gap: 8px;
-      padding: 14px 0;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-description svg {
-      width: 48px;
-      max-height: 39px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-description p {
-      font-size: clamp(10px, 2.8vw, 14px);
-      text-align: center;
-      line-height: 1.35;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-brand {
-      gap: 4px;
-      padding-top: 16px;
-      flex-wrap: wrap;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-brand img {
-      max-height: 40px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-brand-monogram {
-      font-size: 25px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-brand-name {
-      font-size: clamp(9px, 2.5vw, 14px);
-    }
-
-    #e2fc-{{ sid }} .e2fc-corner {
-      width: 60px;
-      height: 10px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-corner-top {
-      top: 17px;
-      right: -20px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-corner-bottom {
-      bottom: 17px;
-      left: -20px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-track {
-      grid-auto-columns: 100%;
-      gap: 10px;
-      padding: 1px 1px 8px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-card {
-      border-radius: 18px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-media {
-      aspect-ratio: 3 / 3.15;
-    }
-
-    #e2fc-{{ sid }} .e2fc-social-pill {
-      top: 9px;
-      left: 8px;
-      gap: 5px;
-      max-width: calc(100% - 16px);
-      padding: 6px 8px;
-      font-size: clamp(9px, 2.4vw, 12px);
-    }
-
-    #e2fc-{{ sid }} .e2fc-social-pill svg {
-      width: 19px;
-      height: 19px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-play {
-      width: 47px;
-      height: 47px;
-      padding: 12px;
-      border-width: 2px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-card-content {
-      gap: 11px;
-      padding: 10px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-profile {
-      gap: 7px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-avatar {
-      flex-basis: 34px;
-      width: 34px;
-      height: 34px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-name-line {
-      gap: 4px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-name-line strong {
-      font-size: clamp(9px, 2.6vw, 13px);
-    }
-
-    #e2fc-{{ sid }} .e2fc-verified {
-      flex-basis: 16px;
-      width: 16px;
-      height: 16px;
-      font-size: 10px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-handle {
-      margin-top: 3px;
-      font-size: clamp(9px, 2.3vw, 12px);
-    }
-
-    #e2fc-{{ sid }} .e2fc-description {
-      font-size: 10px;
-      line-height: 1.35;
-    }
-
-    #e2fc-{{ sid }} .e2fc-button {
-      gap: 5px;
-      min-height: 36px;
-      padding: 7px 5px;
-      border-width: 1.5px;
-      font-size: clamp(9px, 2.7vw, 13px);
-    }
-
-    #e2fc-{{ sid }} .e2fc-button svg {
-      flex-basis: 15px;
-      width: 15px;
-      height: 15px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-button-external {
-      font-size: 15px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-stats {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      margin-top: 14px;
-      padding: 14px 2px;
-      border-radius: 22px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-stat {
-      gap: 6px;
-      padding: 0 4px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-stat-icon {
-      width: 31px;
-      height: 31px;
-      margin-bottom: 2px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-stat strong {
-      font-size: clamp(15px, 4.1vw, 24px);
-      line-height: 1;
-    }
-
-    #e2fc-{{ sid }} .e2fc-stat > span:last-child {
-      font-size: clamp(8px, 2.3vw, 12px);
-      line-height: 1.25;
-    }
-  }
-
-  @media (max-width: 370px) {
-    #e2fc-{{ sid }} .e2fc-main {
-      grid-template-columns: minmax(0, .9fr) minmax(0, 1fr);
-      gap: 7px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature {
-      padding: 12px 8px;
-      border-radius: 14px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-heading {
-      gap: 7px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-heading h3 {
-      font-size: 16px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-number {
-      font-size: 32px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-feature-description p {
-      font-size: 10px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-card-content {
-      padding: 8px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-avatar {
-      flex-basis: 29px;
-      width: 29px;
-      height: 29px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-stats {
-      padding-right: 1px;
-      padding-left: 1px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-stat {
-      padding-right: 2px;
-      padding-left: 2px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-stat strong {
-      font-size: 14px;
-    }
-
-    #e2fc-{{ sid }} .e2fc-stat > span:last-child {
-      font-size: 8px;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    #e2fc-{{ sid }} *,
-    #e2fc-{{ sid }} *::before,
-    #e2fc-{{ sid }} *::after {
-      scroll-behavior: auto !important;
-      transition: none !important;
-    }
-  }
+#e2fc-{{ sid }} {
+  --ec-turquoise: {{ section.settings.turquoise }};
+  --ec-black: {{ section.settings.black }};
+  --ec-white: {{ section.settings.white }};
+  --ec-muted: {{ section.settings.muted }};
+  --ec-stats-bg: {{ section.settings.stats_background }};
+  --ec-card-radius: {{ section.settings.card_radius }}px;
+  background: {{ section.settings.background }};
+  color: var(--ec-black);
+  padding: {{ section.settings.padding_top }}px 24px {{ section.settings.padding_bottom }}px;
+  font-family: inherit;
+}
+#e2fc-{{ sid }} * { box-sizing: border-box; }
+#e2fc-{{ sid }} .e2fc-shell { max-width: {{ section.settings.max_width }}px; margin: 0 auto; }
+#e2fc-{{ sid }} .e2fc-header { text-align: center; position: relative; margin-bottom: 54px; }
+#e2fc-{{ sid }} .e2fc-logo { display: block; width: {{ section.settings.logo_width }}px; max-width: 60%; height: auto; margin: 0 auto 25px; object-fit: contain; }
+#e2fc-{{ sid }} .e2fc-logo-text { font-size: 22px; font-weight: 950; margin-bottom: 24px; }
+#e2fc-{{ sid }} .e2fc-header h2 { margin: 0; font-size: clamp(32px, 4.3vw, {{ section.settings.title_size }}px); line-height: 1.08; font-weight: 950; letter-spacing: -1.8px; font-style: italic; text-transform: uppercase; }
+#e2fc-{{ sid }} .e2fc-header h2 span { color: var(--ec-turquoise); }
+#e2fc-{{ sid }} .e2fc-underline { height: 7px; width: 150px; background: var(--ec-turquoise); border-radius: 8px; margin: 13px auto 14px; transform: rotate(-4deg); }
+#e2fc-{{ sid }} .e2fc-subtitle { color: var(--ec-muted); font-size: 17px; line-height: 1.5; margin: 0 auto; max-width: 800px; }
+#e2fc-{{ sid }} .e2fc-arrows { position: absolute; right: 0; bottom: 0; display: flex; gap: 14px; }
+#e2fc-{{ sid }} .e2fc-arrow { border: 1px solid #dedede; background: var(--ec-white); color: var(--ec-black); border-radius: 50%; width: 54px; height: 54px; font-size: 33px; line-height: 1; cursor: pointer; }
+#e2fc-{{ sid }} .e2fc-arrow:hover, #e2fc-{{ sid }} .e2fc-next { background: var(--ec-turquoise); border-color: var(--ec-turquoise); box-shadow: 0 3px 12px #00d8d833; }
+#e2fc-{{ sid }} .e2fc-main { display: grid; grid-template-columns: minmax(230px, .98fr) minmax(0, 4fr); gap: 28px; align-items: stretch; }
+#e2fc-{{ sid }} .e2fc-feature { background: {{ section.settings.feature_background }}; color: {{ section.settings.feature_text }}; border-radius: 27px; padding: 32px 27px; display: flex; flex-direction: column; min-width: 0; }
+#e2fc-{{ sid }} .e2fc-feature-heading { display: flex; align-items: center; gap: 15px; color: var(--ec-turquoise); font-weight: 900; font-size: 16px; text-transform: uppercase; }
+#e2fc-{{ sid }} .e2fc-feature-heading > span { display: block; width: 3px; height: 28px; background: var(--ec-turquoise); flex-shrink: 0; }
+#e2fc-{{ sid }} .e2fc-feature-number { margin-top: 23px; font-size: clamp(42px, 4vw, {{ section.settings.feature_number_size }}px); font-weight: 950; line-height: 1; letter-spacing: -2px; white-space: nowrap; }
+#e2fc-{{ sid }} .e2fc-feature-number span { color: var(--ec-turquoise); }
+#e2fc-{{ sid }} .e2fc-feature-caption { margin: 9px 0 25px; font-size: 15px; line-height: 1.4; }
+#e2fc-{{ sid }} .e2fc-feature-divider { height: 1px; background: {{ section.settings.feature_divider }}; opacity: .85; width: 100%; }
+#e2fc-{{ sid }} .e2fc-feature-description { display: grid; grid-template-columns: 55px minmax(0,1fr); gap: 12px; align-items: start; padding: 25px 0; }
+#e2fc-{{ sid }} .e2fc-feature-icon { font-size: 38px; color: var(--ec-turquoise); line-height: 1.2; }
+#e2fc-{{ sid }} .e2fc-feature-description p { margin: 0; font-size: 15px; line-height: 1.55; }
+#e2fc-{{ sid }} .e2fc-feature-logo { display: block; width: {{ section.settings.feature_logo_width }}px; max-width: 100%; height: auto; object-fit: contain; margin: auto auto 0; padding-top: 25px; }
+#e2fc-{{ sid }} .e2fc-feature-brand { margin: auto auto 0; padding-top: 25px; font-size: 18px; font-weight: 950; text-align: center; }
+#e2fc-{{ sid }} .e2fc-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 3 * {{ section.settings.card_gap }}px) / {{ section.settings.cards_visible }}); gap: {{ section.settings.card_gap }}px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; min-width: 0; }
+#e2fc-{{ sid }} .e2fc-track::-webkit-scrollbar { display: none; }
+#e2fc-{{ sid }} .e2fc-card { min-width: 0; display: flex; flex-direction: column; background: var(--ec-white); border: 1px solid #e8e8e8; border-radius: var(--ec-card-radius); overflow: hidden; box-shadow: 0 3px 7px #00000012; scroll-snap-align: start; }
+#e2fc-{{ sid }} .e2fc-photo-link { display: block; position: relative; aspect-ratio: 1 / 1.08; overflow: hidden; background: #eee; text-decoration: none; color: inherit; }
+#e2fc-{{ sid }} .e2fc-photo { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+#e2fc-{{ sid }} .e2fc-card:hover .e2fc-photo { transform: scale(1.035); }
+#e2fc-{{ sid }} .e2fc-photo-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; height: 100%; color: #555; }
+#e2fc-{{ sid }} .e2fc-photo-placeholder span { font-size: 42px; }
+#e2fc-{{ sid }} .e2fc-platform { position: absolute; top: 13px; left: 12px; display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; background: #05090b; color: white; border-radius: 30px; font-size: 11px; line-height: 1; font-weight: 900; text-transform: uppercase; }
+#e2fc-{{ sid }} .e2fc-platform span { color: var(--ec-turquoise); font-size: 16px; }
+#e2fc-{{ sid }} .e2fc-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); display: grid; place-items: center; width: 56px; height: 56px; border: 3px solid white; border-radius: 50%; color: white; background: #00000048; font-size: 22px; padding-left: 3px; }
+#e2fc-{{ sid }} .e2fc-profile { display: flex; align-items: center; gap: 11px; padding: 13px 15px 9px; min-width: 0; }
+#e2fc-{{ sid }} .e2fc-avatar, #e2fc-{{ sid }} .e2fc-avatar-placeholder { width: 43px; height: 43px; flex: 0 0 43px; border-radius: 50%; object-fit: cover; background: #e8eeee; }
+#e2fc-{{ sid }} .e2fc-avatar-placeholder { display: grid; place-items: center; font-weight: 900; }
+#e2fc-{{ sid }} .e2fc-profile-info { min-width: 0; }
+#e2fc-{{ sid }} .e2fc-name-row { display: flex; align-items: center; gap: 5px; }
+#e2fc-{{ sid }} .e2fc-name-row h3 { margin: 0; font-size: clamp(12px, 1vw, 16px); line-height: 1.25; font-weight: 950; overflow-wrap: anywhere; }
+#e2fc-{{ sid }} .e2fc-verified { display: inline-grid; place-items: center; background: #0ba9eb; color: white; border-radius: 50%; width: 17px; height: 17px; font-size: 11px; flex-shrink: 0; }
+#e2fc-{{ sid }} .e2fc-profile-info p { margin: 3px 0 0; color: #73777b; font-size: 12px; overflow-wrap: anywhere; }
+#e2fc-{{ sid }} .e2fc-button { display: flex; align-items: center; justify-content: center; gap: 9px; margin: auto 13px 14px; padding: 9px 8px; min-height: 39px; border: 2px solid var(--ec-turquoise); border-radius: 30px; background: linear-gradient(100deg, white, #8af8f3); color: #050505; font-size: 13px; font-weight: 900; line-height: 1.2; text-align: center; text-decoration: none; }
+#e2fc-{{ sid }} a.e2fc-button:hover { background: var(--ec-turquoise); }
+#e2fc-{{ sid }} .e2fc-button > span { font-size: 16px; }
+#e2fc-{{ sid }} .e2fc-button-disabled { opacity: .7; }
+#e2fc-{{ sid }} .e2fc-stats { display: grid; grid-template-columns: repeat({{ section.settings.stat_columns }}, minmax(0,1fr)); margin-top: 28px; background: var(--ec-stats-bg); border-radius: 22px; overflow: hidden; }
+#e2fc-{{ sid }} .e2fc-stat { position: relative; display: flex; align-items: center; justify-content: center; gap: 20px; padding: 22px 18px; min-width: 0; }
+#e2fc-{{ sid }} .e2fc-stat:not(:last-child)::after { content: ""; position: absolute; right: 0; top: 18%; height: 64%; width: 1px; background: var(--ec-turquoise); }
+#e2fc-{{ sid }} .e2fc-stat-icon { font-size: 37px; line-height: 1; flex-shrink: 0; }
+#e2fc-{{ sid }} .e2fc-stat-image { width: 43px; height: 43px; object-fit: contain; flex-shrink: 0; }
+#e2fc-{{ sid }} .e2fc-stat-copy { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+#e2fc-{{ sid }} .e2fc-stat-copy strong { font-size: clamp(22px, 2.1vw, 32px); line-height: 1.1; font-weight: 950; overflow-wrap: anywhere; }
+#e2fc-{{ sid }} .e2fc-stat-copy > span { font-size: 13px; line-height: 1.45; font-weight: 650; overflow-wrap: anywhere; }
+
+@media(max-width: 1100px) {
+  #e2fc-{{ sid }} .e2fc-main { grid-template-columns: 220px minmax(0,1fr); gap: 16px; }
+  #e2fc-{{ sid }} .e2fc-feature { padding: 24px 20px; }
+  #e2fc-{{ sid }} .e2fc-track { grid-auto-columns: calc((100% - {{ section.settings.card_gap }}px) / 2); }
+  #e2fc-{{ sid }} .e2fc-arrows { position: static; justify-content: center; margin-top: 18px; }
+  #e2fc-{{ sid }} .e2fc-header { margin-bottom: 35px; }
+  #e2fc-{{ sid }} .e2fc-stat { gap: 10px; padding: 18px 10px; }
+}
+@media(max-width: 700px) {
+  #e2fc-{{ sid }} { padding-left: 15px; padding-right: 15px; }
+  #e2fc-{{ sid }} .e2fc-header h2 { font-size: clamp(28px, 8vw, 42px); letter-spacing: -1px; }
+  #e2fc-{{ sid }} .e2fc-subtitle { font-size: 14px; }
+  #e2fc-{{ sid }} .e2fc-main { grid-template-columns: 1fr; }
+  #e2fc-{{ sid }} .e2fc-feature { padding: 23px; border-radius: 20px; }
+  #e2fc-{{ sid }} .e2fc-feature-number { font-size: 54px; }
+  #e2fc-{{ sid }} .e2fc-feature-logo, #e2fc-{{ sid }} .e2fc-feature-brand { margin-left: 0; margin-right: auto; }
+  #e2fc-{{ sid }} .e2fc-track { grid-auto-columns: minmax(0, 82%); gap: 14px; }
+  #e2fc-{{ sid }} .e2fc-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #e2fc-{{ sid }} .e2fc-stat { justify-content: flex-start; padding: 18px 12px; }
+  #e2fc-{{ sid }} .e2fc-stat:nth-child(2)::after { display: none; }
+  #e2fc-{{ sid }} .e2fc-stat-icon { font-size: 29px; }
+  #e2fc-{{ sid }} .e2fc-stat-image { width: 31px; height: 31px; }
+  #e2fc-{{ sid }} .e2fc-stat-copy strong { font-size: 22px; }
+  #e2fc-{{ sid }} .e2fc-stat-copy > span { font-size: 11px; }
+}
 </style>
 
 <script>
-  (() => {
-    const root = document.getElementById('e2fc-{{ sid }}');
-    if (!root || root.dataset.e2fcReady === 'true') return;
-    root.dataset.e2fcReady = 'true';
+(function() {
+  var root = document.getElementById('e2fc-{{ sid }}');
+  if (!root || root.dataset.ready === 'true') return;
+  root.dataset.ready = 'true';
 
-    const track = root.querySelector('.e2fc-track');
-    const prev = root.querySelector('.e2fc-prev');
-    const next = root.querySelector('.e2fc-next');
+  var track = root.querySelector('[data-e2fc-track]');
+  var prev = root.querySelector('.e2fc-prev');
+  var next = root.querySelector('.e2fc-next');
 
+  function move(direction) {
     if (!track) return;
-
-    const distance = () => {
-      const card = track.querySelector('.e2fc-card');
-      if (!card) return track.clientWidth;
-      const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-      return card.getBoundingClientRect().width + gap;
-    };
-
-    if (prev) {
-      prev.addEventListener('click', () => {
-        track.scrollBy({ left: -distance(), behavior: 'smooth' });
-      });
-    }
-
-    if (next) {
-      next.addEventListener('click', () => {
-        track.scrollBy({ left: distance(), behavior: 'smooth' });
-      });
-    }
-
-    track.addEventListener('keydown', (event) => {
-      if (event.key === 'ArrowRight') {
-        event.preventDefault();
-        track.scrollBy({ left: distance(), behavior: 'smooth' });
-      }
-      if (event.key === 'ArrowLeft') {
-        event.preventDefault();
-        track.scrollBy({ left: -distance(), behavior: 'smooth' });
-      }
+    var card = track.querySelector('.e2fc-card');
+    if (!card) return;
+    var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    track.scrollBy({
+      left: direction * (card.getBoundingClientRect().width + gap),
+      behavior: 'smooth'
     });
-  })();
+  }
+
+  if (prev) prev.addEventListener('click', function() { move(-1); });
+  if (next) next.addEventListener('click', function() { move(1); });
+})();
 </script>
 
 {% schema %}
 {
-  "name": "Nos collaborations",
-  "tag": "section",
-  "class": "section-nos-collaborations",
+  "name": "E2F - Collaborations",
   "settings": [
-    {
-      "type": "image_picker",
-      "id": "logo",
-      "label": "Logo principal"
-    },
-    {
-      "type": "range",
-      "id": "logo_width",
-      "label": "Largeur du logo sur ordinateur",
-      "min": 100,
-      "max": 500,
-      "step": 10,
-      "default": 300,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "mobile_logo_width",
-      "label": "Largeur du logo sur mobile",
-      "min": 80,
-      "max": 300,
-      "step": 10,
-      "default": 180,
-      "unit": "px"
-    },
-    {
-      "type": "text",
-      "id": "title_black",
-      "label": "Partie noire du titre",
-      "default": "Nos"
-    },
-    {
-      "type": "text",
-      "id": "title_accent",
-      "label": "Partie turquoise du titre",
-      "default": "Collaborations"
-    },
-    {
-      "type": "textarea",
-      "id": "subtitle",
-      "label": "Sous-titre",
-      "default": "Découvrez nos collaborations avec des créateurs de contenu passionnés de football."
-    },
-    {
-      "type": "range",
-      "id": "heading_size",
-      "label": "Taille du titre",
-      "min": 30,
-      "max": 76,
-      "step": 2,
-      "default": 58,
-      "unit": "px"
-    },
-    {
-      "type": "header",
-      "content": "Carte noire"
-    },
-    {
-      "type": "text",
-      "id": "feature_title",
-      "label": "Titre",
-      "default": "Nos influenceurs"
-    },
-    {
-      "type": "text",
-      "id": "feature_number",
-      "label": "Nombre principal",
-      "default": "250K"
-    },
-    {
-      "type": "text",
-      "id": "feature_number_label",
-      "label": "Texte sous le nombre",
-      "default": "Abonnés cumulés"
-    },
-    {
-      "type": "textarea",
-      "id": "feature_description",
-      "label": "Description",
-      "default": "Des collaborations avec des créateurs passionnés."
-    },
-    {
-      "type": "image_picker",
-      "id": "feature_logo",
-      "label": "Logo en bas de la carte noire (facultatif)"
-    },
-    {
-      "type": "header",
-      "content": "Couleurs"
-    },
-    {
-      "type": "color",
-      "id": "accent",
-      "label": "Turquoise",
-      "default": "#00DDE0"
-    },
-    {
-      "type": "color",
-      "id": "background",
-      "label": "Fond de la section",
-      "default": "#FFFFFF"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Texte principal",
-      "default": "#080808"
-    },
-    {
-      "type": "color",
-      "id": "muted_color",
-      "label": "Texte secondaire",
-      "default": "#777777"
-    },
-    {
-      "type": "header",
-      "content": "Dimensions"
-    },
-    {
-      "type": "range",
-      "id": "max_width",
-      "label": "Largeur maximale",
-      "min": 900,
-      "max": 1800,
-      "step": 50,
-      "default": 1500,
-      "unit": "px"
-    },
-    {
-      "type": "select",
-      "id": "media_ratio",
-      "label": "Format des photos",
-      "options": [
-        { "value": "4 / 5", "label": "Portrait" },
-        { "value": "1 / 1", "label": "Carré" },
-        { "value": "4 / 3", "label": "Paysage" }
-      ],
-      "default": "4 / 5"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "label": "Marge supérieure ordinateur",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "default": 32,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "label": "Marge inférieure ordinateur",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "default": 32,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "mobile_padding_top",
-      "label": "Marge supérieure mobile",
-      "min": 0,
-      "max": 60,
-      "step": 2,
-      "default": 18,
-      "unit": "px"
-    },
-    {
-      "type": "range",
-      "id": "mobile_padding_bottom",
-      "label": "Marge inférieure mobile",
-      "min": 0,
-      "max": 60,
-      "step": 2,
-      "default": 18,
-      "unit": "px"
-    }
+    { "type": "image_picker", "id": "logo", "label": "Logo principal" },
+    { "type": "text", "id": "logo_alt", "label": "Texte alternatif du logo", "default": "Esprit2'FOOT" },
+    { "type": "text", "id": "logo_text", "label": "Texte si aucun logo", "default": "EF ESPRIT2'FOOT" },
+    { "type": "range", "id": "logo_width", "label": "Largeur du logo", "min": 100, "max": 400, "step": 10, "unit": "px", "default": 240 },
+    { "type": "text", "id": "title_black", "label": "Début du titre", "default": "NOS" },
+    { "type": "text", "id": "title_color", "label": "Partie turquoise du titre", "default": "COLLABORATIONS" },
+    { "type": "text", "id": "subtitle", "label": "Sous-titre", "default": "Découvrez nos collaborations avec des créateurs de contenu passionnés de football." },
+    { "type": "range", "id": "title_size", "label": "Taille du titre", "min": 32, "max": 76, "step": 2, "unit": "px", "default": 64 },
+    { "type": "header", "content": "Carte noire à gauche" },
+    { "type": "text", "id": "feature_heading", "label": "Titre de la carte", "default": "NOS INFLUENCEURS" },
+    { "type": "text", "id": "feature_number", "label": "Chiffre principal", "default": "250K" },
+    { "type": "text", "id": "feature_suffix", "label": "Symbole après le chiffre", "default": "+" },
+    { "type": "text", "id": "feature_caption", "label": "Texte sous le chiffre", "default": "Abonnés cumulés" },
+    { "type": "text", "id": "feature_icon", "label": "Icône de description", "default": "🤝" },
+    { "type": "textarea", "id": "feature_description", "label": "Description", "default": "Des collaborations avec des créateurs passionnés" },
+    { "type": "image_picker", "id": "feature_logo", "label": "Logo en bas de la carte" },
+    { "type": "text", "id": "feature_logo_alt", "label": "Texte alternatif du logo", "default": "Logo Esprit2'FOOT" },
+    { "type": "text", "id": "feature_logo_text", "label": "Texte si aucun logo n'est ajouté", "default": "EF ESPRIT2'FOOT" },
+    { "type": "range", "id": "feature_logo_width", "label": "Largeur du logo inférieur", "min": 80, "max": 280, "step": 10, "unit": "px", "default": 190 },
+    { "type": "range", "id": "feature_number_size", "label": "Taille du chiffre de gauche", "min": 42, "max": 76, "step": 2, "unit": "px", "default": 66 },
+    { "type": "header", "content": "Disposition" },
+    { "type": "range", "id": "max_width", "label": "Largeur totale", "min": 1000, "max": 1800, "step": 50, "unit": "px", "default": 1650 },
+    { "type": "range", "id": "cards_visible", "label": "Cartes visibles sur ordinateur", "min": 2, "max": 4, "step": 1, "default": 4 },
+    { "type": "range", "id": "card_gap", "label": "Espace entre cartes", "min": 8, "max": 35, "step": 1, "unit": "px", "default": 20 },
+    { "type": "range", "id": "card_radius", "label": "Arrondi des cartes", "min": 0, "max": 30, "step": 2, "unit": "px", "default": 20 },
+    { "type": "header", "content": "Bandeau de statistiques" },
+    { "type": "select", "id": "stat_columns", "label": "Nombre de colonnes", "options": [
+      { "value": "2", "label": "2" },
+      { "value": "3", "label": "3" },
+      { "value": "4", "label": "4" }
+    ], "default": "4" },
+    { "type": "header", "content": "Couleurs" },
+    { "type": "color", "id": "background", "label": "Fond général", "default": "#FFFFFF" },
+    { "type": "color", "id": "white", "label": "Blanc des cartes", "default": "#FFFFFF" },
+    { "type": "color", "id": "black", "label": "Noir principal", "default": "#050809" },
+    { "type": "color", "id": "turquoise", "label": "Turquoise Esprit2'FOOT", "default": "#00DCD9" },
+    { "type": "color", "id": "muted", "label": "Texte secondaire", "default": "#62666D" },
+    { "type": "color", "id": "feature_background", "label": "Fond de la carte gauche", "default": "#061012" },
+    { "type": "color", "id": "feature_text", "label": "Texte de la carte gauche", "default": "#FFFFFF" },
+    { "type": "color", "id": "feature_divider", "label": "Séparateurs de gauche", "default": "#FFFFFF" },
+    { "type": "color", "id": "stats_background", "label": "Fond du bandeau inférieur", "default": "#E2FBFA" },
+    { "type": "header", "content": "Espacements" },
+    { "type": "range", "id": "padding_top", "label": "Marge supérieure", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 40 },
+    { "type": "range", "id": "padding_bottom", "label": "Marge inférieure", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 12 }
   ],
   "blocks": [
     {
-      "type": "creator",
-      "name": "Créateur",
+      "type": "influencer",
+      "name": "Influenceur",
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "cover",
-          "label": "Photo / miniature"
-        },
-        {
-          "type": "image_picker",
-          "id": "avatar",
-          "label": "Photo de profil"
-        },
-        {
-          "type": "text",
-          "id": "name",
-          "label": "Nom",
-          "default": "PABLOBRIMEUX"
-        },
-        {
-          "type": "text",
-          "id": "handle",
-          "label": "Pseudo",
-          "default": "@pablobrimeux"
-        },
-        {
-          "type": "checkbox",
-          "id": "verified",
-          "label": "Compte vérifié",
-          "default": true
-        },
-        {
-          "type": "select",
-          "id": "platform",
-          "label": "Réseau social",
-          "options": [
-            { "value": "TikTok", "label": "TikTok" },
-            { "value": "Instagram", "label": "Instagram" },
-            { "value": "YouTube", "label": "YouTube" },
-            { "value": "Autre", "label": "Autre" }
-          ],
-          "default": "TikTok"
-        },
-        {
-          "type": "text",
-          "id": "description",
-          "label": "Description facultative"
-        },
-        {
-          "type": "url",
-          "id": "video_url",
-          "label": "Lien de la vidéo"
-        },
-        {
-          "type": "text",
-          "id": "button_label",
-          "label": "Texte du bouton",
-          "default": "Voir la vidéo"
-        }
+        { "type": "image_picker", "id": "photo", "label": "Grande photo / miniature" },
+        { "type": "text", "id": "photo_alt", "label": "Texte alternatif de la photo", "default": "Vidéo de collaboration" },
+        { "type": "select", "id": "platform", "label": "Plateforme", "options": [
+          { "value": "TIKTOK", "label": "TikTok" },
+          { "value": "INSTAGRAM", "label": "Instagram" },
+          { "value": "YOUTUBE", "label": "YouTube" },
+          { "value": "SNAPCHAT", "label": "Snapchat" },
+          { "value": "AUTRE", "label": "Autre" }
+        ], "default": "TIKTOK" },
+        { "type": "text", "id": "platform_icon", "label": "Icône de plateforme", "default": "♪" },
+        { "type": "checkbox", "id": "show_play", "label": "Afficher bouton lecture", "default": true },
+        { "type": "image_picker", "id": "avatar", "label": "Photo de profil" },
+        { "type": "text", "id": "avatar_fallback", "label": "Initiales si pas de photo", "default": "EF" },
+        { "type": "text", "id": "name", "label": "Nom affiché", "default": "NOM DU CRÉATEUR" },
+        { "type": "text", "id": "handle", "label": "Pseudo du créateur", "default": "@pseudo" },
+        { "type": "checkbox", "id": "verified", "label": "Afficher le badge de vérification", "default": true },
+        { "type": "text", "id": "verified_icon", "label": "Symbole de vérification", "default": "✓" },
+        { "type": "url", "id": "video_url", "label": "Lien de la vidéo" },
+        { "type": "text", "id": "button_icon", "label": "Icône avant le bouton", "default": "▷" },
+        { "type": "text", "id": "button_text", "label": "Texte du bouton", "default": "Voir la vidéo" },
+        { "type": "text", "id": "button_end_icon", "label": "Icône après le bouton", "default": "↗" }
       ]
     },
     {
       "type": "stat",
-      "name": "Statistique",
+      "name": "Statistique inférieure",
       "settings": [
-        {
-          "type": "select",
-          "id": "icon",
-          "label": "Icône",
-          "options": [
-            { "value": "people", "label": "Communauté" },
-            { "value": "video", "label": "Vidéo" },
-            { "value": "handshake", "label": "Collaboration" },
-            { "value": "bolt", "label": "Éclair" }
-          ],
-          "default": "people"
-        },
-        {
-          "type": "text",
-          "id": "value",
-          "label": "Valeur",
-          "default": "+250K"
-        },
-        {
-          "type": "text",
-          "id": "label",
-          "label": "Libellé",
-          "default": "Abonnés cumulés"
-        }
+        { "type": "image_picker", "id": "icon_image", "label": "Image d'icône personnalisée (facultatif)" },
+        { "type": "text", "id": "icon", "label": "Icône ou emoji si pas d'image", "default": "♧" },
+        { "type": "text", "id": "value", "label": "Chiffre / valeur", "default": "+250K" },
+        { "type": "text", "id": "label", "label": "Texte descriptif", "default": "Abonnés cumulés" }
       ]
     }
   ],
-  "max_blocks": 20,
   "presets": [
     {
-      "name": "Nos collaborations",
+      "name": "E2F - Nos collaborations",
       "blocks": [
-        {
-          "type": "creator",
-          "settings": {
-            "name": "PABLOBRIMEUX",
-            "handle": "@pablobrimeux",
-            "platform": "TikTok",
-            "verified": true
-          }
-        },
-        {
-          "type": "creator",
-          "settings": {
-            "name": "Créateur partenaire",
-            "handle": "@createur",
-            "platform": "Instagram",
-            "verified": true
-          }
-        },
-        {
-          "type": "stat",
-          "settings": {
-            "icon": "people",
-            "value": "+250K",
-            "label": "Abonnés cumulés"
-          }
-        },
-        {
-          "type": "stat",
-          "settings": {
-            "icon": "video",
-            "value": "+50",
-            "label": "Vidéos publiées"
-          }
-        },
-        {
-          "type": "stat",
-          "settings": {
-            "icon": "handshake",
-            "value": "100%",
-            "label": "Collaborations vérifiées"
-          }
-        },
-        {
-          "type": "stat",
-          "settings": {
-            "icon": "bolt",
-            "value": "24/7",
-            "label": "Une vraie communauté football"
-          }
-        }
+        { "type": "influencer", "settings": { "platform": "TIKTOK", "platform_icon": "♪", "name": "PABLOBRIMEUX", "handle": "@pablobrimeux" } },
+        { "type": "influencer", "settings": { "platform": "TIKTOK", "platform_icon": "♪", "name": "SAYAN", "handle": "@sayan.off" } },
+        { "type": "influencer", "settings": { "platform": "INSTAGRAM", "platform_icon": "◎", "name": "GAMEMIXTREIZE", "handle": "@gamemixtreize" } },
+        { "type": "influencer", "settings": { "platform": "TIKTOK", "platform_icon": "♪", "name": "RWANI10", "handle": "@rwani10" } },
+        { "type": "stat", "settings": { "icon": "♧", "value": "+250K", "label": "Abonnés cumulés" } },
+        { "type": "stat", "settings": { "icon": "▷", "value": "+50", "label": "Vidéos publiées" } },
+        { "type": "stat", "settings": { "icon": "🤝", "value": "100%", "label": "Collaborations vérifiées" } },
+        { "type": "stat", "settings": { "icon": "ϟ", "value": "", "label": "Une visibilité auprès d'une vraie communauté football" } }
       ]
     }
   ]
