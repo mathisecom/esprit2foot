@@ -14,6 +14,7 @@
       <h2>{{ section.settings.title_black | escape }}
         <span>{{ section.settings.title_color | escape }}</span>
       </h2>
+
       <div class="e2fc-underline"></div>
       <p class="e2fc-subtitle">{{ section.settings.subtitle | escape }}</p>
 
@@ -28,7 +29,7 @@
       <aside class="e2fc-feature">
         <div class="e2fc-feature-heading">
           <span class="e2fc-line"></span>
-          {{ section.settings.feature_heading | escape }}
+          <span>{{ section.settings.feature_heading | escape }}</span>
         </div>
 
         <div class="e2fc-feature-number">
@@ -36,6 +37,7 @@
         </div>
 
         <p class="e2fc-feature-caption">{{ section.settings.feature_caption | escape }}</p>
+
         <div class="e2fc-divider"></div>
 
         <div class="e2fc-feature-description">
@@ -66,7 +68,7 @@
                 {% if block.settings.photo != blank %}
                   {{ block.settings.photo | image_url: width: 900 | image_tag: class: 'e2fc-photo', loading: 'lazy', alt: block.settings.photo_alt }}
                 {% else %}
-                  <div class="e2fc-photo-placeholder">Ajoutez une photo dans l’éditeur Shopify</div>
+                  <div class="e2fc-photo-placeholder">Ajoutez la miniature dans Shopify</div>
                 {% endif %}
 
                 <span class="e2fc-platform">
@@ -106,7 +108,7 @@
 
               <div class="e2fc-profile">
                 {% if block.settings.avatar != blank %}
-                  {{ block.settings.avatar | image_url: width: 120 | image_tag: class: 'e2fc-avatar', loading: 'lazy', alt: block.settings.name | escape }}
+                  {{ block.settings.avatar | image_url: width: 120 | image_tag: class: 'e2fc-avatar', loading: 'lazy', alt: block.settings.name }}
                 {% else %}
                   <span class="e2fc-avatar-placeholder">{{ block.settings.avatar_fallback | escape }}</span>
                 {% endif %}
@@ -115,7 +117,7 @@
                   <div class="e2fc-name-row">
                     <h3>{{ block.settings.name | escape }}</h3>
                     {% if block.settings.verified %}
-                      <span class="e2fc-verified" aria-label="Vérifié">{{ block.settings.verified_icon | escape }}</span>
+                      <span class="e2fc-verified">{{ block.settings.verified_icon | escape }}</span>
                     {% endif %}
                   </div>
                   <p>{{ block.settings.handle | escape }}</p>
@@ -147,10 +149,11 @@
         {% if block.type == 'stat' %}
           <div class="e2fc-stat" {{ block.shopify_attributes }}>
             {% if block.settings.icon_image != blank %}
-              {{ block.settings.icon_image | image_url: width: 100 | image_tag: class: 'e2fc-stat-image', alt: block.settings.label | escape }}
+              {{ block.settings.icon_image | image_url: width: 100 | image_tag: class: 'e2fc-stat-image', alt: block.settings.label }}
             {% else %}
               <span class="e2fc-stat-icon">{{ block.settings.icon | escape }}</span>
             {% endif %}
+
             <div class="e2fc-stat-copy">
               <strong>{{ block.settings.value | escape }}</strong>
               <span>{{ block.settings.label | escape }}</span>
@@ -165,16 +168,16 @@
 
 <style>
 #e2fc-{{ sid }} {
-  --ec-turquoise: {{ section.settings.turquoise }};
+  --ec-cyan: {{ section.settings.turquoise }};
   --ec-black: {{ section.settings.black }};
   --ec-white: {{ section.settings.white }};
   --ec-muted: {{ section.settings.muted }};
-  --ec-stats-bg: {{ section.settings.stats_background }};
   background: {{ section.settings.background }};
   color: var(--ec-black);
   padding: {{ section.settings.padding_top }}px 24px {{ section.settings.padding_bottom }}px;
   font-family: inherit;
 }
+
 #e2fc-{{ sid }} *,
 #e2fc-{{ sid }} *::before,
 #e2fc-{{ sid }} *::after { box-sizing: border-box; }
@@ -183,24 +186,28 @@
   max-width: {{ section.settings.max_width }}px;
   margin: 0 auto;
 }
+
 #e2fc-{{ sid }} .e2fc-header {
   text-align: center;
   position: relative;
   margin-bottom: 46px;
 }
+
 #e2fc-{{ sid }} .e2fc-logo {
   display: block;
   width: {{ section.settings.logo_width }}px;
-  max-width: 60%;
+  max-width: 65%;
   height: auto;
-  margin: 0 auto 22px;
   object-fit: contain;
+  margin: 0 auto 22px;
 }
+
 #e2fc-{{ sid }} .e2fc-logo-text {
   font-size: 22px;
   font-weight: 950;
   margin-bottom: 22px;
 }
+
 #e2fc-{{ sid }} .e2fc-header h2 {
   margin: 0;
   font-size: clamp(32px, 4.2vw, {{ section.settings.title_size }}px);
@@ -210,22 +217,26 @@
   font-style: italic;
   text-transform: uppercase;
 }
-#e2fc-{{ sid }} .e2fc-header h2 span { color: var(--ec-turquoise); }
+
+#e2fc-{{ sid }} .e2fc-header h2 span { color: var(--ec-cyan); }
+
 #e2fc-{{ sid }} .e2fc-underline {
-  height: 7px;
   width: 150px;
-  background: var(--ec-turquoise);
+  height: 6px;
+  background: var(--ec-cyan);
   border-radius: 8px;
   margin: 13px auto 14px;
-  transform: rotate(-4deg);
+  transform: rotate(-3deg);
 }
+
 #e2fc-{{ sid }} .e2fc-subtitle {
+  max-width: 800px;
+  margin: 0 auto;
   color: var(--ec-muted);
   font-size: 17px;
   line-height: 1.5;
-  margin: 0 auto;
-  max-width: 800px;
 }
+
 #e2fc-{{ sid }} .e2fc-arrows {
   position: absolute;
   right: 0;
@@ -233,31 +244,33 @@
   display: flex;
   gap: 12px;
 }
+
 #e2fc-{{ sid }} .e2fc-arrow {
-  border: 1px solid #dedede;
-  background: var(--ec-white);
-  color: var(--ec-black);
-  border-radius: 50%;
   width: 48px;
   height: 48px;
+  border: 1px solid #dedede;
+  border-radius: 50%;
+  background: #fff;
+  color: #050809;
   font-size: 30px;
   line-height: 1;
   cursor: pointer;
 }
+
 #e2fc-{{ sid }} .e2fc-arrow:hover,
 #e2fc-{{ sid }} .e2fc-next {
-  background: var(--ec-turquoise);
-  border-color: var(--ec-turquoise);
-  box-shadow: 0 3px 12px #00d8d833;
+  background: var(--ec-cyan);
+  border-color: var(--ec-cyan);
 }
 
-/* Layout ordinateur */
+/* CARTE + CARROUSEL */
 #e2fc-{{ sid }} .e2fc-main {
   display: grid;
   grid-template-columns: minmax(230px, .98fr) minmax(0, 4fr);
   gap: 26px;
   align-items: stretch;
 }
+
 #e2fc-{{ sid }} .e2fc-feature {
   background: {{ section.settings.feature_background }};
   color: {{ section.settings.feature_text }};
@@ -267,21 +280,24 @@
   flex-direction: column;
   min-width: 0;
 }
+
 #e2fc-{{ sid }} .e2fc-feature-heading {
   display: flex;
   align-items: center;
   gap: 13px;
-  color: var(--ec-turquoise);
+  color: var(--ec-cyan);
   font-weight: 900;
   font-size: 16px;
   text-transform: uppercase;
 }
+
 #e2fc-{{ sid }} .e2fc-line {
   width: 3px;
   height: 27px;
-  background: var(--ec-turquoise);
+  background: var(--ec-cyan);
   flex-shrink: 0;
 }
+
 #e2fc-{{ sid }} .e2fc-feature-number {
   margin-top: 24px;
   font-size: clamp(42px, 4vw, {{ section.settings.feature_number_size }}px);
@@ -290,18 +306,23 @@
   letter-spacing: -2px;
   white-space: nowrap;
 }
-#e2fc-{{ sid }} .e2fc-feature-number span { color: var(--ec-turquoise); }
+
+#e2fc-{{ sid }} .e2fc-feature-number span { color: var(--ec-cyan); }
+
 #e2fc-{{ sid }} .e2fc-feature-caption {
   margin: 9px 0 25px;
   font-size: 15px;
   line-height: 1.4;
 }
+
 #e2fc-{{ sid }} .e2fc-divider {
+  width: 100%;
   height: 1px;
   background: {{ section.settings.feature_divider }};
   opacity: .8;
-  width: 100%;
+  flex-shrink: 0;
 }
+
 #e2fc-{{ sid }} .e2fc-feature-description {
   display: grid;
   grid-template-columns: 48px minmax(0, 1fr);
@@ -309,16 +330,19 @@
   align-items: start;
   padding: 24px 0;
 }
+
 #e2fc-{{ sid }} .e2fc-feature-icon {
   font-size: 35px;
-  color: var(--ec-turquoise);
+  color: var(--ec-cyan);
   line-height: 1.2;
 }
+
 #e2fc-{{ sid }} .e2fc-feature-description p {
   margin: 0;
   font-size: 15px;
   line-height: 1.55;
 }
+
 #e2fc-{{ sid }} .e2fc-feature-logo {
   display: block;
   width: {{ section.settings.feature_logo_width }}px;
@@ -328,6 +352,7 @@
   margin: auto auto 0;
   padding-top: 24px;
 }
+
 #e2fc-{{ sid }} .e2fc-feature-brand {
   margin: auto auto 0;
   padding-top: 24px;
@@ -336,7 +361,7 @@
   text-align: center;
 }
 
-/* Cartes influenceurs */
+/* CARTES INFLUENCEURS */
 #e2fc-{{ sid }} .e2fc-track {
   display: grid;
   grid-auto-flow: column;
@@ -350,7 +375,9 @@
   min-width: 0;
   -webkit-overflow-scrolling: touch;
 }
+
 #e2fc-{{ sid }} .e2fc-track::-webkit-scrollbar { display: none; }
+
 #e2fc-{{ sid }} .e2fc-card {
   min-width: 0;
   display: flex;
@@ -359,18 +386,20 @@
   border: 1px solid #e8e8e8;
   border-radius: {{ section.settings.card_radius }}px;
   overflow: hidden;
-  box-shadow: 0 3px 7px #00000012;
+  box-shadow: 0 3px 9px #00000012;
   scroll-snap-align: start;
 }
+
 #e2fc-{{ sid }} .e2fc-photo-link {
   display: block;
   position: relative;
   aspect-ratio: 1 / 1.08;
   overflow: hidden;
   background: #eee;
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
+
 #e2fc-{{ sid }} .e2fc-photo {
   display: block;
   width: 100%;
@@ -378,7 +407,9 @@
   object-fit: cover;
   transition: transform .3s ease;
 }
-#e2fc-{{ sid }} .e2fc-card:hover .e2fc-photo { transform: scale(1.035); }
+
+#e2fc-{{ sid }} .e2fc-card:hover .e2fc-photo { transform: scale(1.025); }
+
 #e2fc-{{ sid }} .e2fc-photo-placeholder {
   display: grid;
   place-items: center;
@@ -387,6 +418,7 @@
   color: #555;
   text-align: center;
 }
+
 #e2fc-{{ sid }} .e2fc-platform {
   position: absolute;
   top: 12px;
@@ -396,13 +428,13 @@
   gap: 7px;
   padding: 8px 11px;
   background: #05090b;
-  color: white;
+  color: #fff;
   border-radius: 30px;
   font-size: 11px;
   line-height: 1;
   font-weight: 900;
-  text-transform: uppercase;
 }
+
 #e2fc-{{ sid }} .e2fc-platform-logo {
   display: inline-flex;
   align-items: center;
@@ -411,11 +443,13 @@
   height: 18px;
   flex: 0 0 18px;
 }
+
 #e2fc-{{ sid }} .e2fc-platform-logo svg {
   display: block;
   width: 100%;
   height: 100%;
 }
+
 #e2fc-{{ sid }} .e2fc-play {
   position: absolute;
   top: 50%;
@@ -425,13 +459,14 @@
   place-items: center;
   width: 55px;
   height: 55px;
-  border: 3px solid white;
+  border: 3px solid #fff;
   border-radius: 50%;
-  color: white;
+  color: #fff;
   background: #00000048;
   font-size: 22px;
   padding-left: 3px;
 }
+
 #e2fc-{{ sid }} .e2fc-profile {
   display: flex;
   align-items: center;
@@ -439,6 +474,7 @@
   padding: 13px 13px 9px;
   min-width: 0;
 }
+
 #e2fc-{{ sid }} .e2fc-avatar,
 #e2fc-{{ sid }} .e2fc-avatar-placeholder {
   width: 42px;
@@ -448,17 +484,21 @@
   object-fit: cover;
   background: #e8eeee;
 }
+
 #e2fc-{{ sid }} .e2fc-avatar-placeholder {
   display: grid;
   place-items: center;
   font-weight: 900;
 }
+
 #e2fc-{{ sid }} .e2fc-profile-info { min-width: 0; }
+
 #e2fc-{{ sid }} .e2fc-name-row {
   display: flex;
   align-items: center;
   gap: 5px;
 }
+
 #e2fc-{{ sid }} .e2fc-name-row h3 {
   margin: 0;
   font-size: clamp(12px, 1vw, 16px);
@@ -466,23 +506,26 @@
   font-weight: 950;
   overflow-wrap: anywhere;
 }
+
 #e2fc-{{ sid }} .e2fc-verified {
   display: inline-grid;
   place-items: center;
   background: #0ba9eb;
-  color: white;
+  color: #fff;
   border-radius: 50%;
   width: 17px;
   height: 17px;
   font-size: 11px;
   flex-shrink: 0;
 }
+
 #e2fc-{{ sid }} .e2fc-profile-info p {
   margin: 3px 0 0;
   color: #73777b;
   font-size: 12px;
   overflow-wrap: anywhere;
 }
+
 #e2fc-{{ sid }} .e2fc-button {
   display: flex;
   align-items: center;
@@ -491,9 +534,9 @@
   margin: auto 12px 13px;
   padding: 9px 6px;
   min-height: 39px;
-  border: 2px solid var(--ec-turquoise);
+  border: 2px solid var(--ec-cyan);
   border-radius: 30px;
-  background: linear-gradient(100deg, white, #8af8f3);
+  background: linear-gradient(100deg, #fff, #8af8f3);
   color: #050505;
   font-size: 13px;
   font-weight: 900;
@@ -501,77 +544,93 @@
   text-align: center;
   text-decoration: none;
 }
-#e2fc-{{ sid }} a.e2fc-button:hover { background: var(--ec-turquoise); }
+
+#e2fc-{{ sid }} a.e2fc-button:hover { background: var(--ec-cyan); }
 #e2fc-{{ sid }} .e2fc-button > span { font-size: 16px; }
 #e2fc-{{ sid }} .e2fc-button-disabled { opacity: .7; }
 
-/* Statistiques */
+/* BANDEAU DE STATISTIQUES */
 #e2fc-{{ sid }} .e2fc-stats {
   display: grid;
-  grid-template-columns: repeat({{ section.settings.stat_columns }}, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   margin-top: 27px;
-  background: var(--ec-stats-bg);
+  background: {{ section.settings.stats_background }};
+  border: 1px solid #e8eeee;
   border-radius: 22px;
   overflow: hidden;
+  box-shadow: 0 7px 15px #0000000b;
 }
+
 #e2fc-{{ sid }} .e2fc-stat {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 22px 16px;
+  justify-content: flex-start;
+  gap: 11px;
   min-width: 0;
+  padding: 22px 12px;
+  text-align: center;
 }
+
 #e2fc-{{ sid }} .e2fc-stat:not(:last-child)::after {
   content: "";
   position: absolute;
   right: 0;
-  top: 18%;
-  height: 64%;
+  top: 15%;
+  height: 70%;
   width: 1px;
-  background: var(--ec-turquoise);
+  background: var(--ec-cyan);
 }
+
 #e2fc-{{ sid }} .e2fc-stat-icon {
   font-size: 35px;
   line-height: 1;
-  flex-shrink: 0;
+  color: var(--ec-cyan);
 }
+
 #e2fc-{{ sid }} .e2fc-stat-image {
   width: 40px;
   height: 40px;
   object-fit: contain;
-  flex-shrink: 0;
 }
+
 #e2fc-{{ sid }} .e2fc-stat-copy {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  align-items: center;
+  gap: 5px;
   min-width: 0;
+  width: 100%;
 }
+
 #e2fc-{{ sid }} .e2fc-stat-copy strong {
   font-size: clamp(20px, 2.1vw, 32px);
   line-height: 1.1;
   font-weight: 950;
   overflow-wrap: anywhere;
 }
+
 #e2fc-{{ sid }} .e2fc-stat-copy > span {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.45;
   font-weight: 650;
   overflow-wrap: anywhere;
 }
 
-/* Tablettes */
-@media (max-width: 1100px) {
+/* TABLETTES */
+@media (min-width: 701px) and (max-width: 1100px) {
   #e2fc-{{ sid }} .e2fc-main {
     grid-template-columns: minmax(190px, .85fr) minmax(0, 2fr);
     gap: 16px;
   }
+
   #e2fc-{{ sid }} .e2fc-feature { padding: 22px 17px; }
+
   #e2fc-{{ sid }} .e2fc-track {
     grid-auto-columns: calc((100% - {{ section.settings.card_gap }}px) / 2);
   }
+
   #e2fc-{{ sid }} .e2fc-arrows {
     position: static;
     justify-content: center;
@@ -579,76 +638,117 @@
   }
 }
 
-/* Téléphones : carte à gauche, carrousel à droite */
+/* MOBILE : CARTE GAUCHE, INFLUENCEURS DROITE */
 @media (max-width: 700px) {
-  #e2fc-{{ sid }} { padding-left: 10px; padding-right: 10px; }
+  #e2fc-{{ sid }} {
+    padding: 26px 10px 24px;
+    overflow: hidden;
+  }
 
-  #e2fc-{{ sid }} .e2fc-header { margin-bottom: 20px; }
-  #e2fc-{{ sid }} .e2fc-logo { margin-bottom: 15px; }
+  #e2fc-{{ sid }} .e2fc-header {
+    margin-bottom: 28px;
+    padding: 0 4px;
+  }
+
+  #e2fc-{{ sid }} .e2fc-logo {
+    width: 175px;
+    max-width: 65%;
+    margin-bottom: 20px;
+  }
+
   #e2fc-{{ sid }} .e2fc-header h2 {
-    font-size: clamp(25px, 6vw, 38px);
+    font-size: clamp(25px, 7vw, 39px);
+    line-height: 1.05;
     letter-spacing: -1px;
   }
-  #e2fc-{{ sid }} .e2fc-subtitle { font-size: 12px; }
+
+  #e2fc-{{ sid }} .e2fc-underline {
+    width: 90px;
+    height: 5px;
+    margin: 12px auto;
+  }
+
+  #e2fc-{{ sid }} .e2fc-subtitle {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
   #e2fc-{{ sid }} .e2fc-arrows {
     position: static;
-    display: flex;
     justify-content: center;
-    margin-top: 12px;
+    gap: 12px;
+    margin-top: 18px;
   }
+
   #e2fc-{{ sid }} .e2fc-arrow {
-    width: 36px;
-    height: 36px;
-    font-size: 24px;
+    width: 42px;
+    height: 42px;
+    font-size: 27px;
   }
 
   #e2fc-{{ sid }} .e2fc-main {
     display: grid;
-    grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
-    gap: 9px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px;
     align-items: stretch;
   }
 
   #e2fc-{{ sid }} .e2fc-feature {
     min-width: 0;
-    padding: 13px 9px;
-    border-radius: 14px;
+    padding: 20px 12px;
+    border-radius: 22px;
+    overflow: hidden;
   }
+
   #e2fc-{{ sid }} .e2fc-feature-heading {
-    font-size: 10px;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
     line-height: 1.35;
-    gap: 6px;
   }
-  #e2fc-{{ sid }} .e2fc-line { height: 20px; width: 2px; }
+
+  #e2fc-{{ sid }} .e2fc-line {
+    width: 3px;
+    min-width: 3px;
+    height: 34px;
+  }
+
   #e2fc-{{ sid }} .e2fc-feature-number {
-    margin-top: 15px;
-    font-size: clamp(25px, 7vw, 38px);
-    letter-spacing: -1px;
-    white-space: normal;
-    overflow-wrap: anywhere;
+    margin-top: 24px;
+    font-size: clamp(29px, 7.7vw, 44px);
+    letter-spacing: -1.5px;
+    white-space: nowrap;
   }
+
   #e2fc-{{ sid }} .e2fc-feature-caption {
-    font-size: 10px;
-    margin: 6px 0 13px;
+    margin: 9px 0 19px;
+    font-size: 12px;
+    line-height: 1.4;
   }
+
   #e2fc-{{ sid }} .e2fc-feature-description {
     grid-template-columns: 1fr;
-    gap: 5px;
-    padding: 13px 0;
+    gap: 10px;
+    padding: 19px 0;
   }
-  #e2fc-{{ sid }} .e2fc-feature-icon { font-size: 23px; }
+
+  #e2fc-{{ sid }} .e2fc-feature-icon { font-size: 29px; }
+
   #e2fc-{{ sid }} .e2fc-feature-description p {
-    font-size: 10px;
-    line-height: 1.4;
+    font-size: 12px;
+    line-height: 1.55;
     overflow-wrap: anywhere;
   }
+
   #e2fc-{{ sid }} .e2fc-feature-logo {
     width: 100%;
-    padding-top: 13px;
+    max-width: 180px;
+    padding-top: 22px;
   }
+
   #e2fc-{{ sid }} .e2fc-feature-brand {
-    font-size: 10px;
-    padding-top: 13px;
+    font-size: 12px;
+    padding-top: 22px;
     overflow-wrap: anywhere;
   }
 
@@ -657,83 +757,164 @@
     grid-auto-flow: column;
     grid-template-columns: none;
     grid-auto-columns: 100%;
-    gap: 9px;
+    gap: 10px;
+    min-width: 0;
     overflow-x: auto;
     overflow-y: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    min-width: 0;
-    align-items: stretch;
     -webkit-overflow-scrolling: touch;
   }
+
   #e2fc-{{ sid }} .e2fc-track::-webkit-scrollbar { display: none; }
+
   #e2fc-{{ sid }} .e2fc-card {
     width: 100%;
     min-width: 0;
-    border-radius: 12px;
+    border-radius: 20px;
     scroll-snap-align: start;
   }
-  #e2fc-{{ sid }} .e2fc-photo-link { aspect-ratio: 3 / 4; }
+
+  #e2fc-{{ sid }} .e2fc-photo-link { aspect-ratio: 3 / 3.15; }
+
   #e2fc-{{ sid }} .e2fc-platform {
-    top: 6px;
-    left: 5px;
-    padding: 5px 6px;
-    gap: 4px;
-    font-size: 8px;
-  }
-  #e2fc-{{ sid }} .e2fc-platform-logo {
-    width: 13px;
-    height: 13px;
-    flex-basis: 13px;
-  }
-  #e2fc-{{ sid }} .e2fc-play {
-    width: 34px;
-    height: 34px;
-    font-size: 14px;
-    border-width: 2px;
-  }
-  #e2fc-{{ sid }} .e2fc-profile {
-    padding: 8px 6px;
+    top: 9px;
+    left: 8px;
     gap: 5px;
-  }
-  #e2fc-{{ sid }} .e2fc-avatar,
-  #e2fc-{{ sid }} .e2fc-avatar-placeholder {
-    width: 26px;
-    height: 26px;
-    flex-basis: 26px;
-  }
-  #e2fc-{{ sid }} .e2fc-name-row { gap: 3px; }
-  #e2fc-{{ sid }} .e2fc-name-row h3 { font-size: 10px; }
-  #e2fc-{{ sid }} .e2fc-verified {
-    width: 12px;
-    height: 12px;
-    font-size: 8px;
-  }
-  #e2fc-{{ sid }} .e2fc-profile-info p { font-size: 9px; }
-  #e2fc-{{ sid }} .e2fc-button {
-    min-height: 31px;
-    margin: auto 5px 7px;
-    padding: 5px 2px;
-    gap: 3px;
+    padding: 7px 8px;
     font-size: 9px;
   }
-  #e2fc-{{ sid }} .e2fc-button > span { font-size: 10px; }
 
-  #e2fc-{{ sid }} .e2fc-stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    margin-top: 14px;
-    border-radius: 13px;
+  #e2fc-{{ sid }} .e2fc-platform-logo {
+    width: 16px;
+    height: 16px;
+    flex-basis: 16px;
   }
-  #e2fc-{{ sid }} .e2fc-stat {
-    justify-content: flex-start;
-    padding: 12px 8px;
+
+  #e2fc-{{ sid }} .e2fc-play {
+    width: 43px;
+    height: 43px;
+    font-size: 17px;
+  }
+
+  #e2fc-{{ sid }} .e2fc-profile {
+    padding: 10px 8px 8px;
     gap: 7px;
   }
-  #e2fc-{{ sid }} .e2fc-stat:nth-child(2)::after { display: none; }
-  #e2fc-{{ sid }} .e2fc-stat-icon { font-size: 22px; }
-  #e2fc-{{ sid }} .e2fc-stat-image { width: 24px; height: 24px; }
-  #e2fc-{{ sid }} .e2fc-stat-copy strong { font-size: 17px; }
+
+  #e2fc-{{ sid }} .e2fc-avatar,
+  #e2fc-{{ sid }} .e2fc-avatar-placeholder {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+  }
+
+  #e2fc-{{ sid }} .e2fc-name-row { gap: 4px; }
+
+  #e2fc-{{ sid }} .e2fc-name-row h3 {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  #e2fc-{{ sid }} .e2fc-verified {
+    width: 13px;
+    height: 13px;
+    font-size: 9px;
+  }
+
+  #e2fc-{{ sid }} .e2fc-profile-info p { font-size: 10px; }
+
+  #e2fc-{{ sid }} .e2fc-button {
+    min-height: 38px;
+    margin: auto 7px 9px;
+    padding: 8px 3px;
+    gap: 4px;
+    font-size: 11px;
+    line-height: 1.25;
+  }
+
+  #e2fc-{{ sid }} .e2fc-button > span { font-size: 13px; }
+
+  /* 4 STATS SUR UNE SEULE LIGNE */
+  #e2fc-{{ sid }} .e2fc-stats {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin-top: 18px;
+    background: #fff;
+    border: 1px solid #e9eeee;
+    border-radius: 22px;
+    box-shadow: 0 8px 15px #0000000d;
+  }
+
+  #e2fc-{{ sid }} .e2fc-stat {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 9px;
+    padding: 17px 4px 18px;
+    min-width: 0;
+    text-align: center;
+  }
+
+  #e2fc-{{ sid }} .e2fc-stat:not(:last-child)::after {
+    display: block;
+    right: 0;
+    top: 14%;
+    height: 72%;
+    width: 1px;
+    background: var(--ec-cyan);
+  }
+
+  #e2fc-{{ sid }} .e2fc-stat-icon {
+    font-size: 25px;
+    line-height: 1.1;
+  }
+
+  #e2fc-{{ sid }} .e2fc-stat-image {
+    width: 27px;
+    height: 27px;
+  }
+
+  #e2fc-{{ sid }} .e2fc-stat-copy { gap: 5px; }
+
+  #e2fc-{{ sid }} .e2fc-stat-copy strong {
+    font-size: clamp(14px, 3.8vw, 22px);
+    line-height: 1.1;
+    letter-spacing: -.5px;
+  }
+
+  #e2fc-{{ sid }} .e2fc-stat-copy > span {
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+}
+
+/* TÉLÉPHONES ÉTROITS */
+@media (max-width: 380px) {
+  #e2fc-{{ sid }} .e2fc-main { gap: 7px; }
+
+  #e2fc-{{ sid }} .e2fc-feature {
+    padding: 16px 9px;
+    border-radius: 17px;
+  }
+
+  #e2fc-{{ sid }} .e2fc-feature-heading { font-size: 10px; }
+
+  #e2fc-{{ sid }} .e2fc-feature-number { font-size: 29px; }
+
+  #e2fc-{{ sid }} .e2fc-feature-description p { font-size: 11px; }
+
+  #e2fc-{{ sid }} .e2fc-stats { border-radius: 16px; }
+
+  #e2fc-{{ sid }} .e2fc-stat {
+    padding: 13px 3px;
+    gap: 7px;
+  }
+
+  #e2fc-{{ sid }} .e2fc-stat-copy strong { font-size: 14px; }
+
   #e2fc-{{ sid }} .e2fc-stat-copy > span { font-size: 9px; }
 }
 
@@ -757,12 +938,10 @@
 
   function move(direction) {
     if (!track) return;
-
     var card = track.querySelector('.e2fc-card');
     if (!card) return;
 
-    var styles = window.getComputedStyle(track);
-    var gap = parseFloat(styles.columnGap) || 0;
+    var gap = parseFloat(getComputedStyle(track).columnGap) || 0;
     track.scrollBy({
       left: direction * (card.getBoundingClientRect().width + gap),
       behavior: 'smooth'
@@ -784,54 +963,49 @@
     { "type": "range", "id": "logo_width", "label": "Largeur du logo", "min": 100, "max": 400, "step": 10, "unit": "px", "default": 240 },
     { "type": "text", "id": "title_black", "label": "Titre noir", "default": "NOS" },
     { "type": "text", "id": "title_color", "label": "Titre turquoise", "default": "COLLABORATIONS" },
-    { "type": "text", "id": "subtitle", "label": "Sous-titre", "default": "Découvrez nos collaborations avec des créateurs de contenu passionnés de football." },
+    { "type": "textarea", "id": "subtitle", "label": "Sous-titre", "default": "Découvrez nos collaborations avec des créateurs de contenu passionnés de football." },
     { "type": "range", "id": "title_size", "label": "Taille du titre", "min": 32, "max": 76, "step": 2, "unit": "px", "default": 64 },
 
-    { "type": "header", "content": "Carte de présentation" },
-    { "type": "text", "id": "feature_heading", "label": "Petit titre", "default": "NOS INFLUENCEURS" },
+    { "type": "header", "content": "Carte noire" },
+    { "type": "text", "id": "feature_heading", "label": "Titre de la carte", "default": "NOS INFLUENCEURS" },
     { "type": "text", "id": "feature_number", "label": "Chiffre principal", "default": "250K" },
     { "type": "text", "id": "feature_suffix", "label": "Suffixe du chiffre", "default": "+" },
     { "type": "text", "id": "feature_caption", "label": "Texte sous le chiffre", "default": "Abonnés cumulés" },
-    { "type": "text", "id": "feature_icon", "label": "Icône de présentation", "default": "🤝" },
-    { "type": "textarea", "id": "feature_description", "label": "Description", "default": "Des collaborations avec des créateurs passionnés" },
+    { "type": "text", "id": "feature_icon", "label": "Icône", "default": "🤝" },
+    { "type": "textarea", "id": "feature_description", "label": "Description", "default": "Des collaborations avec des créateurs passionnés." },
     { "type": "image_picker", "id": "feature_logo", "label": "Logo dans la carte noire" },
-    { "type": "text", "id": "feature_logo_alt", "label": "Texte alternatif du logo", "default": "Logo Esprit2'FOOT" },
+    { "type": "text", "id": "feature_logo_alt", "label": "Description du logo inférieur", "default": "Logo Esprit2'FOOT" },
     { "type": "text", "id": "feature_logo_text", "label": "Texte si aucun logo", "default": "EF ESPRIT2'FOOT" },
     { "type": "range", "id": "feature_logo_width", "label": "Largeur du logo inférieur", "min": 80, "max": 280, "step": 10, "unit": "px", "default": 190 },
-    { "type": "range", "id": "feature_number_size", "label": "Taille du chiffre", "min": 42, "max": 76, "step": 2, "unit": "px", "default": 66 },
+    { "type": "range", "id": "feature_number_size", "label": "Taille du chiffre sur ordinateur", "min": 42, "max": 76, "step": 2, "unit": "px", "default": 66 },
 
     { "type": "header", "content": "Mise en page" },
     { "type": "range", "id": "max_width", "label": "Largeur maximale", "min": 1000, "max": 1800, "step": 50, "unit": "px", "default": 1650 },
     { "type": "range", "id": "cards_visible", "label": "Cartes visibles sur ordinateur", "min": 2, "max": 4, "step": 1, "default": 4 },
     { "type": "range", "id": "card_gap", "label": "Espace entre les cartes", "min": 8, "max": 35, "step": 1, "unit": "px", "default": 20 },
     { "type": "range", "id": "card_radius", "label": "Arrondi des cartes", "min": 0, "max": 30, "step": 2, "unit": "px", "default": 20 },
-    { "type": "select", "id": "stat_columns", "label": "Colonnes des statistiques", "options": [
-      { "value": "2", "label": "2 colonnes" },
-      { "value": "3", "label": "3 colonnes" },
-      { "value": "4", "label": "4 colonnes" }
-    ], "default": "4" },
 
     { "type": "header", "content": "Couleurs" },
     { "type": "color", "id": "background", "label": "Fond général", "default": "#FFFFFF" },
-    { "type": "color", "id": "white", "label": "Fond des cartes", "default": "#FFFFFF" },
+    { "type": "color", "id": "white", "label": "Fond des cartes influenceurs", "default": "#FFFFFF" },
     { "type": "color", "id": "black", "label": "Texte principal", "default": "#050809" },
     { "type": "color", "id": "turquoise", "label": "Turquoise", "default": "#00DCD9" },
     { "type": "color", "id": "muted", "label": "Texte secondaire", "default": "#62666D" },
-    { "type": "color", "id": "feature_background", "label": "Fond de la carte noire", "default": "#061012" },
+    { "type": "color", "id": "feature_background", "label": "Fond de la carte noire", "default": "#030B0C" },
     { "type": "color", "id": "feature_text", "label": "Texte de la carte noire", "default": "#FFFFFF" },
     { "type": "color", "id": "feature_divider", "label": "Séparateurs de la carte", "default": "#FFFFFF" },
-    { "type": "color", "id": "stats_background", "label": "Fond des statistiques", "default": "#E2FBFA" },
+    { "type": "color", "id": "stats_background", "label": "Fond du bandeau de statistiques", "default": "#FFFFFF" },
 
-    { "type": "header", "content": "Espacement vertical" },
+    { "type": "header", "content": "Espacement" },
     { "type": "range", "id": "padding_top", "label": "Marge supérieure", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 40 },
-    { "type": "range", "id": "padding_bottom", "label": "Marge inférieure", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 12 }
+    { "type": "range", "id": "padding_bottom", "label": "Marge inférieure", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 20 }
   ],
   "blocks": [
     {
       "type": "influencer",
       "name": "Influenceur",
       "settings": [
-        { "type": "image_picker", "id": "photo", "label": "Photo / miniature de la vidéo" },
+        { "type": "image_picker", "id": "photo", "label": "Photo ou miniature vidéo" },
         { "type": "text", "id": "photo_alt", "label": "Description de la photo", "default": "Vidéo de collaboration" },
         { "type": "select", "id": "platform", "label": "Plateforme", "options": [
           { "value": "TIKTOK", "label": "TikTok" },
@@ -840,15 +1014,15 @@
           { "value": "SNAPCHAT", "label": "Snapchat" },
           { "value": "AUTRE", "label": "Autre" }
         ], "default": "TIKTOK" },
-        { "type": "text", "id": "platform_icon", "label": "Icône pour une autre plateforme", "default": "▶" },
-        { "type": "checkbox", "id": "show_play", "label": "Afficher le bouton lecture", "default": true },
+        { "type": "text", "id": "platform_icon", "label": "Icône pour autre plateforme", "default": "▶" },
+        { "type": "checkbox", "id": "show_play", "label": "Afficher l'icône lecture", "default": true },
         { "type": "image_picker", "id": "avatar", "label": "Photo de profil" },
-        { "type": "text", "id": "avatar_fallback", "label": "Initiales sans photo", "default": "EF" },
+        { "type": "text", "id": "avatar_fallback", "label": "Initiales si aucune photo", "default": "EF" },
         { "type": "text", "id": "name", "label": "Nom du créateur", "default": "NOM DU CRÉATEUR" },
         { "type": "text", "id": "handle", "label": "Pseudo", "default": "@pseudo" },
         { "type": "checkbox", "id": "verified", "label": "Afficher le badge vérifié", "default": true },
         { "type": "text", "id": "verified_icon", "label": "Icône du badge", "default": "✓" },
-        { "type": "url", "id": "video_url", "label": "Lien cliquable de la vidéo" },
+        { "type": "url", "id": "video_url", "label": "Lien de la vidéo" },
         { "type": "text", "id": "button_icon", "label": "Icône avant le texte", "default": "▷" },
         { "type": "text", "id": "button_text", "label": "Texte du bouton", "default": "Voir la vidéo" },
         { "type": "text", "id": "button_end_icon", "label": "Icône après le texte", "default": "↗" }
