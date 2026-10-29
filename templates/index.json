@@ -672,6 +672,38 @@
             "button_text": "Voir la vidéo"
           }
         },
+        "influencer_M8hUWC": {
+          "type": "influencer",
+          "settings": {
+            "photo": "shopify://shop_images/Capture_d_ecran_2026-10-27_a_21.43.51.png",
+            "photo_alt": "Vidéo de collaboration",
+            "platform": "TIKTOK",
+            "platform_custom_label": "Vidéo",
+            "show_play": true,
+            "avatar_fallback": "EF",
+            "name": "rayaneer69",
+            "handle": "@rayaneer69",
+            "verified": true,
+            "video_url": "https://www.tiktok.com/@rayaneer69/video/7700638928314928417?is_from_webapp=1&sender_device=pc&web_id=7701016814067582496",
+            "button_text": "Voir la vidéo"
+          }
+        },
+        "influencer_qAWwDD": {
+          "type": "influencer",
+          "settings": {
+            "photo": "shopify://shop_images/Capture_d_ecran_2026-10-29_a_20.01.42.png",
+            "photo_alt": "Vidéo de collaboration",
+            "platform": "TIKTOK",
+            "platform_custom_label": "Vidéo",
+            "show_play": true,
+            "avatar_fallback": "EF",
+            "name": "Zakinio",
+            "handle": "@zakinio5",
+            "verified": true,
+            "video_url": "https://www.tiktok.com/@zakinio05/video/7702134803671354657?is_from_webapp=1&sender_device=pc&web_id=7701016814067582496",
+            "button_text": "Voir la vidéo"
+          }
+        },
         "influencer_UEHRUC": {
           "type": "influencer",
           "settings": {
@@ -686,22 +718,6 @@
             "handle": "@giovany.69",
             "verified": true,
             "video_url": "https://www.tiktok.com/@giovany.69/video/7700702385039068448?is_from_webapp=1&sender_device=pc&web_id=7701016814067582496",
-            "button_text": "Voir la vidéo"
-          }
-        },
-        "influencer_qAWwDD": {
-          "type": "influencer",
-          "settings": {
-            "photo": "shopify://shop_images/Capture_d_ecran_2026-10-27_a_21.43.51.png",
-            "photo_alt": "Vidéo de collaboration",
-            "platform": "TIKTOK",
-            "platform_custom_label": "Vidéo",
-            "show_play": true,
-            "avatar_fallback": "EF",
-            "name": "rayaneer69",
-            "handle": "@rayaneer69",
-            "verified": true,
-            "video_url": "https://www.tiktok.com/@rayaneer69/video/7700638928314928417?is_from_webapp=1&sender_device=pc&web_id=7701016814067582496",
             "button_text": "Voir la vidéo"
           }
         },
@@ -770,8 +786,9 @@
       },
       "block_order": [
         "influencer_je9cG9",
-        "influencer_UEHRUC",
+        "influencer_M8hUWC",
         "influencer_qAWwDD",
+        "influencer_UEHRUC",
         "influencer_tBB3GV",
         "influencer_UdLwhd",
         "stat_qcqtnF",
