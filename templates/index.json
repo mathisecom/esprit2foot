@@ -833,6 +833,17 @@
             "verified": true
           }
         },
+        "review_c9fL9b": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Capture_d_ecran_2026-10-29_a_13.20.22.png",
+            "stars": 5,
+            "review": "<p>We frro j'ai reçue la paire elle tue de fou bv</p>",
+            "name": "Louis Journiac",
+            "product_name": "A acheté : Vapor 16 Elite Blanche",
+            "verified": true
+          }
+        },
         "review_wTFY67": {
           "type": "review",
           "settings": {
@@ -877,7 +888,7 @@
             "verified": true
           }
         },
-        "review_VwVXBE": {
+        "review_akQjkr": {
           "type": "review",
           "settings": {
             "image": "shopify://shop_images/IMG_9204.jpg",
@@ -913,11 +924,12 @@
       },
       "block_order": [
         "review_dkLYG3",
+        "review_c9fL9b",
         "review_wTFY67",
         "review_VVV6dU",
         "review_Vzabq4",
         "review_pDtXL3",
-        "review_VwVXBE",
+        "review_akQjkr",
         "review_gXRVwc",
         "review_g9bEPa"
       ],
