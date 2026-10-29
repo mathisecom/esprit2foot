@@ -762,9 +762,9 @@
         "stat_maTHPA": {
           "type": "stat",
           "settings": {
-            "icon_type": "bolt",
-            "value": "",
-            "label": "Des vrais communautés autour d'un même sport !"
+            "icon_type": "users",
+            "value": "+10",
+            "label": "Créateurs de vidéos"
           }
         }
       },
