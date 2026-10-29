@@ -36,14 +36,20 @@
 
       <aside class="e2fc-feature">
         <svg class="e2fc-deco e2fc-deco-tr" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-          <polygon points="100,0 100,100 0,0" fill="#ffffff" opacity="0.03"/>
-          <polygon points="46,0 66,0 28,38 8,38" fill="currentColor"/>
-          <polygon points="82,0 100,0 100,18 78,40 60,40" fill="currentColor"/>
+          <defs>
+            <linearGradient id="e2fc-g-{{ sid }}" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="currentColor" stop-opacity="0.55"/>
+              <stop offset="1" stop-color="currentColor" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+          <polygon points="100,0 100,100 22,0" fill="#ffffff" opacity="0.045"/>
+          <polygon points="58,0 82,0 48,34 24,34" fill="url(#e2fc-g-{{ sid }})"/>
+          <polygon points="88,0 96,0 62,34 54,34" fill="currentColor" opacity="0.9"/>
         </svg>
         <svg class="e2fc-deco e2fc-deco-bl" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
-          <polygon points="100,0 100,100 0,0" fill="#ffffff" opacity="0.03"/>
-          <polygon points="46,0 66,0 28,38 8,38" fill="currentColor"/>
-          <polygon points="82,0 100,0 100,18 78,40 60,40" fill="currentColor"/>
+          <polygon points="100,0 100,100 22,0" fill="#ffffff" opacity="0.045"/>
+          <polygon points="58,0 82,0 48,34 24,34" fill="currentColor" opacity="0.95"/>
+          <polygon points="88,0 96,0 62,34 54,34" fill="currentColor" opacity="0.9"/>
         </svg>
 
         <div class="e2fc-feature-inner">
@@ -63,16 +69,8 @@
           <div class="e2fc-feature-divider"></div>
 
           <div class="e2fc-feature-description">
-            <span class="e2fc-feature-icon">
-              {%- if section.settings.feature_icon_image != blank -%}
-                {{ section.settings.feature_icon_image | image_url: width: 160 | image_tag: class: 'e2fc-icon-img', alt: '', loading: 'lazy' }}
-              {%- else -%}
-                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
-              {%- endif -%}
-            </span>
             <p>{{ section.settings.feature_description | escape }}</p>
           </div>
-
           <div class="e2fc-feature-divider"></div>
 
           <div class="e2fc-feature-logo-wrap">
@@ -249,9 +247,9 @@
 
 /* Carte noire */
 #e2fc-{{ sid }} .e2fc-feature { position: relative; overflow: hidden; background: {{ section.settings.feature_background }}; color: {{ section.settings.feature_text }}; border-radius: 28px; min-width: 0; }
-#e2fc-{{ sid }} .e2fc-deco { position: absolute; width: 34%; aspect-ratio: 1; color: var(--ec-turquoise); pointer-events: none; z-index: 0; }
+#e2fc-{{ sid }} .e2fc-deco { position: absolute; width: 38%; aspect-ratio: 1; color: var(--ec-turquoise); pointer-events: none; z-index: 0; }
 #e2fc-{{ sid }} .e2fc-deco-tr { top: 0; right: 0; }
-#e2fc-{{ sid }} .e2fc-deco-bl { bottom: 0; left: 0; transform: rotate(180deg); width: 26%; }
+#e2fc-{{ sid }} .e2fc-deco-bl { bottom: 0; left: 0; transform: rotate(180deg); }
 #e2fc-{{ sid }} .e2fc-feature-inner { position: relative; z-index: 1; display: flex; flex-direction: column; height: 100%; padding: 34px 26px 30px; }
 #e2fc-{{ sid }} .e2fc-feature-heading { display: flex; align-items: stretch; gap: 14px; color: var(--ec-turquoise); font-weight: 900; font-style: italic; font-size: 20px; line-height: 1.1; text-transform: uppercase; }
 #e2fc-{{ sid }} .e2fc-feature-heading i { display: block; width: 2px; flex: 0 0 2px; background: var(--ec-turquoise); }
@@ -259,12 +257,10 @@
 #e2fc-{{ sid }} .e2fc-feature-number .e2fc-plus { color: var(--ec-turquoise); }
 #e2fc-{{ sid }} .e2fc-feature-caption { margin: 10px 0 24px; text-align: center; font-size: 16px; line-height: 1.3; }
 #e2fc-{{ sid }} .e2fc-feature-divider { height: 1px; width: 100%; background: {{ section.settings.feature_divider }}; flex: 0 0 1px; }
-#e2fc-{{ sid }} .e2fc-feature-description { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 12px; align-items: center; padding: 22px 0; }
-#e2fc-{{ sid }} .e2fc-feature-icon { display: block; width: 52px; height: 52px; color: var(--ec-turquoise); }
-#e2fc-{{ sid }} .e2fc-feature-icon svg { width: 100%; height: 100%; }
-#e2fc-{{ sid }} .e2fc-feature-description p { margin: 0; font-size: 16px; line-height: 1.4; }
-#e2fc-{{ sid }} .e2fc-feature-logo-wrap { margin-top: auto; padding-top: 22px; display: flex; justify-content: center; }
-#e2fc-{{ sid }} .e2fc-feature-logo { display: block; width: {{ section.settings.feature_logo_width }}px; max-width: 100%; height: auto; object-fit: contain; }
+#e2fc-{{ sid }} .e2fc-feature-description { display: flex; align-items: center; justify-content: center; padding: 24px 0; }
+#e2fc-{{ sid }} .e2fc-feature-description p { margin: 0; font-size: 16px; line-height: 1.45; text-align: center; text-wrap: balance; }
+#e2fc-{{ sid }} .e2fc-feature-logo-wrap { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; padding-top: 20px; }
+#e2fc-{{ sid }} .e2fc-feature-logo { display: block; width: {{ section.settings.feature_logo_width }}px; max-width: 100%; height: auto; margin: 0 auto; object-fit: contain; object-position: center; }
 #e2fc-{{ sid }} .e2fc-feature-brand { font-size: 18px; font-weight: 900; font-style: italic; text-align: center; }
 
 /* Carrousel */
@@ -312,8 +308,7 @@
   #e2fc-{{ sid }} .e2fc-feature-heading { font-size: 17px; }
   #e2fc-{{ sid }} .e2fc-feature-number { font-size: 44px; }
   #e2fc-{{ sid }} .e2fc-feature-caption, #e2fc-{{ sid }} .e2fc-feature-description p { font-size: 14px; }
-  #e2fc-{{ sid }} .e2fc-feature-description { grid-template-columns: 42px minmax(0, 1fr); padding: 18px 0; }
-  #e2fc-{{ sid }} .e2fc-feature-icon { width: 42px; height: 42px; }
+  #e2fc-{{ sid }} .e2fc-feature-description { padding: 18px 0; }
 }
 
 /* Mobile : on garde carte noire à gauche + carrousel à droite */
@@ -334,10 +329,9 @@
   #e2fc-{{ sid }} .e2fc-feature-heading { gap: 2.2vw; font-size: max(10px, 3.2vw); }
   #e2fc-{{ sid }} .e2fc-feature-number { margin-top: 3vw; font-size: clamp(24px, 8.4vw, 44px); }
   #e2fc-{{ sid }} .e2fc-feature-caption { margin: 1.6vw 0 3vw; font-size: max(10px, 3vw); }
-  #e2fc-{{ sid }} .e2fc-feature-description { gap: 1.8vw; padding: 3vw 0; }
-  #e2fc-{{ sid }} .e2fc-feature-description { grid-template-columns: max(24px, 7.6vw) minmax(0, 1fr); }
+  #e2fc-{{ sid }} .e2fc-feature-description { padding: 3vw 0; }
   #e2fc-{{ sid }} .e2fc-feature-description p { font-size: max(9px, 2.7vw); line-height: 1.3; }
-  #e2fc-{{ sid }} .e2fc-feature-logo-wrap { padding-top: 3vw; }
+  #e2fc-{{ sid }} .e2fc-feature-logo-wrap { padding-top: 2.5vw; }
   #e2fc-{{ sid }} .e2fc-feature-logo { width: 100%; max-width: 100%; }
   #e2fc-{{ sid }} .e2fc-feature-brand { font-size: max(10px, 3vw); }
 
