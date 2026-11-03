@@ -828,6 +828,299 @@
           "title_with_item": {
             "many": "Der nächstgelegene Standort mit Ihren Artikeln ist mehr als %{distance} von %{location} entfernt."
           }
+        },
+        "location_information_far_away": {
+          "many": "Es gibt %{count} Standorte mit Ihrem Artikel"
+        },
+        "location_nearby": {
+          "many": "Es gibt %{count} Standorte in der Nähe mit Ihrem Artikel"
+        },
+        "location_nearby_short": {
+          "many": "%{count} Standorte in der Nähe mit Ihrem Artikel"
+        },
+        "location_far_away": {
+          "many": "%{count} Standorte mit Ihrem Artikel"
+        },
+        "toggle_more_locations": {
+          "many": "%{count} weitere Standorte"
+        },
+        "pickup_unavailable_banner_title": {
+          "many": "Kein Standort mit Ihren Artikeln"
+        },
+        "pickup_unavailable_banner_title_with_country": {
+          "many": "Kein Standort in %{country} mit Ihren Artikeln"
+        },
+        "location_information_far_away_one_item": {
+          "many": "Es gibt %{count} Standorte, die Ihren Artikel führen"
+        },
+        "location_information_far_away_other_items": {
+          "many": "Es gibt %{count} Standorte, die Ihre Artikel führen"
+        },
+        "location_nearby_one_item": {
+          "many": "Es gibt %{count} Standorte in der Nähe, die Ihren Artikel führen"
+        },
+        "location_nearby_other_items": {
+          "many": "Es gibt %{count} Standorte in Ihrer Nähe, die Ihre Artikel vorrätig haben"
+        },
+        "location_nearby_short_one_item": {
+          "many": "%{count} Standorte in Ihrer Nähe haben Ihren Artikel"
+        },
+        "location_nearby_short_other_items": {
+          "many": "%{count} Standorte in Ihrer Nähe mit Ihren Artikeln"
+        },
+        "location_far_away_one_item": {
+          "many": "%{count} Standorte mit Ihrem Artikel"
+        },
+        "location_far_away_other_items": {
+          "many": "%{count} Standorte mit Ihren Artikeln"
+        },
+        "stock_details": {
+          "ship_separately": {
+            "many": "Werden separat versandt"
+          },
+          "remove_items": {
+            "many": "Werden aus Ihrer Bestellung entfernt"
+          }
+        },
+        "unavailable_item_count": {
+          "many": "%{count} Artikel nicht verfügbar"
+        },
+        "ship_separately_notice": {
+          "many": "%{count} Artikel werden separat versandt"
+        },
+        "stock_details_modal": {
+          "can_ship_description": {
+            "many": "Diese Artikel sind am ausgewählten Abholort nicht vorrätig."
+          },
+          "cannot_ship_description": {
+            "many": "Diese Artikel sind an der ausgewählten Abholstation nicht vorrätig und können nicht versendet werden."
+          },
+          "cannot_ship_bundle_description": {
+            "many": "Diese Artikel sind an der ausgewählten Abholstelle nicht auf Lager und können nicht versandt werden. Die Artikel des Sets werden ebenfalls entfernt."
+          }
+        },
+        "stock_details_banner": {
+          "heading": {
+            "many": "%{count} Artikel sind für die Abholung in %{location} nicht verfügbar"
+          },
+          "ship_separately": {
+            "many": "sie separat versenden"
+          }
+        }
+      },
+      "split_delivery": {
+        "inventory_issue_banner": {
+          "heading": {
+            "cannot_be_picked_up": {
+              "many": "%{count} Artikel können nicht abgerufen werden"
+            },
+            "cannot_be_shipped": {
+              "many": "%{count} Artikel können nicht versandt werden"
+            }
+          },
+          "remove_item": {
+            "many": "Artikel entfernen"
+          },
+          "ship_separately": {
+            "many": "Sie separat versenden"
+          },
+          "pick_them_up_in_store": {
+            "many": "In der Filiale abholen"
+          },
+          "remove_item_only": {
+            "many": "Artikel entfernen"
+          }
+        },
+        "pickup_items_count": {
+          "many": "%{count} Artikel entfernen"
+        },
+        "ship_items_count": {
+          "many": "%{count} Artikel versenden"
+        },
+        "items_count": {
+          "many": "%{count} Artikel"
+        }
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "remove_items_action": {
+          "many": "Nicht verfügbare Artikel entfernen"
+        }
+      },
+      "review_address_modal": {
+        "subtitle": {
+          "many": "Diese Bestellung wird an eine von {{merchant}} mitgeteilte Adresse geliefert. Wählen Sie eine Lieferadresse aus."
+        }
+      },
+      "remote_merchandise_only": {
+        "detail_item_label": {
+          "many": "{{count}} Artikel"
+        }
+      }
+    },
+    "notices": {
+      "order": {
+        "cancel_reason": {
+          "many": "Sonstiges"
+        }
+      }
+    },
+    "page_titles": {
+      "search_results": {
+        "many": "Suche: %{count} Ergebnisse für „%{terms}“ gefunden"
+      }
+    }
+  },
+  "customer_accounts": {
+    "navigation_and_structure": {
+      "store_credit_multi_currency_accessibility_label": {
+        "many": "{{formattedBalance}} Guthaben im Geschäft und in {{count}} weiteren Währungen"
+      }
+    },
+    "orders": {
+      "order_list": {
+        "items": {
+          "many": "{{count}} Artikel"
+        }
+      },
+      "order_status": {
+        "delivered_description_gift_card": {
+          "many": "Die Geschenkkarten wurden per E-Mail versandt."
+        },
+        "confirmed_gift_card_additional_description": {
+          "many": "Jeder Geschenkgutschein wird in einer separaten E-Mail versendet."
+        },
+        "delivered_description_gift_card_text": {
+          "many": "Die Geschenkkarten wurden per SMS versendet."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "many": "Jede Geschenkkarte wird in einer separaten SMS versendet."
+        },
+        "gift_resend_success": {
+          "many": "Geschenkkarten zurückgesendet"
+        },
+        "gift_resend_failure": {
+          "many": "Beim erneuten Senden Ihrer Geschenkkarten ist ein Problem aufgetreten. Versuchen Sie es erneut oder kontaktieren Sie uns."
+        },
+        "tracking_number": {
+          "many": "Sendungsverfolgungsnummern"
+        },
+        "gift_card_resend_button": {
+          "many": "Geschenkkarten erneut senden"
+        },
+        "fulfillment_tracking": {
+          "gift_card_sent_to_recipient": {
+            "many": "Die Geschenkkarten wurden an die Empfänger verschickt."
+          }
+        }
+      }
+    },
+    "order_details": {
+      "image_gallery": {
+        "load_more_items": {
+          "many": "{{count}} weitere Artikel anzeigen"
+        },
+        "additional_items": {
+          "many": "+ {{count}} weitere Artikel"
+        }
+      },
+      "edit_summary": {
+        "updated_count": {
+          "many": "Die Bestellung wurde {{count}} mal aktualisiert"
+        }
+      },
+      "subtotal_label_with_quantity": {
+        "many": "Zwischensumme · {{count}} Artikel"
+      },
+      "discount_order_stacking": {
+        "many": "Rabatte auf Bestellungen"
+      }
+    },
+    "B2B": {
+      "orders": {
+        "draft_order_list": {
+          "pending_tab_accessibility_label": {
+            "pending_orders": {
+              "many": "Sie haben {{count}} ausstehende Bestellungen"
+            }
+          }
+        }
+      },
+      "draft_order_details": {
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "many": "Sie haben eine Zahlungsverzögerung von {{count}} Tagen"
+            },
+            "banner_due": {
+              "many": "Ihre Zahlung ist fällig in {{count}} Tagen"
+            },
+            "banner_overdue_for_single_fulfillment": {
+              "many": "Die Zahlung von {{amount}} ist um {{count}} Tage überfällig. {{link}}"
+            }
+          }
+        }
+      }
+    },
+    "errors": {
+      "banner_title": {
+        "many": "Es gibt {{count}} Fehler"
+      }
+    },
+    "payment_methods": {
+      "add_payment_method": {
+        "subscription_contracts": {
+          "more_items": {
+            "many": "{{count}} weitere Produkte"
+          },
+          "product_count": {
+            "many": "{{count}} Produkte"
+          }
+        },
+        "updating_contracts": {
+          "many": "Aktualisierung von {{count}} Abonnementverträgen ..."
+        },
+        "contracts_updated": {
+          "many": "{{count}} Abonnementverträge wurden erfolgreich aktualisiert"
+        }
+      }
+    },
+    "ui_components": {
+      "autocompleteOptionsAvailable": {
+        "many": "{{count}} Artikel verfügbar"
+      },
+      "mapClusterTitle": {
+        "many": "Cluster von {{number}} Markern"
+      }
+    },
+    "date": {
+      "humanize": {
+        "lessThanOneHourAgo": {
+          "many": "Es sind {{count}} Minuten"
+        }
+      }
+    },
+    "returns_and_cancellations": {
+      "request_withdrawal_page": {
+        "review_changes_modal": {
+          "items_to_cancel": {
+            "many": "{{count}} Artikel zum Stornieren"
+          },
+          "items_to_return": {
+            "many": "{{count}} Artikel zur Rückgabe"
+          }
+        },
+        "line_items": {
+          "ineligible_items": {
+            "many": "{{count}} nicht zulässige Artikel"
+          }
+        }
+      },
+      "estimated_refund_summary_card": {
+        "subtotal_with_count": {
+          "many": "Zwischensumme · {{count}} Artikel"
+        },
+        "item_selected": {
+          "many": "{{count}} Artikel"
         }
       }
     }
