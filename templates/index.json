@@ -108,8 +108,8 @@
           "mercurial-superfly-11-elite-fg-bright-lights-pack",
           "mercurial-superfly-11-elite-fg-break-em-pack",
           "f50-hyperfast-laceless-fg-elite-final-rush-pack",
-          "f50-hyperfast-fg-elite-y-3-dragon-bleu-noir",
-          "f50-hyperfast-pack-chaos-vs-control-laceless"
+          "f50-hyperfast-pack-chaos-vs-control-laceless",
+          "f50-hyperfast-fg-elite-y-3-dragon-bleu-noir"
         ],
         "full_width": true,
         "stack_products": false,
@@ -672,6 +672,22 @@
             "button_text": "Voir la vidéo"
           }
         },
+        "influencer_gtfCNx": {
+          "type": "influencer",
+          "settings": {
+            "photo": "shopify://shop_images/Capture_d_ecran_2026-11-04_195107.png",
+            "photo_alt": "Vidéo de collaboration",
+            "platform": "TIKTOK",
+            "platform_custom_label": "Vidéo",
+            "show_play": true,
+            "avatar_fallback": "EF",
+            "name": "Les infiltrés",
+            "handle": "@les3infiltres",
+            "verified": true,
+            "video_url": "https://www.tiktok.com/@les3infiltres/video/7704219247123189025?is_from_webapp=1&sender_device=pc&web_id=7699256071987283489",
+            "button_text": "Voir la vidéo"
+          }
+        },
         "influencer_M8hUWC": {
           "type": "influencer",
           "settings": {
@@ -688,19 +704,20 @@
             "button_text": "Voir la vidéo"
           }
         },
-        "influencer_qAWwDD": {
+        "influencer_WpXNjh": {
           "type": "influencer",
           "settings": {
-            "photo": "shopify://shop_images/Capture_d_ecran_2026-10-29_a_20.01.42.png",
+            "photo": "shopify://shop_images/Capture_d_ecran_2026-11-04_195044.png",
             "photo_alt": "Vidéo de collaboration",
             "platform": "TIKTOK",
             "platform_custom_label": "Vidéo",
             "show_play": true,
+            "avatar": "shopify://shop_images/0cf78a8eb3caf53b35a39d1851b6b34c_tplv-tiktokx-cropcenter-1080-1080.jpg",
             "avatar_fallback": "EF",
-            "name": "Zakinio",
-            "handle": "@zakinio5",
+            "name": "17%",
+            "handle": "@noreality00",
             "verified": true,
-            "video_url": "https://www.tiktok.com/@zakinio05/video/7702134803671354657?is_from_webapp=1&sender_device=pc&web_id=7701016814067582496",
+            "video_url": "https://www.tiktok.com/@noreality00/video/7492823029576240407?is_from_webapp=1&sender_device=pc&web_id=7699256071987283489",
             "button_text": "Voir la vidéo"
           }
         },
@@ -721,33 +738,19 @@
             "button_text": "Voir la vidéo"
           }
         },
-        "influencer_tBB3GV": {
+        "influencer_qAWwDD": {
           "type": "influencer",
           "settings": {
-            "photo_alt": "Vidéo de collaboration",
-            "platform": "INSTAGRAM",
-            "platform_custom_label": "Vidéo",
-            "show_play": true,
-            "avatar_fallback": "EF",
-            "name": "GAMEMIXTREIZE",
-            "handle": "@gamemixtreize",
-            "verified": true,
-            "video_url": "",
-            "button_text": "Voir la vidéo"
-          }
-        },
-        "influencer_UdLwhd": {
-          "type": "influencer",
-          "settings": {
+            "photo": "shopify://shop_images/Capture_d_ecran_2026-10-29_a_20.01.42.png",
             "photo_alt": "Vidéo de collaboration",
             "platform": "TIKTOK",
             "platform_custom_label": "Vidéo",
             "show_play": true,
             "avatar_fallback": "EF",
-            "name": "RWANI10",
-            "handle": "@rwani10",
+            "name": "Zakinio",
+            "handle": "@zakinio5",
             "verified": true,
-            "video_url": "",
+            "video_url": "https://www.tiktok.com/@zakinio05/video/7702134803671354657?is_from_webapp=1&sender_device=pc&web_id=7701016814067582496",
             "button_text": "Voir la vidéo"
           }
         },
@@ -786,11 +789,11 @@
       },
       "block_order": [
         "influencer_je9cG9",
+        "influencer_gtfCNx",
         "influencer_M8hUWC",
-        "influencer_qAWwDD",
+        "influencer_WpXNjh",
         "influencer_UEHRUC",
-        "influencer_tBB3GV",
-        "influencer_UdLwhd",
+        "influencer_qAWwDD",
         "stat_qcqtnF",
         "stat_4HgGYn",
         "stat_GaHKLw",
